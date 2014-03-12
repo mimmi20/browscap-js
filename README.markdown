@@ -7,7 +7,7 @@ and returns an associative array of properties and abilities of that browser.
 
 You must provide a browscap.ini file, which you can get here:
 
-http://browsers.garykeith.com/downloads.asp
+http://browscap.org/
 
 Both the browscap.ini or php_browscap.ini files should work.
 
