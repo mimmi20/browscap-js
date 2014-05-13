@@ -2,7 +2,7 @@
 
 node-browscap is a port of PHP's get_browser function to node.js
 
-It makes available a `getBrowser` function which takes a browser user agent string 
+It makes available a `getBrowser` function which takes a browser user agent string
 and returns an associative array of properties and abilities of that browser.
 
 You must provide a browscap.ini file, which you can get here:
@@ -21,7 +21,7 @@ Example:
 	//Will print "IE 8.0"
 	console.log(browser['Browser'] + " " + browser['Version']);
 
-Thanks to [torvalamo](http://github.com/torvalamo) for some rewrites to 
+Thanks to [torvalamo](http://github.com/torvalamo) for some rewrites to
 improve performance.
 
 # Installation
@@ -39,7 +39,7 @@ several user agents.
 
 To run:
 
-	$ node test.js
+	$ npm test
 
 # License
 
@@ -60,4 +60,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE. 
+IN THE SOFTWARE.
