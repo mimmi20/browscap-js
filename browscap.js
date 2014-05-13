@@ -28,20 +28,24 @@ function parse(filename) {
         var pattern = line.slice(1, -1)
         
         // Convert the pattern into a proper regex
-        current = {
-          __regex__: new RegExp('^'
-            + pattern.replace(/\./g, '\\.')
-                     .replace(/\(/g, '\\(')
-                     .replace(/\)/g, '\\)')
-                     .replace(/\//g, '\\/')
-                     .replace(/\-/g, '\\-')
-                     .replace(/\*/g, '.*')
-                     .replace(/\?/g, '.?')
-            + '$')
+        try {
+          current = {
+              __regex__: new RegExp('^'
+              + pattern.replace(/\./g, '\\.')
+                  .replace(/\(/g, '\\(')
+                  .replace(/\)/g, '\\)')
+                  .replace(/\//g, '\\/')
+                  .replace(/\-/g, '\\-')
+                  .replace(/\*/g, '.*')
+                  .replace(/\?/g, '.?')
+                  .replace(/\+/g, '\\+')
+              + '$')
+          }
+          browserArray.push(current) // Push new browser object onto array
+          patternIndex.push(pattern) // Push pattern onto pattern index
+        } catch (error) {
+          current = {}
         }
-        
-        browserArray.push(current) // Push new browser object onto array
-        patternIndex.push(pattern) // Push pattern onto pattern index
       } else {
         var parts = line.split('=')
           , name = parts[0]
