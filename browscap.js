@@ -1,12 +1,12 @@
-var browsers = []
-  , inifile = './browscap.ini'
+var browsers = [],
+  inifile = './browscap.ini';
 
-exports.setIni = function(filename) {
-  inifile = filename
-  
+exports.setIni = function (filename) {
+  inifile = filename;
+
   // Re-parse if parsed before
   if (browsers.length) {
-    browsers = parse(filename)
+    browsers = parse(filename);
   }
 }
 
@@ -14,31 +14,31 @@ function parse(filename) {
   var current = {}
     , browserArray = []
     , patternIndex = []
-  
+
   require('fs')
     .readFileSync(filename, 'ascii')
     .split(/[\r\n]+/)
-    .forEach(function(line) {
+    .forEach(function (line) {
       // Skip comments and blank lines
       if (/^\s*(;|$)/.test(line)) {
         return
       }
-      
+
       if (line[0] == '[') {
         var pattern = line.slice(1, -1)
-        
+
         // Convert the pattern into a proper regex
         try {
           current = {
-              __regex__: new RegExp('^'
+            __regex__: new RegExp('^'
               + pattern.replace(/\./g, '\\.')
-                  .replace(/\(/g, '\\(')
-                  .replace(/\)/g, '\\)')
-                  .replace(/\//g, '\\/')
-                  .replace(/\-/g, '\\-')
-                  .replace(/\*/g, '.*')
-                  .replace(/\?/g, '.?')
-                  .replace(/\+/g, '\\+')
+              .replace(/\(/g, '\\(')
+              .replace(/\)/g, '\\)')
+              .replace(/\//g, '\\/')
+              .replace(/\-/g, '\\-')
+              .replace(/\*/g, '.*')
+              .replace(/\?/g, '.?')
+              .replace(/\+/g, '\\+')
               + '$')
           }
           browserArray.push(current) // Push new browser object onto array
@@ -50,11 +50,11 @@ function parse(filename) {
         var parts = line.split('=')
           , name = parts[0]
           , value = parts[1]
-        
+
         if (value[0] == '"' && value.slice(-1) == '"') {
           value = value.slice(1, -1)
         }
-        
+
         if (name != 'Parent') {
           current[name] = value
         } else {
@@ -68,15 +68,15 @@ function parse(filename) {
         }
       }
     })
-  
+
   return browserArray
 }
 
-exports.getBrowser = function(userAgent) {
+exports.getBrowser = function (userAgent) {
   if (!browsers.length) {
     browsers = parse(inifile)
   }
-  
+
   // Test user agent against each browser regex
   for (var i = 0; i < browsers.length; i++) {
     if (browsers[i].__regex__.test(userAgent)) {
