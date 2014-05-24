@@ -8,12 +8,27 @@ exports.setIni = function (filename) {
   if (browsers.length) {
     browsers = parse(filename);
   }
-}
+};
+
+exports.getBrowser = function (userAgent) {
+  if (!browsers.length) {
+    browsers = parse(inifile)
+  }
+
+  // Test user agent against each browser regex
+  for (var i = 0; i < browsers.length; i++) {
+    if (browsers[i].__regex__.test(userAgent)) {
+      return browsers[i]
+    }
+  }
+
+  return null;
+};
 
 function parse(filename) {
   var current = {}
     , browserArray = []
-    , patternIndex = []
+    , patternIndex = [];
 
   require('fs')
     .readFileSync(filename, 'ascii')
@@ -25,7 +40,7 @@ function parse(filename) {
       }
 
       if (line[0] == '[') {
-        var pattern = line.slice(1, -1)
+        var pattern = line.slice(1, -1);
 
         // Convert the pattern into a proper regex
         try {
@@ -40,16 +55,16 @@ function parse(filename) {
               .replace(/\?/g, '.?')
               .replace(/\+/g, '\\+')
               + '$')
-          }
-          browserArray.push(current) // Push new browser object onto array
-          patternIndex.push(pattern) // Push pattern onto pattern index
+          };
+          browserArray.push(current); // Push new browser object onto array
+          patternIndex.push(pattern); // Push pattern onto pattern index
         } catch (error) {
           current = {}
         }
       } else {
         var parts = line.split('=')
           , name = parts[0]
-          , value = parts[1]
+          , value = parts[1];
 
         if (value[0] == '"' && value.slice(-1) == '"') {
           value = value.slice(1, -1)
@@ -59,28 +74,15 @@ function parse(filename) {
           current[name] = value
         } else {
           // Copy properties from the parent's entry
-          var i = patternIndex.lastIndexOf(value)
+          var i = patternIndex.lastIndexOf(value);
           for (var key in browserArray[i]) {
             if (key != '__regex__' && key != 'Parent') {
-              current[key] = browserArray[i][key]
+              current[key] = browserArray[i][key];
             }
           }
         }
       }
-    })
+    });
 
   return browserArray
-}
-
-exports.getBrowser = function (userAgent) {
-  if (!browsers.length) {
-    browsers = parse(inifile)
-  }
-
-  // Test user agent against each browser regex
-  for (var i = 0; i < browsers.length; i++) {
-    if (browsers[i].__regex__.test(userAgent)) {
-      return browsers[i]
-    }
-  }
 }
