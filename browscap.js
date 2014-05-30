@@ -38,7 +38,7 @@ exports.getBrowser = function (userAgent) {
           browser[property] = browserData[property];
         }
 
-        while (browserData[3]) {
+        while (browserData['3']) {
           browserData = JSON.parse(browsers[browserData[3]]);
 
           for (var property in browserData) {
@@ -48,9 +48,9 @@ exports.getBrowser = function (userAgent) {
           }
         }
 
-        if (browser[3]) {
+        if (browser['3']) {
           userAgents = require(jsonfile).userAgents;
-          browser[3] = userAgents[browser[3]];
+          browser['3'] = userAgents[browser['3']];
         }
 
         ua = {};
