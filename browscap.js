@@ -1,88 +1,69 @@
-var browsers = [],
-  inifile = './browscap.ini';
+var jsonfile = './browscap.preprocessed.json';
 
-exports.setIni = function (filename) {
-  inifile = filename;
-
-  // Re-parse if parsed before
-  if (browsers.length) {
-    browsers = parse(filename);
-  }
+exports.setJson = function (filename) {
+  jsonfile = filename;
 };
 
 exports.getBrowser = function (userAgent) {
-  if (!browsers.length) {
-    browsers = parse(inifile)
-  }
+  patterns = require(jsonfile).patterns;
+  browsers = require(jsonfile).browsers;
 
   // Test user agent against each browser regex
-  for (var i = 0; i < browsers.length; i++) {
-    if (browsers[i].__regex__.test(userAgent)) {
-      return browsers[i]
+  for (var pattern in patterns) {
+    pattern = pattern.replace('@', '/') + 'i';
+
+    if (pattern.test(userAgent)) {
+      key     = patterns[pattern];
+      found   = false;
+      matches = userAgent.match(pattern);
+
+      if (matches.length === 1) {
+        browsersindex = key;
+        found = true;
+      } else {
+        matchString = '@' + matches.join('|');
+
+        if (key[matchString]) {
+          browsersindex = key[matchString];
+          found = true;
+        }
+      }
+
+      if (found && browsers[browsersindex]) {
+        browser = [userAgent, pattern.toLowerCase().trim()];
+        browserData = JSON.parse(browsers[browsersindex]);
+
+        for (var property in browserData) {
+          browser[property] = browserData[property];
+        }
+
+        while (browserData[3]) {
+          browserData = JSON.parse(browsers[browserData[3]]);
+
+          for (var property in browserData) {
+            if (!browser[property]) {
+              browser[property] = browserData[property];
+            }
+          }
+        }
+
+        if (browser[3]) {
+          userAgents = require(jsonfile).userAgents;
+          browser[3] = userAgents[browser[3]];
+        }
+
+        ua = {};
+        properties = require(jsonfile).properties;
+
+        for (var propertyNumber in browser) {
+          propertyName = properties[propertyNumber];
+          ua[propertyName] = browser[propertyNumber];
+        }
+
+        return ua;
+      }
     }
   }
 
   return null;
 };
-
-function parse(filename) {
-  var current = {}
-    , browserArray = []
-    , patternIndex = [];
-
-  require('fs')
-    .readFileSync(filename, 'ascii')
-    .split(/[\r\n]+/)
-    .forEach(function (line) {
-      // Skip comments and blank lines
-      if (/^\s*(;|$)/.test(line)) {
-        return
-      }
-
-      if (line[0] == '[') {
-        var pattern = line.slice(1, -1);
-
-        // Convert the pattern into a proper regex
-        try {
-          current = {
-            __regex__: new RegExp('^'
-              + pattern.replace(/\./g, '\\.')
-              .replace(/\(/g, '\\(')
-              .replace(/\)/g, '\\)')
-              .replace(/\//g, '\\/')
-              .replace(/\-/g, '\\-')
-              .replace(/\*/g, '.*')
-              .replace(/\?/g, '.?')
-              .replace(/\+/g, '\\+')
-              + '$')
-          };
-          browserArray.push(current); // Push new browser object onto array
-          patternIndex.push(pattern); // Push pattern onto pattern index
-        } catch (error) {
-          current = {}
-        }
-      } else {
-        var parts = line.split('=')
-          , name = parts[0]
-          , value = parts[1];
-
-        if (value[0] == '"' && value.slice(-1) == '"') {
-          value = value.slice(1, -1)
-        }
-
-        if (name != 'Parent') {
-          current[name] = value
-        } else {
-          // Copy properties from the parent's entry
-          var i = patternIndex.lastIndexOf(value);
-          for (var key in browserArray[i]) {
-            if (key != '__regex__' && key != 'Parent') {
-              current[key] = browserArray[i][key];
-            }
-          }
-        }
-      }
-    });
-
-  return browserArray
-}
