@@ -10,12 +10,13 @@ exports.getBrowser = function (userAgent) {
 
   // Test user agent against each browser regex
   for (var pattern in patterns) {
-    pattern = pattern.replace('@', '/') + 'i';
+    pattern = pattern.replace('@', '');
+    re = new RegExp(pattern, 'i');
 
-    if (pattern.test(userAgent)) {
+    if (re.test(userAgent)) {
       key     = patterns[pattern];
       found   = false;
-      matches = userAgent.match(pattern);
+      matches = userAgent.match(re);
 
       if (matches.length === 1) {
         browsersindex = key;
