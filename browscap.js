@@ -12,12 +12,13 @@ exports.getBrowser = function (userAgent) {
 
   // Test user agent against each browser regex
   for (var pattern in patterns) {
-    pattern = pattern.replace(/@/g, '');
-    re = new RegExp(pattern, 'i');
-
-    console.log(pattern);
+    re = new RegExp(pattern.replace(/@/g, ''), 'i');
 
     if (re.test(userAgent)) {
+      if (!patterns.hasOwnProperty(pattern)) {
+        continue;
+      }
+
       key = patterns[pattern];
       found = false;
       matches = userAgent.match(re);
