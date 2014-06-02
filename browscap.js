@@ -48,14 +48,18 @@ exports.getBrowser = function (userAgent) {
         }
 
         while (browserData['Parent']) {
-          browserData = JSON.parse(browsers[browserData['Parent']]);
+          var browserParentData = JSON.parse(browsers[browserData['Parent']]);
 
-          for (var propertyParent in browserData) {
-            if (!browserData.hasOwnProperty(propertyParent)) {
+          for (var propertyParent in browserParentData) {
+            if (!browserParentData.hasOwnProperty(propertyParent)) {
               continue;
             }
 
-            browser[propertyParent] = browserData[propertyParent];
+            if (browser.hasOwnProperty(propertyParent)) {
+              continue;
+            }
+
+            browser[propertyParent] = browserParentData[propertyParent];
           }
         }
 
