@@ -15,6 +15,8 @@ exports.getBrowser = function (userAgent) {
     pattern = pattern.replace('@', '');
     re = new RegExp(pattern, 'i');
 
+    console.log(pattern);
+
     if (re.test(userAgent)) {
       key = patterns[pattern];
       found = false;
@@ -31,6 +33,8 @@ exports.getBrowser = function (userAgent) {
           found = true;
         }
       }
+
+      console.log(found);
 
       if (found && browsers[browsersindex]) {
         var browser = [userAgent, pattern.toLowerCase().trim()];
