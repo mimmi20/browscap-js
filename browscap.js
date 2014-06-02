@@ -36,7 +36,10 @@ exports.getBrowser = function (userAgent) {
       }
 
       if (found && browsers[browsersindex]) {
-        var browser = [userAgent, pattern.toLowerCase().trim()];
+        var browser = {
+          browser_name: userAgent,
+          browser_name_regex: pattern.toLowerCase().trim()
+        };
         var browserData = JSON.parse(browsers[browsersindex]);
 
         for (var property in browserData) {
@@ -47,8 +50,10 @@ exports.getBrowser = function (userAgent) {
           browser[property] = browserData[property];
         }
 
-        while (browserData['Parent']) {
-          var browserParentData = JSON.parse(browsers[browserData['Parent']]);
+        var browserParentData = browserData;
+
+        while (browserParentData['Parent']) {
+          browserParentData = JSON.parse(browsers[browserParentData['Parent']]);
 
           for (var propertyParent in browserParentData) {
             if (!browserParentData.hasOwnProperty(propertyParent)) {
