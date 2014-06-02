@@ -12,7 +12,7 @@ exports.getBrowser = function (userAgent) {
 
   // Test user agent against each browser regex
   for (var pattern in patterns) {
-    pattern = pattern.replace('@', '');
+    pattern = pattern.replace(/@/, '');
     re = new RegExp(pattern, 'i');
 
     console.log(pattern);
