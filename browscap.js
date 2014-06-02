@@ -12,13 +12,13 @@ exports.getBrowser = function (userAgent) {
 
   // Test user agent against each browser regex
   for (var pattern in patterns) {
+    if (!patterns.hasOwnProperty(pattern)) {
+      continue;
+    }
+
     re = new RegExp(pattern.replace(/@/g, ''), 'i');
 
     if (re.test(userAgent)) {
-      if (!patterns.hasOwnProperty(pattern)) {
-        continue;
-      }
-
       key = patterns[pattern];
       found = false;
       matches = userAgent.match(re);
@@ -35,23 +35,27 @@ exports.getBrowser = function (userAgent) {
         }
       }
 
-      console.log(found);
-
       if (found && browsers[browsersindex]) {
         var browser = [userAgent, pattern.toLowerCase().trim()];
         var browserData = JSON.parse(browsers[browsersindex]);
 
         for (var property in browserData) {
+          if (!browserData.hasOwnProperty(property)) {
+            continue;
+          }
+
           browser[property] = browserData[property];
         }
 
         while (browserData['Parent']) {
           browserData = JSON.parse(browsers[browserData['Parent']]);
 
-          for (var property in browserData) {
-            if (!browser[property]) {
-              browser[property] = browserData[property];
+          for (var propertyParent in browserData) {
+            if (!browserData.hasOwnProperty(propertyParent)) {
+              continue;
             }
+
+            browser[propertyParent] = browserData[propertyParent];
           }
         }
 
