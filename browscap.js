@@ -15,10 +15,10 @@ exports.getBrowser = function (userAgent) {
     if (!patterns.hasOwnProperty(pattern)) {
       continue;
     }
-
+console.log(pattern);
     //re = new RegExp(pattern.replace(/@/g, ''), 'i');
     re = new RegExp(pattern);
-
+console.log(re);
     if (re.test(userAgent)) {
       key = patterns[pattern];
       found = false;
