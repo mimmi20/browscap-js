@@ -3,7 +3,8 @@
 , "version" : "0.1.4"
 , "author" : "Dan Grossman"
 , "contributors" :
-  [ "Tor Valamo <tor.valamo@gmail.com> (http://github.com/torvalamo)"
+  [ "Tor Valamo <tor.valamo@gmail.com> (http://github.com/torvalamo)",
+    "Thomas Müller <no.mail@example.org> (https://github.com/mimmi20)"
 ]
 , "repository" :
   { "type" : "git"
@@ -16,8 +17,16 @@
 , "main" : "browscap"
 , "engines" : { "node" : ">=0.2.0" }
 , "licenses" :
-  [ { "type" : "MIT"
-    , "url" : "http://github.com/dangrossman/node-browscap/README.markdown"
+  [ 
+    {
+      "type" : "MIT",
+      "url" : "http://github.com/dangrossman/node-browscap/README.markdown"
     }
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha -u tdd ./test/*.js"
+  }
 }

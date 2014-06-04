@@ -16,13 +16,11 @@ exports.getBrowser = function (userAgent) {
       continue;
     }
 console.log(pattern);
-    //re = new RegExp(pattern.replace(/@/g, ''), 'i');
-    re = new RegExp(pattern);
-console.log(re);
-    if (re.test(userAgent)) {
+console.log(JSON.parse(pattern));
+    if (pattern.test(userAgent)) {
       key = patterns[pattern];
       found = false;
-      matches = userAgent.match(re);
+      matches = userAgent.match(pattern);
 
       if (matches.length === 1) {
         browsersindex = key;
@@ -79,5 +77,34 @@ console.log(re);
     }
   }
 
-  return null;
+  // return default
+  return {
+    Comment:"Default Browser",
+    Browser:"Default Browser",
+    Version:"0.0",
+    MajorVer:"0",
+    MinorVer:"0",
+    Platform:"unknown",
+    Platform_Version:"unknown",
+    Alpha:false,
+    Beta:false,
+    Win16:false,
+    Win32:false,
+    Win64:false,
+    Frames:false,
+    IFrames:false,
+    Tables:false,
+    Cookies:false,
+    BackgroundSounds:false,
+    JavaScript:false,
+    VBScript:false,
+    JavaApplets:false,
+    ActiveXControls:false,
+    isMobileDevice:false,
+    isTablet:false,
+    isSyndicationReader:false,
+    Crawler:false,
+    CssVersion:"0",
+    AolVersion:"0"
+  };
 };
