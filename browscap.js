@@ -35,7 +35,7 @@ exports.getBrowser = function (userAgent) {
         }
       }
 console.log(found);
-console.log(browsersindex);
+console.log(matches);
       if (found && browsers[browsersindex]) {
         var browser = {
           browser_name: userAgent,
