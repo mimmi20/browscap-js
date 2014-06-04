@@ -15,8 +15,7 @@ exports.getBrowser = function (userAgent) {
     if (!patterns.hasOwnProperty(pattern)) {
       continue;
     }
-console.log(pattern);
-console.log(JSON.parse(pattern));
+
     if (pattern.test(userAgent)) {
       key = patterns[pattern];
       found = false;
