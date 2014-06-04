@@ -16,10 +16,12 @@ exports.getBrowser = function (userAgent) {
       continue;
     }
 
-    if (pattern.test(userAgent)) {
+    re = new RegExp(pattern.replace(/@/g, ''), 'i');
+
+    if (re.test(userAgent)) {
       key = patterns[pattern];
       found = false;
-      matches = userAgent.match(pattern);
+      matches = userAgent.match(re);
 
       if (matches.length === 1) {
         browsersindex = key;
