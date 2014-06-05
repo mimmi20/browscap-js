@@ -22,7 +22,7 @@ exports.getBrowser = function (userAgent) {
       patternData = patterns[pattern];
       found = false;
       matches = userAgent.match(re);
-      console.log(matches);
+      matches.shift();
 
       if (matches.length === 1) {
         browsersindex = patternData;
