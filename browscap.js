@@ -5,7 +5,7 @@ exports.setJson = function (filename) {
 };
 
 exports.getBrowser = function (userAgent) {
-  var browsers, patterns, re, key, found, matches, browsersindex;
+  var browsers, patterns, re, found, matches, browsersindex;
 
   patterns = require(jsonfile).patterns;
   browsers = require(jsonfile).browsers;
@@ -29,19 +29,13 @@ exports.getBrowser = function (userAgent) {
         found = true;
       } else {
         var matchString = '@' + matches.join('|');
-console.log(matchString);
+
         if (patternData[matchString]) {
           browsersindex = patternData[matchString];
           found = true;
-          console.log('matchString found !!!');
-        } else {
-          console.log('matchString not found');
         }
       }
-//console.log(found);
-//console.log(matches);
-//console.log(browsersindex);
-//console.log(browsers[browsersindex]);
+
       if (found && browsers[browsersindex]) {
         var browser = {
           browser_name: userAgent,
