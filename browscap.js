@@ -19,23 +19,28 @@ exports.getBrowser = function (userAgent) {
     re = new RegExp(pattern.replace(/@/g, ''), 'i');
 
     if (re.test(userAgent)) {
-      key = patterns[pattern];
+      patternData = patterns[pattern];
       found = false;
       matches = userAgent.match(re);
 
       if (matches.length === 1) {
-        browsersindex = key;
+        browsersindex = patternData;
         found = true;
       } else {
         var matchString = '@' + matches.join('|');
-
-        if (key[matchString]) {
-          browsersindex = key[matchString];
+console.log(matchString);
+        if (patternData[matchString]) {
+          browsersindex = patternData[matchString];
           found = true;
+          console.log('matchString found !!!');
+        } else {
+          console.log('matchString not found');
         }
       }
 console.log(found);
 console.log(matches);
+console.log(browsersindex);
+console.log(browsers[browsersindex]);
       if (found && browsers[browsersindex]) {
         var browser = {
           browser_name: userAgent,
