@@ -28,6 +28,7 @@ exports.getBrowser = function (userAgent) {
         found = true;
       } else {
         var matchString = '@' + matches.join('|');
+console.log(matches);
 console.log(matchString);
         if (patternData[matchString]) {
           browsersindex = patternData[matchString];
@@ -37,10 +38,10 @@ console.log(matchString);
           console.log('matchString not found');
         }
       }
-console.log(found);
-console.log(matches);
-console.log(browsersindex);
-console.log(browsers[browsersindex]);
+//console.log(found);
+//console.log(matches);
+//console.log(browsersindex);
+//console.log(browsers[browsersindex]);
       if (found && browsers[browsersindex]) {
         var browser = {
           browser_name: userAgent,
