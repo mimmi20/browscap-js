@@ -1,7 +1,6 @@
 {
   "name": "browscap",
   "description": "PHP's get_browser/browscap.ini for Node",
-  "main": "./browscap",
   "keywords": ["browscap"],
   "version": "0.1.4",
   "author": {
