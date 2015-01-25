@@ -1,5 +1,5 @@
 var assert = require('assert'),
-  browscap = require('browscap'),
+  browscap = require('../browscap.js'),
   browser;
 
 suite('detecting', function () {
