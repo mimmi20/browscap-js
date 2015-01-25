@@ -1,6 +1,6 @@
 {
   "name": "browscap",
-  "description": "PHP's get_browser/browscap.json for Node",
+  "description": "PHP's get_browser/browscap.json for Node.js",
   "keywords": ["browscap"],
   "author": {
     "name": "Thomas Müller"
@@ -33,7 +33,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/dangrossman/node-browscap/README.markdown"
+      "url": "http://github.com/mimmi20/browscap-js/README.md"
     }
   ],
   "devDependencies": {
