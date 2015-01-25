@@ -1,10 +1,9 @@
 {
   "name": "browscap",
-  "description": "PHP's get_browser/browscap.ini for Node",
+  "description": "PHP's get_browser/browscap.json for Node",
   "keywords": ["browscap"],
-  "version": "0.1.4",
   "author": {
-    "name": "Dan Grossman"
+    "name": "Thomas Müller"
   },
   "contributors": [
     {
@@ -13,16 +12,16 @@
       "url": "http://github.com/torvalamo"
     },
     {
-      "name": "Thomas Müller",
-      "url": "https://github.com/mimmi20"
+      "name": "Contributors",
+      "homepage": "https://github.com/mimmi20/browscap-js/graphs/contributors"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/dangrossman/node-browscap.git"
+    "url": "http://github.com/mimmi20/browscap-js.git"
   },
   "bugs": {
-    "url": "http://github.com/dangrossman/node-browscap/issues"
+    "url": "http://github.com/mimmi20/browscap-js/issues"
   },
   "bin": {
     "browscap": "./browscap.js"
