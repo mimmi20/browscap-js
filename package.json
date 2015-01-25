@@ -28,7 +28,7 @@
   },
   "main": "browscap",
   "engines": {
-    "node": ">=0.2.0"
+    "node": ">=0.8.0"
   },
   "licenses": [
     {
