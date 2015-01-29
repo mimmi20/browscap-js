@@ -19,7 +19,7 @@ exports.getBrowser = function (userAgent) {
       continue;
     }
 
-    patternReplaced = pattern.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|\@]/g, "\\$&").replace(/\\\*/g, '.*').replace(/\\\?/g, '.');
+    patternReplaced = pattern.replace(/[^0-9a-zA-Z]/g, "\\$&").replace(/\\\*/g, '.*').replace(/\\\?/g, '.');
     re = new RegExp('^' + patternReplaced + '$', 'i');
 
     if (re.test(userAgent)) {
