@@ -23,10 +23,6 @@ exports.getBrowser = function (userAgent) {
     re = new RegExp('^' + patternReplaced + '$', 'i');
 
     if (re.test(userAgent)) {
-      console.log('userAgent:' + userAgent);
-      console.log('checking rule:' + pattern);
-      console.log('checking parsed rule:' + patternReplaced);
-
       var browser = {
         browser_name: userAgent,
         browser_name_regex: pattern.toLowerCase().trim()
@@ -39,13 +35,11 @@ exports.getBrowser = function (userAgent) {
         }
 
         browser[property] = browserData[property];
-        console.log('added browser data:' + property + ' => ' + browserData[property]);
       }
 
       var browserParentData = browserData;
 
       while (browserParentData['Parent']) {
-        console.log('detected Parent:' + browserParentData['Parent']);
         browserParentData = JSON.parse(patterns[browserParentData['Parent']]);
 
         for (var propertyParent in browserParentData) {
@@ -58,13 +52,7 @@ exports.getBrowser = function (userAgent) {
           }
 
           browser[propertyParent] = browserParentData[propertyParent];
-          console.log('added browser data from parent:' + propertyParent + ' => ' + browserParentData[propertyParent]);
         }
-      }
-
-      if (browser['Parent']) {
-        browser['Parent'] = patterns[browser['Parent']];
-        console.log('final parent:' + browser['Parent']);
       }
 
       return browser;
