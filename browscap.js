@@ -58,11 +58,13 @@ exports.getBrowser = function (userAgent) {
           }
 
           browser[propertyParent] = browserParentData[propertyParent];
+          console.log('added browser data from parent:' + propertyParent + ' => ' + browserParentData[propertyParent]);
         }
       }
 
       if (browser['Parent']) {
         browser['Parent'] = patterns[browser['Parent']];
+        console.log('final parent:' + browser['Parent']);
       }
 
       return browser;
