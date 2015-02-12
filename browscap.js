@@ -22,6 +22,9 @@ exports.getBrowser = function (userAgent) {
     patternReplaced = pattern.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|\@]/g, "\\$&").replace(/\\\*/g, '.*').replace(/\\\?/g, '.');
     re = new RegExp('^' + patternReplaced + '$', 'i');
 
+    console.log('checking rule:' + pattern);
+    console.log('checking parsed rule:' + patternReplaced);
+
     if (re.test(userAgent)) {
       var browser = {
         browser_name: userAgent,
