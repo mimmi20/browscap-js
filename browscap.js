@@ -5,7 +5,7 @@ exports.setJson = function (filename) {
 };
 
 exports.getBrowser = function (userAgent) {
-  var patterns, re, patternReplaced;
+  var patterns, re;
 
   patterns = require(jsonfile);
 
@@ -19,11 +19,7 @@ exports.getBrowser = function (userAgent) {
       continue;
     }
 
-    patternReplaced = pattern.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|\@]/g, "\\$&").replace(/\\\*/g, '.*').replace(/\\\?/g, '.');
-    re = new RegExp('^' + patternReplaced + '$', 'i');
-
-    console.log('checking rule:' + pattern);
-    console.log('checking parsed rule:' + patternReplaced);
+    re = new RegExp(pattern.replace(/@/g, '').replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&").replace(/\\\*/g, '.*').replace(/\\\?/g, '.'), 'i');
 
     if (re.test(userAgent)) {
       var browser = {
