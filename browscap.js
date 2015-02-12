@@ -1,4 +1,4 @@
-var jsonfile = './browscap.json';
+var jsonfile = './browscap.preprocessed.json';
 
 exports.setJson = function (filename) {
   jsonfile = filename;
