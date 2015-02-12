@@ -18,7 +18,7 @@ suite('checking for issue 544', function () {
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
-    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['JavaScript'], true);
     assert.strictEqual(browser['Cookies'], true);
@@ -27,6 +27,7 @@ suite('checking for issue 544', function () {
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], 'TAB A7-30');
     assert.strictEqual(browser['Device_Maker'], 'Lenovo');
+    assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'A3300-HV');
     assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
