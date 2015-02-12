@@ -48,7 +48,13 @@ exports.getBrowser = function (userAgent) {
             continue;
           }
 
-          browser[property] = browserData[property];
+          if (browserData[property] === 'true') {
+            browser[property] = true;
+          } else if (browserData[property] === 'false') {
+            browser[property] = false;
+          } else {
+            browser[property] = browserData[property];
+          }
         }
 
         var browserParentData = browserData;
@@ -65,7 +71,13 @@ exports.getBrowser = function (userAgent) {
               continue;
             }
 
-            browser[propertyParent] = browserParentData[propertyParent];
+            if (browserParentData[propertyParent] === 'true') {
+              browser[propertyParent] = true;
+            } else if (browserParentData[propertyParent] === 'false') {
+              browser[propertyParent] = false;
+            } else {
+              browser[propertyParent] = browserParentData[propertyParent];
+            }
           }
         }
 
