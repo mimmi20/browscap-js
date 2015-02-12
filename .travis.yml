@@ -6,8 +6,7 @@ node_js:
   - "0.8"
 
 before_script:
-  - wget http://browscap.org/stream?q=BrowsCapJSON -O /tmp/browscap.json
-  - cp /tmp/browscap.json browscap.json
+  - wget http://browscap.org/stream?q=BrowsCapJSON -O ./browscap.json
 
 script:
   - "npm test"
