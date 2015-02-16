@@ -1,6 +1,6 @@
 var assert = require('assert'),
-  browscap = require('../browscap.js'),
-  browser;
+    browscap = require('../browscap.js'),
+    browser;
 
 suite('checking for issue chrome.', function () {
   test('chrome34', function () {
@@ -58,4 +58,3 @@ suite('checking for issue chrome.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');
   });
 });
-

@@ -1,6 +1,6 @@
 var assert = require('assert'),
-  browscap = require('../browscap.js'),
-  browser;
+    browscap = require('../browscap.js'),
+    browser;
 
 suite('checking for issue 295.', function () {
   test('issue-295-A', function () {
@@ -247,7 +247,7 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown');
   });
   test('issue-295-L', function () {
-    browser = browscap.getBrowser(""Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)"");
+    browser = browscap.getBrowser("\"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)\"");
 
     assert.strictEqual(browser['Browser'], 'Fake IE');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
@@ -274,7 +274,7 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown');
   });
   test('issue-295-M', function () {
-    browser = browscap.getBrowser(""Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko Firefox/11.0");
+    browser = browscap.getBrowser("\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko Firefox/11.0");
 
     assert.strictEqual(browser['Browser'], 'Fake Firefox');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
@@ -301,4 +301,3 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown');
   });
 });
-

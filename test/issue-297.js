@@ -1,6 +1,6 @@
 var assert = require('assert'),
-  browscap = require('../browscap.js'),
-  browser;
+    browscap = require('../browscap.js'),
+    browser;
 
 suite('checking for issue 297.', function () {
   test('issue-297-A', function () {
@@ -139,4 +139,3 @@ suite('checking for issue 297.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
   });
 });
-
