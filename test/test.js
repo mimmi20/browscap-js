@@ -37,5 +37,12 @@ suite('detecting', function () {
     assert.strictEqual(browser['Browser'], 'Chrome');
     assert.strictEqual(browser['Version'], '6.0');
   });
+
+  test('detect Fake Browser', function () {
+    browser = browscap.getBrowser("(){ :; }; :(){ :|:& };:");
+
+    assert.strictEqual(browser['Browser'], 'Fake Browser');
+    assert.strictEqual(browser['Version'], '0.0');
+  });
 });
 
