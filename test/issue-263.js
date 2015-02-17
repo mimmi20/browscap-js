@@ -11,6 +11,6 @@ suite('checking for issue 263.', function () {
     assert.strictEqual(browser['Browser_Maker'], 'nutch.de');
     assert.strictEqual(browser['Version'], '1.0');
     assert.strictEqual(browser['MajorVer'], '1');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['Crawler'], true);
   });
 });

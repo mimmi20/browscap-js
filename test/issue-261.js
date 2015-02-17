@@ -18,9 +18,9 @@ suite('checking for issue 261.', function () {
     assert.strictEqual(browser['Platform_Description'], 'Windows 7');
     assert.strictEqual(browser['Platform_Bits'], '64');
     assert.strictEqual(browser['Platform_Maker'], 'Microsoft Corporation');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['CssVersion'], '3');
     assert.strictEqual(browser['Device_Name'], 'Windows Desktop');
     assert.strictEqual(browser['Device_Maker'], 'Various');

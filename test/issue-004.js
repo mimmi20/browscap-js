@@ -17,9 +17,9 @@ suite('checking for issue 004.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Sony');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Playstation 3');
     assert.strictEqual(browser['Device_Maker'], 'Sony');
     assert.strictEqual(browser['Device_Type'], 'TV Device');

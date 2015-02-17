@@ -17,9 +17,9 @@ suite('checking for issue 208.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '64');
     assert.strictEqual(browser['Platform_Maker'], 'Linux Foundation');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'Linux Desktop');
     assert.strictEqual(browser['Device_Maker'], 'Various');
     assert.strictEqual(browser['Device_Type'], 'Desktop');

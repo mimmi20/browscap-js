@@ -17,9 +17,9 @@ suite('checking for issue 493.', function () {
     assert.strictEqual(browser['Platform_Version'], '4.4');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '1');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1 2014 Edition Wi-Fi');
     assert.strictEqual(browser['Device_Maker'], 'Samsung');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
@@ -44,9 +44,9 @@ suite('checking for issue 493.', function () {
     assert.strictEqual(browser['Platform_Version'], '4.3');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '1');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1 2014 Edition Wi-Fi');
     assert.strictEqual(browser['Device_Maker'], 'Samsung');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
@@ -71,9 +71,9 @@ suite('checking for issue 493.', function () {
     assert.strictEqual(browser['Platform_Version'], '4.3');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '1');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1 2014 Edition Wi-Fi');
     assert.strictEqual(browser['Device_Maker'], 'Samsung');
     assert.strictEqual(browser['Device_Type'], 'Tablet');

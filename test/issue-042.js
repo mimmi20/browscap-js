@@ -17,9 +17,9 @@ suite('checking for issue 042.', function () {
     assert.strictEqual(browser['Platform_Version'], '10.0');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Research In Motion Limited');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'KBD');
     assert.strictEqual(browser['Device_Maker'], 'BlackBerry');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');

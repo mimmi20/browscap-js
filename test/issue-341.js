@@ -17,9 +17,9 @@ suite('checking for issue 341.', function () {
     assert.strictEqual(browser['Platform_Version'], '3.2');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'NSZ-GS7/GX70');
     assert.strictEqual(browser['Device_Maker'], 'Sony');
     assert.strictEqual(browser['Device_Type'], 'TV Device');
@@ -44,9 +44,9 @@ suite('checking for issue 341.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Linux Foundation');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'GoogleTV');
     assert.strictEqual(browser['Device_Maker'], 'Google');
     assert.strictEqual(browser['Device_Type'], 'TV Device');

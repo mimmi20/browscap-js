@@ -11,6 +11,6 @@ suite('checking for issue 258.', function () {
     assert.strictEqual(browser['Browser_Maker'], 'unknown');
     assert.strictEqual(browser['Version'], '2.0');
     assert.strictEqual(browser['MajorVer'], '2');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['Crawler'], true);
   });
 });

@@ -17,9 +17,9 @@ suite('checking for issue 092.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Symbian Foundation');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], '306');
     assert.strictEqual(browser['Device_Maker'], 'Nokia');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
@@ -44,9 +44,9 @@ suite('checking for issue 092.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '0');
     assert.strictEqual(browser['Platform_Maker'], 'unknown');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'unknown');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'unknown');

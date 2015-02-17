@@ -17,9 +17,9 @@ suite('checking for issue 224.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '0');
     assert.strictEqual(browser['Platform_Maker'], 'unknown');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'unknown');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'unknown');
@@ -44,9 +44,9 @@ suite('checking for issue 224.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '0');
     assert.strictEqual(browser['Platform_Maker'], 'unknown');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'unknown');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'unknown');
@@ -71,9 +71,9 @@ suite('checking for issue 224.', function () {
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '0');
     assert.strictEqual(browser['Platform_Maker'], 'unknown');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'unknown');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'unknown');

@@ -13,14 +13,14 @@ suite('checking for issue 414.', function () {
     assert.strictEqual(browser['Version'], '0.0');
     assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
-    assert.strictEqual(browser['Alpha'], '');
+    assert.strictEqual(browser['Alpha'], false);
     assert.strictEqual(browser['Platform'], 'unknown');
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '0');
     assert.strictEqual(browser['Platform_Maker'], 'unknown');
-    assert.strictEqual(browser['isMobileDevice'], '');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '1');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], true);
     assert.strictEqual(browser['Device_Name'], 'unknown');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'unknown');

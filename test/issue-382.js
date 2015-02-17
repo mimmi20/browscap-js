@@ -17,10 +17,10 @@ suite('checking for issue 382.', function () {
     assert.strictEqual(browser['Platform_Version'], '6.1');
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Win64'], '');
-    assert.strictEqual(browser['isMobileDevice'], '1');
-    assert.strictEqual(browser['isTablet'], '');
-    assert.strictEqual(browser['Crawler'], '');
+    assert.strictEqual(browser['Win64'], false);
+    assert.strictEqual(browser['isMobileDevice'], true);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'general Mobile Device');
     assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Mobile Device');
