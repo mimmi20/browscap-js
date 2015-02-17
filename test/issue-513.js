@@ -58,7 +58,7 @@ suite('checking for issue 513.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown');
   });
   test('issue-513-C', function () {
-    browser = browscap.getBrowser("\x22Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)\x22");
+    browser = browscap.getBrowser("\\x22Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)\\x22");
 
     assert.strictEqual(browser['Browser'], 'Fake Browser');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
@@ -85,7 +85,7 @@ suite('checking for issue 513.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown');
   });
   test('issue-513-D', function () {
-    browser = browscap.getBrowser("\x22Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36");
+    browser = browscap.getBrowser("\\x22Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36");
 
     assert.strictEqual(browser['Browser'], 'Fake Browser');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');

@@ -139,7 +139,7 @@ suite('checking for issue 500.', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
   });
   test('issue-500-F', function () {
-    browser = browscap.getBrowser("\x22Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) MsnBot-Media /1.0b\x22");
+    browser = browscap.getBrowser("\\x22Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) MsnBot-Media /1.0b\\x22");
 
     assert.strictEqual(browser['Browser'], 'Fake Browser');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');

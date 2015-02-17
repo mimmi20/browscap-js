@@ -44,5 +44,12 @@ suite('detecting', function () {
     assert.strictEqual(browser['Browser'], 'Fake Browser');
     assert.strictEqual(browser['Version'], '0.0');
   });
+
+  test('detect AhrefsBot 5.0', function () {
+    browser = browscap.getBrowser("Mozilla/5.0 (compatible; AhrefsBot/5.0; +http://ahrefs.com/robot/)");
+
+    assert.strictEqual(browser['Browser'], 'AhrefsBot');
+    assert.strictEqual(browser['Version'], '5.0');
+  });
 });
 
