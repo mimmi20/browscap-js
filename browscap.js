@@ -22,12 +22,13 @@ exports.getBrowser = function (userAgent) {
       patternData = patterns[pattern];
       found = false;
       matches = userAgent.match(re);
-      matches.shift();
 
       if (matches.length === 1) {
         browsersindex = patternData;
         found = true;
       } else {
+        matches.shift();
+
         var matchString = '@' + matches.join('|');
 
         if (patternData[matchString]) {
