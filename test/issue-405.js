@@ -48,11 +48,11 @@ suite('checking for issue 405.', function () {
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'PS Vita');
+    assert.strictEqual(browser['Device_Name'], 'Playstation Vita');
     assert.strictEqual(browser['Device_Maker'], 'Sony');
     assert.strictEqual(browser['Device_Type'], 'Console');
     assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
-    assert.strictEqual(browser['Device_Code_Name'], 'PlayStation Vita');
+    assert.strictEqual(browser['Device_Code_Name'], 'Playstation Vita');
     assert.strictEqual(browser['Device_Brand_Name'], 'Sony');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');

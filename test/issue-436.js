@@ -2248,11 +2248,11 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'general Mobile Device');
+    assert.strictEqual(browser['Device_Name'], 'general Mobile Phone');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
-    assert.strictEqual(browser['Device_Type'], 'Mobile Device');
+    assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
-    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Device');
+    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Phone');
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
@@ -2464,11 +2464,11 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['isMobileDevice'], false);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'unknown');
-    assert.strictEqual(browser['Device_Maker'], 'unknown');
+    assert.strictEqual(browser['Device_Name'], 'general Desktop');
+    assert.strictEqual(browser['Device_Maker'], 'Various');
     assert.strictEqual(browser['Device_Type'], 'Desktop');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
-    assert.strictEqual(browser['Device_Code_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
+    assert.strictEqual(browser['Device_Code_Name'], 'general Desktop');
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
@@ -2985,7 +2985,7 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'S6000L-F');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Vodafone');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
@@ -3092,7 +3092,7 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Device_Maker'], 'Medion');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'Lifetab E7312');
+    assert.strictEqual(browser['Device_Code_Name'], 'MD 98488');
     assert.strictEqual(browser['Device_Brand_Name'], 'Medion');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
@@ -3227,7 +3227,7 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Device_Maker'], 'Medion');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'Lifetab E7316');
+    assert.strictEqual(browser['Device_Code_Name'], 'MD 98282');
     assert.strictEqual(browser['Device_Brand_Name'], 'Medion');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');

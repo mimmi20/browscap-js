@@ -74,7 +74,7 @@ suite('checking for issue 291.', function () {
     assert.strictEqual(browser['isMobileDevice'], false);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'PC');
+    assert.strictEqual(browser['Device_Name'], 'Linux Desktop');
     assert.strictEqual(browser['Device_Maker'], 'Various');
     assert.strictEqual(browser['Device_Type'], 'Desktop');
     assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');

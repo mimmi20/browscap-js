@@ -21,7 +21,7 @@ suite('checking for issue 172.', function () {
     assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Surface');
-    assert.strictEqual(browser['Device_Maker'], 'Microsoft');
+    assert.strictEqual(browser['Device_Maker'], 'Microsoft Corporation');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'Surface');

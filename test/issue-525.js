@@ -678,9 +678,9 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
     assert.strictEqual(browser['Device_Code_Name'], 'Macintosh');
     assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
-    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');
   });
   test('issue-525-V', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 1320)");
@@ -1177,7 +1177,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Platform_Bits'], '32');
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
-    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['JavaScript'], true);
     assert.strictEqual(browser['Cookies'], true);
@@ -1186,7 +1186,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], '50 Titanium');
     assert.strictEqual(browser['Device_Maker'], 'Archos');
-    assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
+    assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], '50 Titanium');
     assert.strictEqual(browser['Device_Brand_Name'], 'Archos');
@@ -1797,7 +1797,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'S6000-H');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Vodafone');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');
@@ -1857,7 +1857,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['IFrames'], false);
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], 'KBD');
-    assert.strictEqual(browser['Device_Maker'], 'BlackBerry');
+    assert.strictEqual(browser['Device_Maker'], 'Research In Motion Limited');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'KBD');
@@ -2402,7 +2402,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], 'Tablet');
-    assert.strictEqual(browser['Device_Maker'], 'Cat');
+    assert.strictEqual(browser['Device_Maker'], 'CatSound');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'Tablet');
@@ -3073,12 +3073,12 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true);
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
-    assert.strictEqual(browser['Device_Name'], 'Viera');
+    assert.strictEqual(browser['Device_Name'], 'Viera TV');
     assert.strictEqual(browser['Device_Maker'], 'Panasonic');
     assert.strictEqual(browser['Device_Type'], 'TV Device');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
-    assert.strictEqual(browser['Device_Code_Name'], 'Viera');
-    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
+    assert.strictEqual(browser['Device_Code_Name'], 'Viera TV');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Panasonic');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
@@ -3323,7 +3323,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
     assert.strictEqual(browser['Win64'], false);
     assert.strictEqual(browser['isMobileDevice'], true);
-    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['JavaScript'], true);
     assert.strictEqual(browser['Cookies'], true);
@@ -3332,7 +3332,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], 'Galaxy Tab 8.9 LTE');
     assert.strictEqual(browser['Device_Maker'], 'Samsung');
-    assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
+    assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'GT-P7320');
     assert.strictEqual(browser['Device_Brand_Name'], 'Samsung');
@@ -4483,7 +4483,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true);
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
-    assert.strictEqual(browser['Device_Name'], 'S6000-F');
+    assert.strictEqual(browser['Device_Name'], 'IdeaTab S6000-F');
     assert.strictEqual(browser['Device_Maker'], 'Lenovo');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
@@ -5001,7 +5001,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'A3000-H');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Vodafone');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');

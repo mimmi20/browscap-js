@@ -23,7 +23,7 @@ suite('checking for issue 341.', function () {
     assert.strictEqual(browser['Device_Name'], 'NSZ-GS7/GX70');
     assert.strictEqual(browser['Device_Maker'], 'Sony');
     assert.strictEqual(browser['Device_Type'], 'TV Device');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
     assert.strictEqual(browser['Device_Code_Name'], 'NSZ-GS7/GX70');
     assert.strictEqual(browser['Device_Brand_Name'], 'Sony');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');

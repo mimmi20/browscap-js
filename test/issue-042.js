@@ -21,7 +21,7 @@ suite('checking for issue 042.', function () {
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'KBD');
-    assert.strictEqual(browser['Device_Maker'], 'BlackBerry');
+    assert.strictEqual(browser['Device_Maker'], 'Research In Motion Limited');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'KBD');

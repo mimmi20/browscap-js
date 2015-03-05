@@ -131,7 +131,7 @@ suite('checking for issue 325.', function () {
     assert.strictEqual(browser['Device_Name'], 'Model S');
     assert.strictEqual(browser['Device_Maker'], 'Tesla Motors');
     assert.strictEqual(browser['Device_Type'], 'Car Entertainment System');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
     assert.strictEqual(browser['Device_Code_Name'], 'Model S');
     assert.strictEqual(browser['Device_Brand_Name'], 'Tesla');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');

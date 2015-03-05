@@ -50,7 +50,7 @@ suite('checking for issue 438.', function () {
     assert.strictEqual(browser['Device_Name'], 'Nuron');
     assert.strictEqual(browser['Device_Maker'], 'Nokia');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], '5230');
     assert.strictEqual(browser['Device_Brand_Name'], 'Nokia');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');

@@ -20,12 +20,12 @@ suite('checking for issue 308.', function () {
     assert.strictEqual(browser['isMobileDevice'], false);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'unknown');
-    assert.strictEqual(browser['Device_Maker'], 'unknown');
+    assert.strictEqual(browser['Device_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Desktop');
-    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
-    assert.strictEqual(browser['Device_Code_Name'], 'unknown');
-    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
+    assert.strictEqual(browser['Device_Code_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Trident');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation');

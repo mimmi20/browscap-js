@@ -240,8 +240,8 @@ suite('checking for issue 323.', function () {
     assert.strictEqual(browser['Device_Maker'], 'Amazon.com, Inc.');
     assert.strictEqual(browser['Device_Type'], 'Ebook Reader');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Device');
-    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Code_Name'], 'Kindle');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Amazon');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');

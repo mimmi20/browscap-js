@@ -47,11 +47,11 @@ suite('checking for issue 084.', function () {
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'general Mobile Device');
+    assert.strictEqual(browser['Device_Name'], 'general Mobile Phone');
     assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Device');
+    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Phone');
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Name'], 'U3');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');

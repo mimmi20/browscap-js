@@ -76,7 +76,7 @@ suite('checking for issue 342.', function () {
     assert.strictEqual(browser['Device_Maker'], 'Nokia');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
-    assert.strictEqual(browser['Device_Code_Name'], 'Nokia808PureView');
+    assert.strictEqual(browser['Device_Code_Name'], '808PureView');
     assert.strictEqual(browser['Device_Brand_Name'], 'Nokia');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
