@@ -359,7 +359,7 @@ suite('checking for issue 267.', function () {
   test('issue-267-N', function () {
     browser = browscap.getBrowser("Microsoft Office Mobile/15.0");
 
-    assert.strictEqual(browser['Browser'], 'Microsoft Outlook');
+    assert.strictEqual(browser['Browser'], 'Outlook');
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '0');
     assert.strictEqual(browser['Browser_Maker'], 'Microsoft Corporation');

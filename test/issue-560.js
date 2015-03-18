@@ -25,11 +25,11 @@ suite('checking for issue 560.', function () {
     assert.strictEqual(browser['Frames'], true);
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
-    assert.strictEqual(browser['Device_Name'], 'general Mobile Device');
-    assert.strictEqual(browser['Device_Maker'], 'Various');
+    assert.strictEqual(browser['Device_Name'], 'general Mobile Phone');
+    assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Device');
+    assert.strictEqual(browser['Device_Code_Name'], 'general Mobile Phone');
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Gecko');
     assert.strictEqual(browser['RenderingEngine_Version'], '32.0');

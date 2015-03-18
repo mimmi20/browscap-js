@@ -438,7 +438,7 @@ suite('checking for issue 492.', function () {
   test('issue-492-U', function () {
     browser = browscap.getBrowser("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/7.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; Microsoft Outlook 15.0.4615; ms-office; MSOffice 15)");
 
-    assert.strictEqual(browser['Browser'], 'Microsoft Outlook');
+    assert.strictEqual(browser['Browser'], 'Outlook');
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '64');
     assert.strictEqual(browser['Browser_Maker'], 'Microsoft Corporation');

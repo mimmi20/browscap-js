@@ -762,7 +762,7 @@ suite('checking for issue 317.', function () {
   test('issue-317-AC', function () {
     browser = browscap.getBrowser("Microsoft Office/14.0 (Windows NT 6.1; Microsoft Outlook 14.0.4760; Pro; ms-office; MSOffice 14)");
 
-    assert.strictEqual(browser['Browser'], 'Microsoft Outlook');
+    assert.strictEqual(browser['Browser'], 'Outlook');
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Microsoft Corporation');
