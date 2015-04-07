@@ -5,14 +5,12 @@ browscap-js is a port of PHP's get_browser function to JavaScript
 It makes available a `getBrowser` function which takes a browser user agent string
 and returns an associative array of properties and abilities of that browser.
 
-You must provide a browscap.json file, which you may get here:
-
-http://browscap.org/
+You must use a preprocessed browscap.json file, which is provided too with the name `browscap.preprocessed.json`:
 
 Example:
 
-	var browscap = require('browscap');
-	browscap.setJson('./browscap.json');
+	var browscap = require('browscap-js');
+	browscap.setJson('./browscap.preprocessed.json');
 
 	var browser = browscap.getBrowser("Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; WinTSI 05.11.2009)");
 
@@ -24,7 +22,7 @@ improve performance.
 
 # Installation
 
-Using npm run `npm install browscap`
+Using npm run `npm install browscap-js`
 
 You can get npm from http://npmjs.org/
 

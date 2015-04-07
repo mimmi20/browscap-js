@@ -1,20 +1,13 @@
 {
-  "name": "browscap",
+  "name": "browscap-js",
   "description": "PHP's get_browser/browscap.json for Node.js",
-  "keywords": ["browscap"],
-  "author": {
-    "name": "Thomas Müller"
-  },
+  "keywords": [
+    "browscap"
+  ],
+  "author": "Thomas Müller",
   "contributors": [
-    {
-      "name": "Tor Valamo",
-      "email": "tor.valamo@gmail.com",
-      "url": "http://github.com/torvalamo"
-    },
-    {
-      "name": "Contributors",
-      "homepage": "https://github.com/mimmi20/browscap-js/graphs/contributors"
-    }
+    "Tor Valamo <tor.valamo@gmail.com> (http://github.com/torvalamo)",
+    "Thomas Müller (http://github.com/mimmi20)"
   ],
   "repository": {
     "type": "git",
@@ -26,7 +19,7 @@
   "bin": {
     "browscap": "./browscap.js"
   },
-  "main": "browscap",
+  "main": "browscap-js",
   "engines": {
     "node": ">=0.8.0"
   },
@@ -41,5 +34,12 @@
   },
   "scripts": {
     "test": "mocha -u tdd ./test/*.js"
-  }
+  },
+  "homepage": "https://github.com/mimmi20/browscap-js",
+  "version": "1.0.6001",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "license": "MIT"
 }
