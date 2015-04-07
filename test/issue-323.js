@@ -269,9 +269,9 @@ suite('checking for issue 323.', function () {
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'iPad');
     assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
-    assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
   });
   test('issue-323-K', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (iPad; CPU OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) GSA/3.2.1.25875 Mobile/10A8426 Safari/8536.25");
@@ -409,8 +409,8 @@ suite('checking for issue 323.', function () {
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'iPod Touch');
     assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
-    assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
   });
 });

@@ -230,10 +230,10 @@ suite('checking for issue 539.', function () {
   test('issue-539-J', function () {
     browser = browscap.getBrowser("MQQBrowser/2.7 Mozilla/5.0 (Linux; U; Android A5000; in-id; A5000 Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
 
-    assert.strictEqual(browser['Browser'], 'MQQBrowser');
+    assert.strictEqual(browser['Browser'], 'QQbrowser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown');
+    assert.strictEqual(browser['Browser_Maker'], 'Tencent Ltd.');
     assert.strictEqual(browser['Version'], '2.7');
     assert.strictEqual(browser['MajorVer'], '2');
     assert.strictEqual(browser['MinorVer'], '7');
@@ -262,10 +262,10 @@ suite('checking for issue 539.', function () {
   test('issue-539-K', function () {
     browser = browscap.getBrowser("MQQBrowser/36 Mozilla/5.0 (iPhone 4S; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 Safari/7534.48.3");
 
-    assert.strictEqual(browser['Browser'], 'MQQBrowser');
+    assert.strictEqual(browser['Browser'], 'QQbrowser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown');
+    assert.strictEqual(browser['Browser_Maker'], 'Tencent Ltd.');
     assert.strictEqual(browser['Version'], '0.0');
     assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
@@ -294,10 +294,10 @@ suite('checking for issue 539.', function () {
   test('issue-539-L', function () {
     browser = browscap.getBrowser("MQQBrowser/Mini2.4 (SAMSUNG-GT-E2252)");
 
-    assert.strictEqual(browser['Browser'], 'MQQBrowser Mini');
+    assert.strictEqual(browser['Browser'], 'QQbrowser Mini');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown');
+    assert.strictEqual(browser['Browser_Maker'], 'Tencent Ltd.');
     assert.strictEqual(browser['Version'], '2.4');
     assert.strictEqual(browser['MajorVer'], '2');
     assert.strictEqual(browser['MinorVer'], '4');

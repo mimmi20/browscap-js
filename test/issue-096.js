@@ -384,10 +384,10 @@ suite('checking for issue 096.', function () {
   test('issue-096-BQ', function () {
     browser = browscap.getBrowser("MQQBrowser/3.2/Mozilla/5.0 (Linux; U; Android 4.1.2; en-gb; GT-N7100 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30");
 
-    assert.strictEqual(browser['Browser'], 'MQQBrowser');
+    assert.strictEqual(browser['Browser'], 'QQbrowser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown');
+    assert.strictEqual(browser['Browser_Maker'], 'Tencent Ltd.');
     assert.strictEqual(browser['Version'], '3.2');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '2');

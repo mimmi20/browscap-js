@@ -21,7 +21,7 @@ suite('checking for issue 385.', function () {
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'MI 3W');
-    assert.strictEqual(browser['Device_Maker'], 'Xiaomi');
+    assert.strictEqual(browser['Device_Maker'], 'Xiaomi Tech');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'MI 3W');
