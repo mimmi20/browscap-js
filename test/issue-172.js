@@ -20,12 +20,12 @@ suite('checking for issue 172.', function () {
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);
-    assert.strictEqual(browser['Device_Name'], 'Surface');
-    assert.strictEqual(browser['Device_Maker'], 'Microsoft Corporation');
+    assert.strictEqual(browser['Device_Name'], 'general Tablet');
+    assert.strictEqual(browser['Device_Maker'], 'unknown');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
-    assert.strictEqual(browser['Device_Code_Name'], 'Surface');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Microsoft');
+    assert.strictEqual(browser['Device_Code_Name'], 'general Tablet');
+    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Trident');
     assert.strictEqual(browser['RenderingEngine_Version'], '7.0');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation');

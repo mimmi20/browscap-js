@@ -172,6 +172,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.11');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '11');
@@ -199,6 +200,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.8');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '8');
@@ -1333,6 +1335,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.12');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '12');
@@ -1822,6 +1825,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.11');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '11');
@@ -1930,6 +1934,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.8');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '8');
@@ -1957,6 +1962,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.8');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '8');
@@ -2038,6 +2044,7 @@ suite('checking for issue 096.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.8');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '8');

@@ -6,7 +6,7 @@ suite('checking for issue 120.', function () {
   test('issue-120', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Version/6.0 Mobile/10A525 Safari/8536.25");
 
-    assert.strictEqual(browser['Browser'], 'Google Page Speed');
+    assert.strictEqual(browser['Browser'], 'Google PageSpeed Insights');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Google Inc');

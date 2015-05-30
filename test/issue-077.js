@@ -40,10 +40,10 @@ suite('checking for issue 077.', function () {
     assert.strictEqual(browser['Version'], '2.1');
     assert.strictEqual(browser['MajorVer'], '2');
     assert.strictEqual(browser['MinorVer'], '1');
-    assert.strictEqual(browser['Platform'], 'JAVA');
+    assert.strictEqual(browser['Platform'], 'Linux Smartphone OS');
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '32');
-    assert.strictEqual(browser['Platform_Maker'], 'Oracle');
+    assert.strictEqual(browser['Platform_Maker'], 'Linux Foundation');
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], true);
@@ -172,6 +172,7 @@ suite('checking for issue 077.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.11');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '11');

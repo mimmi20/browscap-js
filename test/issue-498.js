@@ -60,7 +60,7 @@ suite('checking for issue 498.', function () {
   test('issue-498-C', function () {
     browser = browscap.getBrowser("python-requests/2.2.1 CPython/2.7.3 Linux/3.2.0-56-generic");
 
-    assert.strictEqual(browser['Browser'], 'Python-urllib');
+    assert.strictEqual(browser['Browser'], 'python-requests');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Python Software Foundation');
@@ -820,6 +820,7 @@ suite('checking for issue 498.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'unknown');
     assert.strictEqual(browser['Version'], '3.30');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '30');

@@ -13,10 +13,10 @@ suite('checking for issue 013.', function () {
     assert.strictEqual(browser['Version'], '23.0');
     assert.strictEqual(browser['MajorVer'], '23');
     assert.strictEqual(browser['MinorVer'], '0');
-    assert.strictEqual(browser['Platform'], 'FirefoxOS');
+    assert.strictEqual(browser['Platform'], 'Android');
     assert.strictEqual(browser['Platform_Version'], 'unknown');
     assert.strictEqual(browser['Platform_Bits'], '32');
-    assert.strictEqual(browser['Platform_Maker'], 'Mozilla Foundation');
+    assert.strictEqual(browser['Platform_Maker'], 'Google Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], true);
     assert.strictEqual(browser['Crawler'], false);

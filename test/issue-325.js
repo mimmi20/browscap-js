@@ -10,6 +10,7 @@ suite('checking for issue 325.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.19');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '19');
@@ -37,6 +38,7 @@ suite('checking for issue 325.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.19');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '19');

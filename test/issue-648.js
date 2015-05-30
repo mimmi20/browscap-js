@@ -1,0 +1,114 @@
+var assert = require('assert'),
+    browscap = require('../browscap.js'),
+    browser;
+
+suite('checking for issue 648.', function () {
+  test('issue-648-A', function () {
+    browser = browscap.getBrowser("AppleCoreMedia/1.0.0.12F69 (Apple TV; U; CPU OS 8_3 like Mac OS X; en_us)");
+
+    assert.strictEqual(browser['Browser'], 'AppleCoreMedia');
+    assert.strictEqual(browser['Browser_Type'], 'Application');
+    assert.strictEqual(browser['Browser_Bits'], '32');
+    assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Version'], '1.0');
+    assert.strictEqual(browser['MajorVer'], '1');
+    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Platform'], 'ATV OS X');
+    assert.strictEqual(browser['Platform_Version'], '8.3');
+    assert.strictEqual(browser['Platform_Bits'], '32');
+    assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
+    assert.strictEqual(browser['JavaScript'], false);
+    assert.strictEqual(browser['Cookies'], false);
+    assert.strictEqual(browser['Frames'], false);
+    assert.strictEqual(browser['IFrames'], false);
+    assert.strictEqual(browser['Tables'], false);
+    assert.strictEqual(browser['VBScript'], false);
+    assert.strictEqual(browser['JavaApplets'], true);
+    assert.strictEqual(browser['ActiveXControls'], false);
+    assert.strictEqual(browser['BackgroundSounds'], false);
+    assert.strictEqual(browser['Device_Name'], 'AppleTV');
+    assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Device_Type'], 'TV Device');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
+    assert.strictEqual(browser['Device_Code_Name'], 'AppleTV');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
+    assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
+  });
+  test('issue-648-B', function () {
+    browser = browscap.getBrowser("Mail/53 CFNetwork/711.2.23 Darwin/14.0.0");
+
+    assert.strictEqual(browser['Browser'], 'Apple Mail');
+    assert.strictEqual(browser['Browser_Type'], 'Email Client');
+    assert.strictEqual(browser['Browser_Bits'], '32');
+    assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Version'], '0.0');
+    assert.strictEqual(browser['MajorVer'], '0');
+    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Platform'], 'Darwin');
+    assert.strictEqual(browser['Platform_Version'], 'unknown');
+    assert.strictEqual(browser['Platform_Bits'], '32');
+    assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
+    assert.strictEqual(browser['JavaScript'], false);
+    assert.strictEqual(browser['Cookies'], false);
+    assert.strictEqual(browser['Frames'], false);
+    assert.strictEqual(browser['IFrames'], false);
+    assert.strictEqual(browser['Tables'], false);
+    assert.strictEqual(browser['VBScript'], false);
+    assert.strictEqual(browser['JavaApplets'], true);
+    assert.strictEqual(browser['ActiveXControls'], false);
+    assert.strictEqual(browser['BackgroundSounds'], false);
+    assert.strictEqual(browser['Device_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Device_Type'], 'Desktop');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
+    assert.strictEqual(browser['Device_Code_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
+    assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
+  });
+  test('issue-648-C', function () {
+    browser = browscap.getBrowser("Safari/10600.3.18 CFNetwork/720.2.4 Darwin/14.1.0 (x86_64)");
+
+    assert.strictEqual(browser['Browser'], 'Safari');
+    assert.strictEqual(browser['Browser_Type'], 'Browser');
+    assert.strictEqual(browser['Browser_Bits'], '64');
+    assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Version'], '8.0');
+    assert.strictEqual(browser['MajorVer'], '8');
+    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Platform'], 'Darwin');
+    assert.strictEqual(browser['Platform_Version'], 'unknown');
+    assert.strictEqual(browser['Platform_Bits'], '64');
+    assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['isMobileDevice'], false);
+    assert.strictEqual(browser['isTablet'], false);
+    assert.strictEqual(browser['Crawler'], false);
+    assert.strictEqual(browser['JavaScript'], true);
+    assert.strictEqual(browser['Cookies'], true);
+    assert.strictEqual(browser['Frames'], true);
+    assert.strictEqual(browser['IFrames'], true);
+    assert.strictEqual(browser['Tables'], true);
+    assert.strictEqual(browser['VBScript'], false);
+    assert.strictEqual(browser['JavaApplets'], true);
+    assert.strictEqual(browser['ActiveXControls'], false);
+    assert.strictEqual(browser['BackgroundSounds'], false);
+    assert.strictEqual(browser['Device_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
+    assert.strictEqual(browser['Device_Type'], 'Desktop');
+    assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
+    assert.strictEqual(browser['Device_Code_Name'], 'Macintosh');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Apple');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
+    assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');
+  });
+});

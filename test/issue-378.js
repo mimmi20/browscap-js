@@ -466,7 +466,7 @@ suite('checking for issue 378.', function () {
     browser = browscap.getBrowser("AppleCoreMedia/1.0.0.11D5145e (iPad; U; CPU OS 7_1 like Mac OS X; fr_fr)");
 
     assert.strictEqual(browser['Browser'], 'AppleCoreMedia');
-    assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
+    assert.strictEqual(browser['Browser_Type'], 'Application');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Version'], '1.0');
@@ -478,7 +478,7 @@ suite('checking for issue 378.', function () {
     assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], true);
-    assert.strictEqual(browser['Crawler'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'iPad');
     assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Tablet');
@@ -493,7 +493,7 @@ suite('checking for issue 378.', function () {
     browser = browscap.getBrowser("AppleCoreMedia/1.0.0.11D169 (iPhone; U; CPU OS 7_1 like Mac OS X; fr_fr)");
 
     assert.strictEqual(browser['Browser'], 'AppleCoreMedia');
-    assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
+    assert.strictEqual(browser['Browser_Type'], 'Application');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Version'], '1.0');
@@ -505,7 +505,7 @@ suite('checking for issue 378.', function () {
     assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
-    assert.strictEqual(browser['Crawler'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'iPhone');
     assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone');
@@ -520,7 +520,7 @@ suite('checking for issue 378.', function () {
     browser = browscap.getBrowser("AppleCoreMedia/1.0.0.11D201 (iPod touch; U; CPU OS 7_1_1 like Mac OS X; fr_fr)");
 
     assert.strictEqual(browser['Browser'], 'AppleCoreMedia');
-    assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
+    assert.strictEqual(browser['Browser_Type'], 'Application');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Version'], '1.0');
@@ -532,7 +532,7 @@ suite('checking for issue 378.', function () {
     assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
     assert.strictEqual(browser['isMobileDevice'], true);
     assert.strictEqual(browser['isTablet'], false);
-    assert.strictEqual(browser['Crawler'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'iPod Touch');
     assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Mobile Device');
@@ -547,7 +547,7 @@ suite('checking for issue 378.', function () {
     browser = browscap.getBrowser("AppleCoreMedia/1.0.0.11G63b (Macintosh; U; Intel Mac OS X 10_7_5; fr_ca)");
 
     assert.strictEqual(browser['Browser'], 'AppleCoreMedia');
-    assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
+    assert.strictEqual(browser['Browser_Type'], 'Application');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Version'], '1.0');
@@ -559,7 +559,7 @@ suite('checking for issue 378.', function () {
     assert.strictEqual(browser['Platform_Maker'], 'Apple Inc');
     assert.strictEqual(browser['isMobileDevice'], false);
     assert.strictEqual(browser['isTablet'], false);
-    assert.strictEqual(browser['Crawler'], true);
+    assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Macintosh');
     assert.strictEqual(browser['Device_Maker'], 'Apple Inc');
     assert.strictEqual(browser['Device_Type'], 'Desktop');

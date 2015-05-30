@@ -552,6 +552,7 @@ suite('checking for issue 267.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.15');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '15');
@@ -579,6 +580,7 @@ suite('checking for issue 267.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.15');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '15');
@@ -2421,6 +2423,7 @@ suite('checking for issue 267.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '3.16');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '16');
@@ -3254,7 +3257,7 @@ suite('checking for issue 267.', function () {
   test('issue-267-DW', function () {
     browser = browscap.getBrowser("psbot-image (+http://www.picsearch.com/bot.html)");
 
-    assert.strictEqual(browser['Browser'], 'Psbot');
+    assert.strictEqual(browser['Browser'], 'Picsearch Bot');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '0');
     assert.strictEqual(browser['Browser_Maker'], 'Picsearch Services AB');

@@ -2900,6 +2900,7 @@ suite('checking for issue 513.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '1.0');
     assert.strictEqual(browser['MajorVer'], '1');
     assert.strictEqual(browser['MinorVer'], '0');
@@ -3066,7 +3067,7 @@ suite('checking for issue 513.', function () {
     assert.strictEqual(browser['MajorVer'], '11');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'Win10');
-    assert.strictEqual(browser['Platform_Version'], '10');
+    assert.strictEqual(browser['Platform_Version'], '10.0');
     assert.strictEqual(browser['Platform_Bits'], '64');
     assert.strictEqual(browser['Platform_Maker'], 'Microsoft Corporation');
     assert.strictEqual(browser['Win64'], true);
@@ -3146,7 +3147,7 @@ suite('checking for issue 513.', function () {
   test('issue-513-DR', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Windows NT 6.4; Trident/8.0; rv:550) AppleWebKit/537.36 (KHTML, like Gecko) Version/7.0 Safari/550.1.3");
 
-    assert.strictEqual(browser['Browser'], 'IE');
+    assert.strictEqual(browser['Browser'], 'Edge');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Microsoft Corporation');
@@ -3161,14 +3162,18 @@ suite('checking for issue 513.', function () {
     assert.strictEqual(browser['isMobileDevice'], false);
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
+    assert.strictEqual(browser['VBScript'], false);
+    assert.strictEqual(browser['JavaApplets'], false);
+    assert.strictEqual(browser['ActiveXControls'], false);
+    assert.strictEqual(browser['BackgroundSounds'], false);
     assert.strictEqual(browser['Device_Name'], 'Windows Desktop');
     assert.strictEqual(browser['Device_Maker'], 'Various');
     assert.strictEqual(browser['Device_Type'], 'Desktop');
     assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
     assert.strictEqual(browser['Device_Code_Name'], 'Windows Desktop');
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
-    assert.strictEqual(browser['RenderingEngine_Name'], 'Trident');
-    assert.strictEqual(browser['RenderingEngine_Version'], '8.0');
+    assert.strictEqual(browser['RenderingEngine_Name'], 'Edge');
+    assert.strictEqual(browser['RenderingEngine_Version'], '12.0');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation');
   });
   test('issue-513-DS', function () {

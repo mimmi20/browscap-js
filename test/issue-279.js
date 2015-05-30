@@ -960,7 +960,7 @@ suite('checking for issue 279.', function () {
     assert.strictEqual(browser['Browser'], 'Exabot');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '0');
-    assert.strictEqual(browser['Browser_Maker'], 'www.exabot.com');
+    assert.strictEqual(browser['Browser_Maker'], 'Dasault Systems');
     assert.strictEqual(browser['Version'], '3.0');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '0');

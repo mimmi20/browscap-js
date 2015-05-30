@@ -1203,7 +1203,7 @@ suite('checking for issue 436.', function () {
   test('issue-436-AS', function () {
     browser = browscap.getBrowser("python-requests/2.3.0 CPython/2.7.6 Linux/3.13.0-24-generic");
 
-    assert.strictEqual(browser['Browser'], 'Python-urllib');
+    assert.strictEqual(browser['Browser'], 'python-requests');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Python Software Foundation');
@@ -1419,7 +1419,7 @@ suite('checking for issue 436.', function () {
   test('issue-436-BA', function () {
     browser = browscap.getBrowser("python-requests/2.0.0 CPython/2.6.6 Linux/2.6.32-431.el6.x86_64");
 
-    assert.strictEqual(browser['Browser'], 'Python-urllib');
+    assert.strictEqual(browser['Browser'], 'python-requests');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '64');
     assert.strictEqual(browser['Browser_Maker'], 'Python Software Foundation');
@@ -2985,7 +2985,7 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'S6000L-F');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Vodafone');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');

@@ -33,7 +33,7 @@ suite('checking for issue 234.', function () {
   test('issue-234-B', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Coast/3.0.0.74604 Mobile/11D201 Safari/7534.48.3");
 
-    assert.strictEqual(browser['Browser'], 'Opera Coast');
+    assert.strictEqual(browser['Browser'], 'Coast');
     assert.strictEqual(browser['Browser_Type'], 'Application');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Opera Software ASA');

@@ -91,12 +91,12 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true);
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
-    assert.strictEqual(browser['Device_Name'], 'Windows Desktop');
-    assert.strictEqual(browser['Device_Maker'], 'Various');
-    assert.strictEqual(browser['Device_Type'], 'Desktop');
+    assert.strictEqual(browser['Device_Name'], 'Xbox One');
+    assert.strictEqual(browser['Device_Maker'], 'Microsoft Corporation');
+    assert.strictEqual(browser['Device_Type'], 'TV Device');
     assert.strictEqual(browser['Device_Pointing_Method'], 'mouse');
-    assert.strictEqual(browser['Device_Code_Name'], 'Windows Desktop');
-    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Code_Name'], 'Xbox One');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Microsoft');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Trident');
     assert.strictEqual(browser['RenderingEngine_Version'], '6.0');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation');
@@ -401,6 +401,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'unknown');
     assert.strictEqual(browser['Version'], '3.38');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '38');
@@ -2706,6 +2707,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'unknown');
     assert.strictEqual(browser['Version'], '3.35');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '35');
@@ -4144,10 +4146,10 @@ suite('checking for issue 525.', function () {
   test('issue-525-DZ', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (PlayStation 4 2.00) AppleWebKit/537.73 (KHTML, like Gecko)");
 
-    assert.strictEqual(browser['Browser'], 'Playstation Browser');
+    assert.strictEqual(browser['Browser'], 'NetFront');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Sony');
+    assert.strictEqual(browser['Browser_Maker'], 'Access');
     assert.strictEqual(browser['Version'], '0.0');
     assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
@@ -4160,7 +4162,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['JavaScript'], true);
     assert.strictEqual(browser['Cookies'], true);
-    assert.strictEqual(browser['Frames'], false);
+    assert.strictEqual(browser['Frames'], true);
     assert.strictEqual(browser['IFrames'], true);
     assert.strictEqual(browser['Tables'], true);
     assert.strictEqual(browser['Device_Name'], 'Playstation 4');
@@ -4212,6 +4214,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'unknown');
     assert.strictEqual(browser['Version'], '3.38');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '38');
@@ -4336,7 +4339,7 @@ suite('checking for issue 525.', function () {
   test('issue-525-EF', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.28 (KHTML, like Gecko) NX/3.0.3.12.14 NintendoBrowser/4.1.0.9584.EU");
 
-    assert.strictEqual(browser['Browser'], 'NetFront');
+    assert.strictEqual(browser['Browser'], 'NetFront NX');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '0');
     assert.strictEqual(browser['Browser_Maker'], 'Access');
@@ -5001,7 +5004,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Device_Type'], 'Tablet');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen');
     assert.strictEqual(browser['Device_Code_Name'], 'A3000-H');
-    assert.strictEqual(browser['Device_Brand_Name'], 'Vodafone');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Lenovo');
     assert.strictEqual(browser['RenderingEngine_Name'], 'Blink');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc');

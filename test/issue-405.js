@@ -6,10 +6,10 @@ suite('checking for issue 405.', function () {
   test('issue-405-A', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (PlayStation 4 1.75) AppleWebKit/536.26 (KHTML, like Gecko)");
 
-    assert.strictEqual(browser['Browser'], 'Playstation Browser');
+    assert.strictEqual(browser['Browser'], 'NetFront');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Sony');
+    assert.strictEqual(browser['Browser_Maker'], 'Access');
     assert.strictEqual(browser['Version'], '0.0');
     assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
@@ -37,6 +37,7 @@ suite('checking for issue 405.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'unknown');
     assert.strictEqual(browser['Version'], '3.2');
     assert.strictEqual(browser['MajorVer'], '3');
     assert.strictEqual(browser['MinorVer'], '2');

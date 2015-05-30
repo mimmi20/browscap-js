@@ -6,7 +6,7 @@ suite('checking for issue 417.', function () {
   test('issue-417', function () {
     browser = browscap.getBrowser("psbot-page (+http://www.picsearch.com/bot.html)");
 
-    assert.strictEqual(browser['Browser'], 'Psbot');
+    assert.strictEqual(browser['Browser'], 'Picsearch Bot');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '0');
     assert.strictEqual(browser['Browser_Maker'], 'Picsearch Services AB');

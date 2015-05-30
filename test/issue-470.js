@@ -141,7 +141,7 @@ suite('checking for issue 470.', function () {
   test('issue-470-F', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.28 (KHTML, like Gecko) NX/3.0.3.12.11 NintendoBrowser/2.1.0.9559.EU");
 
-    assert.strictEqual(browser['Browser'], 'NetFront');
+    assert.strictEqual(browser['Browser'], 'NetFront NX');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '0');
     assert.strictEqual(browser['Browser_Maker'], 'Access');

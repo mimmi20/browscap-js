@@ -226,6 +226,7 @@ suite('checking for issue 323.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Amazon.com, Inc.');
+    assert.strictEqual(browser['Browser_Modus'], 'Desktop Mode');
     assert.strictEqual(browser['Version'], '1.0');
     assert.strictEqual(browser['MajorVer'], '1');
     assert.strictEqual(browser['MinorVer'], '0');
