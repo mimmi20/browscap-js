@@ -19,7 +19,7 @@
   "bin": {
     "browscap": "./browscap.js"
   },
-  "main": "browscap-js",
+  "main": "browscap",
   "engines": {
     "node": ">=0.8.0"
   },
