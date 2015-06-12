@@ -1,6 +1,4 @@
 exports.getBrowser = function (userAgent) {
-  var browsersindex;
-
   var patterns = require('./sources/browscap.preprocessed.patterns.json').patterns;
 
   // Test user agent against each browser regex
