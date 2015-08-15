@@ -9,7 +9,7 @@ suite('checking for issue 052.', function () {
     assert.strictEqual(browser['Browser'], 'Waterfox');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '64');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown');
+    assert.strictEqual(browser['Browser_Maker'], 'www.waterfoxproject.org');
     assert.strictEqual(browser['Version'], '26.0');
     assert.strictEqual(browser['MajorVer'], '26');
     assert.strictEqual(browser['MinorVer'], '0');

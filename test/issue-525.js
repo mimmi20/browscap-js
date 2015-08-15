@@ -3413,9 +3413,9 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Version'], '0.0');
-    assert.strictEqual(browser['MajorVer'], '0');
-    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Version'], '3.2');
+    assert.strictEqual(browser['MajorVer'], '3');
+    assert.strictEqual(browser['MinorVer'], '2');
     assert.strictEqual(browser['Platform'], 'iOS');
     assert.strictEqual(browser['Platform_Version'], '3.2');
     assert.strictEqual(browser['Platform_Bits'], '32');

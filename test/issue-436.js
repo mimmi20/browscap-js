@@ -2751,9 +2751,9 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Version'], '0.0');
-    assert.strictEqual(browser['MajorVer'], '0');
-    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Version'], '5.1');
+    assert.strictEqual(browser['MajorVer'], '5');
+    assert.strictEqual(browser['MinorVer'], '1');
     assert.strictEqual(browser['Platform'], 'iOS');
     assert.strictEqual(browser['Platform_Version'], '5.1');
     assert.strictEqual(browser['Platform_Bits'], '32');
@@ -2888,9 +2888,9 @@ suite('checking for issue 436.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Version'], '0.0');
-    assert.strictEqual(browser['MajorVer'], '0');
-    assert.strictEqual(browser['MinorVer'], '0');
+    assert.strictEqual(browser['Version'], '4.2');
+    assert.strictEqual(browser['MajorVer'], '4');
+    assert.strictEqual(browser['MinorVer'], '2');
     assert.strictEqual(browser['Platform'], 'iOS');
     assert.strictEqual(browser['Platform_Version'], '4.2');
     assert.strictEqual(browser['Platform_Bits'], '32');

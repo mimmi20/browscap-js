@@ -147,8 +147,8 @@ suite('checking for issue 279.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Version'], '0.0');
-    assert.strictEqual(browser['MajorVer'], '0');
+    assert.strictEqual(browser['Version'], '5.0');
+    assert.strictEqual(browser['MajorVer'], '5');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'MacOSX');
     assert.strictEqual(browser['Platform_Version'], '10.7');

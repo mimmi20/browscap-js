@@ -985,7 +985,7 @@ suite('checking for issue 267.', function () {
     assert.strictEqual(browser['Browser'], 'Coccoc bot');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler');
     assert.strictEqual(browser['Browser_Bits'], '0');
-    assert.strictEqual(browser['Browser_Maker'], 'Coc Coc search engine');
+    assert.strictEqual(browser['Browser_Maker'], 'Coc Coc Company Limited');
     assert.strictEqual(browser['Version'], '1.0');
     assert.strictEqual(browser['MajorVer'], '1');
     assert.strictEqual(browser['MinorVer'], '0');
@@ -2288,8 +2288,8 @@ suite('checking for issue 267.', function () {
     assert.strictEqual(browser['Browser_Type'], 'Email Client');
     assert.strictEqual(browser['Browser_Bits'], '32');
     assert.strictEqual(browser['Browser_Maker'], 'Apple Inc');
-    assert.strictEqual(browser['Version'], '0.0');
-    assert.strictEqual(browser['MajorVer'], '0');
+    assert.strictEqual(browser['Version'], '6.0');
+    assert.strictEqual(browser['MajorVer'], '6');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'MacOSX');
     assert.strictEqual(browser['Platform_Version'], '10.8');

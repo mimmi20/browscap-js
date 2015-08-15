@@ -21,11 +21,11 @@ suite('checking for issue 437.', function () {
     assert.strictEqual(browser['isTablet'], false);
     assert.strictEqual(browser['Crawler'], false);
     assert.strictEqual(browser['Device_Name'], 'Smart TV');
-    assert.strictEqual(browser['Device_Maker'], 'Various');
+    assert.strictEqual(browser['Device_Maker'], 'Samsung');
     assert.strictEqual(browser['Device_Type'], 'TV Device');
     assert.strictEqual(browser['Device_Pointing_Method'], 'unknown');
     assert.strictEqual(browser['Device_Code_Name'], 'Smart TV');
-    assert.strictEqual(browser['Device_Brand_Name'], 'unknown');
+    assert.strictEqual(browser['Device_Brand_Name'], 'Samsung');
     assert.strictEqual(browser['RenderingEngine_Name'], 'WebKit');
     assert.strictEqual(browser['RenderingEngine_Version'], 'unknown');
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc');

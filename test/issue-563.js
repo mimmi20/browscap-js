@@ -2982,12 +2982,12 @@ suite('checking for issue 563.', function () {
   test('issue-563-CQ', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Linux; Android 4.4.2; MTC SMART Run Build/ARK) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 ACHEETAHI/2100501044");
 
-    assert.strictEqual(browser['Browser'], 'Android WebView');
+    assert.strictEqual(browser['Browser'], 'CM Browser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Google Inc');
-    assert.strictEqual(browser['Version'], '4.0');
-    assert.strictEqual(browser['MajorVer'], '4');
+    assert.strictEqual(browser['Browser_Maker'], 'Cheetah Mobile');
+    assert.strictEqual(browser['Version'], '0.0');
+    assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'Android');
     assert.strictEqual(browser['Platform_Version'], '4.4');
@@ -3270,12 +3270,12 @@ suite('checking for issue 563.', function () {
   test('issue-563-CZ', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Linux; Android 4.4.3; D5303 Build/19.1.1.A.0.165) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 ACHEETAHI/2100501044");
 
-    assert.strictEqual(browser['Browser'], 'Android WebView');
+    assert.strictEqual(browser['Browser'], 'CM Browser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Google Inc');
-    assert.strictEqual(browser['Version'], '4.0');
-    assert.strictEqual(browser['MajorVer'], '4');
+    assert.strictEqual(browser['Browser_Maker'], 'Cheetah Mobile');
+    assert.strictEqual(browser['Version'], '0.0');
+    assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'Android');
     assert.strictEqual(browser['Platform_Version'], '4.4');
@@ -4678,12 +4678,12 @@ suite('checking for issue 563.', function () {
   test('issue-563-ER', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Linux; U; Android 4.2.2; ru-ru; PMP5785C3G_QUAD Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30 ACHEETAHI/2100501044");
 
-    assert.strictEqual(browser['Browser'], 'Android');
+    assert.strictEqual(browser['Browser'], 'CM Browser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Google Inc');
-    assert.strictEqual(browser['Version'], '4.0');
-    assert.strictEqual(browser['MajorVer'], '4');
+    assert.strictEqual(browser['Browser_Maker'], 'Cheetah Mobile');
+    assert.strictEqual(browser['Version'], '0.0');
+    assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'Android');
     assert.strictEqual(browser['Platform_Version'], '4.2');
@@ -4838,12 +4838,12 @@ suite('checking for issue 563.', function () {
   test('issue-563-EW', function () {
     browser = browscap.getBrowser("Mozilla/5.0 (Linux; U; Android 4.3.9; ru-ru; K1 turbo Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 ACHEETAHI/2100501044");
 
-    assert.strictEqual(browser['Browser'], 'Android');
+    assert.strictEqual(browser['Browser'], 'CM Browser');
     assert.strictEqual(browser['Browser_Type'], 'Browser');
     assert.strictEqual(browser['Browser_Bits'], '32');
-    assert.strictEqual(browser['Browser_Maker'], 'Google Inc');
-    assert.strictEqual(browser['Version'], '4.0');
-    assert.strictEqual(browser['MajorVer'], '4');
+    assert.strictEqual(browser['Browser_Maker'], 'Cheetah Mobile');
+    assert.strictEqual(browser['Version'], '0.0');
+    assert.strictEqual(browser['MajorVer'], '0');
     assert.strictEqual(browser['MinorVer'], '0');
     assert.strictEqual(browser['Platform'], 'Android');
     assert.strictEqual(browser['Platform_Version'], '4.3');
