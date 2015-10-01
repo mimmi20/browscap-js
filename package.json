@@ -30,7 +30,7 @@
     }
   ],
   "dependencies": {
-    "md5": "~2"
+    "md5": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "*"
@@ -43,6 +43,5 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
   "license": "MIT"
 }
