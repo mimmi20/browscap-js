@@ -2,6 +2,8 @@ language: node_js
 sudo: false
 
 node_js:
+  - "4.1"
+  - "4.0"
   - "0.12"
   - "0.11"
   - "0.10"
@@ -10,7 +12,6 @@ node_js:
 
 os:
   - linux
-  - osx
 
 script:
   - "npm test"
