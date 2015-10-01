@@ -29,6 +29,9 @@
       "url": "http://github.com/mimmi20/browscap-js/README.md"
     }
   ],
+  "dependencies": {
+    "md5": "~2"
+  },
   "devDependencies": {
     "mocha": "*"
   },
