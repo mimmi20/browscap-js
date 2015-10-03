@@ -1,0 +1,15 @@
+{
+    "content": [
+        "8c037f36b6177c0b9d7443216329463c\t12\tlibwww\\-perl\\\/.*",
+        "8c0b827c210f77fc825513d9f87ff478\t31\tlg\\\/bl[\\d][\\d]\\\/v[\\d][\\d]a browser\\\/obigo\\-q[\\d]\\.[\\d].*",
+        "8c0fb936d8387a6198fa79ccfde25d51\t24\twebtarantula\\.com crawler.*",
+        "8c2450c8cc90f98a73e03e55676e04a6\t14\tobjectssearch\\\/.*",
+        "8c3a976dcdb7604958088e6f2cdf61a0\t21\tlg\\-c[\\d][\\d][\\d]\\\/uc browser[\\d]\\.[\\d].*",
+        "8c3bfa1e09f7f938c411f3238662fe82\t27\tkwc\\-kx[\\d]\\\/[\\d][\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8c4d4124e21b2a73faa1ababf4a4c7e4\t8\tmsproxy\\\/.*",
+        "8c7fed53779dd92d68868345ac584396\t53\tvodafone\\\/sharp[\\d][\\d][\\d]sh\\\/shg[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* browser\\\/up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8c8b73461f53eb5273e50475fa9d3257\t13\tmagpierss\\\/.* \\(.*\\)",
+        "8cb56dcbed92091d3417f4c60c5c1a33\t20\tezic\\.com http agent .*",
+        "8ce029e2d8205a08824ec623377e6fae\t13\tactiverefresh.*"
+    ]
+}

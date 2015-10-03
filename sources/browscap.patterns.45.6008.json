@@ -1,0 +1,22 @@
+{
+    "content": [
+        "45014a0cfbfca8596bcf3df18a9e96e4\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "4515e0bec19c78eadc878ca9c09bc704\t61\thtc_p[\\d][\\d][\\d][\\d]\\-mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce; ppc\\)",
+        "455a6f22569a0a3907fbecba5283c479\t15\tmsnbot\\-products",
+        "455d2304be5bdeeaa68859145c1542be\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "456fe5881fc48f7e9893415ac376698d\t30\tkapere \\(http\\:\\\/\\\/www\\.kapere\\.com\\)",
+        "4573e69f87fec5068e2d58e4ffd10433\t14\tasus\\-j[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*",
+        "458f78c14953f31a23006c1984f55e7e\t70\tnokiax[\\d]\\-[\\d][\\d]\\\/[\\d]\\.[\\d] \\(.*\\) .* mozilla\\\/[\\d]\\.[\\d] applewebkit\\\/.* \\(khtml,.*like gecko.*\\) safari\\\/.*",
+        "4599b75f90db094af0dae54e103c80af\t32\tsonyericssonk[\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "45a2d94df49408f8b6e36d4e0210a693\t25\tbrowser\\\/.* cfnetwork\\\/.*darwin.*",
+        "45c30edff6b966b7398ef4e75f78322f\t23\ticab\\\/[\\d]\\.[\\d].* \\(.*macintosh.*ppc.*\\)\ticab\\\/[\\d]\\.[\\d].* \\(.*macintosh.*[\\d][\\d]k.*\\)",
+        "45c30edff6b966b7398ef4e75f78322f\t19\ticab\\\/[\\d]\\.[\\d].* \\(.*mac os x.*\\)",
+        "45d1948991fa432d26228d6f4880fb87\t40\tjrtwine software check favorites utility",
+        "45da97a8fdeb7c13cb6c613c1746126f\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "45dd0b595b0b6f4b4f108f8704609197\t9\tw[\\d]crobot\\\/.*",
+        "45e7a49d3eea7e6362f3ef33b849e6f5\t26\tmot\\-a[\\d][\\d][\\d]\\\/ wap\\.browser\\\/[\\d]\\.[\\d] .*",
+        "45e7a49d3eea7e6362f3ef33b849e6f5\t17\tmot\\-a[\\d][\\d][\\d]\\\/.*\\\/wap[\\d]\\.[\\d] .*",
+        "45f05710dbe94f4505061785438b7792\t28\tbenq\\-m[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "45fbb3403d1f5ca0df0d123d05a03036\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "content": [
+        "bc069c744801aaed8edee242537083d0\t14\tjust\\-crawler\\(.*\\)",
+        "bc34b97fd39c9e049865bc742ebb7c55\t61\tdropcatcher\\.de domain bot \\+http\\:\\\/\\\/www\\.dropcatcher\\.de\\\/bot\\.html",
+        "bc4d82dbbf0e43b315c609c2f3a43bf4\t57\tamoi\\-a[\\d][\\d][\\d]\\\/plat\\-v\\-ft\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bc4eccc60389851686975c235f2f924d\t15\tlg\\-g[\\d][\\d][\\d][\\d] au\\\/[\\d]\\.[\\d].*",
+        "bc6a5943b84b30a99d9adabd0465bf19\t9\tzookabot\\\/.*",
+        "bc9c5f43c2ff8716b2fbac4abf31591e\t57\tultrafone [\\d][\\d][\\d].*linux.*android.[\\d]\\.[\\d].* release.* browser.applewebkit.*",
+        "bccf333001d710474b6547072f75fd67\t30\talcatel\\-th[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bccf39b42d811fedb6956055ef67ce41\t52\trenlifangbot\\\/[\\d]\\.[\\d] \\(.http\\:\\\/\\\/search\\.msn\\.com\\\/msnbot\\.htm\\)",
+        "bcd68622ca5b1eb070173602a56cdcc2\t20\tmot\\-l[\\d]i\\\/.* mib\\\/ber[\\d]\\.[\\d] .*",
+        "bcd8b0c2eb1fce714eab6cef0d771acc\t2\t\\(\\).*",
+        "bce0a956f699a78a6b6a803d236f2c3b\t8\thttpgrab",
+        "bcf8f674a7d6a919d0605999f803014b\t67\tfacebookscraper\\\/[\\d]\\.[\\d]\\( http.*\\:\\\/\\\/www\\.facebook\\.com\\\/sharescraper_help\\.php\\).*"
+    ]
+}

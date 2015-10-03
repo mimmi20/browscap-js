@@ -1,0 +1,16 @@
+{
+    "content": [
+        "351a1d2ad68bc401c305b0715268ecd7\t29\tisc header collector handlers.*",
+        "3527b446d87e46e6f67c4959cd6f3e67\t40\tsonyericssonw[\\d][\\d][\\d]iv\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "3527b446d87e46e6f67c4959cd6f3e67\t30\tsonyericssonw[\\d][\\d][\\d]iv\\\/.*\\(symbianos\\\/.*",
+        "352a7502b8f17714189dd6fee43c7331\t37\tmqqbrowser\\\/mini[\\d]\\.[\\d].* \\(samsung\\-gt\\-e[\\d][\\d][\\d][\\d]\\).*",
+        "353c8773694fbf1251dec54d98b614a1\t11\tsurf knight",
+        "354022db715e655b28cb12b0ebf4d196\t8\teventax\\\/.*",
+        "35465d1451f76ba420d335c10ba465ac\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "354ecd3e6842453c1f099c3902a94077\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "3583fc2882858801bb8acfb2e5d67d80\t27\tvulcan\\-color up\\.browser\\\/[\\d]\\.[\\d].*",
+        "358d385c335a5bdd51b259f81244e506\t9\tbitcomet\\\/.*",
+        "35b7225ad7ea1d12912d275e7b1c2c05\t11\tnokian[\\d][\\d]\\-[\\d]\\\/.*",
+        "35fc65e53ef0afa494e5d39deae51305\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*"
+    ]
+}

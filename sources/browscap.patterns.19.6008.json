@@ -1,0 +1,16 @@
+{
+    "content": [
+        "190b46dbb12e4f67537fb76fc1ca4640\t6\trevolt",
+        "190fc953d0be9969b2b90c129831156d\t76\tdopod[\\d][\\d][\\d]\\\/mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce; smartphone; [\\d][\\d][\\d]x[\\d][\\d][\\d]\\).*",
+        "191054b4284cf7559c3cd3e4b47100db\t27\twebindexer\\\/.* \\(web indexer; .*\\)",
+        "191054b4284cf7559c3cd3e4b47100db\t25\twebindexer\\\/.* \\(web indexer.*\\)",
+        "19245b1872e5513c6506cdaa160e2713\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "1948b15490e14ee31c5f36837f44cda5\t8\tiwagent\\\/.*",
+        "197f4fa9e461a6aa0a5bf7d0cd1f1a3c\t11\tia_archiver.*",
+        "199700641e65411f307341bbf3496bf8\t38\tsonyericssonw[\\d][\\d][\\d]\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "199700641e65411f307341bbf3496bf8\t28\tsonyericssonw[\\d][\\d][\\d]\\\/.*\\(symbianos\\\/.*",
+        "19b50be123f5967a2b6e7ed761d77e2a\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "19df6c9bab7d6abf2bcb3fdd0550fb9a\t9\temailwolf.*",
+        "19e8dd8deb917b9e0ee2813193133240\t37\tsamsung\\-gt\\-e[\\d][\\d][\\d][\\d]\\\/e[\\d][\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

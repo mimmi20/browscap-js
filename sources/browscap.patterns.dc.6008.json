@@ -1,0 +1,15 @@
+{
+    "content": [
+        "dc140c63e4364a5b72a32d600452880e\t8\ticarus[\\d]j.*",
+        "dc40e42bc575e2539359188ac93d40db\t24\twindows\\-media\\-player\\\/[\\d][\\d]\\..*",
+        "dc4738b7b62b4a2ff695e94fbcd429b4\t23\tlg\\-f[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "dc47cf7c6af0be9e80ba79745678406c\t25\txda_diamond_pro opera\\\/[\\d]\\.[\\d].*",
+        "dc62de918ab78b498020d1e451c98341\t22\tlg\\-gt[\\d][\\d][\\d] teleca\\\/wap[\\d]\\.[\\d].*",
+        "dc707edbc4de72ae0db5b379899022cf\t31\tmot\\-k[\\d]v\\\/[\\d][\\d]\\..* mib\\\/ber[\\d]\\.[\\d] .* ege\\\/[\\d]\\.[\\d].*",
+        "dc8f26e487b8fe96504a4c0a0dcb3061\t26\tsec\\-schn[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "dca0260202e548ff59b196b14518e59b\t28\tkaklebot \\- www\\.kakle\\.com\\\/[\\d]\\.[\\d]",
+        "dcc72b24d9df234ed66070690382d817\t34\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/t[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "dccee81acc8101a0e79ae82d0a53465e\t7\tpeerbot.*",
+        "dcea4ad1be1276e64cf522a074f9d3c5\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*"
+    ]
+}

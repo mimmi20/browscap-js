@@ -1,0 +1,14 @@
+{
+    "content": [
+        "78311b5cbbe9dab9b98053b41acb6d5c\t14\tmetaheadersbot.*",
+        "7832024541774a991341dba0e7e96f9a\t12\tirssiurllog\\\/.*",
+        "784897209bf5f6549369723c2ed225e2\t28\tlenovo\\-i[\\d][\\d][\\d]\\\/.*\\\/wap[\\d]\\.[\\d] profile\\\/.*",
+        "784c205fbd3a61e546791226c32ff660\t7\tmsnbot\\\/.*",
+        "7861dcb81ce716585781af50f86973ac\t25\tmot\\-v[\\d][\\d][\\d]\\\/ wap\\.browser\\\/[\\d]\\.[\\d].*",
+        "78687ae0fe1ee490181d924a235e3b95\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "78758131cdcd293eba70300e10603089\t31\tatomiclite\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*darwin.*",
+        "78a0cc219a4cb3563ac5fed236ad00f9\t5\tcrawl.*",
+        "78d86f674456d46e4226f1da21c4cf23\t16\ttalkro web\\-shot\\\/.*",
+        "78fd080d5024933a536b09342e20efa3\t14\thttpclient\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "content": [
+        "1f03246aca1b2390e83bfa41fd33ded7\t12\tvisionutils\\\/.*",
+        "1f0c7cda82b38b851d4d78b76d2ce7e7\t56\thtc_p[\\d][\\d][\\d][\\d]\\-mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*\\)",
+        "1f0fa103ac7e0efc8846b24382750cb7\t32\tvanillasurf\\\/[\\d]\\.[\\d] cfnetwork\\\/.*darwin.*",
+        "1f120a0ab0402ab6d796f1286e116c06\t14\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d] .*",
+        "1f120a0ab0402ab6d796f1286e116c06\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "1f3870be274f6c49b3e31a0c6728957f\t12\tapple.iphone.*",
+        "1f40de80f183116a8f43d018b8b06247\t29\tmot\\-a\\-[\\d]e\\\/[\\d].\\.[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1fa92ddcbbfbfee383095e7f6c4357cc\t12\tbrowsershots",
+        "1fa9fb825428b71f029c39bd645eeafc\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "1fba6a914fdd6bc13037002c7389ad61\t8\twebcorp\\\/.*",
+        "1fcaba9477c525eaff487c530e864a35\t14\tdbtel\\-m[\\d][\\d]\\\/[\\d]\\.[\\d] .*",
+        "1fcb6275ac00086592a3054686c012bb\t8\tcheckbot.*",
+        "1fcf961182d4a06b327617e7dd486568\t11\tnokia[\\d][\\d][\\d][\\d]i\\\/.*",
+        "1ff4d60d97c7c4d298d0e2f130d48da3\t83\tngm dynamic racing [\\d]\\\/.* linux\\\/.* android\\\/[\\d]\\.[\\d].* release\\\/.* browser\\\/applewebkit.* mobile safari.*"
+    ]
+}

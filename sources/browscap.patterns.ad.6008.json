@@ -1,0 +1,18 @@
+{
+    "content": [
+        "ad00dea424356b00dbe7109633a9dd4f\t67\tomniweb[\\d][\\d][\\d]\\.[\\d][\\d]\\..* cfnetwork\\\/.*darwin.* \\(power%[\\d][\\d]macintosh\\) \\(powermac[\\d]%[\\d]c[\\d]\\)",
+        "ad00dea424356b00dbe7109633a9dd4f\t64\tomniweb[\\d][\\d][\\d]\\..* cfnetwork\\\/.*darwin.* \\(power%[\\d][\\d]macintosh\\) \\(powermac[\\d]%[\\d]c[\\d]\\)",
+        "ad17e71de2b6c446b5dd9f0b827013cd\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "ad399c9eba02c7920e855c24862b619f\t43\tperfect%[\\d][\\d]browser\\-ipad\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*darwin.*",
+        "ad4143504d97c95c830c8fdc16b84268\t24\tmot\\-razrv[\\d]x\\\/.* mib\\\/ber[\\d]\\.[\\d] .*",
+        "ad4679f7702cb927752ca7e7ebf388cd\t28\tlge\\-pm[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ad57468ffe62e7152efc4ea1c3473ed4\t30\tsagem\\-myx\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ad5f82e879a9c5d6b5b442eb37e50551\t22\tdomain dossier utility.*",
+        "ad645aac3de71798caaa7f0e5dbba48b\t33\tsharp\\-tq\\-gx[\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ad7609bb4bf4c2cd66d49e0a8019ed54\t26\tsie\\-[\\d][\\d][\\d][\\d]\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ad9c0adb48e31ce776cdede556cf0d20\t20\tmot\\-v[\\d][\\d][\\d]ens\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "adae490af4953cb85087585db6a0e314\t27\tlg\\-u[\\d][\\d][\\d][\\d]\\\/v[\\d][\\d][\\d] obigo\\\/wap[\\d]\\.[\\d] .*",
+        "adc5d2743f9ae4c6aec4fd978266b30a\t11\tyandexblog\\\/.*",
+        "addff206aa1e806a1be02661c864f171\t10\tunicorn\\\/[\\d]\\..*"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "content": [
+        "bd03e9850b102a1959a5ce0d1bc5cf26\t19\tnetcarta_webmapper\\\/.*",
+        "bd1317109fe22cd6480c893fcfbad407\t23\tsph\\-a[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bd2a889f3870a118dfe29f13359d3e46\t29\tnokia\\-rh\\-[\\d][\\d]\\\/v .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bd5ced24164aa89c6525fee228d2fa82\t16\tmot\\-a[\\d][\\d][\\d]\\\/r[\\d][\\d]_g_[\\d].*",
+        "bd8234ddb90477406f16c762dc8f7dfa\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "bda9542cad64d3935c457bece507fbae\t8\tflashget",
+        "bdb2de74323342785c0481f4e4e0029a\t7\tspinne\\\/.*",
+        "bdbacd4b0b059c18559b07ca512811c8\t37\thuawei\\-u[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] brew\\\/[\\d]\\.[\\d] browser\\\/[\\d]\\.[\\d] .*",
+        "bdc327fd5072b4d141d4d24f7d42159f\t11\tmasscan\\\/[\\d]\\.[\\d].*",
+        "bdd825989125d58ae200ee4430780cbb\t15\tgooglebot\\-video.*",
+        "bdef771ed83618fdeb47d00f08334bef\t32\tsharp\\-tm\\-[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bdf2ae0d76cf33bfcbbfe0b501993d26\t8\tshareaza.*",
+        "bdfdf05cedb242ae9b8680ddaf8fcb63\t15\tlg\\-f[\\d][\\d][\\d][\\d] au\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -124,7 +124,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 4 LTE', 'Expected actual "Device_Name" to be \'Galaxy Note 4 LTE\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 4 LTE (Europe)', 'Expected actual "Device_Name" to be \'Galaxy Note 4 LTE (Europe)\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Samsung', 'Expected actual "Device_Maker" to be \'Samsung\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone', 'Expected actual "Device_Type" to be \'Mobile Phone\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1217,7 +1217,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1', 'Expected actual "Device_Name" to be \'Galaxy Note 10.1\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1 3G & WiFi', 'Expected actual "Device_Name" to be \'Galaxy Note 10.1 3G & WiFi\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Samsung', 'Expected actual "Device_Maker" to be \'Samsung\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Tablet', 'Expected actual "Device_Type" to be \'Tablet\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3267,7 +3267,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1', 'Expected actual "Device_Name" to be \'Galaxy Note 10.1\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'Galaxy Note 10.1 WiFi', 'Expected actual "Device_Name" to be \'Galaxy Note 10.1 WiFi\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Samsung', 'Expected actual "Device_Maker" to be \'Samsung\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Tablet', 'Expected actual "Device_Type" to be \'Tablet\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4197,7 +4197,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'Xperia SP', 'Expected actual "Device_Name" to be \'Xperia SP\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'Xperia SP LTE', 'Expected actual "Device_Name" to be \'Xperia SP LTE\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Sony', 'Expected actual "Device_Maker" to be \'Sony\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Mobile Phone', 'Expected actual "Device_Type" to be \'Mobile Phone\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -6375,7 +6375,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'A7-30 A3300 Wi-Fi', 'Expected actual "Device_Name" to be \'A7-30 A3300 Wi-Fi\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'TAB A7-30 Wi-Fi + 3G', 'Expected actual "Device_Name" to be \'TAB A7-30 Wi-Fi + 3G\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Lenovo', 'Expected actual "Device_Maker" to be \'Lenovo\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Tablet', 'Expected actual "Device_Type" to be \'Tablet\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -6983,7 +6983,7 @@ suite('checking for issue 525.', function () {
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['IFrames'], true, 'Expected actual "IFrames" to be true (was \'' + browser['IFrames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Tables'], true, 'Expected actual "Tables" to be true (was \'' + browser['Tables'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Device_Name'], 'A7-30 A3300 Wi-Fi', 'Expected actual "Device_Name" to be \'A7-30 A3300 Wi-Fi\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Device_Name'], 'TAB A7-30 Wi-Fi + 3G', 'Expected actual "Device_Name" to be \'TAB A7-30 Wi-Fi + 3G\' (was \'' + browser['Device_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Maker'], 'Lenovo', 'Expected actual "Device_Maker" to be \'Lenovo\' (was \'' + browser['Device_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Type'], 'Tablet', 'Expected actual "Device_Type" to be \'Tablet\' (was \'' + browser['Device_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Device_Pointing_Method'], 'touchscreen', 'Expected actual "Device_Pointing_Method" to be \'touchscreen\' (was \'' + browser['Device_Pointing_Method'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

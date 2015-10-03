@@ -1,0 +1,22 @@
+{
+    "content": [
+        "bb09fd765dc689840d4622a79e4bc564\t10\tmozdex\\\/[\\d]\\.[\\d].*",
+        "bb0f34588dfec8b9f7f468b4ee07a2b7\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "bb17668467b5ddac089930da7c0e6288\t12\tgreenbrowser",
+        "bb1c379ad5c7019b91cf7cb2b9bd8f28\t25\tlg\\-c[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bb2bdc8c7b7e39c6b815a2202e58d972\t18\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d] .*",
+        "bb40ea19273d8a65fc8952c6a6e3d458\t10\twoobot\\\/[\\d]\\.[\\d].*",
+        "bb5486cad9f39196deb77e6188aabcef\t29\to[\\d]\\-x[\\d]i\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bb5c96a252d5479f3e4ef6f04a18ee6b\t27\tdbtelj[\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bb64a7a020ee74e237a96a5ec5e8552b\t55\tduckduckbot\\\/.*; \\(.http\\:\\\/\\\/duckduckgo\\.com\\\/duckduckbot\\.html\\)",
+        "bb872456b17e47d1b1430297604454be\t23\tnec\\-[\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bb8d586e26cddf5181a20463af87fa35\t24\tsie\\-a[\\d][\\d]c\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bbcfeb0cb213d8ea6344faa4296fb345\t66\tnokia[\\d][\\d][\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "bbdbe444288550204c968fe7002a97a9\t15\tforum poster v[\\d].*",
+        "bbdbe444288550204c968fe7002a97a9\t12\tforum poster.*",
+        "bbfa1146b7c849c30c8bfd54bc59d0a9\t18\tmot\\-v[\\d][\\d][\\d]p\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "bbfaf476dfeb8af28aeb5c4e6e80e88d\t23\tsie\\-m[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "bbfcf8ef0dc53a789080ec883980658c\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "bbfd66af827c0ff614a140595be0e3a2\t7\ty\\!j\\-psc.*"
+    ]
+}

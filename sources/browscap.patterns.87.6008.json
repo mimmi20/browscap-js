@@ -1,0 +1,28 @@
+{
+    "content": [
+        "8702bbff176ce6a3d3b734e899573756\t48\tnec\\-n[\\d][\\d][\\d]\\\/\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)djcc\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "871eb90745da946892f33f45976551a2\t19\tlg\\-c[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d].*",
+        "8767628cf1c4e64edcddaf35cb5012a5\t21\tarachnida web crawler.*",
+        "878c831b0dba46387d6c0f6c83b42d93\t20\tfacebookexternalhit\\\/.*",
+        "87c6258a249c353f7aff487e9bd494d1\t20\tmot\\-a[\\d][\\d][\\d]i\\\/r[\\d][\\d][\\d]_g_[\\d][\\d]\\..*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t109\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t106\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*cpu iphone os .* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t103\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-s[\\d][\\d][\\d][\\d] .*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t101\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t98\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*micromax a[\\d][\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*cpu iphone os .* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t94\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-s[\\d][\\d][\\d][\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t91\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*blackberry; u.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t88\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t86\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*linux.*android.[\\d]\\.[\\d].*micromax a[\\d][\\d] .*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t85\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*cpu iphone os .* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t83\tonebrowser\\\/[\\d]\\.[\\d].mozilla\\\/[\\d]\\.[\\d] \\(.*blackberry; u.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t82\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*linux.*android.[\\d]\\.[\\d].*gt\\-s[\\d][\\d][\\d][\\d] .*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t73\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t70\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*blackberry; u.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t69\tonebrowser\\\/[\\d]\\.[\\d].*\\(.*linux.*android.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) .*safari\\\/.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t31\tonebrowser\\\/[\\d]\\.[\\d].*\\(samsung\\-gt\\-s[\\d][\\d][\\d][\\d].*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t24\tonebrowser\\\/[\\d]\\.[\\d].*\\(gt\\-s[\\d][\\d][\\d][\\d]s.*",
+        "87d73d62b7bd3fc6e13d502bdc888673\t14\tonebrowser\\\/[\\d]\\.[\\d].*",
+        "87dea29edb4dddc3518799d56d9a83dc\t24\tkddi\\-sa[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "content": [
+        "2f16dde6aa964b12932106945bfc29ab\t23\tvk\\-vk[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "2f19c871d0c916d66e762fcccfbc678d\t12\tcovario\\-ids\\\/.*",
+        "2f1bd62c09cc7c48004eeecbaaf31dc8\t29\tkwc\\-kx[\\d]\\\/[\\d]\\.[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "2f4aac4dcc716dd7f8e36e55be08941d\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "2f4c51f3630f6fd7f6b51ce4c845c459\t31\tsagem\\-myc\\-[\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "2f4cd3a8d1340b4c1cbab3bd60d4cdaf\t7\tsistrix.*",
+        "2f5b393e1c5de8a21564b1ab804ea48e\t24\tkddi\\-hi[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "2f6bb9c96b2a260ad8d967b590248e4c\t44\taudiovox\\-cdm[\\d][\\d][\\d][\\d]sp\\\/t[\\d][\\d][\\d]sp[\\d]t[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "2f8f98b990f22dcf0943374ecac19d98\t34\tfirefox\\\/[\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "2fa87fa37669ef656e144228f5310e2d\t38\tsonyericssonu[\\d]iv\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "2fa87fa37669ef656e144228f5310e2d\t28\tsonyericssonu[\\d]iv\\\/.*\\(symbianos\\\/.*",
+        "2fddad8511ea2c415a74dd3d85a50d86\t16\thatena\\:\\:crawler\\\/.*"
+    ]
+}

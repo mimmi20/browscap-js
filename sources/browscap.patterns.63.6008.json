@@ -1,0 +1,24 @@
+{
+    "content": [
+        "6303196d0f68d9ced859967c78187a7d\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "63047ce9682ebbacf4e3396dba51b3b2\t7\tn[\\d]p_bot.*",
+        "6306b9b972826825761f6f08285fe001\t24\tsec\\-sghe[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] tss\\\/[\\d]\\.[\\d] .*",
+        "63283dd17ede2d3555923e0d557857a6\t31\tsagem\\-myc[\\d]\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "633128c0414341871fa65486f7ec707e\t23\tsch\\-a[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6367e064b1ec62145e397d504e511269\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "6383e26f2884e73df7e6acf1dfbdfd8d\t34\tlg\\-lx[\\d][\\d][\\d] au\\-mic\\-lx[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mmp\\\/[\\d]\\.[\\d] .*",
+        "63aa3b9ea3932a79e3f53a36acaafb26\t23\tlg\\-l[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "63ae6be9bbb277f041e8136a3129145c\t13\tbloglovin\\\/[\\d]\\.[\\d].*",
+        "63b8d9381a37531e4042499fcfa7f6ad\t19\tblackberry[\\d][\\d][\\d][\\d]m\\\/[\\d]\\.[\\d].*",
+        "63dcfc6fef25f8b44c2b55b86be0daaf\t27\tcoverscout.* cfnetwork\\\/.*darwin.*",
+        "63e8ea6ee1f1934730b05030830e1294\t118\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*mi [\\d]lte build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t112\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-n[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-i[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t105\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*a[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t104\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t100\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t97\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "63e8ea6ee1f1934730b05030830e1294\t93\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "63e8f871fe2da46757604ad31f01d661\t7\tgslfbot.*",
+        "63eb553ccfb7bcec326b968e52b08ac9\t6\twebzip.*"
+    ]
+}

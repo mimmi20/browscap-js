@@ -1,0 +1,17 @@
+{
+    "content": [
+        "d30cb457305b9d7a2bb8d27009cd096c\t36\tsamsung\\-sgh\\-t[\\d][\\d][\\d]\\\/t[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d3471ae8841fde85aafba2651ffca428\t19\tmot\\-a[\\d][\\d][\\d]\\\/r[\\d][\\d][\\d]_g_[\\d][\\d]\\..*",
+        "d35355afc9fb1bdae698969a8fc7b417\t25\tmozilla,busecurityproject.*",
+        "d356e5ba14eecec1b4ec7c18ec5ba90b\t27\tamoi\\-ca[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d35cfefa43f4ad9ef9d5b962d487a12c\t19\tbackstreet browser .*",
+        "d35e0f1eeb6243926be60e937a49b035\t27\tsgh\\-z[\\d][\\d][\\d] shp\\\/vpp\\\/r[\\d] smb[\\d]\\.[\\d] .*",
+        "d369ac138fafd6f841469c985bef8a35\t18\tsuperfeedr bot\\\/[\\d]\\.[\\d].*",
+        "d369ac138fafd6f841469c985bef8a35\t15\tsuperfeedr bot\\\/.*",
+        "d36f5d5ee46018f56575c1af69ecb8ee\t12\tmj[\\d][\\d]bot\\\/v[\\d]\\.[\\d].*",
+        "d36f5d5ee46018f56575c1af69ecb8ee\t11\tmj[\\d][\\d]bot\\\/v[\\d]\\..*",
+        "d376aa2a7dda11d9615f3539dd66d5c0\t7\tcobweb\\\/.*",
+        "d3abfb4a2a2e2d117e026993f99eec34\t11\turl_access\\\/.*",
+        "d3bd7ccbb2787b89ea5e1443270388d7\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*"
+    ]
+}

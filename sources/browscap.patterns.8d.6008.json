@@ -1,0 +1,22 @@
+{
+    "content": [
+        "8d1e5be34fabfd5c73aafa30d2b1b54a\t34\tmotorola\\-t[\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]a up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8d2cd11f4f48e6f3349a10a5d34afaa8\t23\tlg\\-g[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8d399ccdb4914240927eaeb9ddb9b46b\t13\thrcrawler\\\/[\\d]\\.[\\d].*",
+        "8d3aaf08afb5ee5212dcec402cc1eebf\t71\tdopod[\\d][\\d][\\d]pro\\\/mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*; dopod[\\d][\\d][\\d].*pro\\).*",
+        "8d3cc30146a91ddd2cc887988c480342\t36\tpython\\-requests\\\/.* cpython\\\/.*linux.*x[\\d][\\d]_[\\d][\\d].*",
+        "8d3cc30146a91ddd2cc887988c480342\t35\tpython\\-requests\\\/.* cpython\\\/.*linux i[\\d][\\d][\\d].*",
+        "8d3cc30146a91ddd2cc887988c480342\t30\tpython\\-requests\\\/.* cpython\\\/.*linux.*",
+        "8d3cc30146a91ddd2cc887988c480342\t16\tpython\\-requests\\\/.*",
+        "8d6b431e7c8be0500ed6b9c4788cc79f\t8\tworiobot.*",
+        "8d6c391e7cb39133c91b73281a24f21f\t15\tvalidator\\.nu\\\/lv.*",
+        "8d77fc90c990c7146e8b3f2673f3c9aa\t31\tsagem\\-myc\\-[\\d]b\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8d9c53edb0bb0f796c5d49d8111e7529\t14\texabot\\-images\\\/.*",
+        "8daeb07ac69540bb449aa35b0db673b8\t67\tatrax solutions atraxbot\\\/[\\d]\\..*; http\\:\\\/\\\/www\\.atraxsolutions\\.com\\\/atraxbot",
+        "8daf188649af1194f33ddfa00d096b6a\t25\tsie\\-c[\\d]v\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8db11a961ab55e0cd8b659c5c329feb6\t10\tredcarpet\\\/.*",
+        "8db14387b47447d83038c3c7f658baff\t77\tmot\\-a[\\d][\\d][\\d][\\d]eam\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; linux; a[\\d][\\d][\\d][\\d]eam; .*\\) .* opera [\\d]\\.[\\d].*",
+        "8de40b38fbd089bfd0e8a8aeaed267b0\t23\tsie\\-s[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8df1a0e37e4322ecd084260b7fa372c2\t10\ttlsprober\\\/.*"
+    ]
+}

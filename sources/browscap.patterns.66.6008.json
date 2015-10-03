@@ -1,0 +1,20 @@
+{
+    "content": [
+        "6604b9b0c32064f4672f16ccbd890d94\t9\tdillo\\\/[\\d]\\.[\\d].*",
+        "66306c297e74baf8ae56ef4f06e2669c\t33\tblijbolreallysimpleaggregator\\\/[\\d]\\.[\\d].*",
+        "66361d194f9737b2e3b6cdb127c6eff6\t72\ths\\-g[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\\/wap[\\d]\\.[\\d] profile\\\/midp[\\d]\\.[\\d] configuration\\\/cldc[\\d]\\.[\\d]",
+        "66482cdf720260fe78544b12f9b5e659\t29\tlge\\-ax[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6648316f0d98b0759fee0c97d3e16faf\t11\tbuibui\\-bot\\\/.*",
+        "66587fcbd6521f89b8a17552b1690206\t23\tsie\\-m[\\d]c\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6677c7411a304787ae649b9f7f2310bb\t20\tlg\\-f[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "667e6ec874e1abb502662ff847c2c44c\t104\tcakemix\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-n[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml,.*like gecko.*\\) version\\\/.\\.[\\d].*safari.*",
+        "6689b4109f7835a3413b625a11f295f8\t28\tmot\\-t[\\d][\\d][\\d]\\\/g_[\\d]c\\.[\\d]b\\.[\\d]br mib\\\/[\\d]\\.[\\d].*",
+        "668becbe79da9285d8f4303e438419f6\t24\tgoogle\\-http\\-java\\-client\\\/.*",
+        "668d4e41863df7bb17c05f4415bbf44e\t52\tnetvision ag andreas\\.heidoetting@thomson\\-webcast\\.net",
+        "669810bb8b76ccfcc67b2d6d71bedcfc\t23\twebtrends link analyzer",
+        "66cce10a0eeaca55773593d9a740b525\t10\tfangcrawl\\\/.*",
+        "66db74b78f30252eeb4fb8bea325e4a9\t9\twebripper",
+        "66dcfd3a52739e615049206ad08091de\t7\tinnoa[\\d][\\d].*",
+        "66e7ff1fb17dee6b1180617e2af0f049\t36\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

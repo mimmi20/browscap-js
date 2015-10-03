@@ -1,0 +1,20 @@
+{
+    "content": [
+        "9f19ead5d21f6601af7229f75f4735c4\t25\tmot\\-[\\d]\\.[\\d]\\.[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9f19ead5d21f6601af7229f75f4735c4\t24\tmot\\-[\\d]\\.[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9f202bf2c6554a76d76f80934c7b92f0\t26\tmot\\-a[\\d][\\d][\\d]\\\/ wap\\.browser\\\/[\\d]\\.[\\d] .*",
+        "9f2249b2c0008229943d140b7a6b1199\t19\tblackberry[\\d][\\d][\\d][\\d]i\\\/[\\d]\\.[\\d].*",
+        "9f29312f67eb768c1f4387a4b9ee69e6\t24\tnutch\\\/[\\d]\\.. \\(openx spider\\)",
+        "9f3b4bfd28207f405412a29e7204cdbe\t9\tvengabot\\\/.*",
+        "9f4fd3c869d7fa847b71204f3cc99239\t15\tlg\\-g[\\d][\\d][\\d][\\d] au\\\/[\\d]\\.[\\d].*",
+        "9f514930e68536ec9de7cc57c2b7d0be\t33\tblogshares spiders \\(renewed v[\\d]\\.[\\d][\\d].*",
+        "9f514930e68536ec9de7cc57c2b7d0be\t18\tblogshares spiders.*",
+        "9f6e0237197e46053be7489c6d939a52\t36\tsamsung\\-sgh\\-d[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9f7d1b2de91e0f3d0060becd73704859\t24\tmot\\-e[\\d][\\d][\\d]\\\/[\\d][\\d]\\..* mib\\\/ber[\\d]\\.[\\d] .*",
+        "9f81312a75cfe93fce66b79ee118e3f3\t9\tminirank\\\/.*",
+        "9f94ba00fcfd23b366b1501453a9c992\t18\twadaino\\.jp\\-crawler.*",
+        "9f961c34441844b950aa55944762a348\t24\tsie\\-af[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9fe1045929cd8cdc144e85aaa48b01e9\t11\tnudelsalat\\\/.*",
+        "9fff76f9b3a42ad3ded0516d2f142f97\t44\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d]\\\/uc browser[\\d]\\.[\\d].* untrusted\\\/[\\d]\\.[\\d]"
+    ]
+}

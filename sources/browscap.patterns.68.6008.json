@@ -1,0 +1,14 @@
+{
+    "content": [
+        "6800641c095074978c3bda243371215f\t26\tautomator.* cfnetwork\\\/.*darwin.*",
+        "680a3bc836ef3286fca7d60ae7ed1c0e\t18\tnokia[\\d][\\d][\\d][\\d]iclassic\\\/.*",
+        "686103c604d4def926413e7a3a0fae99\t20\tlg\\-g[\\d][\\d][\\d]\\\/v[\\d][\\d][\\d]\\\/wap[\\d]\\.[\\d] .*",
+        "6864f389d9876436bc8778ff071d1b6c\t21\tmy nutch spider\\\/nutch.*",
+        "6864f389d9876436bc8778ff071d1b6c\t10\tmy browser",
+        "687a518e84c2da7f04079e847433d01a\t29\tmot\\-c[\\d][\\d][\\d]v\\\/as_g_[\\d][\\d]\\.[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "688d02b8ffc0740fc790871148d11e8c\t19\tfunnel web profiler.*",
+        "68b4fdcfb019f08fd5ea5cbbe663e2c2\t35\tsonyericssonj[\\d][\\d][\\d]i\\\/.* telecabrowser\\\/[\\d]\\..*",
+        "68b58cc9f6139d2bc6b525c4c25b0262\t27\tmicrosoft\\-webdav\\-miniredir\\\/.*",
+        "68b65deb163e218a1a6c07ed3e1fc808\t24\tkddi\\-ts[\\d]s up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

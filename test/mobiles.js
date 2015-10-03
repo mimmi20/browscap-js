@@ -9,7 +9,7 @@ suite('checking for issue mobiles.', function () {
     assert.strictEqual(browser['Browser'], 'FlyFlow', 'Expected actual "Browser" to be \'FlyFlow\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown', 'Expected actual "Browser_Maker" to be \'unknown\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser_Maker'], 'Baidu', 'Expected actual "Browser_Maker" to be \'Baidu\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Version'], '2.5', 'Expected actual "Version" to be \'2.5\' (was \'' + browser['Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['MajorVer'], '2', 'Expected actual "MajorVer" to be \'2\' (was \'' + browser['MajorVer'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['MinorVer'], '5', 'Expected actual "MinorVer" to be \'5\' (was \'' + browser['MinorVer'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,0 +1,24 @@
+{
+    "content": [
+        "14039e32d58a1adddb1d7ad0a1fcbe8d\t23\tsie\\-m[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "140478c0f53f3508ae0120779139e97a\t23\tsie\\-c[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "141039624b7fe7170f5696863f26cccf\t17\tcontextad bot [\\d]\\.[\\d].*",
+        "141039624b7fe7170f5696863f26cccf\t13\tcontextad bot.*",
+        "1411356217930bc9b98cc8f6cc1561d9\t9\tpagenest\\\/.*",
+        "1418bdf3e76f13e4879072fc0f9ce26c\t16\tyahoovideosearch.*",
+        "141b635cd65087855970441282602638\t46\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* vendorid\\\/[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "141b635cd65087855970441282602638\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "1426a847e394f5411e8ceba3e682b550\t59\tgsmart\\-s[\\d][\\d][\\d][\\d];mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; ppc;[\\d][\\d][\\d]x[\\d][\\d][\\d]\\)",
+        "143d593a059f1b43001bffbc43790a20\t66\tnokia[\\d][\\d][\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "143e69c0fd3da0158b9b600ffb453890\t22\tsocialspider\\-finder\\\/[\\d]\\..*",
+        "14420f48deb8f49af932370706c284b8\t31\tmobilerss.*\\-ipad.* cfnetwork\\\/.*darwin.*",
+        "14420f48deb8f49af932370706c284b8\t26\tmobilerss.* cfnetwork\\\/.*darwin.*",
+        "1444a590c85febecfe65c921cb0575ea\t20\tnetchart adv crawler.*",
+        "147c391ed5ed681eae8d499905f13bfe\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "14819c7754c1da367a99ea0fd95e9765\t11\tlwp\\-request.*",
+        "1486b215f5f426178503c3e37585fd51\t20\tmot\\-c[\\d][\\d][\\d]\\\/[\\d]b\\..* mib\\\/[\\d]\\.[\\d].*",
+        "14a9fa90062e5ba9fd4086c58ccd4c88\t60\tcapitel\\-c[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] cldc\\\/cldc\\-[\\d]\\.[\\d] midp\\\/midp\\-[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "14d215879c79dbbf3362087d6b7f2b2d\t24\tsie\\-me[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "14d8c44b289f0fe2edad74288317407a\t29\tutstarc[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

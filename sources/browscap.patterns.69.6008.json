@@ -1,0 +1,13 @@
+{
+    "content": [
+        "69008f3fd22fc8d983b305f7298cf4a3\t23\tmot\\-c[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "69259f797d2c37959cf5006208c48e73\t34\tstagefright\\\/[\\d]\\.[\\d].* \\(.*linux.*android.[\\d]\\.[\\d].*\\).*",
+        "69259f797d2c37959cf5006208c48e73\t30\tstagefright\\\/[\\d]\\.[\\d].* \\(.*linux.*android.*\\).*",
+        "692edff7598694831032a3d33315563f\t11\tnokia[\\d][\\d][\\d][\\d]c\\\/.*",
+        "6945b7d53c8c2f0592ffd95a11612065\t11\tsec\\-sghx[\\d][\\d][\\d].*",
+        "694ccf4b475ac3a20c9b63c3c378df9c\t31\tacadiauniversitywebcensusclient",
+        "698aa01c24d19990d2df946266cbbde8\t10\tingrid\\\/.\\.[\\d].*",
+        "69af6a98f4b793f222ec03f8b87215a2\t37\tbird\\-x[\\d]\\\/k[\\d][\\d],pn\\\/wap[\\d]\\.[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "69f131d236da18591731f316519f2d7b\t26\tfgbrowser.* cfnetwork\\\/.*darwin.*"
+    ]
+}

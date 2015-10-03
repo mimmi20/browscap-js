@@ -1,0 +1,31 @@
+{
+    "content": [
+        "58043df68f8f539a3e2db8ac3330f7ba\t70\tnokia[\\d][\\d][\\d][\\d]c\\-[\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "5808faa6162065bbe2e1892cadf2204a\t15\tpluckitcrawler\\\/.*",
+        "5815cc7e9b165a8837956904f86b0e12\t26\tsec\\-sghp[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "581769968512c6e17689775428075c77\t22\tmot\\-gatw_\\\/.* up\\.browser\\\/.*",
+        "581813e807b5f24a984d9815fba2ab51\t19\tlg\\-c[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d].*",
+        "5820706ce9e074fa36793daf61814b64\t24\tsie\\-me[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "582f6bca49900cab15a2cc957b7bb3c2\t5\tnpbot.*",
+        "583494e394e7039abde70b62f3d8cf2c\t10\tsqeobot\\\/[\\d]\\..*",
+        "584efb8310473a1bfddb0570d2713547\t37\tsafari\\\/[\\d][\\d]..\\..* cfnetwork\\\/.*darwin.*\\(x[\\d][\\d]_[\\d][\\d]\\).*",
+        "584efb8310473a1bfddb0570d2713547\t29\tsafari\\\/[\\d][\\d]..\\..* cfnetwork\\\/.*darwin.*",
+        "58522d626d0d773ad1fc1a83aabcffe8\t31\talcatel\\-cth[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "585a4378d0a3483e75772e15d4f2e96f\t35\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "5864ec71f52230f921dd755a04ad9a22\t11\tnetmechanic.*",
+        "5869507eebc207f427f653cd6412cd6b\t20\tlg\\-f[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "58740d8a194ece174d6b5e032fbd4148\t44\tsamsung\\-sgh\\-d[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] .*\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "5877ca381fdf2f09e032954197ea2660\t75\tkddi\\-ca[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*\\(gui\\)mmp\\\/[\\d]\\.[\\d] \\(compatible; kddi\\-googlebot\\-mobile\\\/[\\d]\\.[\\d].*",
+        "5877ca381fdf2f09e032954197ea2660\t24\tkddi\\-ca[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "587f630246b0d5de225bca10728a8fca\t10\tkraken\\\/[\\d]\\.[\\d].*",
+        "5899c5b39af89a4b477441bf1dc3c4d2\t23\tmot\\-a[\\d][\\d][\\d]\\\/[\\d][\\d]\\.[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "58b8aec4e5c44245fa3d5d97fec0b74b\t29\tlge\\-vx[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "58c509cbfa5c95799d64c82b6b7715dd\t9\tiseekbot\\\/.*",
+        "58d875a46a1335ac3dc1ed78f8a71723\t30\tmot\\-[\\d][\\d]\\.[\\d]_\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "58dc420bdc3b0a6b40fa25b2b804e197\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "58e53d1324eef6265fdb97b08ed9aadf\t4\truby",
+        "58e7746fdf287b8c7173c3b37a3d47b4\t40\tsagem\\-myx[\\d]\\-[\\d]\\\/[\\d]\\.[\\d] .* browser\\\/up\\.browser\\\/[\\d]\\.[\\d].*",
+        "58f76ddcd2412df99406fa0a144e3bc7\t10\tgregarius\\\/.*",
+        "58fa600f4ea8c7d08b63d118b854609a\t17\tmot\\-u[\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d] .*"
+    ]
+}

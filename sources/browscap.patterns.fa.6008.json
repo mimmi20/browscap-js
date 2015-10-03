@@ -1,0 +1,17 @@
+{
+    "content": [
+        "fa100730ae4547f048d8ee954458236a\t41\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/e[\\d][\\d][\\d]uvef[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "fa1c064fc5109b3d54ff20b3f8a59009\t11\tlivelapbot\\\/.*",
+        "fa4ef757a228c59dbd95902bb577baa6\t49\twindows\\-rss\\-platform\\\/[\\d]\\.[\\d] \\(msie .\\.[\\d]; windows nt .*\\..*\\)",
+        "fa4ef757a228c59dbd95902bb577baa6\t48\twindows\\-rss\\-platform\\\/[\\d]\\.[\\d] \\(msie .*; .*windows nt [\\d]\\.[\\d].*\\)",
+        "fa4ef757a228c59dbd95902bb577baa6\t24\twindows\\-rss\\-platform\\\/[\\d]\\.[\\d].*",
+        "fab5cf5954ff8d0394af6decc08c1ba5\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "fabcaa97871555b68aa095335975e613\t17\tbot\\.araturka\\.com\\\/.*",
+        "fabcaa97871555b68aa095335975e613\t15\tbot\\.ara\\.com\\.tr\\\/.*",
+        "fabcaa97871555b68aa095335975e613\t3\tbot.*",
+        "fad9383ed4698856ed467fd49ecf4820\t28\tbookmark renewal check agent.*",
+        "fad9383ed4698856ed467fd49ecf4820\t20\tbookmark search tool.*",
+        "fad9383ed4698856ed467fd49ecf4820\t14\tbookmark buddy.*",
+        "fae7a9c0c70bb47fb0c970ebdb0c2985\t22\tmot\\-fe\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

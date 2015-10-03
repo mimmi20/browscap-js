@@ -1,0 +1,18 @@
+{
+    "content": [
+        "003c31158fda76b09977e9b2a5a9d500\t19\tg[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0042dc4b3e2069bfb4b7d096144f1ab6\t11\tkejian\\-k[\\d][\\d][\\d].*",
+        "00552333b12f0fdb7f44a2618d740fa5\t4\tw[\\d]m\\\/.*",
+        "006b2c7c19eff6a269e1993d90f9fb08\t29\tphilips[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0079818a29294e350629fc9b713f74e5\t38\tdotbot\\\/.* \\(http\\:\\\/\\\/www\\.dotnetdotcom\\.org\\\/.*\\)",
+        "007fb0ae6e7df0af9dfce40c8b48935c\t13\tnewsalloy\\\/.* \\(.*\\)",
+        "00a695de96388aecac748706b3249d9b\t9\tadidxbot\\\/.*",
+        "00ba9fba31c3906c9db02865dd133bc2\t65\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(apple; iphone.*iphone os.[\\d].[\\d].*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00ba9fba31c3906c9db02865dd133bc2\t63\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(apple; ipod.*iphone os.[\\d].[\\d].*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00ba9fba31c3906c9db02865dd133bc2\t61\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(apple; iphone.*iphone os.*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00ba9fba31c3906c9db02865dd133bc2\t59\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(apple; ipod.*iphone os.*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00ba9fba31c3906c9db02865dd133bc2\t52\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(.*iphone os.[\\d].[\\d].*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00ba9fba31c3906c9db02865dd133bc2\t48\tyahoomobile\\\/[\\d]\\.[\\d] .*\\(.*iphone os.*\\); yhoo_search_app\\\/[\\d]\\.[\\d].*",
+        "00f7ef12d66a55a728ffdb7d8c3dcaf5\t11\tpsbot\\-image.*"
+    ]
+}

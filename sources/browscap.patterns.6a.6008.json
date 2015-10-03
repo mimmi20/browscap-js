@@ -1,0 +1,15 @@
+{
+    "content": [
+        "6a0c64b77b85ab6263c7f264ad894e73\t28\tlge\\-mn[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6a21355ad8d88e7a87b0e9e2b8c5a621\t24\tsie\\-c[\\d][\\d]a\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6a548b682b3a28858af8d96defe6f240\t11\tnet_vampire.*",
+        "6a5a08e9f6227b425c82da8cc4df70ad\t52\tbenq\\-cf[\\d][\\d]\\\/[\\d]\\.[\\d][\\d]\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6a5edb8d1d271f49a68d29663031e9ff\t29\tlge\\-vx[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6a613a5417844fa6a02733364db1cd56\t32\taudiovox\\-cdm\\-[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6a694dae5efd453b460092c7ebfe461e\t11\tscooter\\\/[\\d]\\.[\\d].*",
+        "6a74a42271b843a0708328dde6859432\t28\tmotorola\\-e[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6add34d56cdec6db39116f8ecfa63df0\t21\tbot\\\/[\\d]\\.[\\d].* \\(bot for jce\\).*",
+        "6af8158b20cdda8cfd42bc096373f45e\t25\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] \\(.*symbianos\\\/.*",
+        "6af8158b20cdda8cfd42bc096373f45e\t24\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*symbianos\\\/.*"
+    ]
+}

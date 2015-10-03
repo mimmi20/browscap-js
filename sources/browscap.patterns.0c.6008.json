@@ -1,0 +1,23 @@
+{
+    "content": [
+        "0c04ed17c4a475a7026df086b99d3376\t17\tnew\\-sogou\\-spider\\\/.*",
+        "0c1e8e90f52d80f9ac66f63b16f7726e\t12\ty\\!j\\-bro\\\/yfsj.*",
+        "0c23a8bf29a191f18aee814737e2a6ec\t36\tnokia n[\\d][\\d]\\\/[\\d]\\.[\\d] push\\\/po up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0c23a8bf29a191f18aee814737e2a6ec\t25\tnokia [\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0c23a8bf29a191f18aee814737e2a6ec\t24\tnokia n[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0c23a8bf29a191f18aee814737e2a6ec\t10\tnokia [\\d][\\d][\\d][\\d]",
+        "0c30086b812519b006aa27ef4f37f15b\t14\tgooglebot v[\\d]\\.[\\d].*",
+        "0c30086b812519b006aa27ef4f37f15b\t9\tgooglebot.*",
+        "0c48ea28b453e672dde75d32ac8e6407\t26\tmot\\-e[\\d][\\d][\\d]\\\/[\\d]e\\.[\\d][\\d]\\.[\\d][\\d]r mib\\\/[\\d]\\.[\\d].*",
+        "0c56a82c02f7283dd187002bd14f8ea5\t52\tbenq\\-ef[\\d][\\d]\\\/[\\d]\\.[\\d][\\d]\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0c56f5bdb94a7b08cace8875588901a4\t7\ty\\!j\\-brh.*",
+        "0c7195a3f51eb3440d865de2449b63f8\t10\tlarbin_[\\d]\\.[\\d].*",
+        "0c89866e3c5104076f9c8b132ea1c4ba\t27\tmozilla\\\/smb[\\d]\\(z[\\d][\\d][\\d]\\)\\\/samsung .*",
+        "0c94065ee7fe83cd001d685aa8a796d5\t25\tdomainsdb\\.net metacrawler.*",
+        "0cbab7e743096d327e14367134b9873a\t25\tez publish link validator",
+        "0cbb3a850fb3a80e4db9e78e0552c3b6\t11\tnokia[\\d][\\d][\\d][\\d]i\\\/.*",
+        "0cc175b9c0f1b6a831c399e269772661\t18\ta \\.net web crawler",
+        "0cd6bf667145a7a4074aff60c3f9b45e\t13\ty\\!j\\-brl\\\/yatss.*",
+        "0cf6370dae631604b2b98016c2cbe2cf\t31\tsagem\\-myx\\-[\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

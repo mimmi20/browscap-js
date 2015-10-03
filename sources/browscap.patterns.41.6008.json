@@ -1,0 +1,26 @@
+{
+    "content": [
+        "4124bc0a9335c27f086f24ba207a4912\t6\taa bot.*",
+        "412b43f831be176872d60fce33651faa\t34\tpanasonic\\-gad[\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "413ef7e2dd2528340aeaff35dc04ae03\t26\tkejian\\-k[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "4143018b9d91005e863ca0031022a2b4\t25\tsie\\-c[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "41622b1cac8512bd35dec1d425693b30\t26\tblackberrysiemens sk[\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "418315be1826a3be6895a4a02ae20e92\t6\thtdig\\\/.*",
+        "418926265d57c387e8ebb3f449a786f1\t16\tlg\\-mg[\\d][\\d][\\d]a au\\\/[\\d]\\.[\\d].*",
+        "41b0000269b2dfffb66740e56a38229d\t14\ty\\!j\\-brz\\\/yatsha.*",
+        "41b1f2b6d404a37363766c281f7bcb60\t40\tbookmarkbase\\([\\d]\\\/;http\\:\\\/\\\/bookmarkbase\\.com\\)",
+        "41b28ae10655ec3fb5e425a9076edd7c\t13\twebcrawler_[\\d]\\..*",
+        "41bb10e2549f70673ee7ebb2a5684602\t32\tmot\\-c[\\d][\\d][\\d]m\\\/ulsas_g_[\\d][\\d]\\.[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "41c8d1b0dc36e7949e9039f0c9bc35f0\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "41d0956d87dd96ff15343f48663ff8de\t36\tincredimail [\\d]\\.[\\d].* \\(ipad; .*iphone os.[\\d].[\\d].*",
+        "41d0956d87dd96ff15343f48663ff8de\t32\tincredimail [\\d]\\.[\\d].* \\(ipad; .*iphone os.*",
+        "41d0956d87dd96ff15343f48663ff8de\t30\tincredimail [\\d]\\.[\\d].* \\(.*iphone os.[\\d].[\\d].*",
+        "41d0956d87dd96ff15343f48663ff8de\t26\tincredimail [\\d]\\.[\\d].* \\(.*iphone os.*",
+        "41d1938a26ce4d82eca5d4b5dffa24d3\t9\tcisco\\-ios",
+        "41d834e878a64a6a52171b77c03ac3bc\t11\tbittorrent\\\/.*",
+        "41e02a119c7e9aa172abb7ed8559936b\t36\tsamsung\\-sgh\\-e[\\d][\\d][\\d]c\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "41f6cf3a1423c64855f899e8e1b21358\t23\tuniversalfeedparser\\\/[\\d]\\.[\\d].*",
+        "41f6cf3a1423c64855f899e8e1b21358\t22\tuniversalfeedparser\\\/[\\d]\\..*",
+        "41fc72cc45fe269f2eeebba3d944f2fe\t12\tadidxbot\\\/[\\d]\\.[\\d].*"
+    ]
+}
