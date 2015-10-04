@@ -54,10 +54,10 @@ module.exports = function GetPattern (cache) {
      * @return Array
      */
     this.getPatterns = function(userAgent) {
-        var PatternHelper = require('helper');
+        var PatternHelper = require('./helper');
         var patternHelper = new PatternHelper();
 
-        var SubKey = require('../subkey');
+        var SubKey       = require('../subkey');
         var subkeyHelper = new SubKey();
 
         var starts = patternHelper.getHashForPattern(userAgent, true);
@@ -67,12 +67,11 @@ module.exports = function GetPattern (cache) {
 
         // get patterns, first for the given browser and if that is not found,
         // for the default browser (with a special key)
-        for (var i = 0; i < starts.length(); i++) {
-            var tmpStart = starts[i];
-
+        for (var i = 0; i < starts.length; i++) {
+            var tmpStart  = starts[i];
             var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
 
-            if (!this.cache.hasItem('browscap.patterns.' + tmpSubkey, true)) {
+            if (!this.cache.hasItem('browscap.patterns.' + tmpSubkey, true)) {console.log('cache not found');
                 continue;
             }
 
@@ -82,7 +81,7 @@ module.exports = function GetPattern (cache) {
                 continue;
             }
 
-            if (typeof file.content !== 'Array' || file.content.length === 0) {
+            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
                 continue;
             }
 
@@ -90,14 +89,15 @@ module.exports = function GetPattern (cache) {
 
             for (var j = 0; j < file.content.length; j++) {
                 var buffer    = file.content[j];
-                var split     = buffer.split("\t", 3);
-                var tmpBuffer = split[0];
-                var len       = split[1];
-                var patterns  = split[2];
+                //console.log("\n" + buffer);
+                var split     = buffer.split("\t");
+                var tmpBuffer = split.shift();
 
                 if (tmpBuffer === tmpStart) {
+                    var len = split.shift();
+
                     if (len <= length) {
-                        patternList.push(patterns.trim());
+                        patternList.push(split);
                     }
 
                     found = true;

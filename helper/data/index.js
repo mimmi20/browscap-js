@@ -30,7 +30,7 @@
 var SubKey = require('../subkey');
 var subkeyHelper = new SubKey();
 
-var PatternHelper = require('helper');
+var PatternHelper = require('../pattern/helper');
 var patternHelper = new PatternHelper();
 
 /**
@@ -63,10 +63,10 @@ module.exports = function GetData (cache, quoter) {
         var unquotedPattern = this.quoter.pregUnQuote(pattern);
 
         // Try to get settings for the pattern
-        var addedSettings = this.getIniPart(unquotedPattern);
-
+        var addedSettings = this.getIniPart(unquotedPattern);console.log(unquotedPattern);
+console.log(typeof settings, addedSettings);
         // set some additional data
-        if (typeof settings !== 'Array' || settings.length === 0) {
+        if ((typeof settings !== 'Array' && typeof settings !== 'object') || settings.length === 0) {
             // The optimization with replaced digits get can now result in setting searches, for which we
             // won't find a result - so only add the pattern information, is settings have been found.
             //
@@ -127,15 +127,14 @@ module.exports = function GetData (cache, quoter) {
 
         for (var i = 0; i < file.content.length; i++) {
             var buffer = file.content[i];
-            var contents = buffer.split("\t", 2);
-            var tmpBuffer = contents[0];
-            var patterns  = contents[1];
+            var contents = buffer.split("\t");
+            var tmpBuffer = contents.shift();
 
             if (tmpBuffer !== patternhash) {
                 continue;
             }
 
-            data = JSON.parse(patterns);
+            data = JSON.parse(contents);
         }
 
         return data;

@@ -27,7 +27,8 @@
  * @since      added with version 3.0
  */
 
-var CacheClass = require('cache-class');
+var CacheClass = require('../cache-class');
+var fs         = require('fs');
 
 /**
  * a cache proxy to be able to use the cache adapters provided by the WurflCache package
@@ -40,9 +41,9 @@ var CacheClass = require('cache-class');
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/browscap/browscap-php/
  */
-module.exports = function BrowscapCache (flatCache) {
-    this.version   = null;
-    this.flatCache = flatCache;
+module.exports = function BrowscapCache (datafolder) {
+    this.version = null;
+    this.folder  = datafolder;
 
     /**
      * Detected browscap version (read from INI file)
@@ -65,7 +66,7 @@ module.exports = function BrowscapCache (flatCache) {
     /**
      * Get an item.
      */
-    this.getItem = function(cacheId, withVersion) {
+    this.getItem = function(cacheId, withVersion, callback) {
         if (typeof withVersion === 'undefined') {
             withVersion = true;
         }
@@ -74,17 +75,18 @@ module.exports = function BrowscapCache (flatCache) {
             cacheId += '.' + this.getVersion();
         }
 
-        this.flatCache.get(cacheId, function(data){
-            if (data === undefined) {
-                return new CacheClass(null, false);
-            }
+        var data   = fs.readFileSync(this.getPath(cacheId));
+        var object = JSON.parse(data);
 
-            if (typeof data.content == 'undefined' ) {
-                return new CacheClass(null, false);
-            }
+        if (typeof object === 'undefined') {
+            return new CacheClass(null, false);
+        }
 
-            return new CacheClass(data.content, true);
-        });
+        if (typeof object.content == 'undefined' ) {
+            return new CacheClass(null, false);
+        }
+
+        return new CacheClass(object.content, true);
     };
 
     /**
@@ -96,7 +98,7 @@ module.exports = function BrowscapCache (flatCache) {
      * @param content
      * @param withVersion
      */
-    this.setItem = function(cacheId, content, withVersion) {
+    this.setItem = function(cacheId, content, withVersion, callback) {
         var data = {content: content};
 
         if (typeof withVersion === 'undefined') {
@@ -108,9 +110,9 @@ module.exports = function BrowscapCache (flatCache) {
         }
 
         // Save and return
-        this.flatCache.set(cacheId, data, function(err){
-            return (!err);
-        });
+        var json = JSON.stringify(data);
+
+        return fs.writeFileSync(this.getPath(cacheId), json);
     };
 
     /**
@@ -129,8 +131,13 @@ module.exports = function BrowscapCache (flatCache) {
             cacheId += '.' + this.getVersion();
         }
 
-        this.flatCache.get(cacheId, function(result){
-            return (typeof result !== 'undefined');
-        });
+        var data   = fs.readFileSync(this.getPath(cacheId));
+        var object = JSON.parse(data);
+
+        return (typeof object.content !== 'undefined');
+    };
+
+    this.getPath = function(keyname) {
+        return this.folder + '/' + keyname + '.json'
     };
 };

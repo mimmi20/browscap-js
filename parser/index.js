@@ -54,22 +54,26 @@ module.exports = function Ini (patternHelper, dataHelper) {
         userAgent = userAgent.toLowerCase();
 
         var patternList = this.patternHelper.getPatterns(userAgent);
-
+//console.log(patternList.length);
         for (var i = 0; i < patternList.length; i++) {
             var patterns       = patternList[i];
-            var patternToMatch = new RegExp('^(?:' + patterns.replace("\t", ')|(?:') + ')$', 'i');
-
-            if (!patternToMatch.test(userAgent)) {
+            //console.log(patterns);
+            var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
+            //console.log(patternToMatch);
+            if (!patternToMatch.test(userAgent)) {console.log('pattern did not match');
                 continue;
             }
 
-            var patternSubList = patterns.split("\t");
-
+            var patternSubList = patterns; //.split("\t");
+//console.log(patternSubList);
             for (var j = 0; j < patternSubList.length; j++) {
-                var pattern = patternSubList[j].replace('[\d]', '(\d)');
+                console.log(new RegExp('\\[\\\\d\\]', 'gi'));
+                var pattern = patternSubList[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+                console.log(patternSubList[j]);
+                console.log(pattern);
                 var quotedPattern = new RegExp('^' + pattern + '$', 'i');
-
-                if (!quotedPattern.test(userAgent)) {
+                console.log(quotedPattern);
+                if (!quotedPattern.test(userAgent)) {console.log('subpattern did not match');
                     continue;
                 }
 
@@ -80,17 +84,65 @@ module.exports = function Ini (patternHelper, dataHelper) {
                     matches.shift();
 
                     for (var k = 0; k < matches.length; k++){
-                        var numPos = pattern.indexOf('(\d)');
-                        var sub    = pattern.substring(numPos, 4);
+                        var numPos = pattern.indexOf('(\\d)');
+                        var sub    = pattern.substr(numPos, 4);
                         pattern = pattern.replace(sub, matches[k]);
                     }
                 }
-
+console.log(pattern);
                 // Try to get settings - as digits have been replaced to speed up the pattern search,
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.
                 return this.dataHelper.getSettings(pattern, {});
             }
+        }
+
+        // return default
+        return {
+            "Comment": "Default Browser",
+            "Browser": "Default Browser",
+            "Browser_Type": "unknown",
+            "Browser_Bits": "0",
+            "Browser_Maker": "unknown",
+            "Browser_Modus": "unknown",
+            "Version": "0.0",
+            "MajorVer": "0",
+            "MinorVer": "0",
+            "Platform": "unknown",
+            "Platform_Version": "unknown",
+            "Platform_Description": "unknown",
+            "Platform_Bits": "0",
+            "Platform_Maker": "unknown",
+            "Alpha": "false",
+            "Beta": "false",
+            "Win16": "false",
+            "Win32": "false",
+            "Win64": "false",
+            "Frames": "false",
+            "IFrames": "false",
+            "Tables": "false",
+            "Cookies": "false",
+            "BackgroundSounds": "false",
+            "JavaScript": "false",
+            "VBScript": "false",
+            "JavaApplets": "false",
+            "ActiveXControls": "false",
+            "isMobileDevice": "false",
+            "isTablet": "false",
+            "isSyndicationReader": "false",
+            "Crawler": "false",
+            "CssVersion": "0",
+            "AolVersion": "0",
+            "Device_Name": "unknown",
+            "Device_Maker": "unknown",
+            "Device_Type": "unknown",
+            "Device_Pointing_Method": "unknown",
+            "Device_Code_Name": "unknown",
+            "Device_Brand_Name": "unknown",
+            "RenderingEngine_Name": "unknown",
+            "RenderingEngine_Version": "unknown",
+            "RenderingEngine_Description": "unknown",
+            "RenderingEngine_Maker": "unknown"
         }
     };
 };

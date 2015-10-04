@@ -13,15 +13,13 @@ module.exports = function Browscap (cacheDir) {
    * @param userAgent the user agent string
    */
   this.getBrowser = function(userAgent) {
-    var Ini           = require('parser');
-    var Quoter        = require('helper/quoter');
+    var Ini           = require('./parser');
+    var Quoter        = require('./helper/quoter');
     var quoter        = new Quoter();
-    var GetPattern    = require('helper/pattern');
-    var BrowscapCache = require('cache/browscap');
-    var Flat          = require('flat-file-cache');
-    var flatCache     = new Flat(this.cacheDir);
-    var cache         = new BrowscapCache(flatCache);
-    var GetData       = require('helper/data');
+    var GetPattern    = require('./helper/pattern');
+    var BrowscapCache = require('./cache/browscap');
+    var cache         = new BrowscapCache(this.cacheDir);
+    var GetData       = require('./helper/data');
     var patternHelper = new GetPattern(cache);
     var dataHelper    = new GetData(cache, quoter);
 
