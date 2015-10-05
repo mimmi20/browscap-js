@@ -63,8 +63,8 @@ module.exports = function GetData (cache, quoter) {
         var unquotedPattern = this.quoter.pregUnQuote(pattern);
 
         // Try to get settings for the pattern
-        var addedSettings = this.getIniPart(unquotedPattern);console.log(unquotedPattern);
-console.log(typeof settings, addedSettings);
+        var addedSettings = this.getIniPart(unquotedPattern);
+
         // set some additional data
         if ((typeof settings !== 'Array' && typeof settings !== 'object') || settings.length === 0) {
             // The optimization with replaced digits get can now result in setting searches, for which we
@@ -89,7 +89,17 @@ console.log(typeof settings, addedSettings);
         }
 
         // merge settings
-        settings += addedSettings;
+        for (var property in addedSettings) {
+            if (!addedSettings.hasOwnProperty(property)) {
+                continue;
+            }
+            if (settings.hasOwnProperty(property)) {
+                continue;
+            }
+
+            settings[property] = addedSettings[property];
+        }
+        //settings += addedSettings;
 
         if (parentPattern !== null) {
             return this.getSettings(this.quoter.pregQuote(parentPattern), settings);
@@ -119,11 +129,9 @@ console.log(typeof settings, addedSettings);
             return {};
         }
 
-        if (typeof file.content !== 'Array' || file.content.length === 0) {
+        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
             return {};
         }
-
-        var data = {};
 
         for (var i = 0; i < file.content.length; i++) {
             var buffer = file.content[i];
@@ -134,9 +142,9 @@ console.log(typeof settings, addedSettings);
                 continue;
             }
 
-            data = JSON.parse(contents);
+            return JSON.parse(contents);
         }
 
-        return data;
+        return {};
     };
 };

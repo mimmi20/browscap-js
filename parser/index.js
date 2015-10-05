@@ -54,26 +54,22 @@ module.exports = function Ini (patternHelper, dataHelper) {
         userAgent = userAgent.toLowerCase();
 
         var patternList = this.patternHelper.getPatterns(userAgent);
-//console.log(patternList.length);
+
         for (var i = 0; i < patternList.length; i++) {
             var patterns       = patternList[i];
-            //console.log(patterns);
             var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
-            //console.log(patternToMatch);
-            if (!patternToMatch.test(userAgent)) {console.log('pattern did not match');
+
+            if (!patternToMatch.test(userAgent)) {
                 continue;
             }
 
-            var patternSubList = patterns; //.split("\t");
-//console.log(patternSubList);
+            var patternSubList = patterns;
+
             for (var j = 0; j < patternSubList.length; j++) {
-                console.log(new RegExp('\\[\\\\d\\]', 'gi'));
-                var pattern = patternSubList[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
-                console.log(patternSubList[j]);
-                console.log(pattern);
+                var pattern       = patternSubList[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
                 var quotedPattern = new RegExp('^' + pattern + '$', 'i');
-                console.log(quotedPattern);
-                if (!quotedPattern.test(userAgent)) {console.log('subpattern did not match');
+
+                if (!quotedPattern.test(userAgent)) {
                     continue;
                 }
 
@@ -89,7 +85,7 @@ module.exports = function Ini (patternHelper, dataHelper) {
                         pattern = pattern.replace(sub, matches[k]);
                     }
                 }
-console.log(pattern);
+
                 // Try to get settings - as digits have been replaced to speed up the pattern search,
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.

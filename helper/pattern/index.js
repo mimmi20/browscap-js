@@ -71,7 +71,7 @@ module.exports = function GetPattern (cache) {
             var tmpStart  = starts[i];
             var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
 
-            if (!this.cache.hasItem('browscap.patterns.' + tmpSubkey, true)) {console.log('cache not found');
+            if (!this.cache.hasItem('browscap.patterns.' + tmpSubkey, true)) {
                 continue;
             }
 
@@ -89,7 +89,7 @@ module.exports = function GetPattern (cache) {
 
             for (var j = 0; j < file.content.length; j++) {
                 var buffer    = file.content[j];
-                //console.log("\n" + buffer);
+
                 var split     = buffer.split("\t");
                 var tmpBuffer = split.shift();
 
