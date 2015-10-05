@@ -18,7 +18,7 @@
         "54775aed4edd91052c565bb1dcd51dcb\t70\tnokia[\\d][\\d][\\d][\\d]c\\-[\\d]\\\/[\\d]\\.[\\d] \\(.* mozilla\\\/.\\.[\\d] applewebkit\\\/.* \\(khtml,.*like gecko.*\\) safari\\\/.*",
         "54922d47c03e09b45e1fd8ac23b8e737\t82\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; transformer prime tf[\\d][\\d][\\d] build\\\/.*\\).*",
         "54922d47c03e09b45e1fd8ac23b8e737\t72\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; tp[\\d][\\d]\\.[\\d]\\-[\\d][\\d][\\d][\\d]dc.* build\\\/.*\\).*\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; lifetab_s[\\d][\\d][\\d][\\d] build\\\/.*\\).*",
-        "54922d47c03e09b45e1fd8ac23b8e737\t65\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; sgpt[\\d][\\d] build\\\/.*\\).*\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; me[\\d][\\d][\\d]c build\\\/.*\\).*",
+        "54922d47c03e09b45e1fd8ac23b8e737\t65\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; me[\\d][\\d][\\d]c build\\\/.*\\).*\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; sgpt[\\d][\\d] build\\\/.*\\).*",
         "54922d47c03e09b45e1fd8ac23b8e737\t59\tandroiddownloadmanager\\\/[\\d]\\.[\\d].* \\(linux; .; android [\\d]\\.[\\d].*; .* build\\\/.*\\).*",
         "549beeb414201e101266b43a1e0129ec\t17\tsec\\-.* .*netfront\\\/[\\d]\\.[\\d].*",
         "549beeb414201e101266b43a1e0129ec\t14\tsec\\-.* .*netfront\\\/.*",
