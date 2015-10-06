@@ -63,10 +63,8 @@ module.exports = function Ini (patternHelper, dataHelper) {
                 continue;
             }
 
-            var patternSubList = patterns;
-
-            for (var j = 0; j < patternSubList.length; j++) {
-                var pattern       = patternSubList[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+            for (var j = 0; j < patterns.length; j++) {
+                var pattern       = patterns[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
                 var quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
                 if (!quotedPattern.test(userAgent)) {
@@ -82,14 +80,23 @@ module.exports = function Ini (patternHelper, dataHelper) {
                     for (var k = 0; k < matches.length; k++){
                         var numPos = pattern.indexOf('(\\d)');
                         var sub    = pattern.substr(numPos, 4);
-                        pattern = pattern.replace(sub, matches[k]);
+                        pattern    = pattern.replace(sub, matches[k]);
                     }
                 }
-
+//console.log(pattern);
                 // Try to get settings - as digits have been replaced to speed up the pattern search,
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.
-                return this.dataHelper.getSettings(pattern, {});
+                var settings  = this.dataHelper.getSettings(pattern, {});
+                var hasResult = false;
+
+                for (var property in settings) {
+                    hasResult = true;
+                    break;
+                }
+                if (hasResult) {
+                    return settings;
+                }
             }
         }
 

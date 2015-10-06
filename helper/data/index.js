@@ -61,7 +61,7 @@ module.exports = function GetData (cache, quoter) {
         // The pattern has been pre-quoted on generation to speed up the pattern search,
         // but for this check we need the unquoted version
         var unquotedPattern = this.quoter.pregUnQuote(pattern);
-
+//console.log(unquotedPattern);
         // Try to get settings for the pattern
         var addedSettings = this.getIniPart(unquotedPattern);
 
@@ -119,29 +119,29 @@ module.exports = function GetData (cache, quoter) {
         var patternhash = patternHelper.getHashForParts(pattern);
         var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
 
-        if (!this.cache.hasItem('browscap.iniparts.' + subkey, true)) {
+        if (!this.cache.hasItem('browscap.iniparts.' + subkey, true)) {//console.log('no cache')
             return {};
         }
 
         var file = this.cache.getItem('browscap.iniparts.' + subkey, true);
 
-        if (!file.success) {
+        if (!file.success) {//console.log('no sucess')
             return {};
         }
 
-        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {//console.log('empty')
             return {};
         }
 
         for (var i = 0; i < file.content.length; i++) {
-            var buffer = file.content[i];
-            var contents = buffer.split("\t");
+            var buffer    = file.content[i];
+            var contents  = buffer.split("\t");
             var tmpBuffer = contents.shift();
-
+            //console.log(tmpBuffer, patternhash)
             if (tmpBuffer !== patternhash) {
                 continue;
             }
-
+            //console.log(tmpBuffer, patternhash)
             return JSON.parse(contents);
         }
 

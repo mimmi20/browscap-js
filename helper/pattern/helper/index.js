@@ -66,7 +66,7 @@ module.exports = function PatternHelper () {
      * @param variants
      */
     this.getHashForPattern = function(pattern, variants) {
-        var regex   = new RegExp('^([^\.\*\?\s\r\n\\\\]+).*$');
+        var regex   = new RegExp('^([^\\.\\*\\?\\s\\r\\n\\\\]+).*$');
         pattern     = pattern.substring(0, 32);
 
         if (typeof variants === 'undefined') {
@@ -78,7 +78,7 @@ module.exports = function PatternHelper () {
         }
 
         var matches = pattern.match(regex);
-
+//console.log(matches, matches[1]);
         if (typeof matches[1] === 'undefined') {
             return variants ? [md5('')] :  md5('');
         }
