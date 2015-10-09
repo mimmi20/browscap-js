@@ -83,7 +83,7 @@ module.exports = function Ini (patternHelper, dataHelper) {
                         pattern    = pattern.replace(sub, matches[k]);
                     }
                 }
-//console.log(pattern);
+
                 // Try to get settings - as digits have been replaced to speed up the pattern search,
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.
