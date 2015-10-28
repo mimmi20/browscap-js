@@ -1,0 +1,28 @@
+{
+    "content": [
+        "9d0aced1f83558b11fa3d1f581573571\t12\tsec\\-sghe[\\d][\\d][\\d] .*",
+        "9d3ef4de6a86f0f19c5ad42e93438a9e\t40\tdocweb link crawler \\(http\\:\\\/\\\/doc\\.php\\.net\\)",
+        "9d3ff71b05581b2f029af0e2c2fd54f0\t29\tgoodreaderipad\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "9d453bc0a95b65e41cdf53e4e3959709\t17\tkonka_a[\\d][\\d] kwap[\\d]\\.[\\d]",
+        "9d482fc9a4c5a43c2a58eb0b3e74a60b\t9\tfly\\-mx[\\d][\\d][\\d]",
+        "9d5b7360adaaba7872d3ba6ee627c1b6\t6\tsmbot\\\/.*",
+        "9d5e3ecdeb4cdb7acfd63075ae046672\t13\tkevin http\\:\\\/\\\/.*",
+        "9d8c21ab6885c241b9ca3cf3cdf03b94\t8\tlynx.[\\d]\\.[\\d].*",
+        "9d8c21ab6885c241b9ca3cf3cdf03b94\t4\tlynx.*",
+        "9d911a8511f8f3fa124fecc465827758\t32\tlg\\-km[\\d][\\d][\\d]\\\/v[\\d][\\d]x browser\\\/obigo\\-q[\\d]\\.[\\d].*",
+        "9da07da60869bfb1088bf7c47fbc8ac5\t29\tvm[\\d][\\d][\\d][\\d]\\\/[\\d][\\d][\\d]\\.[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9da0a109127b718469fbae700c03e157\t11\tpecl\\:\\:http\\\/.*",
+        "9db726565067c5d877a0ad63dac0bf84\t52\tcdr\\\/[\\d]\\.[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows\\)",
+        "9dba1eb0a5a8be313b43e49dfc772d92\t28\tlge\\-ax[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d]\\.[\\d][\\d].*",
+        "9dbfefadda0a5d5eb5db05abfce0cd58\t33\tpanasonic\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9dca71d5ed3bc701f3692e7ba08350d7\t11\tintravnews\\\/.*",
+        "9dcefda595e6405a6773c0d61a9e4f38\t25\tsie\\-c[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9de87f9bde62d03f0edfe4f9e42e00e0\t37\tphilips\\-fisio [\\d][\\d][\\d]\\\/[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "9dea066a75e54f6a4c38df05db532000\t45\texactseek\\-pagereaper\\-.* \\(crawler@exactseek\\.com\\)",
+        "9df22f196a33acd0b372fe502de51211\t7\tauto\\.de",
+        "9df27de5e0a1255f0e92cbeb75100a94\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "9df3538e7d576793a161291cc8e3f124\t8\tvadixbot",
+        "9df3b01c60df20d13843841ff0d4482c\t14\taccess browser.*",
+        "9df3b01c60df20d13843841ff0d4482c\t12\taccess robot.*"
+    ]
+}

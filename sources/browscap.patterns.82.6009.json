@@ -1,0 +1,24 @@
+{
+    "content": [
+        "8203e0a0e3d7a3f45b5916c2aa929f9b\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "82104064b12c16d0cb15e676f8151b1a\t34\twp\\-android\\\/.* \\(.*linux.*android.*gt\\-n[\\d][\\d][\\d][\\d]\\\/.*",
+        "82104064b12c16d0cb15e676f8151b1a\t33\twp\\-android\\\/.* \\(.*android [\\d]\\.[\\d].*gt\\-n[\\d][\\d][\\d][\\d]\\\/.*",
+        "82104064b12c16d0cb15e676f8151b1a\t25\twp\\-android\\\/.* \\(.*linux.*android.*",
+        "82104064b12c16d0cb15e676f8151b1a\t24\twp\\-android\\\/.* \\(.*android [\\d]\\.[\\d].*",
+        "8231c5f7c0089981c3c53be0cf8ccc0a\t55\tlenovo\\-a[\\d][\\d][\\d].*linux.*android.[\\d]\\.[\\d].* release.* browser.applewebkit.*",
+        "823f1e6d922119ef9bf399d97f1dd9cc\t24\tgoogle\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "823f1e6d922119ef9bf399d97f1dd9cc\t23\tgoogle\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "823f1e6d922119ef9bf399d97f1dd9cc\t21\tgoogle\\\/.* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "823f1e6d922119ef9bf399d97f1dd9cc\t18\tgoogle\\\/.* cfnetwork\\\/.*",
+        "825827a57876207ef35c488bf827428d\t28\tnec\\-n[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "825874027ef55098e827d7bb5700e4af\t24\tjoedog\\\/.* \\(x[\\d][\\d]; i; siege .*\\)",
+        "8271612d89331fb591904e90b3b79137\t39\tsonyericssonk[\\d][\\d][\\d]i\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "8271612d89331fb591904e90b3b79137\t29\tsonyericssonk[\\d][\\d][\\d]i\\\/.*\\(symbianos\\\/.*",
+        "827ccb0eea8a706c4c34a16891f84e7b\t5\t[\\d][\\d][\\d][\\d][\\d].*",
+        "827e9578fbec94be2d849cb02a3c8530\t24\tsie\\-a[\\d][\\d]a\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "82a72ce77e504bc566fd4c8222d48d16\t37\tsec\\-sghv[\\d][\\d][\\d]\\-x[\\d][\\d][\\d]\\\/pearl up\\.browser\\\/[\\d]\\.[\\d].*",
+        "82b1e31529e32ad074ee3cb4aed24f53\t24\tlg\\-g[\\d][\\d][\\d] mic\\\/v[\\d][\\d][\\d]\\\/wap[\\d]\\.[\\d] .*",
+        "82b68663c564239b6645ec251dc2fbfb\t38\tkolinka forum search \\(www\\.kolinka\\.com\\)",
+        "82c57eda5a49c497bf31ba4f4bebd111\t26\timagemobile\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "content": [
+        "c902cd9c52e386c7c7c8c63620921224\t21\tmaxpointcrawler\\\/nutch.*",
+        "c91a1e38881ed4e9c54a1153e8c14c8a\t18\tzend_xmlrpc_client",
+        "c92da926d3e4dbc13fd5d1ffe9571f0b\t12\tunister\\-bot .*",
+        "c9423cc5b4cde675963ea23c1d7ea22d\t78\tmot\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; linux; motorola e[\\d][\\d][\\d].* opera [\\d]\\.[\\d].*",
+        "c9447f8829f68ce1dbb0b947980ac96c\t29\tsagem\\-myx[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c94f9014d0058a69baf48cfd515e77a4\t18\tplantynet_webrobot.*",
+        "c967320a5bb5926efad169710c188eba\t17\tforschungsportal\\\/.*",
+        "c96ecf1a1c864fe1fa351977336de10a\t25\tkwc\\-k[\\d][\\d][\\d]b\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c977f50ea636da7e1a6f45d2d055d1c2\t19\tlg\\-g[\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "c9884f6f56c401b329116c5810ed2d3b\t36\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c99740072eee622942a2996e4a168b8c\t22\tmot\\-c[\\d][\\d][\\d]\\\/ wap\\.browser\\\/.*",
+        "c99992e8e8328ee505bda4ea162284b5\t10\tslysearch\\\/.*",
+        "c9ab23a4a09e4ab0be2561207214995f\t23\tcooliris.[\\d]\\.[\\d] cfnetwork\\\/.*",
+        "c9ab23a4a09e4ab0be2561207214995f\t19\tcooliris.* cfnetwork\\\/.*",
+        "c9b747a165d0a02b212a7e97df007f44\t7\tdavclnt.*",
+        "c9e1c7b5bb688d3a61aa99284dcb59d0\t24\tsie\\-c[\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c9facb2aa2668776e88873c59f89d94c\t16\tnixxiebot.foster.*",
+        "c9fd95bfe6b9b30b57962b225180b013\t29\tlge\\-ad[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}
