@@ -1,0 +1,23 @@
+{
+    "content": [
+        "d20a7ce532d96548868c9c46516650dc\t25\tsie\\-s[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d23ed8f46b96fc4de933090634298260\t55\tmsnbot\\-webmaster\\\/[\\d]\\.[\\d] \\(.*http\\:\\\/\\\/search\\.msn\\.com\\\/msnbot\\.htm\\)",
+        "d23f97aae3c83a9c6a4003e871763176\t13\thttp_request[\\d].*",
+        "d2460e15122f52d3696666e0707aa591\t8\tamaya\\\/[\\d]\\..*",
+        "d252e997d1672859956c13916b0d4b0c\t31\tsagem\\-myx\\-[\\d]m\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d255941d2b132bf6bbe3a4ac37b96ac7\t6\tinno[\\d][\\d].*",
+        "d259d4f1f6c8625ef2ff0b94f5b87e2d\t14\tlg\\-g[\\d][\\d][\\d] au\\\/[\\d]\\.[\\d].*",
+        "d25a3b7bc3484839cf6859502aea4e64\t25\tbigslickgofish.* cfnetwork\\\/.*",
+        "d2621f4b2d2f926e1545f7935f6f6268\t12\tfeedblitz\\\/[\\d]\\..*",
+        "d2699353961e56389e041429b4c73e29\t25\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] \\(.*symbianos\\\/.*",
+        "d2699353961e56389e041429b4c73e29\t24\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*symbianos\\\/.*",
+        "d271d4675721b597de1e75a2a44057f5\t26\tsec\\-sghp[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d271d4675721b597de1e75a2a44057f5\t11\tsec\\-sghp[\\d][\\d][\\d].*",
+        "d280b87a07dda653ad80cb8a5f6903b8\t21\thitpad\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "d29055e2ea629abbbece6e587d56d4a2\t27\tlg\\-gb[\\d][\\d][\\d]\\\/v[\\d][\\d][\\d] obigo\\\/wap[\\d]\\.[\\d] .*",
+        "d29d2508dccad4ec9e3a45bb2f48e107\t13\tstackrambler\\\/.*",
+        "d2d11d377fcaaa9454b9bcbfb792fe37\t7\ty\\!j\\-dlc.*",
+        "d2d62ba8041b364d5f82f15745b668d3\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "d2fd24cdbb7cafd3da3abb228c987997\t28\tnec\\-n[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

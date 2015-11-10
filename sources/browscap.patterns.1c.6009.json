@@ -1,0 +1,25 @@
+{
+    "content": [
+        "1c00e593f7f7a3b76404195f9d277b9d\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "1c0206b1061f83df667dcdb7e21b2539\t38\tperfect%[\\d][\\d]browser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "1c0206b1061f83df667dcdb7e21b2539\t37\tperfect%[\\d][\\d]browser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "1c0206b1061f83df667dcdb7e21b2539\t35\tperfect%[\\d][\\d]browser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "1c0206b1061f83df667dcdb7e21b2539\t32\tperfect%[\\d][\\d]browser\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "1c14de157c8ec84d2287e60a3d23a419\t27\tnokia\\-rh\\-[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1c3d2a65de8f14121463cde3bd9769a5\t18\tapple\\-pubsub\\\/[\\d][\\d]\\.[\\d][\\d].*",
+        "1c694a611a0b0dcb8388afdf0c7582d4\t20\tpanasonic\\-x[\\d][\\d][\\d]p\\\/rp[\\d] .*",
+        "1c6b311e12fe14365c7e762076da0748\t6\tinno[\\d][\\d].*",
+        "1c6ffe4cd7cb1ecc2f358ecca19656e2\t19\tlinklint\\-checkonly\\\/.*",
+        "1c705d2cd764f147a4e113c4a7618652\t25\tmot\\-v[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mib[\\d]\\.[\\d]\\\/v[\\d]\\.[\\d] .*",
+        "1c705d2cd764f147a4e113c4a7618652\t20\tmot\\-v[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mib[\\d]\\.[\\d]\\\/.*",
+        "1c98c556a46f2b40e495c87e69bc2415\t17\tmot\\-a[\\d][\\d][\\d]\\\/a[\\d][\\d][\\d]_g_[\\d].*",
+        "1c9c7ce9c9e2ddc8a39e91b77eff2a44\t72\tyahooseeker\\\/cafekelsa.* \\(compatible; konqueror\\\/.*; freebsd.*\\(khtml,.*like gecko.*\\)",
+        "1c9c7ce9c9e2ddc8a39e91b77eff2a44\t21\tyahooseeker\\\/cafekelsa.*",
+        "1ca335760a3491141857e35222bec455\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "1cb3c8aaa00858f199ca0d37a8d91ab4\t20\tcurl\\\/[\\d]\\.[\\d][\\d].*x[\\d][\\d]_[\\d][\\d].*linux.*",
+        "1cb3c8aaa00858f199ca0d37a8d91ab4\t14\tcurl\\\/[\\d]\\.[\\d][\\d].*linux.*",
+        "1cb3c8aaa00858f199ca0d37a8d91ab4\t9\tcurl\\\/[\\d]\\.[\\d][\\d].*\tcurl\\\/[\\d]\\.[\\d][\\d]",
+        "1cf3a72a0c960aed0332d36bdcb4838c\t8\tpagedown.*",
+        "1cf54b6e37c63084d1314b4c6d2d95a5\t19\tblackberry[\\d][\\d][\\d][\\d]f\\\/[\\d]\\.[\\d].*"
+    ]
+}

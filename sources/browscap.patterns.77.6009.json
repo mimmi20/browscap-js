@@ -1,0 +1,17 @@
+{
+    "content": [
+        "77007c83cc264490e05c0f8abcb69edc\t20\tlg\\-c[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "772b0e8adf06a6f7fbc2636a68852700\t17\tsec\\-sghe[\\d][\\d][\\d]c\\\/[\\d]\\.[\\d] .*",
+        "772b86070405c9874dbcc2fa7e5fdb08\t21\tlg\\-mg[\\d][\\d][\\d]a mic\\\/wap[\\d]\\.[\\d] .*",
+        "7754a5bcb545d8eee5a85c913ddc18a7\t30\tmot\\-e[\\d][\\d][\\d]_\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7755885fe9805b6020cd22ad4d32fbce\t48\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].* opera\\\/.*\\(j[\\d]me\\\/midp.*opera mini\\\/[\\d]\\.[\\d].*\\).*",
+        "775787445b1850ad70d33901d88f175a\t22\tisearch\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "776147767916ac4e191fa8446a6590f5\t52\tfeedhub metadatafetcher\\\/[\\d]\\.[\\d] \\(http\\:\\\/\\\/www\\.feedhub\\.com\\)",
+        "776147767916ac4e191fa8446a6590f5\t50\tfeedhub feeddiscovery\\\/[\\d]\\.[\\d] \\(http\\:\\\/\\\/www\\.feedhub\\.com\\)",
+        "776147767916ac4e191fa8446a6590f5\t48\tfeedhub feedfetcher\\\/[\\d]\\.[\\d] \\(http\\:\\\/\\\/www\\.feedhub\\.com\\)",
+        "77793c3d9d9cfcd76cb94624cac91fc7\t33\tsharp\\-tq\\-gx[\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7795e3f5697cb871f11c67f576a1d0cd\t27\tbenq\\-sl[\\d][\\d]\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "77d126b1527e1e51592f50c67dae285e\t8\tamoi\\\/r[\\d]a",
+        "77dc9dd2f7f3bb6374370a11216363d9\t37\tanswerbus \\(http\\:\\\/\\\/www\\.answerbus\\.com\\\/\\)"
+    ]
+}
