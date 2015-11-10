@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 1998-2014 Browser Capabilities Project
+ * Copyright (c) 1998-2015 Browser Capabilities Project
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -19,13 +19,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @category   Browscap-PHP
- * @package    Cache
- * @copyright  1998-2014 Browser Capabilities Project
+ * @category   browscap-js
+ * @package    cache
+ * @copyright  1998-2015 Browser Capabilities Project
  * @license    http://www.opensource.org/licenses/MIT MIT License
- * @link       https://github.com/browscap/browscap-php/
- * @since      added with version 3.0
+ * @link       https://github.com/mimmi20/browscap-js/
  */
+
+"use strict";
 
 var CacheClass = require('../cache-class');
 var fs         = require('fs');
@@ -33,13 +34,12 @@ var fs         = require('fs');
 /**
  * a cache proxy to be able to use the cache adapters provided by the WurflCache package
  *
- * @category   Browscap-PHP
- * @package    Cache
+ * @category   browscap-js
+ * @package    cache
  * @author     Thomas Müller <t_mueller_stolzenhain@yahoo.de>
- * @copyright  Copyright (c) 1998-2014 Browser Capabilities Project
- * @version    3.0
+ * @copyright  Copyright (c) 1998-2015 Browser Capabilities Project
  * @license    http://www.opensource.org/licenses/MIT MIT License
- * @link       https://github.com/browscap/browscap-php/
+ * @link       https://github.com/mimmi20/browscap-js/
  */
 module.exports = function BrowscapCache (datafolder) {
     this.version = null;
