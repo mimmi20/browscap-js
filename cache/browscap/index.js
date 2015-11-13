@@ -50,7 +50,7 @@ module.exports = function BrowscapCache (datafolder) {
      *
      * @var int
      */
-    this.getVersion = function() {
+    this.getVersion = function getVersion () {
 
         if (this.version === null) {
             var version = this.getItem('browscap.version', false);
@@ -66,7 +66,7 @@ module.exports = function BrowscapCache (datafolder) {
     /**
      * Get an item.
      */
-    this.getItem = function(cacheId, withVersion, callback) {
+    this.getItem = function getItem (cacheId, withVersion, callback) {
         if (typeof withVersion === 'undefined') {
             withVersion = true;
         }
@@ -98,7 +98,7 @@ module.exports = function BrowscapCache (datafolder) {
      * @param content
      * @param withVersion
      */
-    this.setItem = function(cacheId, content, withVersion, callback) {
+    this.setItem = function setItem (cacheId, content, withVersion, callback) {
         var data = {content: content};
 
         if (typeof withVersion === 'undefined') {
@@ -122,7 +122,7 @@ module.exports = function BrowscapCache (datafolder) {
      * @param cacheId
      * @param withVersion
      */
-    this.hasItem = function(cacheId, withVersion) {
+    this.hasItem = function hasItem (cacheId, withVersion) {
         if (typeof withVersion === 'undefined') {
             withVersion = true;
         }
@@ -137,7 +137,7 @@ module.exports = function BrowscapCache (datafolder) {
         return (typeof object.content !== 'undefined');
     };
 
-    this.getPath = function(keyname) {
+    this.getPath = function getPath (keyname) {
         return this.folder + '/' + keyname + '.json'
     };
 };

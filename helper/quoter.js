@@ -46,14 +46,14 @@ module.exports = function Quoter () {
      *
      * @return string
      */
-    this.pregQuote = function(userAgent) {
+    this.pregQuote = function pregQuote (userAgent) {
         var pattern = this.preg_quote(userAgent);
 
         // the \\x replacement is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
         return pattern.replace('\\\\*', '.*').replace('\\\\?', '.').replace('\\x', '\\\\x');
     };
 
-    this.preg_quote = function(str, delimiter) {
+    this.preg_quote = function preg_quote (str, delimiter) {
         //  discuss at: http://phpjs.org/functions/preg_quote/
         // original by: booeyOH
         // improved by: Ates Goral (http://magnetiq.com)
@@ -71,7 +71,7 @@ module.exports = function Quoter () {
             .replace(new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]', 'g'), '\\$&');
     };
 
-    this.preg_unquote = function(str, delimiter) {
+    this.preg_unquote = function preg_unquote (str, delimiter) {
         //  discuss at: http://phpjs.org/functions/preg_quote/
         // original by: booeyOH
         // improved by: Ates Goral (http://magnetiq.com)
@@ -96,7 +96,7 @@ module.exports = function Quoter () {
      * @param pattern
      * @return string
      */
-    this.pregUnQuote = function(pattern) {
+    this.pregUnQuote = function pregUnQuote (pattern) {
         var regex = new RegExp('[^a-z0-9\\s]', 'i');
 
         if (!regex.test(pattern)) {

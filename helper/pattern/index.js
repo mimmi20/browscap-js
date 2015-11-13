@@ -52,7 +52,7 @@ module.exports = function GetPattern (cache) {
      *
      * @return Array
      */
-    this.getPatterns = function(userAgent) {
+    this.getPatterns = function getPatterns (userAgent) {
         var PatternHelper = require('./helper');
         var patternHelper = new PatternHelper();
 

@@ -45,7 +45,7 @@ module.exports = function SubKey (content, success) {
      * @param  string
      * @return string
      */
-    this.getPatternCacheSubkey = function(string) {
+    this.getPatternCacheSubkey = function getPatternCacheSubkey (string) {
         return string.substring(0, 2);
     };
 
@@ -54,7 +54,7 @@ module.exports = function SubKey (content, success) {
      *
      * @return Object
      */
-    this.getAllPatternCacheSubkeys = function() {
+    this.getAllPatternCacheSubkeys = function getAllPatternCacheSubkeys () {
         var subkeys = {};
         var chars   = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
@@ -73,7 +73,7 @@ module.exports = function SubKey (content, success) {
      * @param string
      * @return string
      */
-    this.getIniPartCacheSubKey = function(string) {
+    this.getIniPartCacheSubKey = function getIniPartCacheSubKey (string) {
         return string.substring(0, 3);
     };
 
@@ -82,7 +82,7 @@ module.exports = function SubKey (content, success) {
      *
      * @return Array
      */
-    this.getAllIniPartCacheSubKeys = function() {
+    this.getAllIniPartCacheSubKeys = function getAllIniPartCacheSubKeys () {
         var subKeys = [];
         var chars   = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 

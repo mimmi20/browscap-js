@@ -56,7 +56,7 @@ module.exports = function GetData (cache, quoter) {
      * @param  settings
      * @return array
      */
-    this.getSettings = function(pattern, settings) {
+    this.getSettings = function getSettings (pattern, settings) {
         // The pattern has been pre-quoted on generation to speed up the pattern search,
         // but for this check we need the unquoted version
         var unquotedPattern = this.quoter.pregUnQuote(pattern);
@@ -113,7 +113,7 @@ module.exports = function GetData (cache, quoter) {
      * @param  pattern
      * @return Object
      */
-    this.getIniPart = function(pattern) {
+    this.getIniPart = function getIniPart (pattern) {
         pattern         = pattern.toLowerCase();
         var patternhash = patternHelper.getHashForParts(pattern);
         var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);

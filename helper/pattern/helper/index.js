@@ -64,7 +64,7 @@ module.exports = function PatternHelper () {
      * @param pattern
      * @param variants
      */
-    this.getHashForPattern = function(pattern, variants) {
+    this.getHashForPattern = function getHashForPattern (pattern, variants) {
         var regex   = new RegExp('^([^\\.\\*\\?\\s\\r\\n\\\\]+).*$');
         pattern     = pattern.substring(0, 32);
 
@@ -112,7 +112,7 @@ module.exports = function PatternHelper () {
      *
      * @return string
      */
-    this.getHashForParts = function(pattern) {
+    this.getHashForParts = function getHashForParts (pattern) {
         return md5(pattern);
     };
 
@@ -123,7 +123,7 @@ module.exports = function PatternHelper () {
      * @param  pattern
      * @return int
      */
-    this.getPatternLength = function(pattern) {
+    this.getPatternLength = function getPatternLength (pattern) {
         return pattern.replace('*', '').length;
     };
 };

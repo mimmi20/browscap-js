@@ -49,7 +49,7 @@ module.exports = function Ini (patternHelper, dataHelper) {
      * @param  userAgent
      * @return Object|null
      */
-    this.getBrowser = function(userAgent) {
+    this.getBrowser = function getBrowser (userAgent) {
         userAgent = userAgent.toLowerCase();
 
         var patternList = this.patternHelper.getPatterns(userAgent);
