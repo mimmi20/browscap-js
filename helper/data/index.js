@@ -118,17 +118,13 @@ module.exports = function GetData (cache, quoter) {
         var patternhash = patternHelper.getHashForParts(pattern);
         var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
 
-        if (!this.cache.hasItem('browscap.iniparts.' + subkey, true)) {
-            return {};
-        }
-
         var file = this.cache.getItem('browscap.iniparts.' + subkey, true);
 
         if (!file.success) {
             return {};
         }
 
-        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+        if ((typeof file.content !== 'Array' && typeof file.content !== 'Object') || file.content.length === 0) {
             return {};
         }
 

@@ -70,17 +70,13 @@ module.exports = function GetPattern (cache) {
             var tmpStart  = starts[i];
             var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
 
-            if (!this.cache.hasItem('browscap.patterns.' + tmpSubkey, true)) {
-                continue;
-            }
-
             var file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
 
             if (!file.success) {
                 continue;
             }
 
-            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+            if ((typeof file.content !== 'Array' && typeof file.content !== 'Object') || file.content.length === 0) {
                 continue;
             }
 

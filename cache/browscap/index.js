@@ -46,9 +46,9 @@ module.exports = function BrowscapCache (datafolder) {
     this.folder  = datafolder;
 
     /**
-     * Detected browscap version (read from INI file)
+     * Detected browscap version
      *
-     * @var int
+     * @returns {string}
      */
     this.getVersion = function getVersion () {
 
@@ -65,8 +65,12 @@ module.exports = function BrowscapCache (datafolder) {
 
     /**
      * Get an item.
+     *
+     * @param cacheId
+     * @param withVersion
+     * @returns {CacheClass}
      */
-    this.getItem = function getItem (cacheId, withVersion, callback) {
+    this.getItem = function getItem (cacheId, withVersion) {
         if (typeof withVersion === 'undefined') {
             withVersion = true;
         }
@@ -90,15 +94,14 @@ module.exports = function BrowscapCache (datafolder) {
     };
 
     /**
-     * save the content into an php file
+     * save the content into an json file
      *
-     *
-     * @return boolean whether the file was correctly written to the disk
      * @param cacheId
      * @param content
      * @param withVersion
+     * @returns {*}
      */
-    this.setItem = function setItem (cacheId, content, withVersion, callback) {
+    this.setItem = function setItem (cacheId, content, withVersion) {
         var data = {content: content};
 
         if (typeof withVersion === 'undefined') {
@@ -118,25 +121,22 @@ module.exports = function BrowscapCache (datafolder) {
     /**
      * Test if an item exists.
      *
-     * @return bool
      * @param cacheId
      * @param withVersion
+     * @returns {boolean}
      */
     this.hasItem = function hasItem (cacheId, withVersion) {
-        if (typeof withVersion === 'undefined') {
-            withVersion = true;
-        }
+        var version = this.getItem(cacheId, withVersion);
 
-        if (withVersion) {
-            cacheId += '.' + this.getVersion();
-        }
-
-        var data   = fs.readFileSync(this.getPath(cacheId));
-        var object = JSON.parse(data);
-
-        return (typeof object.content !== 'undefined');
+        return (version.content !== null && version.success);
     };
 
+    /**
+     * creates the name of the cache file for an cache key
+     *
+     * @param keyname
+     * @returns {string}
+     */
     this.getPath = function getPath (keyname) {
         return this.folder + '/' + keyname + '.json'
     };
