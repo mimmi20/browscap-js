@@ -30,7 +30,8 @@
     }
   ],
   "dependencies": {
-    "md5": "^2.0.0"
+    "md5": "^2.0.0",
+    "browscap-js-cache": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"

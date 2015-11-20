@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function Browscap (cacheDir) {
   if (typeof cacheDir === 'undefined') {
     cacheDir = './sources/';
@@ -17,7 +19,7 @@ module.exports = function Browscap (cacheDir) {
     var Quoter        = require('./helper/quoter');
     var quoter        = new Quoter();
     var GetPattern    = require('./helper/pattern');
-    var BrowscapCache = require('./cache/browscap');
+    var BrowscapCache = require('browscap-js-cache');
     var cache         = new BrowscapCache(this.cacheDir);
     var GetData       = require('./helper/data');
     var patternHelper = new GetPattern(cache);
