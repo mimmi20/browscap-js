@@ -1,0 +1,20 @@
+{
+    "content": [
+        "3005ce6156d87ed5f2002014f376c68f\t29\tlge\\-lg[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "300aacc157905439358e43c67d30fcdc\t10\twebwhacker.*",
+        "300c6e698bf786f7b9401c0e5b66c847\t24\tkddi\\-ca[\\d]g up\\.browser\\\/[\\d]\\.[\\d].*",
+        "301ee743aa825f0f2e695a8f9d003391\t25\tmot\\-v[\\d][\\d]x_\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "302036387c1daedbb460a8cc42115c66\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "306547b76423aaec70985c7641a6f607\t21\tnutch\\\/.* \\(openx spider\\)",
+        "30703582f2f532a305c33d25bf8f40d6\t4\tdap .*",
+        "3095dbfcb9273218857172b1e75e7cd5\t28\tnorbert the spider\\(burf\\.com\\)",
+        "30a0af6d8e593a152d1eb1fb67c98183\t34\thaier\\-m[\\d][\\d][\\d]\\\/\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\)[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d]",
+        "30a1c0b804aa4a9389efb3cb9f5fd4be\t15\tgenderanalyzer\\\/.*",
+        "30dc922de29d22e37ba7694a058f88a7\t23\tlg\\-kp[\\d][\\d][\\d] teleca\\\/wap[\\d]\\.[\\d] .*",
+        "30df8aceac59e8cdeffbc1076c528ede\t24\tcyberduck\\\/.* \\(.*windows xp.*\\) .*",
+        "30df8aceac59e8cdeffbc1076c528ede\t21\tcyberduck\\\/.* \\(.*windows.*\\) .*",
+        "30f56cd85179c0aaeec6f92fdf9f3471\t23\tbot\\\/.* \\(bot; .*bot@bot\\.bot\\)",
+        "30f56cd85179c0aaeec6f92fdf9f3471\t18\tbot\\\/.* \\(bot for jce\\).*",
+        "30ff21d3c804814c1cff861917576690\t11\tnokia[\\d][\\d][\\d][\\d]b\\\/.*"
+    ]
+}

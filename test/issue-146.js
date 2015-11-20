@@ -1,3 +1,5 @@
+"use strict";
+
 var assert = require('assert'),
     Browscap = require('../browscap.js'),
     browscap = new Browscap(),
@@ -7,7 +9,7 @@ suite('checking for issue 146.', function () {
   test('issue-146 ["Mozilla/4.0 (compatible; MSIE 7.0;Windows NT 5.1;.NET CLR 1.1.4322;.NET CLR 2.0.50727;.NET CLR 3.0.04506.30) Lightspeedsystems"]', function () {
     browser = browscap.getBrowser('Mozilla/4.0 (compatible; MSIE 7.0;Windows NT 5.1;.NET CLR 1.1.4322;.NET CLR 2.0.50727;.NET CLR 3.0.04506.30) Lightspeedsystems');
 
-    assert.strictEqual(browser['Browser'], 'Lightspeedsystems', 'Expected actual "Browser" to be \'Lightspeedsystems\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser'], 'Lightspeed Systems Crawler', 'Expected actual "Browser" to be \'Lightspeed Systems Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Maker'], 'Lightspeed Systems', 'Expected actual "Browser_Maker" to be \'Lightspeed Systems\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

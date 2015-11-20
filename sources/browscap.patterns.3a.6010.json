@@ -1,0 +1,13 @@
+{
+    "content": [
+        "3a06b3998dec2c0fc9b5de40d0bd1c17\t24\tkddi\\-ca[\\d]a up\\.browser\\\/[\\d]\\.[\\d].*",
+        "3a77d691e369c981e92d0db16ae6e8ac\t37\tnokian[\\d][\\d]_[\\d]gb\\-.;mozilla\\\/[\\d]\\.[\\d] symbianos\\\/.*",
+        "3a8f5aaa3431047132cbc63e0a3dae03\t65\tmot\\-razrv[\\d]xx\\\/.* ber[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d].*  opera [\\d]\\.[\\d][\\d].*",
+        "3a9357ba0b1007ca3bf5f354dd737d78\t10\tcynthia [\\d]\\..*",
+        "3a9357ba0b1007ca3bf5f354dd737d78\t8\tcynthia .*",
+        "3af082176b68890e08bafb44fc5b8a6e\t15\tmot\\-v[\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "3af082176b68890e08bafb44fc5b8a6e\t12\tmot\\-v[\\d]\\\/.* mib\\\/.*",
+        "3af3f883059cb8f04253a6ddeba544f4\t36\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "3afca7e1300a3dcc636cd0a03daa6384\t8\tfacebot\\\/.*"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "content": [
+        "0d1017ce7c8f44d6eedc7ee479115117\t5\twwwc\\\/.*",
+        "0d1443bf78258f3cc61f1adb16e20d76\t45\tsamsung\\-e[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] openwave\\\/[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0d149b90e7394297301c90191ae775f0\t32\tit\\\\\\x.*b[\\d]s me \\(compatible.*; msie [\\d]\\.[\\d].*",
+        "0d2522c7a9bed943227fad339580a726\t6\twebpix.*",
+        "0d3c5f89640e3ed1845a09b3b9792b7f\t14\thyperestraier\\\/.*",
+        "0d4c4f551487d0d1c3faef7dd32681dc\t13\tnokia[\\d][\\d][\\d][\\d]s\\-[\\d]\\\/.*",
+        "0d5d1c829084132957d9abf4a976a2f2\t16\tsec\\-sghx[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*",
+        "0d5e0e810e804ce856fd72eef94cf879\t23\tlg\\-l[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0d7c05891c4de94639827c92db042304\t36\tsamsung\\-sgh\\-d[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0d7c4bc326985bee76ac2c8f61a9a5fe\t27\tgoogle\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "0d7c4bc326985bee76ac2c8f61a9a5fe\t26\tgoogle\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "0d7c4bc326985bee76ac2c8f61a9a5fe\t24\tgoogle\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "0d7c4bc326985bee76ac2c8f61a9a5fe\t21\tgoogle\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "0d82a5982c87476aa0bfc435d7b81103\t29\telmer, the thinglink imagebot.*",
+        "0d8b5afc2c43d9e8bf0953c6c5bb9660\t24\tmot\\-sap[\\d]_.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0d91a87741e21020859f48bb43a391d8\t29\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] \\(.*up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0d95af6870456b2bd28e23ee4b5151a8\t33\tsharp\\-tq\\-gx[\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0db811838678e12700e62e584c176e7e\t7\tgidbot\\\/.*",
+        "0dbd7735b52ac56d02d831cdaf64b9f6\t24\tsie\\-sl[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "0debc5ba3524c08b51e523ec6cffe7fd\t84\tmot\\-motorokr e[\\d]\\\/[\\d]\\.[\\d]\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; linux; motorokr e[\\d].* opera [\\d]\\.[\\d][\\d].*",
+        "0debc5ba3524c08b51e523ec6cffe7fd\t26\tmot\\-motorokr e[\\d] opera [\\d]\\.[\\d][\\d].*",
+        "0df225342274f78ca5ebcda96f47b2ee\t13\tsimplepie\\\/[\\d]\\.[\\d].*"
+    ]
+}

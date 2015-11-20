@@ -1,0 +1,17 @@
+{
+    "content": [
+        "3800f845ae86a2e1a26be414d8cadd0f\t28\tmfc foundation class library.*",
+        "3803da4f69dcfbe7aaf002df84bff8a3\t5\tabot\\\/.*",
+        "38668fb25225f54f66859cd40bb3cf9f\t37\tyandex\\\/[\\d]\\.[\\d][\\d]\\.[\\d][\\d][\\d] \\(compatible; win[\\d][\\d]; .*\\)",
+        "3871471f5493e88e2bdbdad1e3651ce3\t34\trealplayer%[\\d][\\d]downloader.* cfnetwork\\\/.*",
+        "3874016b256e101ab9794dfd472f0678\t15\tericssona[\\d][\\d][\\d][\\d]s\\\/.*",
+        "389953f0d11bf9eb939f97b9ae0d5774\t71\tmot\\-q[\\d]\\\/[\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]r mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce.*opera [\\d]\\.[\\d][\\d].*",
+        "389f47b27d4b3855a2cfa7c1e2e01393\t23\tsch\\-x[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "38bf0d0d5bc93de5efd4a1bb97970300\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "38c051b285d06e62e24f4da8cedbb3ff\t21\tisilox\\\/[\\d]\\.[\\d].* windows\\\/[\\d][\\d]",
+        "38c051b285d06e62e24f4da8cedbb3ff\t16\tisilox\\\/[\\d]\\.[\\d].* macos",
+        "38d3e762c625ca81206c7bffc890ee0c\t15\twebclipping\\.com",
+        "38f33842e343c6ad19a37449c7b17dc5\t16\thatenascreenshot.*",
+        "38fd630e5a06a2a3f335f44dc15b04f2\t24\tflipboard\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*"
+    ]
+}

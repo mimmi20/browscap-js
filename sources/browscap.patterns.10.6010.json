@@ -1,0 +1,19 @@
+{
+    "content": [
+        "100ef5c5e575ddf5b0a82101d0c1aa5f\t7\trssowl\\\/.*",
+        "101fb1b216ac3553cb00c0ac8acc922b\t16\tmot\\-l[\\d]i\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "10206890882e3203e52577d9ce3a7f9c\t8\tseekbot\\\/.*",
+        "1037d0c3eda85ca777df12c8e84a2995\t9\tccbot\\\/[\\d]\\.[\\d].*",
+        "1045c6d084c18f7775678c71cd9ff375\t17\tgarlikcrawler\\\/[\\d]\\.[\\d].*",
+        "104e821b0016c05ffc2a105d1c445d71\t24\tsie\\-cx[\\d]a\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1074ef30be97ed6a7660b16fe4c88e58\t17\tg[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "107609d5394cf95977bfde832f8af167\t11\tsec\\-sghe[\\d][\\d][\\d].*",
+        "10771da8b7b883a52b166e09c2ae0235\t11\twhatweb\\\/[\\d]\\.[\\d].*",
+        "10830cc3e38cee090348f6edab60d4e6\t77\tmot\\-razrv[\\d]xxr_j\\\/[\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]r.* ber[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d].*  opera [\\d]\\.[\\d][\\d].*",
+        "10ab32fd2e3904206c0de250c325a446\t11\tmbot v\\.[\\d]\\.[\\d][\\d].*",
+        "10ab32fd2e3904206c0de250c325a446\t4\tmbot.*",
+        "10cb901e8614ed1dce230c17c9a1671c\t7\tenvolk\\\/.*",
+        "10e039eec4bfe63f996087be55743779\t20\tmot\\-v[\\d][\\d][\\d]ens\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "10e411958e439b1b49d51048bfc4eb60\t11\tubicrawler\\\/.*"
+    ]
+}
