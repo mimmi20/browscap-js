@@ -76,7 +76,7 @@ module.exports = function GetPattern (cache) {
                 continue;
             }
 
-            if ((typeof file.content !== 'Array' && typeof file.content !== 'Object') || file.content.length === 0) {
+            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
                 continue;
             }
 

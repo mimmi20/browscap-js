@@ -124,7 +124,7 @@ module.exports = function GetData (cache, quoter) {
             return {};
         }
 
-        if ((typeof file.content !== 'Array' && typeof file.content !== 'Object') || file.content.length === 0) {
+        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
             return {};
         }
 
