@@ -1,0 +1,16 @@
+{
+    "content": [
+        "6100e570783312caa030438ec192eea6\t23\tnec\\-[\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "611164c1a925b0f759f97db7fd7b3523\t11\tbandscraper.*",
+        "612540d547a070f434864f1f6df5c79b\t28\tssearch_bot \\(ssearch crawler.*",
+        "61339d0c59a1cf16c885d7abd0019300\t11\tnokiac[\\d]\\-[\\d][\\d]\\\/.*",
+        "6148fb8c0ac82a9a2fdf560cb0351b3d\t25\tsie\\-c[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "61573df0df99bab4d305e8d2d7118f15\t52\testylesearch .* \\(compatible; msie [\\d]\\.[\\d]; windows nt [\\d]\\.[\\d]\\)",
+        "61573df0df99bab4d305e8d2d7118f15\t13\testylesearch .*",
+        "61655429deae23e8c1b6f6740bdd6481\t14\tmasidani_bot_v.*",
+        "6166b8831bd74b6f5d4709e545ee12b4\t19\tblackberry[\\d][\\d][\\d][\\d]c\\\/[\\d]\\.[\\d].*",
+        "61aa506c1c2e447e0bf9bd3478c47abb\t97\thtc\\-p[\\d][\\d][\\d][\\d]\\-orange\\\/ppc; [\\d][\\d][\\d]x[\\d][\\d][\\d]; opver [\\d][\\d]\\.[\\d][\\d][\\d]\\.[\\d]\\.[\\d][\\d][\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "61aa506c1c2e447e0bf9bd3478c47abb\t96\thtc\\-p[\\d][\\d][\\d][\\d]\\-orange\\\/ppc; [\\d][\\d][\\d]x[\\d][\\d][\\d]; opver [\\d][\\d]\\.[\\d][\\d][\\d]\\.[\\d]\\.[\\d][\\d][\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "61f83e7bc9596ea6d1c138479bdf14de\t10\tsuperhttp\\\/.*"
+    ]
+}

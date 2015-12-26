@@ -1,0 +1,20 @@
+{
+    "content": [
+        "a215ebfcf564c3d8371dc8e59e7a125a\t5\tslurp",
+        "a221b91e64611749507457b3d0f13e1f\t37\teb\\-iphone\\\/.* \\(.*iphone os.[\\d].[\\d].*ipad\\) mobile",
+        "a221b91e64611749507457b3d0f13e1f\t33\teb\\-iphone\\\/.* \\(.*iphone os.[\\d].[\\d].*\\) mobile",
+        "a26df2bf8729cb5557663605495b7053\t7\tyandex\\\/.*",
+        "a2aa41a11966a9c646ec52d23d620af5\t10\tseebot\\\/[\\d]\\.[\\d].*",
+        "a2af3704d30e387aa5f778b95ebece0b\t9\tktorrent\\\/.*",
+        "a2c3d6cb0c130678a063c8465e3a248a\t19\tmot\\-e[\\d][\\d][\\d][\\d]\\\/[\\d].* mib\\\/[\\d]\\.[\\d].*",
+        "a2d442c9c95a52c1094a69a160855afc\t30\tmot\\-r[\\d]\\-[\\d]_\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "a2d53ce9d035b4c1448ba45d7bcb8aa4\t78\thtc_touch_hd_t[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "a2d53ce9d035b4c1448ba45d7bcb8aa4\t77\thtc_touch_hd_t[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "a2d53ce9d035b4c1448ba45d7bcb8aa4\t30\thtc_touch_hd_t[\\d][\\d][\\d][\\d] opera\\\/[\\d][\\d]\\.[\\d][\\d].*",
+        "a2d53ce9d035b4c1448ba45d7bcb8aa4\t29\thtc_touch_hd_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "a2d53ce9d035b4c1448ba45d7bcb8aa4\t28\thtc_touch_hd_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d].*",
+        "a2d943277555807176f7de856519c6cf\t35\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/bsi.* up\\.browser\\\/[\\d]\\.[\\d].*\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/bsi up\\.browser\\\/[\\d]\\.[\\d].*",
+        "a2e4822a98337283e39f7b60acf85ec9\t27\tempty \\(compatible.*; msie [\\d]\\.[\\d].*",
+        "a2f1fbd7a668364c93c0e08bdcd37d51\t11\tjobroboter\\\/.*"
+    ]
+}

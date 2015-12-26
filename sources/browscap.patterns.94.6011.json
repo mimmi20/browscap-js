@@ -1,0 +1,17 @@
+{
+    "content": [
+        "94025a8fdbbe9977efb5f43309a30410\t17\tfollowsite\\.com \\(.*\\)",
+        "941d54cccc3f493e99ee08b9b6418740\t29\tkwc\\-kx[\\d]\\\/[\\d]\\.[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "94679639fbff388d5ea792f2c54d1afd\t64\txda_star; [\\d][\\d][\\d]x[\\d][\\d][\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "94679639fbff388d5ea792f2c54d1afd\t63\txda_star; [\\d][\\d][\\d]x[\\d][\\d][\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "946c754b58b5136e513b33cbee9af0e7\t11\ty\\!j\\-brg\\\/gsc.*",
+        "94728fff5719c8ec1cab6b8cbb83a2d6\t8\twisebot\\\/.*",
+        "94b835ea6359d279aea62c51b69d4344\t15\tnokia[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] \\(.*",
+        "94e0907f19416adbfd9ba6979d3c0053\t58\toncheck linkchecker von www\\.scientec\\.de fuer www\\.onsinn\\.de",
+        "94e9d556243a31553ac0de8484880b83\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "94ea5ea29dd968760654e1b6e64eea8b\t58\thttp\\:\\\/\\\/mms\\.revol\\.us\\\/uaprofs\\\/e[\\d][\\d][\\d][\\d]\\-jv\\\/[\\d]\\.[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "94f2f18bce0f7b213d6b3a3a662cb525\t12\tnsplayer\\\/[\\d][\\d]\\..*",
+        "94f3b1fa55424842feff6f80d57d3ed6\t10\twebpatrol\\\/.*",
+        "94f698a47bff5795825d2fd8c2ae617a\t22\tnokian[\\d][\\d]\\\/uc browser[\\d]\\.[\\d].*"
+    ]
+}

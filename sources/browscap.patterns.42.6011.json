@@ -1,0 +1,15 @@
+{
+    "content": [
+        "420d2eedb29758a86bf54f653ec65b4b\t36\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "4222701f49eafefe43ea7a15645c7268\t25\tsie\\-m[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "4222701f49eafefe43ea7a15645c7268\t24\tsie\\-m[\\d][\\d]\\\/[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "422f130a96de014a49a88ffa7aeb881a\t69\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "422f130a96de014a49a88ffa7aeb881a\t68\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "423bbba2aa9b471870200088ee3e61fa\t31\tkwc\\-k[\\d]xxn\\\/my[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "426b20e2d76e54c258d37a0c19db30f7\t14\tsecurepoint cf",
+        "426c70c360c4b0c5ef58e6dc535cf520\t8\triddler .*",
+        "42b32f4f2711d9d1dfd47921e7a76ad8\t11\ticonsurf\\\/[\\d]\\..*",
+        "42be0695c0c2fba60d335e2c189bc81b\t24\tlg[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "42dabc12f3400facf870c36d689d792a\t17\ti\\-mobile [\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*"
+    ]
+}

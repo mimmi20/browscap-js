@@ -1,0 +1,18 @@
+{
+    "content": [
+        "e6150a9fdf04594f047cec564d2cf552\t43\tsusie \\(http\\:\\\/\\\/www\\.sync[\\d]it\\.com\\\/bms\\\/susie\\.php",
+        "e62d459124548d5bb904999308f210ef\t9\ttwitturly.*",
+        "e643ef784a10c542877924f0f1e4686b\t9\tbarca\\\/[\\d]\\.[\\d].*",
+        "e65b6a53f6cebca023306424bb12d053\t15\tmsfrontpage\\\/[\\d][\\d]\\..*",
+        "e672793bd8f4b571004fa7aa7721dc81\t11\tfetch\\\/nutch.*",
+        "e67a4d3b714b25ef242eb126cb84d09f\t33\tsoundcloud\\\/.*; iphone\\\/.*iphone os.[\\d].[\\d].*",
+        "e67a4d3b714b25ef242eb126cb84d09f\t29\tsoundcloud\\\/.*; iphone\\\/.*iphone os.*",
+        "e68ffa21477a6a5ccd90f83e92efde64\t24\tsie\\-el[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e6b51aa8ac443357c4ac5083bb02bcd6\t12\treadability\\\/.*",
+        "e6b58ad17f92d4496dc90d334f174be2\t43\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e6cf2a4886f3684e525b706cfa65e7ac\t35\tsamsung\\-sgh\\-e[\\d][\\d][\\d]a\\\/t[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e6d4b37d89ed64d38c7dd63fe3d4cb05\t10\tcfschedule.*",
+        "e6ebc4f6c381b82104ca6e231b8ff4e0\t24\tkddi\\-sn[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e6fdb5da36fc3b96584f63ae9bb4ff93\t15\tmot\\-v[\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "content": [
+        "8921bb88c49c00d8df1f61062ac767b8\t6\tinno[\\d][\\d].*",
+        "89223a56051e53a18b43be2083227523\t34\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "89223a56051e53a18b43be2083227523\t33\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "89223a56051e53a18b43be2083227523\t31\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "89223a56051e53a18b43be2083227523\t28\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "8932b7e1a4b7f72b3460b54a0d2bba25\t11\tnextopiabot.*",
+        "8935f8c16512fcb3a8a991fbc35537de\t15\tlg\\-kg[\\d][\\d] mic\\\/[\\d]\\.[\\d].*",
+        "8945d7d76734a6ef54ef742e0c2789e4\t75\thtc_touch_hd_t[\\d][\\d][\\d][\\d]\\\/[\\d][\\d][\\d]x[\\d][\\d][\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d][\\d].*\\)",
+        "8969267adc9f4ff33809faaf61d54f4e\t27\tcity\\-map screenshot service.*",
+        "8971bc1056bab9e8b834c5c140e3cfe5\t24\textras[\\d]imovie.* cfnetwork\\\/.*",
+        "89a594dfff7b5aea84ef32a5b8cc0f9f\t24\tnutch test crawler\\\/nutch.*",
+        "89c36e9f5b2bf82200dff3d8e3e2a2af\t23\tzte\\-c[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] smit\\-wap\\\/.*"
+    ]
+}

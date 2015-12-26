@@ -1,0 +1,20 @@
+{
+    "content": [
+        "5921489ba6c561adc76fa5f5f41fda14\t23\ticab\\\/[\\d]\\.[\\d].* \\(.*macintosh.*ppc.*\\)\ticab\\\/[\\d]\\.[\\d].* \\(.*macintosh.*[\\d][\\d]k.*\\)",
+        "5921489ba6c561adc76fa5f5f41fda14\t19\ticab\\\/[\\d]\\.[\\d].* \\(.*mac os x.*\\)",
+        "592cec0a3fc4d8cf9b6e57a09bff554b\t37\twillow internet crawler by twotrees v.*",
+        "593b50368d1e541e20169b06cadee426\t44\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d]\\\/uc browser[\\d]\\.[\\d].* untrusted\\\/[\\d]\\.[\\d]",
+        "5966c62e48ccc238264462187681a29f\t23\tsam\\-r[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "59843847381493ad50fc3adfa6fb1b6f\t92\telmediaplayer mozilla\\\/[\\d]\\.[\\d] \\(.*mac os x [\\d][\\d].[\\d][\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.* safari\\\/.*",
+        "59843847381493ad50fc3adfa6fb1b6f\t91\telmediaplayer mozilla\\\/[\\d]\\.[\\d] \\(.*mac os x [\\d][\\d].[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.* safari\\\/.*",
+        "59843847381493ad50fc3adfa6fb1b6f\t86\telmediaplayer mozilla\\\/[\\d]\\.[\\d] \\(.*mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/.* safari\\\/.*",
+        "59ab5fd54a355e21f339840432be1e3f\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "59acaa3d055ff101ccef8046e4dd86ca\t24\tnokian[\\d]\\-[\\d][\\d]\\\/uc browser[\\d]\\.[\\d].*",
+        "59e3d1f275d331dd18f7fda2e53675b8\t29\tg\\-xxx\\\/[\\d]\\.[\\d]beta .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "59ea921dba0fd4dfa03d2c5cbba1bd08\t40\tperfect%[\\d][\\d]browser\\-ipad\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "59ea921dba0fd4dfa03d2c5cbba1bd08\t39\tperfect%[\\d][\\d]browser\\-ipad\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "59ea921dba0fd4dfa03d2c5cbba1bd08\t37\tperfect%[\\d][\\d]browser\\-ipad\\\/.* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "59ea921dba0fd4dfa03d2c5cbba1bd08\t34\tperfect%[\\d][\\d]browser\\-ipad\\\/.* cfnetwork\\\/.*",
+        "59f23ba7a58947519be78db11bc375d8\t17\tpython\\-urllib\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "content": [
+        "cf43a9f0447b04198250ca88e1d65030\t14\ttagyu agent\\\/[\\d]\\..*",
+        "cf43a9f0447b04198250ca88e1d65030\t12\ttagyu agent\\\/.*",
+        "cf43cd2064db1d3f9996572f7bdbabee\t48\tgoogleearth\\\/[\\d]\\.[\\d].*\\(.*windows;microsoft windows \\([\\d]\\.[\\d].*\\).*\\).*",
+        "cf453ab1fe0048484ec168f1165e5baf\t46\tsam\\-r[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*sam\\-r[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "cf7e693f571b1f8feefab8bff110ac0f\t69\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\..*; windows ce; iemobile.[\\d]\\.[\\d][\\d].*\\)",
+        "cf7e693f571b1f8feefab8bff110ac0f\t68\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\..*; windows ce; iemobile.[\\d]\\.[\\d].*\\)\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "cf8ac06515fef4ef2a698d3e62240df2\t25\tsie\\-c[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "cf8cfe2934e4c8fad876c7aa293e077e\t19\thaier\\-n[\\d][\\d]\\\/wap[\\d]\\.[\\d]\\.[\\d] .*",
+        "cfd006aea435e34df6d666cc1d8639a0\t23\tmot\\-c[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "cfda7f90b7357f7ceae39551719ea017\t7\ty\\!j\\-srd.*",
+        "cff8e16580f66ed7282b129eeb6adccb\t6\tfoobot.*"
+    ]
+}

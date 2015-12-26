@@ -1,0 +1,17 @@
+{
+    "content": [
+        "fb2d26a453e1847b9308e04b4c5cd98a\t44\tk\\-meleon.* \\(.*windows nt [\\d]\\.[\\d].*\\) gecko\\\/.* mozilla\\\/[\\d]\\.[\\d]",
+        "fb3e4fcb888a75c53376d04b60795d53\t12\tsophosagent\\\/.*",
+        "fb66f69d149a603f2baf40e4883fec79\t23\twindows\\-media\\-player\\\/[\\d]\\..*",
+        "fb7b9a4920f14b8d47729e5ff6b54ff9\t10\tnavissobot",
+        "fb8e84e260b3a80e7ab09b19bc008bc3\t22\ttargetyournews\\.com bot",
+        "fb93d501b4e75e394a108c1c1bb3f367\t20\ttsm\\-[\\d][\\d][\\d]\\\/.* browser\\\/[\\d]\\.[\\d].*",
+        "fb98a192f6a055ba495ef414c330834b\t12\twebcrawl\\.net",
+        "fbc4d0b1fc1aa32efbc3277a0bf396e7\t11\tnokiac[\\d]\\-[\\d][\\d]\\\/.*",
+        "fbdef033dc54ff9b79c5d645ee86fd7f\t5\thcat\\\/.*",
+        "fbe18e456b1cfe42bf49bb843020b9ac\t34\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/k[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "fbe4846472bec97887c71232597f20ac\t22\tmot\\-f[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "fbeaf5a655a27ee216f7822097f4ba1f\t13\ttwingly recon",
+        "fbfaed852b28dc40bc43f1bc94c52468\t18\tjbrowser\\-wap\\\/[\\d]\\.[\\d]\\.[\\d]"
+    ]
+}

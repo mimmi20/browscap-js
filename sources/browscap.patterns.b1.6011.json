@@ -1,0 +1,21 @@
+{
+    "content": [
+        "b1062a41d8124ee497ff01f658c7058b\t24\tsie\\-cx[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b11a3f4d01a89bfa21d0fad8a392f683\t17\tgmx mailcheck\\\/[\\d]\\.[\\d].*",
+        "b11a3f4d01a89bfa21d0fad8a392f683\t14\tgmx mailcheck\\\/.*",
+        "b1299ea2b532e9b309921da4d049bc1e\t13\ttransmission\\\/.*",
+        "b1575dc2a8d977c6612168bca2fe6c0f\t9\twebreaper.*",
+        "b15e63d01d4d4efbb7a51a21df59df4a\t10\tmister pix.*",
+        "b17a1b3188de0e5b21653cf1bbaea228\t23\ti\\-mobile[\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "b18e279b122e6ca25d0a7e6cf443e87b\t22\tmot\\-d[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b1aed55e3fba72b0b390707cd260a816\t73\thtc_maple_s[\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "b1d39fd83fa39166da93b0d076fb72b3\t23\twindows\\-media\\-player\\\/[\\d]\\..*",
+        "b1d961ff130a25f1e2bbc7b4c1c11a60\t23\tsie\\-c[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b1e216366348c373ad14721dfce5450f\t48\tgoogleearth\\\/[\\d]\\.[\\d].*\\(.*windows;microsoft windows \\([\\d]\\.[\\d].*\\).*\\).*",
+        "b1e84f7bc5eeb41bcce7ead99bf162c1\t77\tmot\\-a[\\d][\\d][\\d][\\d]\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; linux; motorola a[\\d][\\d][\\d][\\d].* opera [\\d]\\.[\\d][\\d].*",
+        "b1e84f7bc5eeb41bcce7ead99bf162c1\t37\tmot\\-a[\\d][\\d][\\d][\\d]\\\/.* linuxos\\\/.* browser\\\/opera[\\d]\\.[\\d][\\d].*",
+        "b1e8798b10ab55a58200bdbaa5ec48a5\t8\tchilkat\\\/.*",
+        "b1ff40560ff5700259625b45278dda2b\t39\tsonyericssonw[\\d][\\d][\\d]i\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "b1ff40560ff5700259625b45278dda2b\t29\tsonyericssonw[\\d][\\d][\\d]i\\\/.*\\(symbianos\\\/.*"
+    ]
+}

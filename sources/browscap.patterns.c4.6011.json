@@ -1,0 +1,20 @@
+{
+    "content": [
+        "c429cf15c1f6d59df2b64465b20c4914\t82\tmot\\-a[\\d][\\d][\\d]\\\/r[\\d][\\d]_g_[\\d].* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; linux; motorola.*profile\\\/midp\\-[\\d]\\.[\\d].*",
+        "c429cf15c1f6d59df2b64465b20c4914\t75\tmot\\-a[\\d][\\d][\\d]\\\/r[\\d][\\d]_g_[\\d].* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; motorola.*profile\\\/midp\\-[\\d]\\.[\\d].*",
+        "c42d0ad7241330166d87fb0b704d3f2a\t137\te[\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\\/wap[\\d]\\.[\\d] profile\\\/midp[\\d]\\.[\\d] configuration\\\/cldc[\\d]\\.[\\d],e[\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\\/wap[\\d]\\.[\\d] profile\\\/midp[\\d]\\.[\\d] configuration\\\/cldc[\\d]\\.[\\d]",
+        "c42d0ad7241330166d87fb0b704d3f2a\t68\te[\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\\/wap[\\d]\\.[\\d] profile\\\/midp[\\d]\\.[\\d] configuration\\\/cldc[\\d]\\.[\\d]",
+        "c44437f4b2bfe1087f63dc6159c34aae\t18\tsonyericssonj[\\d][\\d][\\d]i\\\/.*",
+        "c451a2b14375e505aaf4b9206ce36316\t26\tios\\\/[\\d]\\.[\\d].* \\(.*\\) dataaccessd\\\/[\\d]\\.[\\d].*",
+        "c45541b0199626b99e092b3339134d18\t10\twnmbot\\\/[\\d]\\.[\\d].*",
+        "c466419187b9da12be5dc82f904e3b72\t17\tsonyericssonk[\\d][\\d][\\d]i.*",
+        "c4790d3a16465b440ae4a965201e6bd0\t15\tunityplayer\\\/[\\d]\\.[\\d].*",
+        "c4897f3dffa37bb0c225042d5547d407\t43\tsamsung\\-sgh\\-p[\\d][\\d][\\d]\\-orange\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c48b812062f43df830fee4f7ad117d17\t23\tclipish\\\/[\\d]\\.[\\d][\\d].* cfnetwork\\\/.*",
+        "c49c0e4ef743bf2b715d844f75542fd8\t72\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d]\\\/[\\d][\\d][\\d]x[\\d][\\d][\\d] [\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "c4ab7d47fa55346e16cd4e119038290a\t9\thoowwwer\\\/.*",
+        "c4cf4d991e2e2d3f1d4011e4f91c530d\t26\tkwc\\-torino\\\/ up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c4f4f2824855cfbdc2b39df470529c10\t66\tnokia[\\d][\\d][\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "c4f6911c4ab0e917ccc0a351f1a62637\t24\tsie\\-cf[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

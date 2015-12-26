@@ -1,0 +1,25 @@
+{
+    "content": [
+        "df12eb2e7cd311d0987fe53d5dbeec2f\t17\tterra\\\/.* cfnetwork\\\/.*",
+        "df1afd4b18cf9d7166c6234633734685\t72\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "df1afd4b18cf9d7166c6234633734685\t24\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "df1afd4b18cf9d7166c6234633734685\t23\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d].*",
+        "df1bc0a12a7f40a35c85f7845d5e7917\t37\tsonyericssonu[\\d]i\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "df1bc0a12a7f40a35c85f7845d5e7917\t27\tsonyericssonu[\\d]i\\\/.*\\(symbianos\\\/.*",
+        "df2660ea01ef2a3a8a2cc60cac7c12d5\t6\tbinlar.*",
+        "df34556270a1b55cbecd619b8e2d376d\t13\tccwap\\-browser",
+        "df42db1c2502d943e32d73d50a865a66\t24\tmot\\-l[\\d]\\\/[\\d]a\\.[\\d][\\d]\\.[\\d][\\d]r mib\\\/[\\d]\\.[\\d].*",
+        "df42db1c2502d943e32d73d50a865a66\t21\tmot\\-l[\\d]\\\/[\\d]a\\.[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "df42db1c2502d943e32d73d50a865a66\t18\tmot\\-l[\\d]\\\/[\\d]a\\..* mib\\\/[\\d]\\.[\\d].*",
+        "df4cb4f2b755768cbfd10b604d1fbbb6\t9\tgetright\\\/.*",
+        "df6d4c44e4d33148a076a5924d1d7725\t31\tsagem\\-myx[\\d]\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "df7e8e6ea78367d39379ead7f5b331db\t11\tlwp\\:\\:simple.*",
+        "df84711c6347b4da3eb97b2206817255\t33\tsharp\\-tq\\-v[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "df8a920a599d7adb8f76c82f5ecf80db\t8\tipv[\\d]scan.*",
+        "df8cfe1485c2e00f646b22f5927099e6\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "dfa28b8b336e9083d2f53724bb306d2a\t14\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d] .*",
+        "dfa28b8b336e9083d2f53724bb306d2a\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "dfaf1c3e42bd1458be88230fd6236939\t28\tnec\\-n[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "dfd1ad9846d7fa0fbb6c4738630a609e\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*"
+    ]
+}

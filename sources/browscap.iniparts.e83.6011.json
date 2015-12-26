@@ -1,0 +1,28 @@
+{
+    "content": [
+        "e839bcdf50cb1de915c0000542a2f116\t{\"Parent\":\"UC Browser 7.1\"}",
+        "e8331be1dc9c6cc189d3d509a54afea4\t{\"Parent\":\"Flipboard App 3.2\",\"Platform_Version\":\"4.4\",\"isTablet\":true,\"Device_Name\":\"Galaxy Tab S 8.4 LTE\",\"Device_Maker\":\"Samsung\",\"Device_Type\":\"Tablet\",\"Device_Code_Name\":\"SM-T705\",\"Device_Brand_Name\":\"Samsung\"}",
+        "e839deb96a22614dd37db9830c80d7c3\t{\"Parent\":\"Comodo Dragon 23.1\",\"Platform\":\"WinXP\",\"Platform_Version\":\"5.1\",\"Platform_Description\":\"Windows XP\",\"Platform_Maker\":\"Microsoft Corporation\",\"Win32\":true,\"Device_Name\":\"Windows Desktop\",\"Device_Code_Name\":\"Windows Desktop\"}",
+        "e83c944a7fdd3851183a3bc2a1bf7903\t{\"Parent\":\"Android WebView 4.1\",\"Platform_Version\":\"4.2\",\"isTablet\":true,\"Device_Name\":\"Xelio 10 Pro\",\"Device_Maker\":\"Odys\",\"Device_Type\":\"Tablet\",\"Device_Code_Name\":\"Xelio 10 Pro\",\"Device_Brand_Name\":\"Odys\"}",
+        "e83b9851dc66ff84d7f8c55a9389108e\t{\"Parent\":\"Android WebView 1.5\",\"Platform_Version\":\"4.0\",\"Device_Name\":\"Ascend G330\",\"Device_Maker\":\"Huawei\",\"Device_Pointing_Method\":\"unknown\",\"Device_Code_Name\":\"U8825\",\"Device_Brand_Name\":\"Huawei\"}",
+        "e83e049cc05caf7757dc4103854ae45b\t{\"Parent\":\"Opera 11.01\",\"Browser_Bits\":\"32\",\"Platform\":\"Win2000\",\"Platform_Version\":\"5.0\",\"Platform_Description\":\"Windows 2000\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"Microsoft Corporation\",\"Win32\":true,\"Device_Name\":\"Windows Desktop\",\"Device_Code_Name\":\"Windows Desktop\"}",
+        "e83e46f176f6c06aaeb290c61460ba49\t{\"Parent\":\"Opera 8.50\",\"Browser_Bits\":\"32\",\"Platform\":\"SunOS\",\"Platform_Description\":\"SunOS\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"Oracle\"}",
+        "e83367e6147f8226be3227ca244807a9\t{\"Parent\":\"Opera 7.03\",\"Browser_Bits\":\"32\",\"Platform\":\"Linux\",\"Platform_Description\":\"Linux\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"Linux Foundation\",\"Device_Name\":\"Linux Desktop\",\"Device_Code_Name\":\"Linux Desktop\"}",
+        "e8372cfbdb042885a123688b99839826\t{\"Parent\":\"Google App 4.0\",\"Platform_Version\":\"6.0\"}",
+        "e83bb5e6ddfcbb83895293df55eb7a01\t{\"Parent\":\"Iron 15.0\",\"Browser_Bits\":\"32\",\"Platform\":\"WinXP\",\"Platform_Version\":\"5.2\",\"Platform_Description\":\"Windows XP\",\"Platform_Bits\":\"64\",\"Platform_Maker\":\"Microsoft Corporation\",\"Win64\":true,\"Device_Name\":\"Windows Desktop\",\"Device_Code_Name\":\"Windows Desktop\"}",
+        "e83dd66f4aa1aafdc38cfa8af39af31f\t{\"Parent\":\"Chrome 50.0 for iOS\",\"Platform_Version\":\"8.0\"}",
+        "e8374035f2028d0f12a03607dd5cb5dc\t{\"Parent\":\"Chrome 48.0 for Android\",\"Platform_Version\":\"4.0\",\"isTablet\":true,\"Device_Name\":\"LifeTab S9512\",\"Device_Maker\":\"Medion\",\"Device_Type\":\"Tablet\",\"Device_Code_Name\":\"LifeTab S9512\",\"Device_Brand_Name\":\"Medion\"}",
+        "e833b8a28fd267f9f011da504aea7c08\t{\"Parent\":\"Chrome 39.0 for Android\",\"Platform_Version\":\"4.2\",\"isTablet\":true,\"Device_Name\":\"MediaPad 10 Link\",\"Device_Maker\":\"Huawei\",\"Device_Type\":\"Tablet\",\"Device_Code_Name\":\"MediaPad 10\",\"Device_Brand_Name\":\"Huawei\"}",
+        "e837483aa5669598c0ad4c52121d0cdf\t{\"Parent\":\"Chrome 37.0 for Android\",\"Platform_Version\":\"4.0\",\"Device_Name\":\"Galaxy Note LTE (AT\\u0026T)\",\"Device_Maker\":\"Samsung\",\"Device_Code_Name\":\"SGH-I717\",\"Device_Brand_Name\":\"Samsung\"}",
+        "e83c5f1dafebc2134453b2debd7e649f\t{\"Parent\":\"Chrome 33.0\",\"Browser_Bits\":\"32\",\"Platform\":\"Win8\",\"Platform_Version\":\"6.2\",\"Platform_Description\":\"Windows 8\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"Microsoft Corporation\",\"Win32\":true,\"Device_Name\":\"Windows Desktop\",\"Device_Code_Name\":\"Windows Desktop\"}",
+        "e83bed8f467b6c62934d7c00fdf53c1e\t{\"Parent\":\"Chrome 9.0\",\"Browser_Bits\":\"32\",\"Platform\":\"WinXP\",\"Platform_Version\":\"5.1\",\"Platform_Description\":\"Windows XP\",\"Platform_Bits\":\"64\",\"Platform_Maker\":\"Microsoft Corporation\",\"Win64\":true,\"Device_Name\":\"Windows Desktop\",\"Device_Code_Name\":\"Windows Desktop\"}",
+        "e83641ac53e81655760e791d220307a3\t{\"Parent\":\"Yahoo\",\"Version\":\"3.3\",\"MajorVer\":\"3\",\"MinorVer\":\"3\"}",
+        "e83e13fea6953865ad377592aaf78ded\t{\"Parent\":\"Nokia Proxy Browser 5.0\",\"Device_Name\":\"112\",\"Device_Code_Name\":\"112\"}",
+        "e832e8004c0e00ebb91dcba9634eda43\t{\"Parent\":\"Android Browser 4.0\",\"Platform_Version\":\"4.2\",\"isTablet\":true,\"Device_Name\":\"Media Pad\",\"Device_Maker\":\"Huawei\",\"Device_Type\":\"Tablet\",\"Device_Code_Name\":\"Media Pad\",\"Device_Brand_Name\":\"Huawei\"}",
+        "e831e268838dfe22cfe63a649413cd41\t{\"Parent\":\"ELinks 0.10\",\"Browser_Bits\":\"32\",\"Platform\":\"Linux\",\"Platform_Description\":\"Linux\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"Linux Foundation\",\"Device_Name\":\"Linux Desktop\",\"Device_Code_Name\":\"Linux Desktop\"}",
+        "e837578273fa5a5a3071fd17840e4cc6\t{\"Parent\":\"Iceweasel 27.0\",\"Browser_Bits\":\"64\",\"Platform_Bits\":\"64\"}",
+        "e83d8b0f3414ae769d4cc5bd262f779b\t{\"Parent\":\"Firefox 26.0\",\"Browser_Bits\":\"32\",\"Platform\":\"FreeBSD\",\"Platform_Description\":\"FreeBSD\",\"Platform_Bits\":\"32\",\"Platform_Maker\":\"FreeBSD Foundation\"}",
+        "e837d11bf2cf5913243e905f0943c6f3\t{\"Parent\":\"Openwave Mobile Browser 6.1\"}",
+        "e83b9833af8c52081c6d59e4c4f60e2f\t{\"Parent\":\"PERFECT Browser 2.3 (iPad)\",\"Platform_Version\":\"3.1\"}"
+    ]
+}

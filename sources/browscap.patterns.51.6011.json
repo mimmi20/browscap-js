@@ -1,0 +1,22 @@
+{
+    "content": [
+        "510519fe2158c9a8bfcbba824cd41d26\t24\txing\\-contenttabreceiver\\\/.*",
+        "5107ddbcc23644ce08aab98f1865de41\t19\tj\\-phone\\\/[\\d]\\.[\\d]\\\/j\\-sh[\\d][\\d]\\\/.*",
+        "5107ddbcc23644ce08aab98f1865de41\t18\tj\\-phone\\\/[\\d]\\.[\\d]\\\/v[\\d][\\d][\\d]t\\\/.*",
+        "510abfb8a391a5c6c9a81a285cc077e7\t3\tlwp.*",
+        "514bf133d0499f968a5f45fd55e0aa43\t32\tkwc\\-kx[\\d][\\d][\\d]c\\\/[\\d]\\.[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "519bbdb8322076bc853b1f2707f8fa6b\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "51a0ce732829b0f7006fb49a2628df54\t9\ttmcrawler",
+        "51a8b2a3ad16ee5cae00f16020f1688d\t23\tsie\\-m[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "51b08a0f6eceb6cde23d915848237fd1\t26\tmot\\-a[\\d][\\d][\\d]i\\\/r[\\d][\\d][\\d]_g_[\\d][\\d]\\.[\\d][\\d]\\.a[\\d]r.*",
+        "51d3442f7bd201578a7e02a45afaa0a9\t23\tsie\\-s[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "51dc57bdd6a8695fe2a3b438f8442945\t32\tdalvik\\\/.* \\(.*linux.*android.[\\d]\\.[\\d].*\\) .*fbav\\\/.*",
+        "51dc57bdd6a8695fe2a3b438f8442945\t28\tdalvik\\\/.* \\(.*linux.*android.*\\) .*fbav\\\/.*",
+        "51dc57bdd6a8695fe2a3b438f8442945\t21\tdalvik\\\/.* \\(.*linux.*android.*",
+        "51e9e953ec0582104fe427e2bdec0e64\t9\tnutscrape",
+        "51ebde770bdb7233735d1fbc50a9aa81\t74\tpalmcentro\\\/v[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows [\\d][\\d]; palmsource\\\/.*",
+        "51ecd75a206561661c2c098924c71f9d\t36\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/x[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "51ee3a7e9fc44ac67071dcc8ed3f6d44\t32\tsagem\\-my[\\d][\\d][\\d]x\\\/[\\d]\\.[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "51f88197d39cb68721fb4a8ab55597a1\t40\tnec\\-n[\\d][\\d][\\d]\\\/[\\d][\\d][\\d][\\d]ajcc\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "content": [
+        "200c20bcbaf3b3cccf1bbb3d81767bfc\t48\tsonyericssonwt[\\d][\\d]i\\\/r[\\d]ad[\\d][\\d][\\d] telecabrowser\\\/q[\\d][\\d]c[\\d]\\-[\\d] .*",
+        "20177e51932b66b848dacab544221bdc\t21\tfacebookplatform\\\/[\\d]\\.[\\d] .*",
+        "20292861fe208c767f992205d4cec934\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "202d025e593b9cc23e65081ebfe7a9cf\t53\tmot\\-mp.*\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(compatible; msie .*; windows ce; .*\\)",
+        "202d025e593b9cc23e65081ebfe7a9cf\t50\tmot\\-mp.*\\\/.* mozilla\\\/.* \\(compatible; msie .*; windows ce; .*\\)",
+        "204db224070df5162b773ac0e5fc1e52\t7\tlocubot.*",
+        "20609d99f37330b5db3a927035df1b3c\t14\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d] .*",
+        "20609d99f37330b5db3a927035df1b3c\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "20769ba396b75ba5e55572cb43f4bdbb\t4\tsohu.*",
+        "20795a4d7ddd9d3d653abefd19a76b4e\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "207aabe9a233d96817b9d610ac5037b1\t42\tsamsung\\-sgh\\-d[\\d][\\d][\\d]\\\/d[\\d][\\d][\\d]xahc[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "207c7e711220a4c9d8a0c9bc56f6b799\t68\tmot\\-razrv[\\d]xx\\\/[\\d][\\d]\\..* ber[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d].*  opera [\\d]\\.[\\d][\\d].*",
+        "208e5d1935e43deb18831b7e5094e7a6\t34\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "208e5d1935e43deb18831b7e5094e7a6\t33\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "208e5d1935e43deb18831b7e5094e7a6\t31\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "208e5d1935e43deb18831b7e5094e7a6\t28\tatomicbrowser\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "2094e9c15c3488a9f91aa185c7168702\t44\taudiovox\\-cdm[\\d][\\d][\\d][\\d]sp\\\/t[\\d][\\d][\\d]sp[\\d]t[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "20e920e9c78b0227a1ed17e9f9abb373\t10\tlapozzbot\\\/.*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t39\tjuc \\(linux; u; [\\d]\\.[\\d].*micromax a[\\d][\\d].*\\)ucweb[\\d]\\.[\\d].*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t36\tjuc \\(linux; u; [\\d]\\.[\\d].*gt\\-i[\\d][\\d][\\d][\\d].*\\) ucweb[\\d]\\.[\\d].*\tjuc \\(linux; u; [\\d]\\.[\\d].*gt\\-s[\\d][\\d][\\d][\\d].*\\) ucweb[\\d]\\.[\\d].*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t28\tjuc \\(linux; u; [\\d]\\.[\\d].*\\) ucweb[\\d]\\.[\\d].*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t27\tjuc \\(linux; u; [\\d]\\.[\\d].*\\)ucweb[\\d]\\.[\\d].*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t25\tjuc \\(linux; u; .*\\) ucweb[\\d]\\.[\\d].*\tjuc \\(linux; u; [\\d]\\.[\\d].*\\) ucweb.*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t24\tjuc \\(linux; u; .*\\)ucweb[\\d]\\.[\\d].*",
+        "20e9794b7ee143b3f66d7126e73ba57e\t22\tjuc \\(linux; u; .*\\) ucweb.*"
+    ]
+}

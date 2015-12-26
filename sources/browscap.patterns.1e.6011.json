@@ -1,0 +1,24 @@
+{
+    "content": [
+        "1e0b3d89483a0c2304711a468e07dc4c\t14\tmot\\-c[\\d]\\\/.* up\\\/[\\d]\\.[\\d].*",
+        "1e149eb4ef57708dd67e28d30a6c1367\t23\teventmachine httpclient.*",
+        "1e1b767be1b355223b3aa7db78ec49a7\t20\tmediapartners\\-google.*",
+        "1e35f2a57e7a29ed6dc127ba6aa982f7\t25\tlge\\-vx[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1e43a7b8e4a13e4fbef63d240cc0cd8f\t20\tmot\\-t[\\d][\\d][\\d]\\\/g_[\\d].* mib\\\/[\\d]\\.[\\d].*",
+        "1e51d3db27a2b49f3eb51285cbffc647\t41\tsagem\\-myx[\\d]\\-[\\d]m\\\/[\\d]\\.[\\d] .* ege\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1e5925ecaac228d8250d51421c62eb93\t14\tfreshdownload\\\/.*",
+        "1e70dcd99af5a5b64ba8ac717803b77b\t43\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1e75915effe9c6ddf03286c717a88a8b\t69\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "1e75915effe9c6ddf03286c717a88a8b\t68\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "1e75915effe9c6ddf03286c717a88a8b\t20\thtc_p[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "1e75915effe9c6ddf03286c717a88a8b\t19\thtc_p[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d].*",
+        "1ead5e1324ae85918d5434d724f0870b\t11\tomnipelagos.*",
+        "1ebb94ba5b3eb4cd74adb583bf035c7f\t15\tsec\\-sghc[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "1ebce95de0c099c1ede424abd5ff946e\t70\tlenovo\\-a[\\d][\\d][\\d]t.*linux.*android.[\\d]\\.[\\d].* release.* browser\\\/applewebkit.* mobile safari.*",
+        "1ed200b82f8d0e33373f290dc95000ad\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "1ed7a2191a5ad27301cfcced2316f2c6\t12\tbookmacster\\\/.*",
+        "1edd2e24aff00ad3d4c993b2bd13522b\t43\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1ede77107526ab308d6cf51e16d8a19a\t11\tfeedburner\\\/.*",
+        "1ee5edf757f2ce7648a63851be098d8d\t37\tsamsung\\-sgh\\-s[\\d][\\d][\\d]\\\/shark up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

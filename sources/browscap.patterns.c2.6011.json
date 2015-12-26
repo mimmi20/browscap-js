@@ -1,0 +1,30 @@
+{
+    "content": [
+        "c201ae72dbce04eb8beaea445766a080\t57\tsamsung\\-sgh\\-l[\\d][\\d][\\d]\\-vodafone\\\/l[\\d][\\d][\\d]buhec shp\\\/vpp\\\/r[\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "c201ae72dbce04eb8beaea445766a080\t56\tsamsung\\-sgh\\-l[\\d][\\d][\\d]\\-vodafone\\\/l[\\d][\\d][\\d]buhec shp\\\/vpp\\\/r[\\d] opera\\\/[\\d]\\.[\\d].*",
+        "c20595a7a5fbe7614ad2e4036ff27377\t53\tvodafone\\\/sharp[\\d][\\d][\\d]sh\\\/shg[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] browser\\\/up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c20d335b36a9c61b8f2a550f51dac8e2\t56\tdopods[\\d][\\d][\\d]\\\/mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*\\).*",
+        "c21362c09265784947da5fc575e64e08\t75\tpantech\\-c[\\d][\\d][\\d]\\\/r[\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "c21362c09265784947da5fc575e64e08\t74\tpantech\\-c[\\d][\\d][\\d]\\\/r[\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "c21c12ecc6ca8c381823c7c6abf88cb1\t49\thtc_smart_f[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(like gecko\\) obigo\\\/q[\\d]",
+        "c26558cb62c09a86001324cf2757047a\t30\tsec\\-sghc[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c2668ce9b66c9fc8bf3e8343d38731e9\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "c2721807ea8bd491e0c9647cc477f2ea\t25\tsie\\-c[\\d]v\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c2736547db92153aff7943ad6dd694a6\t26\tsafari\\\/[\\d][\\d]..\\..* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "c2736547db92153aff7943ad6dd694a6\t23\tsafari\\\/[\\d][\\d]..\\..* cfnetwork\\\/.*",
+        "c286c3b33818b2d272f4b0d903ede70d\t119\tkinder\\-tablet\\-[\\d]\\.[\\d]\\-weltbild\\-mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*eos[\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml,.*like gecko.*\\) version\\\/[\\d]\\.[\\d].*safari.*",
+        "c29207bce3ecdf138d2bdab78ab9334d\t18\tlightningdownload\\\/.*",
+        "c2930032e5fc0a7ba20c74e2fe792c28\t12\tramblermail\\\/.*",
+        "c2b2890b2e03861ce930aac280ac8a0a\t6\tjeode\\\/.*",
+        "c2b8d672e58c1421067f902941319038\t48\tgoogleearth\\\/[\\d]\\.[\\d].*\\(.*windows;microsoft windows \\([\\d]\\.[\\d].*\\).*\\).*",
+        "c2bc055329a07d312c7c0458d4fe918d\t12\textractorpro.*",
+        "c2bdf16511ca3772d8510764c8d61c66\t17\tmsnbot\\-newsblogs\\\/.*",
+        "c2cba3ba999f6fc2789ea678cb729d0b\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c2d1972dc3025dd72a95387f1f8397fc\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "c2d2c6bd1eba9339124ae7f668f7b431\t21\tnso_debugger_user\\\/[\\d]\\.[\\d].*",
+        "c2d3d9c8477f5ed4df7b03e3aff123cc\t24\tsie\\-ax[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c2d541591d61ad83f89149b5be307470\t7\tsynobot",
+        "c2e62e49561531b8cb641f4d2835958e\t66\tnokia[\\d][\\d][\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "c2e8ff13e8523c408389fef7664872d5\t70\tsamsung\\-gt\\-c[\\d][\\d][\\d][\\d].* profile\\\/midp\\-[\\d]\\.[\\d] configuration\\\/cldc\\-[\\d]\\.[\\d] untrusted\\\/[\\d]\\.[\\d]"
+    ]
+}

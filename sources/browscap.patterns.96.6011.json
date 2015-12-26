@@ -1,0 +1,23 @@
+{
+    "content": [
+        "960e48339afe91dfb3d492b84147fcc8\t16\tdomaincrawler\\\/[\\d]\\..*",
+        "9633dfd3cfbe271a5e8bbd3a5f4ceffc\t17\tlibcurl\\-agent\\\/[\\d]\\.[\\d].*",
+        "96411ce18dc2ad5e94b55e762ac61341\t14\tlibweb\\\/clshttp.*",
+        "964b013e98b97f66f4655c044f933b22\t62\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "964b013e98b97f66f4655c044f933b22\t61\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "964b013e98b97f66f4655c044f933b22\t28\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "964b013e98b97f66f4655c044f933b22\t27\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*",
+        "964d4bda528092ef29a4cd773eee56b9\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "96569c1533a27f655caf170fd98c07f0\t23\tsie\\-a[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "965f9ed93f31113b2702fb36a061d03a\t19\tlg\\-kg[\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d].*",
+        "9678040c367178759ced0ee123b1c7ad\t57\tdopodc[\\d][\\d][\\d]w\\\/mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*\\)",
+        "9678f7a7939f457fa0d9353761e189c7\t2\tm[\\d].*",
+        "9687cde603a6c22146a8af1e6d2983bf\t72\ths\\-g[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)\\\/wap[\\d]\\.[\\d] profile\\\/midp[\\d]\\.[\\d] configuration\\\/cldc[\\d]\\.[\\d]",
+        "96b19094e13cd3fc25ea4c967bf73330\t20\thttp\\:\\\/\\\/arachnode\\.net.*",
+        "96b4773b54f7eb974531c63a11ef4682\t53\tamoi\\-d[\\d][\\d]\\\/plat\\-f\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "96c23af597e3f01916db620a0653ab0c\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "96d672c8e967f5404bdc0dc935379aa4\t35\tsharp\\-tq\\-gx\\-e[\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "96f5388ff514444321c8cffc363a8ab1\t76\tsubtext version [\\d]\\.[\\d].* \\- http\\:\\\/\\\/subtextproject\\.com\\\/ \\(microsoft windows nt [\\d]\\.[\\d]\\..*\\)",
+        "96fd216c7e9a60c87d889a9ebaf44d39\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*"
+    ]
+}

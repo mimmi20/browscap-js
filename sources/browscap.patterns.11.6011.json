@@ -1,0 +1,20 @@
+{
+    "content": [
+        "1128286e9d3aeb3ae4919bbb75adeae3\t37\tiac\\-s[\\d][\\d][\\d]\\\/[\\d][\\d][\\d][\\d][\\d][\\d][\\d][\\d]aiol[\\d][\\d][\\d][\\d][\\d][\\d][\\d][\\d]\\\/wap[\\d]\\.[\\d] .*",
+        "1138768e9ca0fc27387e5a1d8a4054cd\t16\tfeed[\\d][\\d] proxy\\\/.* \\(.*\\)",
+        "114c7d9b6c1b425b4fe9765e2a08ce3d\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "11554c4baa5c3dec72537dab11e42bd2\t18\tpanasonic\\-x[\\d][\\d]\\\/r[\\d][\\d] .*",
+        "11568f6c887efa78e51a2a2b4d70c079\t29\tincutio xml\\-rpc \\-\\- wordpress\\\/.*",
+        "11960ab2569b2a81a3d0d895f2f52502\t18\tinternetexploirer .*",
+        "1196d1d43d4ce8b49f0271801a7e89e9\t19\tgooglefriendconnect.*",
+        "11aceab8c8eacb8d4eafe95d5f72ac7c\t22\t\\(compatible.*; msie .\\...*;.*",
+        "11ba5c0bb9f849821bce56524d478417\t62\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "11ba5c0bb9f849821bce56524d478417\t61\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "11ba5c0bb9f849821bce56524d478417\t34\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].* linux\\\/.* opera\\\/[\\d]\\.[\\d][\\d].*",
+        "11ba5c0bb9f849821bce56524d478417\t28\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "11ba5c0bb9f849821bce56524d478417\t27\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*",
+        "11ba67c9073d9723e012c127603e3bbc\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "11dcbc59bdb7c7133b7559f6db24312e\t10\tfeedblitz\\\/.*",
+        "11e2142591b6a64471e77ddc8d599d2f\t24\tkddi\\-sh[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

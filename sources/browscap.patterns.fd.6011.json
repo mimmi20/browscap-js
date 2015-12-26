@@ -1,0 +1,19 @@
+{
+    "content": [
+        "fd18772cbac19277b20dcccc1b90efb9\t18\tbl\\.uk_lddc_bot\\\/[\\d]\\.[\\d].*",
+        "fd18772cbac19277b20dcccc1b90efb9\t15\tbl\\.uk_lddc_bot\\\/.*",
+        "fd1deddc5d03aacb53233762660c6784\t8\tweblide\\\/.*",
+        "fd357878aaa4aae8370f55fa49994c7f\t23\timagemobile\\\/.* cfnetwork\\\/.*",
+        "fd3db54a860534a541cee1e2cd4a56d5\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "fd456406745d816a45cae554c788e754\t16\tdownload express.*",
+        "fd456406745d816a45cae554c788e754\t15\tdownload master.*\tdownload wonder.*",
+        "fd456406745d816a45cae554c788e754\t14\tdownload ninja.*\tdownload demon.*",
+        "fd70694b338342222607ff503fd631a2\t23\tlg\\-c[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "fd7a50f78e905706889bcba2cc607b85\t87\thtc_s[\\d][\\d][\\d]\\-mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; smartphone; [\\d][\\d][\\d]x[\\d][\\d][\\d]; smartphone\\)",
+        "fd940c13d48f36676be4c08f5f8b1ace\t14\tbittorrentmac\\\/.*",
+        "fdbc09fc91cb337fdcfc47c01ddb2e76\t26\tlg\\-gd[\\d][\\d][\\d]\\\/v[\\d][\\d][\\d] obigo\\\/wap[\\d]\\.[\\d].*",
+        "fdc8cea67cd9372eb02ec34fd30a6cf3\t35\tsonyericssonk[\\d][\\d][\\d]i\\\/.* semc\\-browser\\\/[\\d]\\.[\\d].*",
+        "fdc8cea67cd9372eb02ec34fd30a6cf3\t33\tsonyericssonk[\\d][\\d][\\d]i\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "fdd83e924b1723ca67c7129d7962a993\t27\tegiss\\-wap\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "content": [
+        "d502df36e80452f53530d5522cbd1c9d\t22\tmot\\-e[\\d][\\d][\\d]\\\/[\\d]a\\.[\\d].* mib\\\/[\\d]\\.[\\d] .*",
+        "d508ef2e604515a603c0e8041edf57e1\t11\tnokia[\\d][\\d][\\d][\\d]i\\\/.*",
+        "d50aa56d4acb2cde26f67919e9365b6f\t16\teve\\-minibrowser\\\/.*",
+        "d5229bc92f51c6bfd9825679cade7867\t30\tlotus\\-notes\\\/[\\d]\\.[\\d] \\( windows\\-nt \\)",
+        "d538884c3ed8b74b142b014965956857\t64\tsamsung\\-gt\\-b[\\d][\\d][\\d][\\d]\\\/.* \\(compatible.*; msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "d53f8007a05c99770e36abce2d882fdc\t4\t%%%%.*",
+        "d54e182d8b1b6a9e1228d40685a4b75b\t13\tapple\\-pubsub\\\/.*",
+        "d566c34b744fa3ec83b1fc62425966dc\t27\tsec\\-sghq[\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d57423327f55f34d311f666dd8b33dc0\t12\tgetrightpro\\\/.*",
+        "d586fb78ef0ecfcdca0ad1ce29c89576\t20\ttweetbot\\\/.* cfnetwork\\\/.*",
+        "d5897eddd8250f0d8c0832cf2c35ef74\t35\tsonyericssonj[\\d][\\d][\\d]i\\\/.* semc\\-browser\\\/[\\d]\\.[\\d].*",
+        "d59d9160afbe08263524f2a22e1029c6\t16\tbluecoat proxysg",
+        "d5ca0bddb6a20748ce7f3d59eaa8eca1\t26\tsie\\-sp[\\d][\\d]\\\/[\\d]. up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d5d24525b629092f6ef10ba933c70830\t18\temacs\\\/w[\\d]\\\/[\\d]\\..* \\(.*linux.*",
+        "d5d24525b629092f6ef10ba933c70830\t17\temacs\\\/w[\\d]\\\/[\\d]\\..* \\(.*unix.*",
+        "d5d24525b629092f6ef10ba933c70830\t11\temacs\\\/w[\\d]\\\/[\\d]\\..*",
+        "d5da27b76fea56c0dc65816dfbdf8649\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "d5e45efb50b9e3e4755929c3696a8bfb\t16\tipick.* cfnetwork\\\/.*",
+        "d5f1b6317f8cfb702f164636c1c4585b\t43\tirlbot\\\/[\\d]\\.[\\d] \\(.*http\\:\\\/\\\/irl\\.cs\\.tamu\\.edu\\\/crawler.*\\)",
+        "d5fa685181a6733050baf1987dae9311\t24\tkddi\\-ca[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

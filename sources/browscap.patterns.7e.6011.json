@@ -1,0 +1,23 @@
+{
+    "content": [
+        "7e044051d2be2765bdb3e068b6af85ba\t24\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "7e044051d2be2765bdb3e068b6af85ba\t23\thtc_hd[\\d]_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d].*",
+        "7e211cd720c29f9217f150400e7dced1\t15\tyahoofeedseeker.*",
+        "7e29feb0653d1c44e30cb52f26b664fa\t28\ticabmobile\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "7e29feb0653d1c44e30cb52f26b664fa\t27\ticabmobile\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "7e29feb0653d1c44e30cb52f26b664fa\t25\ticabmobile\\\/.* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "7e29feb0653d1c44e30cb52f26b664fa\t22\ticabmobile\\\/.* cfnetwork\\\/.*",
+        "7e5d6de3a6755a4f35cdd20810553104\t27\tvk\\-vk[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7e69a946b62d666797d5eb8850d3aa9c\t7\tsbl\\-bot.*",
+        "7e6b554650f3fff1974d9006d518412d\t24\tmot\\-a\\-[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7e6b554650f3fff1974d9006d518412d\t21\tmot\\-a\\-[\\d][\\d]\\\/.* up\\.browser\\\/.*",
+        "7ea9188b68e89046c17418ffa027df85\t40\tnec\\-n[\\d][\\d][\\d]\\\/[\\d][\\d][\\d][\\d]ajcc\\\/wap[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7eb1ff09427ceeba11828fbc39f9ef36\t20\tlg\\-c[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "7eb8a88cd1db451e8dfa217ce49a88b1\t41\talcatel\\-oh[\\d]c\\\/[\\d]\\.[\\d] obigointernetbrowser\\\/[\\d]\\.[\\d]",
+        "7eef6b4ca615f5ad30a70be3eaf91c1c\t22\tgoodreader\\\/.* cfnetwork\\\/.*",
+        "7ef49668f492bf1c50c0e2e99907cf7e\t62\tsamsung\\-sgh\\-f[\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "7ef49668f492bf1c50c0e2e99907cf7e\t61\tsamsung\\-sgh\\-f[\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "7ef49668f492bf1c50c0e2e99907cf7e\t28\tsamsung\\-sgh\\-f[\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "7ef49668f492bf1c50c0e2e99907cf7e\t27\tsamsung\\-sgh\\-f[\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*"
+    ]
+}

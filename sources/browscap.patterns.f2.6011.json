@@ -1,0 +1,20 @@
+{
+    "content": [
+        "f201f6863ce351033977ca290dbb4b41\t26\tlge\\-cu[\\d][\\d][\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f20a698699ddd337ae993089c08cd0fb\t7\twada\\.vn.*",
+        "f23434bcda9bd5be9fdfd7e46baed5a2\t12\tfeedshow\\\/.* \\(.*\\)",
+        "f242d5a1ea3b4f2b91ef91a134628e14\t28\tnec\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f267384672632d4f845e741d46b2b3a9\t31\tsagem\\-myc[\\d]\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f284897e1b9f58f34ce7564c641997f7\t26\te[\\d][\\d]\\-mpg[\\d]\\\/a\\.[\\d]\\.[\\d]\\.[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] .*",
+        "f286e66f6006d37a8c92a7455ee5ebc0\t20\tlg\\-c[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "f2926cd1af02e04c12366bc79dc0c5ed\t23\tmot\\-e[\\d][\\d][\\d]\\\/[\\d]e\\.[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "f294e5e7b4255b069235a2c7f254ea2e\t61\tctl\\-rocket\\\/[\\d]\\.[\\d]\\\/wap[\\d]\\.[\\d] profile\\\/midp\\-[\\d]\\.[\\d] configuration\\\/cldc\\-[\\d]\\.[\\d]",
+        "f29f487ae6ca0a67191b29243812daed\t69\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "f29f487ae6ca0a67191b29243812daed\t68\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "f2b0caa0ede9a53e74a8b6cafb72a348\t39\tsonyericssonw[\\d][\\d][\\d]i\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "f2b0caa0ede9a53e74a8b6cafb72a348\t29\tsonyericssonw[\\d][\\d][\\d]i\\\/.*\\(symbianos\\\/.*",
+        "f2b64bafd7d13bfd304eb2b006773351\t8\txovibot\\\/.*",
+        "f2dc8e619cd9c5cf326b388a27b36ae2\t16\tsec\\-sghx[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*",
+        "f2ffc023b3143f64c256eace7ae08840\t29\tlge\\-mx[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

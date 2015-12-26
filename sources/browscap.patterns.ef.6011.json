@@ -1,0 +1,27 @@
+{
+    "content": [
+        "ef007456ce35c3a7005a0f4def6eaa1b\t7\ty\\!j\\-brs.*",
+        "ef0226ba9ffd6063e91fad4428edd4fb\t76\tdopod[\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce; smartphone; [\\d][\\d][\\d]x[\\d][\\d][\\d]\\)",
+        "ef22034709b1583384c290b05e7ddc4a\t18\tz\\-add link checker.*",
+        "ef29819bfe5b148a0d121c40fc19b4da\t73\thtc\\-st[\\d][\\d][\\d][\\d]\\\/.* \\(.*\\) mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\).*",
+        "ef29819bfe5b148a0d121c40fc19b4da\t43\thtc\\-st[\\d][\\d][\\d][\\d]\\\/.* \\(.*opera\\\/[\\d]\\.[\\d][\\d].* \\(windows nt [\\d]\\.[\\d]; u.*\\)",
+        "ef29819bfe5b148a0d121c40fc19b4da\t42\thtc\\-st[\\d][\\d][\\d][\\d]\\\/.* \\(.*opera\\\/[\\d]\\.[\\d].* \\(windows nt [\\d]\\.[\\d]; u.*\\)",
+        "ef351f3ca835e07f19d7b33d4f5dcd30\t23\tnokia[\\d][\\d][\\d][\\d]\\\/uc browser[\\d]\\.[\\d].*",
+        "ef3bfc09c3459fd7b0794dfabd9e75a0\t50\tbenq\\-z[\\d]\\\/[\\d]\\.[\\d][\\d]\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ef3f285e588267a692611c0e5379a623\t30\tmot\\-gatw[\\d]\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "ef419943109a59722ccc4d6f3a986e21\t8\tlachesis",
+        "ef466018a2f3d627639641a86400394e\t28\tsamsung\\-gt\\-b[\\d][\\d][\\d][\\d]\\\/.* opera [\\d]\\.[\\d][\\d].*",
+        "ef466018a2f3d627639641a86400394e\t27\tsamsung\\-gt\\-b[\\d][\\d][\\d][\\d]\\\/.* opera [\\d]\\.[\\d].*",
+        "ef4ade1792d3038889d81724cef2a85f\t10\tantbot\\\/[\\d]\\.[\\d].*",
+        "ef519c956b70b1d4bead9af59c696ea3\t22\tnokiae[\\d][\\d]\\\/uc browser[\\d]\\.[\\d].*",
+        "ef8d40adc79474727dad3c64379f8a84\t35\tsonyericssonk[\\d][\\d][\\d]i\\\/.* semc\\-browser\\\/[\\d]\\.[\\d].*",
+        "ef9efd9ddb1964e59b9d7d7f3bc40a02\t24\twindows\\-update\\-agent\\\/[\\d]\\.[\\d].*",
+        "efa1ae0b2edf68c3f2d8f7757d399f04\t27\tkwc\\-kx[\\d]\\\/[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "efb4efd223f8dbb39222fc25edebf18f\t26\tmot\\-w[\\d][\\d][\\d]\\\/ wap\\.browser\\\/[\\d]\\.[\\d] .*",
+        "efb4efd223f8dbb39222fc25edebf18f\t25\tmot\\-w[\\d][\\d][\\d]\\\/ wap\\.browser\\\/[\\d]\\.[\\d].*",
+        "efc35eef88f94647481d523e7117b998\t36\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "efcacb4732aedde74f9e7984efb68935\t27\tmot\\-v[\\d]i_itunes\\\/.* mib\\\/ber[\\d]\\.[\\d] .*",
+        "efcacb4732aedde74f9e7984efb68935\t23\tmot\\-v[\\d]i_itunes\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "efd83612d2220235e112a12b6f1971fd\t8\tsygolbot.*"
+    ]
+}

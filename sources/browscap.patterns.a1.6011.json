@@ -1,0 +1,32 @@
+{
+    "content": [
+        "a1234b3161b4fbfdfb96dd576b65bbea\t54\tcloud mapping experiment\\. contact research@pdrlabs\\.net",
+        "a1252afe9efe07a7830d753e46ab4347\t118\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*mi [\\d]lte build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t112\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-n[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*gt\\-i[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t105\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*a[\\d][\\d][\\d][\\d] build\\\/.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t104\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t100\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] chrome\\\/.*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t97\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "a1252afe9efe07a7830d753e46ab4347\t93\tmqqbrowser\\\/[\\d]\\.[\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) version\\\/[\\d]\\.[\\d] .*safari\\\/.*",
+        "a12c120b4d8cbca1d052e9a735772024\t8\twebfetch",
+        "a132700c79102e9c7295e657d9539546\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "a17e7f52634090c3e4fd92dac8e85968\t21\tbird_d[\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]\\.[\\d]\\\/[\\d]\\.[\\d] .*",
+        "a17fad9d866f72a70186119fe98ed0d6\t7\tzumbot\\\/.*",
+        "a189c633d9995e11bf8607170ec9a4b8\t24\toracle enterprise search",
+        "a189c633d9995e11bf8607170ec9a4b8\t19\toracle ultra search",
+        "a190396c5ce77593bd08cf62417fa4f8\t36\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/x[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "a1ae18357ef5cfb5451b83862e05d01e\t53\tqueryseekerspider \\( http\\:\\\/\\\/queryseeker\\.com\\\/bot\\.html \\)",
+        "a1bce7059da1a9fd6c8d4b258f4e0422\t12\tsec\\-sghx[\\d][\\d][\\d] .*",
+        "a1c9bf49eb4fc9fd11b972c6312461bd\t36\tnec\\-n[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] hopenos\\\/[\\d]\\.[\\d] up\\.link\\\/[\\d]\\.[\\d].*",
+        "a1d0261e462f04ba6507d85db8ff969f\t143\tadsbot.google.mobile \\(.http\\:\\\/\\\/www\\.google\\.com\\\/mobile\\\/adsbot\\.html\\) mozilla \\(iphone.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit \\(khtml,.*like gecko.*\\).*",
+        "a1d0261e462f04ba6507d85db8ff969f\t140\tadsbot.google.mobile \\(.http\\:\\\/\\\/www\\.google\\.com\\\/mobile\\\/adsbot\\.html\\) mozilla \\(iphone.*cpu iphone os .* like mac os x.*\\) applewebkit \\(khtml,.*like gecko.*\\).*",
+        "a1d0261e462f04ba6507d85db8ff969f\t137\tadsbot.google.mobile \\(.http\\:\\\/\\\/www\\.google\\.com\\\/mobile\\\/adsbot\\.html\\) mozilla \\(.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit \\(khtml,.*like gecko.*\\).*",
+        "a1d0261e462f04ba6507d85db8ff969f\t134\tadsbot.google.mobile \\(.http\\:\\\/\\\/www\\.google\\.com\\\/mobile\\\/adsbot\\.html\\) mozilla \\(.*cpu iphone os .* like mac os x.*\\) applewebkit \\(khtml,.*like gecko.*\\).*",
+        "a1d0261e462f04ba6507d85db8ff969f\t20\tadsbot.google.mobile.*",
+        "a1d0261e462f04ba6507d85db8ff969f\t13\tadsbot.google.*",
+        "a1fd0834a3dc21537ceac0feb0d013d3\t28\tatomiclite\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "a1fd0834a3dc21537ceac0feb0d013d3\t27\tatomiclite\\\/.* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "a1fd0834a3dc21537ceac0feb0d013d3\t25\tatomiclite\\\/.* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "a1fd0834a3dc21537ceac0feb0d013d3\t22\tatomiclite\\\/.* cfnetwork\\\/.*"
+    ]
+}

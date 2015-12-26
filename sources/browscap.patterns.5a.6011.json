@@ -1,0 +1,27 @@
+{
+    "content": [
+        "5a123614dc2cc688b99f563cf7937a24\t31\tatomiclite\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "5a123614dc2cc688b99f563cf7937a24\t30\tatomiclite\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "5a123614dc2cc688b99f563cf7937a24\t28\tatomiclite\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "5a123614dc2cc688b99f563cf7937a24\t25\tatomiclite\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "5a1ffa4212472ddfed273f28d93be022\t48\tdatafountains\\\/dmoz feature vector corpus creator.*",
+        "5a1ffa4212472ddfed273f28d93be022\t29\tdatafountains\\\/dmoz downloader.*",
+        "5a261ae40cf7509e538961fcd1e00158\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "5a528dc413bf833a700d1cefa6ce0d18\t28\tsafesearch microdata crawler.*",
+        "5a700dd804c4f7c5b4fea2186544addc\t74\tcocoal\\.icio\\.us\\\/[\\d]\\.[\\d] \\(v[\\d][\\d]\\) \\(mac os x; http\\:\\\/\\\/www\\.scifihifi\\.com\\\/cocoalicious\\)",
+        "5a700dd804c4f7c5b4fea2186544addc\t18\tcocoal\\.icio\\.us\\\/.* \\(.*\\).*",
+        "5a7d02e24e98fa8078eeb836681276d4\t62\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "5a7d02e24e98fa8078eeb836681276d4\t61\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "5a7d02e24e98fa8078eeb836681276d4\t34\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].* linux\\\/.* opera\\\/[\\d]\\.[\\d][\\d].*",
+        "5a7d02e24e98fa8078eeb836681276d4\t28\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "5a7d02e24e98fa8078eeb836681276d4\t27\tsamsung\\-gt\\-i[\\d][\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*",
+        "5a834d13e2d0e2a13921296a2460313d\t31\tnewsgator fetchlinks extension\\\/.*",
+        "5a94ed4ffe42d965c962d64cec2ce225\t14\tscollspider\\\/[\\d]\\..*",
+        "5ac4e8061a626936bc4f4cf67be5911c\t24\tez[\\d][\\d][\\d]\\\/bsi au\\.browser\\\/[\\d]\\.[\\d].*",
+        "5ad0267f7896240bce28da6fe235300f\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "5ad2f303c85fd07fe1b088c74fbc6460\t25\tsie\\-c[\\d][\\d]\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "5aee5623e78bfacec9134a38d747d5c5\t26\thttp\\:\\\/\\\/www\\.yellowpages\\.com.*",
+        "5af0dfc60e59a100dfbcc4620600f063\t24\tspector%[\\d][\\d]pro.* cfnetwork\\\/.*",
+        "5af8b38a243fd6ff6b21ac033696bdaf\t36\thaier\\-v[\\d][\\d][\\d][\\d]\\\/\\([\\d][\\d][\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)sw[\\d][\\d]\\\/wap[\\d]\\.[\\d] .*"
+    ]
+}

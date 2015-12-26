@@ -1,0 +1,23 @@
+{
+    "content": [
+        "79088c1be5bada453840e81ed3611980\t10\tlinkwalker.*",
+        "7916390ca40ca7685b140e8143a65278\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "791bdd514ca351493d306a20a7ace4b4\t15\ttoata dragostea.*",
+        "792d400f861ab490f06e193f95880e1c\t28\tholmesbot \\(http\\:\\\/\\\/holmes\\.ge\\)",
+        "793feac50cb0c73affb4d24ab71ef95c\t9\tbilgibot\\\/.*",
+        "79434185d73b7ec3afd010b91c7f124d\t40\tsagem\\-my[\\d][\\d][\\d]v\\\/[\\d]\\.[\\d]\\\/.* browser\\\/up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7957d774ca93225699746fde98219e60\t11\twebstripper.*",
+        "79704d23e12acb8914b1a82f5f1abf77\t55\tlivedoor feedfetcher\\\/[\\d]\\.[\\d].* \\(http\\:\\\/\\\/reader\\.livedoor\\.com\\\/;.*\\)",
+        "797a382b5324e93b23b8478ec84fabed\t20\tmot\\-v[\\d][\\d]m\\\/[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "797c682d489e4db4792c300f6b34a4da\t31\tviralvideochart\\.unrulymedia\\.com.*",
+        "798824111f85546a3e920218515e10e5\t14\tfeeddigest\\\/.* \\(.*\\)",
+        "79894ea95534e9362a5b9434ca2b81ae\t22\tlg\\-kp[\\d][\\d][\\d] obigo\\\/wap[\\d]\\.[\\d] .*",
+        "79c1241a355de44672b8a17564e00f80\t7\tichiro\\\/.*",
+        "79cbc6c36ef145dc9a9544216cb8ffc7\t7\tseebot\\\/.*",
+        "79ccdd3b040530d1717d94958f804c34\t7\ty\\!j\\-ssf.*",
+        "79dc93bfa440d02f625ecf1cfa6103a6\t72\thtc\\-[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\).*",
+        "79dc93bfa440d02f625ecf1cfa6103a6\t71\thtc\\-[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\).*",
+        "79e54f66578adf0a8eef279d4c147ccc\t10\tce\\-preload",
+        "79eb17fdb3d2dc3c77674fc2781c2917\t27\t\\(compatible;  .*; trident\\\/[\\d]\\.[\\d].*"
+    ]
+}
