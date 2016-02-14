@@ -1,0 +1,16 @@
+{
+    "content": [
+        "d60cadf1a41c651e1f0ade50136bad43\t18\ttiny tiny rss\\\/[\\d]\\.[\\d][\\d].*",
+        "d60cadf1a41c651e1f0ade50136bad43\t17\ttiny tiny rss\\\/[\\d]\\.[\\d].*",
+        "d615c7c7a7128c225cfac235ba19a884\t7\tiisbot\\\/.*",
+        "d61980a907ebca2e80cd06e2cd46c149\t29\tmot\\-a\\-[\\d]c\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "d61f48d331c9849f50d53effbd2e3b96\t37\twhatsapp\\\/[\\d]\\.[\\d].* iphone_os\\\/.* device\\\/iphone.*",
+        "d626eb246a0005b16112c9cc4509c47b\t8\tgaisbot\\\/.*",
+        "d633dcccd7d91af6b28f28ce1f62859c\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "d642a4d6d035a997c601819c129b6f84\t22\tmot\\-sap[\\d]_\\\/.* up\\.browser\\\/.*",
+        "d674d3598a1db1ff7ad3fd412a236a87\t7\tpompos\\\/.*",
+        "d69ae0dc9e3ce49ea85e5005f2e54e3a\t17\tcrawl_application",
+        "d6a5c9544eca9b5ce2266d1c34a93222\t7\tfirefox.*",
+        "d6be897f0ecb40b1f8c74015539e5da6\t43\tinetbot\\\/.* \\(.http\\:\\\/\\\/www\\.inetbot\\.com\\\/bot\\.html\\)"
+    ]
+}

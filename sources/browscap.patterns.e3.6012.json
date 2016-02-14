@@ -1,0 +1,31 @@
+{
+    "content": [
+        "e30ba6e0c53093a65185203624da776f\t35\tsamsung\\-sgh\\-e[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e3280f11109805eed0c8330f876b6ebf\t23\tsie\\-c[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e3280f11109805eed0c8330f876b6ebf\t8\tsie\\-c[\\d][\\d]\\\/.*",
+        "e334916c4a6c47ac55f572df64d3a41b\t15\ttineye\\-bot\\\/[\\d]\\.[\\d][\\d].*",
+        "e33957cc45daf2e1e8b863bdaf488334\t36\tsonyericssonj[\\d][\\d][\\d]i\\\/r[\\d].*telecabrowser\\\/[\\d]\\..*",
+        "e33b88444971aadecb04ef787f06b12b\t35\tfeeddlerrss [\\d]\\.[\\d] \\(ipad.*iphone os.[\\d].[\\d].*\\)",
+        "e33b88444971aadecb04ef787f06b12b\t32\tfeeddlerrss .* \\(ipad.*iphone os.[\\d].[\\d].*\\)",
+        "e33b88444971aadecb04ef787f06b12b\t31\tfeeddlerrss [\\d]\\.[\\d] \\(.*iphone os.[\\d].[\\d].*\\)",
+        "e33b88444971aadecb04ef787f06b12b\t28\tfeeddlerrss .* \\(.*iphone os.[\\d].[\\d].*\\)",
+        "e33d5193da531aa31153204a08f6f131\t34\tlg\\\/ku[\\d][\\d][\\d]i\\\/v[\\d][\\d]a browser\\\/obigo\\-q[\\d][\\d]a\\\/.*",
+        "e34eb796733b34755708585003b1ae41\t27\txing\\-contenttabreceiver\\\/[\\d]\\.[\\d]",
+        "e34f9cbf7d919d246e32f12447d2e1e9\t36\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e389a212c2b3beb2a9a00ad2f13b8c2b\t106\tlenovo a[\\d][\\d][\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*lenovo a[\\d][\\d][\\d].*\\) applewebkit.* \\(khtml,.*like gecko.*\\).*version\\\/[\\d]\\.[\\d].*chrome.*safari.*",
+        "e389a212c2b3beb2a9a00ad2f13b8c2b\t101\tlenovo a[\\d][\\d][\\d].*mozilla\\\/[\\d]\\.[\\d] \\(.*linux.*android.[\\d]\\.[\\d].*lenovo a[\\d][\\d][\\d].*\\) applewebkit.* \\(khtml,.*like gecko.*\\) version\\\/[\\d]\\.[\\d].*safari.*",
+        "e389a212c2b3beb2a9a00ad2f13b8c2b\t55\tlenovo a[\\d][\\d][\\d].*linux.*android.[\\d]\\.[\\d].* release.* browser.applewebkit.*",
+        "e389a212c2b3beb2a9a00ad2f13b8c2b\t11\tlenovo g[\\d][\\d][\\d]",
+        "e39d76944a60f8c1c97be92dd2527bc2\t19\tlg\\-g[\\d][\\d][\\d][\\d]i\\\/jm au\\\/[\\d]\\.[\\d].*",
+        "e3a2fb081ac807b9fbfce1c8b88114d0\t62\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "e3a2fb081ac807b9fbfce1c8b88114d0\t61\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "e3a2fb081ac807b9fbfce1c8b88114d0\t28\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "e3a2fb081ac807b9fbfce1c8b88114d0\t27\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*",
+        "e3ecd5eca82c601feeaaf07076e5d300\t28\tsamsung\\-gt\\-m[\\d][\\d][\\d][\\d].* jasmine\\\/[\\d]\\.[\\d].*",
+        "e3f0f6c7a08f33e47f30ae0aafb738e5\t62\tsamsung\\-sgh\\-i[\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "e3f0f6c7a08f33e47f30ae0aafb738e5\t61\tsamsung\\-sgh\\-i[\\d][\\d][\\d].*\\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "e3f0f6c7a08f33e47f30ae0aafb738e5\t28\tsamsung\\-sgh\\-i[\\d][\\d][\\d].*.dolphin\\\/[\\d]\\.[\\d].*",
+        "e3f0f6c7a08f33e47f30ae0aafb738e5\t27\tsamsung\\-sgh\\-i[\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*\tsamsung\\-sgh\\-i[\\d][\\d][\\d].* opera [\\d]\\.[\\d][\\d].*",
+        "e3f0f6c7a08f33e47f30ae0aafb738e5\t26\tsamsung\\-sgh\\-i[\\d][\\d][\\d].* opera [\\d]\\.[\\d].*"
+    ]
+}

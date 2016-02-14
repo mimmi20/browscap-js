@@ -1,0 +1,28 @@
+{
+    "content": [
+        "8a04744caa2093ec5bfa9c2084166336\t17\tinet \\- eureka app",
+        "8a144bcee3952eabb2c796a578c2c920\t16\tkonka\\-sw[\\d][\\d][\\d]\\-a[\\d][\\d]\\\/.*",
+        "8a3286a9662808e2c9e4e2e338cb74c4\t24\tkddi\\-ca[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8a4e3d767c2f50a1650df8ad979e8093\t52\tarexx \\(compatible; msie [\\d]\\.[\\d]; amigaos[\\d]\\.[\\d]\\) ibrowse [\\d]\\.[\\d]",
+        "8a4e3d767c2f50a1650df8ad979e8093\t51\tarexx \\(.*compatible.*;.*msie [\\d]\\.[\\d]; amigaos[\\d]\\.[\\d]\\) ibrowse [\\d]\\.[\\d]",
+        "8a61dcdcfe7df3bbe0417b1c45625c81\t13\tlinkstats bot",
+        "8a73f59ab7ed819ca9baad274d545857\t7\tirlbot\\\/.*",
+        "8a7ec446e90687a84a93c22a77166ae4\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "8a8bb7cd343aa2ad99b7d762030857a2\t34\ta[\\d] website download\\\/[\\d]\\..* \\(.*\\) miggibot",
+        "8a8bb7cd343aa2ad99b7d762030857a2\t20\ta[\\d] sitemap generator.*",
+        "8a8bb7cd343aa2ad99b7d762030857a2\t19\ta[\\d] website download.*\ta[\\d] website analyzer.*\ta[\\d] keyword research.*",
+        "8a8bde9037cc247a4414b2d84e0353ca\t23\tmot\\-c[\\d][\\d][\\d]\\\/[\\d]b\\.d[\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "8a8bde9037cc247a4414b2d84e0353ca\t21\tmot\\-c[\\d][\\d][\\d]\\\/[\\d]b\\.d.* mib\\\/[\\d]\\.[\\d].*",
+        "8a9596f483a1f51017555338843c4b46\t11\topenbsd ftp.*",
+        "8ab85d6711b3f62ed2da1c1c87e7b191\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "8abc811a0d2ce47973a2b31886bd5d82\t11\tfeed\\:\\:find\\\/.*",
+        "8abd0d66908f91f75dc9e4e0f1f60611\t81\tsamsung\\-sgh\\-i[\\d][\\d][\\d]\\\/uchi[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*",
+        "8abd0d66908f91f75dc9e4e0f1f60611\t80\tsamsung\\-sgh\\-i[\\d][\\d][\\d]\\\/uchi[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*",
+        "8ac190784b2182f073be3c40d1ec9276\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "8af1c98037e0cd5a0d7398c372d0db1f\t81\thtc_touch_cruise_t[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\).*",
+        "8af1c98037e0cd5a0d7398c372d0db1f\t33\thtc_touch_cruise_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "8af1c98037e0cd5a0d7398c372d0db1f\t32\thtc_touch_cruise_t[\\d][\\d][\\d][\\d] opera\\\/[\\d]\\.[\\d].*",
+        "8af297cc216a3731229138a00a82f40d\t27\thitachi\\-p[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "8af4bba348a0eb1fc51feadb328302c0\t10\tsimplepie\\\/.*"
+    ]
+}

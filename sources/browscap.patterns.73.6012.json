@@ -1,0 +1,28 @@
+{
+    "content": [
+        "7310bb8374bcfc7fc21b2a1c7a757bed\t29\tutstargz[\\d]s\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7329a0ba66e73651ecdcd66e15a86899\t36\tsamsung\\-sgh\\-n[\\d][\\d][\\d]\\\/.* up\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "735abfb56e47b7b65f1bda3b22f494f0\t20\tnetestate ne crawler.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t91\tflixsterios\\\/.* \\(ipad.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t88\tflixsterios\\\/.* \\(ipad.*cpu iphone os .* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t87\tflixsterios\\\/.* \\(.*cpu iphone os [\\d].[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t84\tflixsterios\\\/.* \\(ipad.*cpu os [\\d]_[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*\tflixsterios\\\/.* \\(.*cpu iphone os .* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t82\tflixsterios\\\/.* \\(ipad.*cpu os [\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t80\tflixsterios\\\/.* \\(.*cpu os [\\d]_[\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t78\tflixsterios\\\/.* \\(ipad.*cpu.*os.*like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*\tflixsterios\\\/.* \\(.*cpu os [\\d].* like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735ce8bbb63e95495442fe33861e9ebd\t74\tflixsterios\\\/.* \\(.*cpu.*os.*like mac os x.*\\) applewebkit\\\/.* \\(khtml, like gecko\\) mobile\\\/.*",
+        "735f9715cf1c6bf5a842dafbd3311069\t43\ttasap\\-image\\-robot\\\/[\\d]\\..* \\(http\\:\\\/\\\/www\\.tasap\\.com\\)",
+        "73778f6993ad5fb0c8ba0edcdf23806b\t32\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\..* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "73778f6993ad5fb0c8ba0edcdf23806b\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "73823e621a4d26ab0e4df58d2b534370\t21\tmitsu\\-m[\\d][\\d][\\d]\\\/.*\\\/wap[\\d]\\.[\\d]\\.[\\d] .*",
+        "73866f7d58b39da713e1b0ce28862220\t9\tgetsmart\\\/.*",
+        "738abf52ce9d53ed4644dee97e43e63e\t9\twebfetch\\\/.*",
+        "738ec5050d77e02de85d0883a7524dcf\t69\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\.[\\d].*\\)",
+        "738ec5050d77e02de85d0883a7524dcf\t68\thtc_p[\\d][\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; windows ce; iemobile.[\\d]\\..*\\)",
+        "739e028960139f36fe3dd21ddb712003\t12\tprowebwalker.*",
+        "73a3e45b96e4f3e2427906e5e1cfc1d8\t14\topenisearch\\\/[\\d]\\..*",
+        "73aef9c9dc15f4f4f7730097c2a37deb\t7\tgaisbot.*",
+        "73c18c59a39b18382081ec00bb456d43\t14\tgg peekbot [\\d]\\.[\\d].*",
+        "73c18c59a39b18382081ec00bb456d43\t11\tgg peekbot .*"
+    ]
+}
