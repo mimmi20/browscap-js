@@ -1,0 +1,20 @@
+{
+    "content": [
+        "b8032542fd1de2e722b35e6a3a74f393\t13\ttwitterbot\\\/[\\d]\\..*",
+        "b81caae262ac636529d810e0321b114f\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "b81f1807f703bcef26d46f27c460ccad\t33\tpanasonic\\-a[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b82f687c296e9fb39430b97f89bcb57a\t48\tsamsung\\-gt\\-e[\\d][\\d][\\d][\\d] opera\\\/.*\\(j[\\d]me\\\/midp.*opera mini\\\/[\\d]\\.[\\d].*\\).*",
+        "b83a886a5c437ccd9ac15473fd6f1788\t11\tmail\\.ru\\\/[\\d]\\.[\\d]",
+        "b83f24434170223523ec2d7327f59584\t25\tkwc\\-k[\\d][\\d][\\d]j\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b861a6591007bfd8b330cb6d5589efdc\t27\tsamsung\\-gt\\-s[\\d][\\d][\\d][\\d].*jasmine\\\/[\\d]\\.[\\d].*",
+        "b880a476a447213af4644249b6f29998\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "b8834a1b84b9fead1e3e253777e6fd0a\t30\tsagem\\-myz\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b8b2e39c2ebe497b8267d70a5623a297\t34\tsharp\\-tq\\-gx[\\d][\\d]i\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b8d22d176a1f42859a0aae004f66ce34\t9\tvinti\\\/[\\d]\\.[\\d].*",
+        "b8d7fceed5e26d2c58a9f8904a29097c\t30\tdbtel[\\d][\\d][\\d][\\d]c\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b8da5b2c952e75974ec065790eee4046\t25\tsie\\-m[\\d][\\d]\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b8dd183a8f6d38b1766f9a4e76c76e73\t23\ttitanium [\\d][\\d][\\d][\\d] \\([\\d]\\.[\\d][\\d]\\.[\\d][\\d]\\)",
+        "b8f265bdffdd17092cb251eb08236677\t35\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b8fb2d3f2cafb387adc6d56ed0f17bd2\t37\tblogpulselive \\(support@blogpulse\\.com\\)"
+    ]
+}

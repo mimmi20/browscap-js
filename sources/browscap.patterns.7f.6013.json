@@ -1,0 +1,20 @@
+{
+    "content": [
+        "7f035a4e0ee22b47219744036d58d5de\t9\tzipppbot\\\/.*",
+        "7f1388c2178852e8c36fee18823ebfe3\t20\tt[\\d][\\d][\\d]x up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7f218b7168c2b45a5dfe8a02c3df2c6c\t62\tbird_d[\\d][\\d][\\d]\\\/[\\d]\\.[\\d][\\d] mtk[\\d][\\d][\\d][\\d]\\\/v[\\d]\\-[\\d][\\d]a release\\\/[\\d]\\.[\\d]\\.[\\d][\\d][\\d][\\d] browser\\\/teleca .*",
+        "7f2da27591a7832498df4138728ffd5c\t6\treblog.*",
+        "7f3e2a92bdb04ddbad90fde5e2f7c0fa\t11\tsiteparser\\\/.*",
+        "7f46165474d11ee5836777d85df2cdab\t50\tonline link validator \\(http\\:\\\/\\\/www\\.dead\\-links\\.com\\\/\\)",
+        "7f46e3c691e5c6a4b8eb3bf0a5599719\t28\tlge\\-lg[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d]\\.[\\d][\\d].*",
+        "7f70dccf879931d995dd140781838f42\t23\tsam\\-r[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "7f72d88eb679037f5e94f8d15a13d8cc\t15\tdownloadsession.*",
+        "7f79d809f2ddb67dd56fba65fbef5295\t16\tr[\\d]_commentreader.*",
+        "7f89c9bd3dfb2f32922edf86d253481a\t8\tpolybot..*",
+        "7fe0ef88f93c1971004157bc56641323\t95\tmio[\\d][\\d][\\d][\\d]\\\/r[\\d][\\d] profile\\\/midp\\-[\\d]\\.[\\d] midp\\-[\\d]\\.[\\d] configuration\\\/cldc\\-[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*\\)",
+        "7fe7eba07bd1ad054f32b693568ea546\t10\tbluedragon.*",
+        "7ff977a339ec00c585e1bd6e6413dc4d\t7\tphoton\\\/.*",
+        "7ffc4d510260a8544e5550e62ec56bc1\t16\trel link checker.*",
+        "7fffe1a7062fa11b9a137fed6f44812b\t13\twebdownloader.*"
+    ]
+}

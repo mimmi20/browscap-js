@@ -1,0 +1,23 @@
+{
+    "content": [
+        "b412536156eed1e0dcd2774e787f34cc\t12\tbcklinks [\\d]\\.[\\d].*",
+        "b412536156eed1e0dcd2774e787f34cc\t8\tbcklinks.*",
+        "b41de7ad9400d47238587ecb4d09a1c6\t10\tgettor\\\/[\\d]\\.[\\d].*",
+        "b445c48597178fa3c490f16428190a24\t24\tkddi\\-sa[\\d]a up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b448aaa165f5b95fbe2b96ee7a618aec\t57\tmot\\-mpx[\\d][\\d][\\d]\\\/.* mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce.*",
+        "b450fe8b1db845331424ed5e70ff3389\t75\tmot\\-razrv[\\d]\\\/[\\d].* ber[\\d]\\.[\\d] mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d]; [\\d][\\d][\\d][\\d][\\d][\\d][\\d][\\d]\\) .* opera [\\d]\\.[\\d][\\d].*",
+        "b45568f6b6f06337ae6080eede58e151\t10\tguzzle\\\/[\\d]\\.[\\d].*",
+        "b4628fe4f5f38e5b293be2024ce95239\t27\tinsurance\\.preisvergleich\\.de",
+        "b472f2d603d8e24762caba34ea6e3f95\t18\tshortlinktranslate.*",
+        "b4746e032fec2f050682566bab0d0a49\t11\tgsa\\-crawler.*",
+        "b4a3e744abacf7fb0e3165978afcb204\t25\tlge\\-cx[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b4a5c3602c41c7af88218ec426d70742\t47\tsafaribookmarkchecker.*\\(.http\\:\\\/\\\/www\\.coriolis\\.ch\\\/\\)",
+        "b4ab99b099b980e887f272d43fd704bb\t27\tmot\\-c[\\d][\\d][\\d]m\\\/uls_g_[\\d][\\d]\\..* mib\\\/[\\d]\\.[\\d].*",
+        "b4b0ff584b75e2a3532359a98895ec51\t20\tlg\\-mg[\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "b4b5038b361ba9aabd5ff36ab82c3551\t10\twebcollage.*",
+        "b4ce8d493fe5e1eadd88d87e22b15238\t57\tanonymisiert durch almisoft browser\\-maulkorb \\(anonymisier.*",
+        "b4ce8d493fe5e1eadd88d87e22b15238\t12\tanonymisiert.*",
+        "b4e03097b1968bdf91a21204138e3ce1\t15\ttencenttraveler.*",
+        "b4e54d643dcb3d2f8f659898b19aebd5\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "content": [
+        "2800feb9f4af1251735ed02cc513ee78\t22\tmot\\-ef\\\/.* km\\.browser\\\/[\\d]\\.[\\d].*",
+        "2805a864403e6bca24881716fbe993b0\t24\tsec\\-sghe[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] tss\\\/[\\d]\\.[\\d] .*",
+        "28209d17f9134387cae0537068c19629\t18\thyundaihg[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .*",
+        "2831a2f1daf3c1d3ee87c202e10069c0\t21\twebsitepulse checker\\\/.*",
+        "28365d966229fb2ac2f1d5c1be3f86d5\t11\tbittornado\\\/.*",
+        "283c50ac2fd4c552038881c68b110c93\t24\tfastbot crawler beta [\\d]\\.[\\d].*",
+        "283c50ac2fd4c552038881c68b110c93\t20\tfastbot crawler beta.*",
+        "283d6d4d72d0fafc8fe930f51aee3987\t12\teuripbot\\\/[\\d]\\.[\\d].*",
+        "284bb882f7756bc6ba61aba69a91b222\t24\thtc\\-p[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] opera\\\/[\\d]\\.[\\d][\\d].*",
+        "284bb882f7756bc6ba61aba69a91b222\t23\thtc\\-p[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] opera\\\/[\\d]\\.[\\d].*",
+        "2863761b4a138f07bf6d492fef58e63d\t15\tlibrabot\\\/[\\d]\\.[\\d] \\(.*\\)",
+        "28767f8a7c56f953da2c1d90c9cac552\t15\tstratagems kumo.*",
+        "287e9593819b2fcdf9945e7ccacd637d\t22\textreme picture finder",
+        "289451c2334a179fea83b984d35d0710\t25\tlg\\-gr[\\d][\\d][\\d]\\\/v[\\d][\\d]. teleca\\\/q[\\d]\\.[\\d].*",
+        "289963eb2755a22c95b8df711d30e609\t16\tmsn feed manager",
+        "28a56554a48dc80f9b6597f516f24488\t21\traynette_httprequest\\\/.*",
+        "28ba2e82a66d354abbc3cabb4fa74493\t68\topera\\\/[\\d][\\d] profile\\\/javas\\-[\\d]\\.[\\d]\\.[\\d] configuration\\\/cldc\\-[\\d]\\.[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "28c7a2c2c4ef3098267b1f1209ffe674\t30\tsagem\\-myx\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "28d58381eec89eaafcec7473d4ea54d1\t16\ttsm\\-[\\d]\\\/teleca\\\/[\\d]\\.[\\d].*",
+        "28da94fe69279bcd08140abd731b8781\t12\tcazoodlebot\\\/.*"
+    ]
+}

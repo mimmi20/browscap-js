@@ -1,0 +1,21 @@
+{
+    "content": [
+        "b60c0be4b4cd12e30f82d8ae0658ff7c\t14\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d] .*",
+        "b60c0be4b4cd12e30f82d8ae0658ff7c\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "b611ab2d06628f76e40ca4339bc5402b\t23\tuniversalfeedparser\\\/[\\d]\\.[\\d].*",
+        "b611ab2d06628f76e40ca4339bc5402b\t22\tuniversalfeedparser\\\/[\\d]\\..*",
+        "b633f72b0b626262311f0b848cccfb5f\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "b6417fc5ddd1c578ff7aaf131514a168\t43\tsonyericssonk[\\d][\\d][\\d]c\\\/.* browser\\\/semc\\-browser\\\/[\\d]\\.[\\d].*",
+        "b65126a57dd3f6e4fbf628d04baf446a\t8\tszukacz\\\/.*",
+        "b66b72891461659aa0470e969b702e1a\t23\tsie\\-c[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "b6777c0305a72bbb10b0efdd54fc8ec1\t16\twebsiteextractor.*",
+        "b6863def00ccad6e38d6120b124cb8fd\t11\ti\\-mobile[\\d][\\d][\\d]",
+        "b68f0f8ca0a6e70f0dccf36bb31b5e2d\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "b6ab8c53227123af8041b831553b7d65\t10\thrcrawler\\\/.*",
+        "b6bc16d8dd397b73f1092e8977c283d5\t68\tnokiax[\\d]\\-[\\d][\\d]\\\/.* profile\\\/midp\\-[\\d].* ucweb\\\/[\\d]\\.[\\d] \\(.*\\) u[\\d]\\\/.* ucbrowser\\\/[\\d]\\.[\\d].* u[\\d]\\\/.* mobile.*",
+        "b6d14c9fa0ec839a7a369d7c32bd010b\t48\tsonyericssonw[\\d][\\d][\\d]i\\\/r[\\d]ad[\\d][\\d][\\d] telecabrowser\\\/q[\\d][\\d]c[\\d]\\-[\\d] .*",
+        "b6d610ec1f70a54650517e135fe2eb1d\t28\tsec\\-sghp[\\d][\\d][\\d], tss\\\/[\\d]\\.[\\d], rev[\\d]\\.[\\d].*",
+        "b6efd606d118d0f62066e31419ff04cc\t21\tapache openoffice\\\/[\\d]\\.[\\d].*",
+        "b6efd606d118d0f62066e31419ff04cc\t17\tapache openoffice.*"
+    ]
+}

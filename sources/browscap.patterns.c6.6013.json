@@ -1,0 +1,16 @@
+{
+    "content": [
+        "c60d441bf579a9aba551c1fede0fc557\t14\twinwap\\-pro\\\/[\\d]\\.[\\d].*",
+        "c618ffcc3deb528b639efad3d622583a\t14\tpixray\\-seeker\\\/.*",
+        "c619d5a38ca3222e5c4d84f31a3e6d69\t8\tvegas[\\d][\\d]\\\/.*",
+        "c624b8407c80a8a6fc713b1c920eee38\t23\tlg\\-g[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c644c1d1f3c824b0bb07ae136a1f3524\t11\tericssont[\\d][\\d].*",
+        "c67a0c07243252fd881b8f0bbfafeb34\t10\trepomonkey.*",
+        "c6ad0c4fd2ecf1c208341f364e965709\t18\tbmc link validator.*",
+        "c6b49cf0baa6af71ffbe87c9e35156cb\t8\tmailbar\\\/.*",
+        "c6b4af1355b3ae6666e3a5c4c003c0d9\t25\tsie\\-s[\\d][\\d]\\\/[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "c6c35d5162880c52ded48d224ea93187\t84\taudiovox\\-smt[\\d][\\d][\\d][\\d]\\\/mozilla\\\/[\\d]\\.[\\d] \\(.*compatible.*;.*msie [\\d]\\.[\\d][\\d]; windows ce; smartphone; [\\d][\\d][\\d]x[\\d][\\d][\\d]\\)",
+        "c6f4a8304ce5a0255cac605cf88b1c75\t26\ty\\!%[\\d][\\d]messenger\\\/.* cfnetwork\\\/.*",
+        "c6f6b026423513db3eb1ae6ab242a820\t10\tnewspaper\\\/.*"
+    ]
+}

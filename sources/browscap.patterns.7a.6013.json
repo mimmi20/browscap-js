@@ -1,0 +1,16 @@
+{
+    "content": [
+        "7a07edc009d69ce147e12a36a6350550\t10\tm[\\d]gate\\\/[\\d]\\.[\\d].*",
+        "7a163a9459ee1a25ba91000bb438602f\t29\tscreenerbot crawler beta [\\d]\\.[\\d] .*",
+        "7a163a9459ee1a25ba91000bb438602f\t25\tscreenerbot crawler beta .*",
+        "7a39097b6e3619221987f7a77185def6\t21\tiltrovatore\\-.etaccio\\\/.*",
+        "7a500af9521105e9441d9a9b593d1cca\t37\tbloglines\\\/.* \\(http\\:\\\/\\\/www\\.bloglines\\.com.*\\)",
+        "7ac2002747d566e98348d4999a8706c3\t26\tios\\\/[\\d]\\.[\\d].* \\(.*\\) dataaccessd\\\/[\\d]\\.[\\d].*",
+        "7aca4a3f4f446b77d3cf9989cd39f1bf\t16\tbookmark\\-manager",
+        "7adbea63e8e559e0e1105d65f0f73285\t10\tmsnbot\\\/[\\d]\\.[\\d].*",
+        "7adf26233e445b591c770d3b269351ff\t20\tmot\\-v[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] mib[\\d]\\.[\\d]\\\/.*",
+        "7ae744d64ea022f6cd4051f12d07ad9e\t6\tbeamer.*",
+        "7af4d3fccd9bbc5d9c70d51f6c7c6d12\t21\tstewdio windmaker [\\d]\\.[\\d].*",
+        "7af4d3fccd9bbc5d9c70d51f6c7c6d12\t17\tstewdio windmaker.*"
+    ]
+}

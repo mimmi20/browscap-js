@@ -1,0 +1,16 @@
+{
+    "content": [
+        "6d163f1f3b45e0e5a3f9c4278f79a0b6\t90\tdino[\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(x[\\d][\\d]; linux x[\\d][\\d]_[\\d][\\d]\\) applewebkit\\\/.* \\(khtml, like gecko\\) chrome\\\/[\\d][\\d]\\..*safari\\\/.*",
+        "6d2f77c9b3481912848a03b04514ca5d\t28\tyoow\\!\\\/.* \\(.http\\:\\\/\\\/www\\.yoow\\.eu\\)",
+        "6d386f3c35b3bd8eb21534406697e605\t26\tmot\\-a[\\d][\\d][\\d]\\\/[\\d][\\d]\\.[\\d][\\d]\\.[\\d][\\d] mib\\\/[\\d]\\.[\\d] .*",
+        "6d38f84e6e2781050b96f188f89370cc\t20\tlg\\-m[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d] .*",
+        "6d44685a05e16be0d35130b6d0fdd0b3\t25\tmot\\-razrv[\\d]xv\\\/.* mib\\\/ber[\\d]\\.[\\d] .*",
+        "6d55dbc52c51f7f82fe727360d353aba\t9\tgvfs\\\/[\\d]\\.[\\d][\\d].*",
+        "6d644e2193494434857d8751a0ab4869\t54\tnon\\-browser; microsoft office\\\/[\\d][\\d]\\..* \\(.*windows nt [\\d]\\.[\\d].* [\\d][\\d]\\..*\\)",
+        "6d66fc91e8c98692b18aa1228939c452\t15\tddg\\-android\\-[\\d]\\.[\\d].*",
+        "6da58c5d39729bd3b3dce8469ab33833\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "6dd8709e921878f3948a7137c6288db5\t32\tsagem\\-myc[\\d]\\-[\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6deab451216a1406970151612e5ef37e\t18\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d] .*",
+        "6dfda3ca6e238fd61623748006a0d8a6\t7\ty\\!j\\-rie.*"
+    ]
+}

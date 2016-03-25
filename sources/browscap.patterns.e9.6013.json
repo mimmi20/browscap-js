@@ -1,0 +1,29 @@
+{
+    "content": [
+        "e908afd30c59a973a7b67f972d74ab36\t12\tcurl\\\/php [\\d]\\.[\\d].*",
+        "e908afd30c59a973a7b67f972d74ab36\t8\tcurl\\\/php.*",
+        "e90a2706dd5c4a19e6556687057c671c\t4\tobot.*",
+        "e93842d20a7db63156d363b27ff4edb1\t19\tlg\\-f[\\d][\\d][\\d][\\d] mic\\\/wap[\\d]\\.[\\d].*",
+        "e9468a040e5e5f64fed1a651f8632722\t21\tsep[\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e94873b770b57d2a1fa8bf6e97089ff2\t37\tah\\-ha\\.com crawler \\(crawler@ah\\-ha\\.com\\)",
+        "e9646d086a37906e5bec4323d3b37c9b\t6\tsnoopy.*",
+        "e97e48b62404461157f28b052892cf71\t38\tsonyericssons[\\d][\\d][\\d]\\\/.* browser\\\/openwave\\\/[\\d]\\.[\\d].*",
+        "e97f7952347cd6b40acf51985788ac63\t10\tinfox\\-wisg.*",
+        "e98065d03bbc10d176984636078f2219\t18\tnso_debugger_user\\\/.*",
+        "e98658ceafc428f7b35a484308fcfa21\t35\tmaui.wap.browser novarra\\-vision\\\/[\\d]\\.[\\d]",
+        "e98658ceafc428f7b35a484308fcfa21\t33\tmaui wap browser maui wap browser",
+        "e98658ceafc428f7b35a484308fcfa21\t16\tmaui wap browser.*",
+        "e98b8ecea9cfea9e3b28a0c555b9e1af\t7\tmelvil\\\/.*",
+        "e9a638f4c119cc54c1bc0702e945bd8f\t38\tsonyericssonc[\\d][\\d][\\d]\\\/.* browser\\\/netfront\\\/[\\d]\\.[\\d].*",
+        "e9a638f4c119cc54c1bc0702e945bd8f\t28\tsonyericssonc[\\d][\\d][\\d]\\\/.*\\(symbianos\\\/.*",
+        "e9be9d4f562192863498caf6f380a355\t10\tnokia[\\d][\\d][\\d][\\d]\\\/.*",
+        "e9c4eeccab947f986ca992f0ce59df74\t16\tvlc media player.*",
+        "e9c5cb87d6ae82e0d160cf4e1d957f59\t15\tlg\\-c[\\d][\\d][\\d][\\d] au\\\/[\\d]\\.[\\d].*",
+        "e9c911765ca806cb1da45379472467e2\t17\tmot\\-a[\\d][\\d][\\d]\\\/r[\\d][\\d][\\d]_g_[\\d].*",
+        "e9cc131dbaa3f80b3b28c6f9a7dd9f8c\t23\tlg\\-l[\\d][\\d][\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e9da4652bdb7d37af0e824dd5f472afd\t20\tlg\\-g[\\d][\\d][\\d]\\\/v[\\d][\\d][\\d]\\\/wap[\\d]\\.[\\d] .*",
+        "e9e0b9e04726c66d1e4127cc10721de0\t8\tthumbor\\\/.*",
+        "e9e19ab25c0ee15eed96e6d7cc2811db\t34\tpolytron\\-big\\-band\\-s up\\.browser\\\/[\\d]\\.[\\d].*",
+        "e9e8df7a01e7691e229665fac6310ec3\t32\tutstarcom\\-g[\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*"
+    ]
+}

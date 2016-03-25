@@ -1,0 +1,29 @@
+{
+    "content": [
+        "f4076194e212223238a8194afcb28e3f\t27\tpingdom\\.com_bot_version_[\\d]\\.[\\d].*",
+        "f4076194e212223238a8194afcb28e3f\t24\tpingdom\\.com_bot_version_.*",
+        "f4076194e212223238a8194afcb28e3f\t14\tpingdom gigrib.*",
+        "f4085f51e833e4eea81cc4517eba44bf\t39\tjs\\-kit url resolver, http\\:\\\/\\\/js\\-kit\\.com\\\/",
+        "f42996fab5284924e4ca60632c09f560\t25\tconveramultimediacrawler\\\/.*",
+        "f4361a175082bbf37e0bb60c906cd224\t28\tkwc\\-garnetto\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f438c56f4abb8f082837ab444d5e47b3\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "f4494db17b7e573f5d8ce395c305202f\t7\ttwikle\\\/.*",
+        "f45fa0ff212c7604ace0c48b5d681974\t32\tsagem\\-my[\\d][\\d][\\d]x\\\/[\\d]\\.[\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f462f657f67bb935467a8c242723f5bb\t23\tsie\\-e[\\d][\\d]\\\/.* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f4679f7b07cacdd32a8753b63bf74cc7\t82\tsonyericssonp[\\d][\\d][\\d]i\\\/r[\\d][\\d][\\d] mozilla\\\/[\\d]\\.[\\d] \\(compatible.*; msie [\\d]\\.[\\d]; symbian os; .*\\) opera [\\d]\\.[\\d][\\d].*",
+        "f46e3f0c2da449ccb6be1bafb8dc1cfa\t59\topentaggerbot \\(http\\:\\\/\\\/www\\.opentagger\\.com\\\/opentaggerbot\\.htm\\)",
+        "f479691ecebe07ffe999b5f6066e7d6a\t39\tpython\\-requests\\\/[\\d]\\.[\\d].* cpython\\\/.*linux.*x[\\d][\\d]_[\\d][\\d].*",
+        "f479691ecebe07ffe999b5f6066e7d6a\t38\tpython\\-requests\\\/[\\d]\\.[\\d].* cpython\\\/.*linux i[\\d][\\d][\\d].*",
+        "f479691ecebe07ffe999b5f6066e7d6a\t33\tpython\\-requests\\\/[\\d]\\.[\\d].* cpython\\\/.*linux.*",
+        "f479691ecebe07ffe999b5f6066e7d6a\t19\tpython\\-requests\\\/[\\d]\\.[\\d].*",
+        "f479ab9e58aeaa7a0e7f9f5df936a383\t32\tsagem\\-myx\\-[\\d]t\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f47b40c007638f94381aeee2d41e6e7a\t10\trealplayer.*",
+        "f47c00bfc25972baf607f7e46a047edc\t20\tterra\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "f484570d7cf557020e11ace406901b10\t12\ttheme spider.*",
+        "f4ade86090bc04b73375052f70d862a3\t37\tsamsung\\-sgh\\-x[\\d][\\d][\\d]c\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f4bdfa508082ee9d7d990f7ffc135d37\t15\tmfc_tear_sample",
+        "f4d3589afe395de0e28766138cf47bab\t11\trlinkcheker.*",
+        "f4dd654e3a4cf4b548ce77c8deef93b7\t29\tdbtel[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d] .* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "f4f9a7c5b3f62c1cd2635f199ec26460\t16\tinternetexplorer.*\tinternetexplorer.*"
+    ]
+}

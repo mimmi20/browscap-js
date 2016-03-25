@@ -1,0 +1,25 @@
+{
+    "content": [
+        "6b20e28a0e436bbb9c04e26f5db2062a\t17\tmot\\-v[\\d][\\d][\\d]\\\/.* mib\\\/[\\d]\\.[\\d].*",
+        "6b2912e0867b6f94a5ebbb1442ff2aea\t4\tfget.*",
+        "6b2984c34c3f0a4779e41ae241b1a099\t35\tsamsung\\-sgh\\-x[\\d][\\d][\\d]\\\/[\\d]\\.[\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6b303efdf0f19af5065e3aba18c87721\t38\tquicktime.*\\(qtver\\=[\\d][\\d]\\.[\\d].*os\\=.*windows nt [\\d]\\.[\\d].*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t37\tquicktime.*\\(qtver\\=[\\d]\\.[\\d].*os\\=.*windows nt [\\d]\\.[\\d].*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t34\tquicktime.*\\(qtver\\=[\\d][\\d]\\.[\\d].*os\\=.*windows [\\d][\\d].*\\)\tquicktime.*\\(qtver\\=[\\d][\\d]\\.[\\d].*os\\=windows me.*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t33\tquicktime.*\\(qtver\\=[\\d]\\.[\\d].*os\\=.*windows [\\d][\\d].*\\)\tquicktime.*\\(qtver\\=[\\d]\\.[\\d].*os\\=windows me.*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t31\tquicktime.*\\(qtver\\=[\\d][\\d]\\.[\\d].*os\\=mac [\\d][\\d]\\..*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t30\tquicktime.*\\(qtver\\=[\\d][\\d]\\.[\\d].*os\\=mac [\\d]\\..*\\)\tquicktime.*\\(qtver\\=[\\d]\\.[\\d].*os\\=mac [\\d][\\d]\\..*\\)",
+        "6b303efdf0f19af5065e3aba18c87721\t29\tquicktime.*\\(qtver\\=[\\d]\\.[\\d].*os\\=mac [\\d]\\..*\\)",
+        "6b996ce5d87a781d65a071b6fb43caa6\t25\tvideocon_s[\\d][\\d][\\d]_wap browser.*",
+        "6ba95ca3e4f13a0a118831b6d53ac263\t9\tlge\\\/u[\\d][\\d][\\d][\\d].*\tlge\\\/u[\\d][\\d][\\d][\\d]",
+        "6bb61f6020c4c4d820c5aeac2662aab9\t19\tblackberry[\\d][\\d][\\d][\\d]e\\\/[\\d]\\.[\\d].*",
+        "6bbfefe5c6cf88460adacac946efe9bc\t12\tlinksweeper\\\/.*",
+        "6bc20c5ad0407086433f0763abde08d2\t26\tsie\\-cl[\\d][\\d]\\\/[\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6bcd7e399cf04e8fe8f26dec116cc5cb\t32\tbenq\\-m[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6bcd7e399cf04e8fe8f26dec116cc5cb\t31\tbenq\\-m[\\d][\\d][\\d]\\\/[\\d]\\.[\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "6bcfbb9da3bc5b8306388787eb60584c\t13\tlg\\\/u[\\d][\\d][\\d][\\d]\\\/v[\\d]\\.[\\d]",
+        "6bd4122be4c1af8f2eb561806f8db987\t17\tsamsung\\-sph\\-l[\\d][\\d][\\d]\\\/.*",
+        "6bd48b1e57856137037bfee4dec8d57f\t25\tder gro.xdfe bildersauger.*",
+        "6bddd942bf11cc7fa9f1da2e5a6edca9\t11\txovibot\\\/[\\d]\\.[\\d].*"
+    ]
+}

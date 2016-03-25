@@ -1,0 +1,20 @@
+{
+    "content": [
+        "150333a8aed8a2b09afe7173dd79cafa\t17\tbusiversebot\\\/v[\\d]\\.[\\d].*",
+        "152ac2a54b49a7a10d247874274a4b65\t20\tpoodle_predictor_[\\d]\\.[\\d]",
+        "1554713d721d053f43a068621ff451e9\t18\tblackberry[\\d][\\d][\\d][\\d]\\\/[\\d]\\.[\\d].*",
+        "155e9f4aad4a033d441580ee3b47315d\t28\tlge\\-mm[\\d][\\d][\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "1564c61cd508a3ba2f326fbf87379824\t35\tfirefox\\\/[\\d][\\d]\\.[\\d].*anonymized by abelssoft.*",
+        "1571fbe0a11a29e7facb2ddb15e5496f\t9\tdispatch\\\/.*",
+        "159115c78bd71c86ed4f72f2d9b0b8af\t106\tnokia[\\d][\\d][\\d]t_td\\\/.* \\(symbianos\\\/.*; series[\\d][\\d]\\\/.* mozilla\\\/[\\d]\\.[\\d]; .*\\) applewebkit\\\/.* \\(khtml,.*like gecko.*\\)nokiabrowser\\\/[\\d]\\.[\\d].*safari\\\/.*",
+        "159dfe654972cb1e09d78b89a0cc38ff\t34\topera%[\\d][\\d]coast\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d][\\d].*",
+        "159dfe654972cb1e09d78b89a0cc38ff\t33\topera%[\\d][\\d]coast\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d]\\.[\\d].*",
+        "159dfe654972cb1e09d78b89a0cc38ff\t31\topera%[\\d][\\d]coast\\\/[\\d]\\.[\\d].* cfnetwork\\\/[\\d][\\d][\\d].*",
+        "159dfe654972cb1e09d78b89a0cc38ff\t28\topera%[\\d][\\d]coast\\\/[\\d]\\.[\\d].* cfnetwork\\\/.*",
+        "15a046f8309705106ffffcb29720dc36\t14\temailcollector.*",
+        "15a1e90c1766a1f58d734db64eecff93\t30\tsagem\\-myx\\-[\\d]\\\/[\\d]\\.[\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
+        "15a7e079ad9f53be4a38fa8706e9fcf7\t10\tmot\\-c[\\d][\\d][\\d]i\\\/.*",
+        "15b0d8e50b1abb71173c98e0bd175172\t8\troku\\\/dvp.*",
+        "15f06c55bcd5ed672f6cf7a977f36acc\t21\tmot\\-a[\\d][\\d][\\d]\\\/[\\d].\\..* mib\\\/[\\d]\\.[\\d] .*"
+    ]
+}

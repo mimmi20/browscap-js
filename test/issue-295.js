@@ -31,7 +31,7 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown', 'Expected actual "Device_Brand_Name" to be \'unknown\' (was \'' + browser['Device_Brand_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Name'], 'KHTML', 'Expected actual "RenderingEngine_Name" to be \'KHTML\' (was \'' + browser['RenderingEngine_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Version'], '4.11', 'Expected actual "RenderingEngine_Version" to be \'4.11\' (was \'' + browser['RenderingEngine_Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE', 'Expected actual "RenderingEngine_Maker" to be \'KDE\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-295-B ["Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.16) Gecko Kazehakase/0.5.8 Debian/0.5.8-4"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.16) Gecko Kazehakase/0.5.8 Debian/0.5.8-4');
@@ -85,7 +85,7 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown', 'Expected actual "Device_Brand_Name" to be \'unknown\' (was \'' + browser['Device_Brand_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Name'], 'KHTML', 'Expected actual "RenderingEngine_Name" to be \'KHTML\' (was \'' + browser['RenderingEngine_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Version'], '4.9', 'Expected actual "RenderingEngine_Version" to be \'4.9\' (was \'' + browser['RenderingEngine_Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE', 'Expected actual "RenderingEngine_Maker" to be \'KDE\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-295-D ["Mozilla/5.0 (X11; Linux x86_64) KHTML/4.8.4 (like Gecko) Konqueror/4.8"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) KHTML/4.8.4 (like Gecko) Konqueror/4.8');
@@ -112,7 +112,7 @@ suite('checking for issue 295.', function () {
     assert.strictEqual(browser['Device_Brand_Name'], 'unknown', 'Expected actual "Device_Brand_Name" to be \'unknown\' (was \'' + browser['Device_Brand_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Name'], 'KHTML', 'Expected actual "RenderingEngine_Name" to be \'KHTML\' (was \'' + browser['RenderingEngine_Name'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['RenderingEngine_Version'], '4.8', 'Expected actual "RenderingEngine_Version" to be \'4.8\' (was \'' + browser['RenderingEngine_Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE', 'Expected actual "RenderingEngine_Maker" to be \'KDE\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-295-E ["Links (2.8; Linux 3.10.17 x86_64; GNU C 4.8.1; text)"]', function () {
     browser = browscap.getBrowser('Links (2.8; Linux 3.10.17 x86_64; GNU C 4.8.1; text)');
@@ -252,7 +252,7 @@ suite('checking for issue 295.', function () {
   test('issue-295-L ["\"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)\""]', function () {
     browser = browscap.getBrowser('\"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)\"');
 
-    assert.strictEqual(browser['Browser'], 'Fake IE', 'Expected actual "Browser" to be \'Fake IE\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser'], 'Fake Browser', 'Expected actual "Browser" to be \'Fake Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Maker'], 'unknown', 'Expected actual "Browser_Maker" to be \'unknown\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -288,7 +288,7 @@ suite('checking for issue 295.', function () {
   test('issue-295-M ["\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko Firefox/11.0"]', function () {
     browser = browscap.getBrowser('\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko Firefox/11.0');
 
-    assert.strictEqual(browser['Browser'], 'Fake Firefox', 'Expected actual "Browser" to be \'Fake Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser'], 'Fake Browser', 'Expected actual "Browser" to be \'Fake Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Maker'], 'unknown', 'Expected actual "Browser_Maker" to be \'unknown\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

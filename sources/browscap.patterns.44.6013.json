@@ -1,0 +1,8 @@
+{
+    "content": [
+        "442b66b822865a8e96978aafb17f3a07\t9\twesee_bot.*",
+        "449ad12fe042b00c53cd91fe0ade7c46\t102\thtc_chacha_a[\\d][\\d][\\d]e\\\/mozilla\\\/[\\d]\\.[\\d]\\(.*linux.*android.[\\d]\\.[\\d].*build\\\/.*\\) applewebkit\\\/.* \\(khtml,.*like gecko.*\\) version\\\/[\\d]\\.[\\d].*safari.*",
+        "44ad8a973a3cae39a9fe25c240054978\t17\tw[\\d]c_i[\\d][\\d]n\\-checker\\\/.*",
+        "44b5e0cccaa75a0a30f5eab14c34dfa8\t27\tlg\\-gs[\\d][\\d][\\d]\\\/v[\\d][\\d][\\d] obigo\\\/wap[\\d]\\.[\\d] .*"
+    ]
+}
