@@ -1,9 +1,0 @@
-{
-    "content": [
-        "e702cadcff1849c282f73ae85ae53842\t34\tr[\\d][\\d][\\d].* up\\.browser\\\/[\\d]\\.[\\d].*novarra\\-vision\\\/.*",
-        "e72e546e5ae1329be8025e4ded95aff8\t21\tlinguatools\\-bot\\\/nutch.*",
-        "e77eb8e162da37998100c7abdf4c736d\t30\tmot\\-ncr_[\\d]\\\/[\\d][\\d]\\.[\\d][\\d] up\\.browser\\\/[\\d]\\.[\\d].*",
-        "e79985787053a181611adf8814d1e2d3\t30\tnokia[\\d][\\d][\\d][\\d]i\\\/[\\d]\\.[\\d] \\(.*up\\.browser\\\/[\\d]\\.[\\d].*",
-        "e7a6f07436359b2f51d20654fc32037b\t39\tamoi\\-m[\\d]\\\/plat\\-emp\\\/wap[\\d]\\.[\\d]\\\/midp[\\d]\\.[\\d]\\\/cldc[\\d]\\.[\\d]"
-    ]
-}

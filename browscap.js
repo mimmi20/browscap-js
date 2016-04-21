@@ -2,7 +2,7 @@
 
 module.exports = function Browscap (cacheDir) {
   if (typeof cacheDir === 'undefined') {
-    cacheDir = __dirname + '/sources/';
+    cacheDir = __dirname + '/sources/sources/';
   }
 
   this.cacheDir = cacheDir;
