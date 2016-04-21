@@ -39,7 +39,7 @@
   },
   "scripts": {
     "test": "npm run download && mocha -u tdd ./test/*.js",
-    "download": "node download.js",
+    "download": "rm -rf sources/* && node download.js",
     "postinstall": "npm run download"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
