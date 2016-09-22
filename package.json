@@ -43,7 +43,7 @@
     "postinstall": "npm run download"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
-  "version": "1.8.6016",
+  "version": "1.8.6017",
   "directories": {
     "test": "test"
   },
