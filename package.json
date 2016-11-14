@@ -32,15 +32,13 @@
   "dependencies": {
     "md5": "^2.0.0",
     "browscap-js-cache": "^1.2.0",
-    "github-download": "^0.4"
+    "browscap-json-cache-files": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"
   },
   "scripts": {
-    "test": "npm run download && mocha -u tdd ./test/*.js",
-    "download": "rm -rf sources && node download.js",
-    "postinstall": "npm run download"
+    "test": "mocha -u tdd ./test/*.js"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
   "version": "1.8.6017",
