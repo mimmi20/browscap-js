@@ -10,7 +10,7 @@ suite('checking for issue 968.', function () {
     browser = browscap.getBrowser('HbbTV/1.1.1 (;;;;;) Maple_2011');
 
     assert.strictEqual(browser['Comment'], 'Samsung Generic TV', 'Expected actual "Comment" to be \'Samsung Generic TV\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Browser'], 'Samsung', 'Expected actual "Browser" to be \'Samsung\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser'], 'Samsung TV', 'Expected actual "Browser" to be \'Samsung TV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Maker'], 'Samsung', 'Expected actual "Browser_Maker" to be \'Samsung\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -110,7 +110,7 @@ suite('checking for issue 968.', function () {
     browser = browscap.getBrowser('HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit');
 
     assert.strictEqual(browser['Comment'], 'Samsung Generic TV', 'Expected actual "Comment" to be \'Samsung Generic TV\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Browser'], 'Samsung', 'Expected actual "Browser" to be \'Samsung\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser'], 'Samsung TV', 'Expected actual "Browser" to be \'Samsung TV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Maker'], 'Samsung', 'Expected actual "Browser_Maker" to be \'Samsung\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
