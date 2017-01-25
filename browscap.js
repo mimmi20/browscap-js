@@ -2,7 +2,7 @@
 
 module.exports = function Browscap (cacheDir) {
   if (typeof cacheDir === 'undefined') {
-    cacheDir = __dirname + '/node_modules/browscap-json-cache-files/sources/';
+    cacheDir = process.cwd() + '/node_modules/browscap-json-cache-files/sources/';
   }
 
   this.cacheDir = cacheDir;
