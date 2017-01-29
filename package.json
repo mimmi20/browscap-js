@@ -1,6 +1,6 @@
 {
   "name": "browscap-js",
-  "description": "PHP's get_browser/browscap.json for Node.js",
+  "description": "PHP's get_browser/browscap.js for Node.js",
   "keywords": [
     "browscap"
   ],
@@ -32,7 +32,7 @@
   "dependencies": {
     "md5": "^2.0.0",
     "browscap-js-cache": "^1.2.0",
-    "browscap-json-cache-files": "^1.0.0"
+    "browscap-json-cache-files": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "*"

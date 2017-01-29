@@ -2,7 +2,7 @@
 
 module.exports = function Browscap (cacheDir) {
   if (typeof cacheDir === 'undefined') {
-    cacheDir = process.cwd() + '/node_modules/browscap-json-cache-files/sources/';
+    cacheDir = require('path').dirname(require.resolve('browscap-json-cache-files')) + '/sources/';
   }
 
   this.cacheDir = cacheDir;
@@ -14,7 +14,7 @@ module.exports = function Browscap (cacheDir) {
    *
    * @param userAgent the user agent string
    */
-  this.getBrowser = function(userAgent) {
+  this.getBrowser = function getBrowser (userAgent) {
     var Ini           = require('./parser');
     var Quoter        = require('./helper/quoter');
     var quoter        = new Quoter();

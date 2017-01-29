@@ -33,7 +33,7 @@
  *
  * @category   browscap-js
  * @package    parser
- * @author     Thomas Müller <t_mueller_stolzenhain@yahoo.de>
+ * @author     Thomas Müller <mimmi20@live.de>
  * @copyright  Copyright (c) 1998-2015 Browser Capabilities Project
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
