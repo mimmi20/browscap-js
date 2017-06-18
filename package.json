@@ -41,7 +41,7 @@
     "test": "mocha -u tdd ./test/*.js"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
-  "version": "1.8.6023",
+  "version": "1.9.6023",
   "directories": {
     "test": "test"
   },
