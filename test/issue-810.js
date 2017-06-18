@@ -759,7 +759,7 @@ suite('checking for issue 810.', function () {
   test('issue-810-Q ["Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:25.7) Gecko/20151012 Firefox/31.9 PaleMoon/25.7.3"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:25.7) Gecko/20151012 Firefox/31.9 PaleMoon/25.7.3');
 
-    assert.strictEqual(browser['Comment'], 'Palemoon 25.7', 'Expected actual "Comment" to be \'Palemoon 25.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'PaleMoon 25.7', 'Expected actual "Comment" to be \'PaleMoon 25.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PaleMoon', 'Expected actual "Browser" to be \'PaleMoon\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '64', 'Expected actual "Browser_Bits" to be \'64\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1309,7 +1309,7 @@ suite('checking for issue 810.', function () {
   test('issue-810-AC ["Mozilla/5.0 (Windows NT 10.0; WOW64; rv:25.7) Gecko/20151012 Firefox/31.9 PaleMoon/25.7.3"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 10.0; WOW64; rv:25.7) Gecko/20151012 Firefox/31.9 PaleMoon/25.7.3');
 
-    assert.strictEqual(browser['Comment'], 'Palemoon 25.7', 'Expected actual "Comment" to be \'Palemoon 25.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'PaleMoon 25.7', 'Expected actual "Comment" to be \'PaleMoon 25.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PaleMoon', 'Expected actual "Browser" to be \'PaleMoon\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

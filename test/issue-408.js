@@ -9,11 +9,11 @@ suite('checking for issue 408.', function () {
   test('issue-408 ["Pingdom.com_bot_version_1.4_(http://www.pingdom.com)"]', function () {
     browser = browscap.getBrowser('Pingdom.com_bot_version_1.4_(http://www.pingdom.com)');
 
-    assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'Pingdom', 'Expected actual "Comment" to be \'Pingdom\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Pingdom', 'Expected actual "Browser" to be \'Pingdom\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Browser_Maker'], 'unknown', 'Expected actual "Browser_Maker" to be \'unknown\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Browser_Maker'], 'Pingdom AB.', 'Expected actual "Browser_Maker" to be \'Pingdom AB.\' (was \'' + browser['Browser_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Modus'], 'unknown', 'Expected actual "Browser_Modus" to be \'unknown\' (was \'' + browser['Browser_Modus'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Version'], '1.4', 'Expected actual "Version" to be \'1.4\' (was \'' + browser['Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['MajorVer'], '1', 'Expected actual "MajorVer" to be \'1\' (was \'' + browser['MajorVer'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1809,7 +1809,7 @@ suite('checking for issue 651.', function () {
   test('issue-651-AK ["Google/2.0.1.10455 CFNetwork/548.1.4 Darwin/11.0.0"]', function () {
     browser = browscap.getBrowser('Google/2.0.1.10455 CFNetwork/548.1.4 Darwin/11.0.0');
 
-    assert.strictEqual(browser['Comment'], 'Google App 2.0', 'Expected actual "Comment" to be \'Google App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'Google App 2.0 for Darwin', 'Expected actual "Comment" to be \'Google App 2.0 for Darwin\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Google App', 'Expected actual "Browser" to be \'Google App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Application', 'Expected actual "Browser_Type" to be \'Application\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

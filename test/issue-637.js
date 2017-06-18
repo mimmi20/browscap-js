@@ -9,7 +9,7 @@ suite('checking for issue 637.', function () {
   test('issue-637 ["iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9"]', function () {
     browser = browscap.getBrowser('iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9');
 
-    assert.strictEqual(browser['Comment'], 'iTunes', 'Expected actual "Comment" to be \'iTunes\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'iTunes 12.0', 'Expected actual "Comment" to be \'iTunes 12.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Application', 'Expected actual "Browser_Type" to be \'Application\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
