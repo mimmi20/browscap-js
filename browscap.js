@@ -27,6 +27,17 @@ module.exports = function Browscap (cacheDir) {
 
     var parser = new Ini(patternHelper, dataHelper);
 
-    return parser.getBrowser(userAgent);
+    var promise = parser.getBrowser(userAgent);
+
+    // Unpack already resolved promises to ensure backward compatibility
+    var result;
+    promise.then((value) => {
+      result = value;
+    });
+    if (typeof(result) === "undefined") {
+      return promise;
+    } else {
+      return result;
+    }
   };
 };

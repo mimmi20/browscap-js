@@ -27,6 +27,13 @@
  */
 
 "use strict";
+// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
+// backward-compatiblity with existing code that expects us to return a
+// synchronous result after doing synchronous I/O
+if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
+    var nodejs_only = "";
+    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
+}
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -62,46 +69,49 @@ module.exports = function GetPattern (cache) {
         var starts = patternHelper.getHashForPattern(userAgent, true);
         var length = patternHelper.getPatternLength(userAgent);
 
-        var patternList = [];
-
         // get patterns, first for the given browser and if that is not found,
         // for the default browser (with a special key)
-        for (var i = 0; i < starts.length; i++) {
-            var tmpStart  = starts[i];
+        return Promise.all(starts.map((tmpStart) => {
             var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
 
-            var file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
+            return Promise.resolve(this.cache.getItem('browscap.patterns.' + tmpSubkey, true));
+        })).then((files) => {
+            var patternList = [];
 
-            if (!file.success) {
-                continue;
-            }
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
 
-            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
-                continue;
-            }
+                if (!file.success) {
+                    continue;
+                }
 
-            var found = false;
+                if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+                    continue;
+                }
 
-            for (var j = 0; j < file.content.length; j++) {
-                var buffer    = file.content[j];
+                var found = false;
 
-                var split     = buffer.split("\t");
-                var tmpBuffer = split.shift();
+                for (var j = 0; j < file.content.length; j++) {
+                    var buffer    = file.content[j];
 
-                if (tmpBuffer === tmpStart) {
-                    var len = split.shift();
+                    var split     = buffer.split("\t");
+                    var tmpBuffer = split.shift();
 
-                    if (len <= length) {
-                        patternList.push(split);
+                    if (tmpBuffer === starts[i]) {
+                        var len = split.shift();
+
+                        if (len <= length) {
+                            patternList.push(split);
+                        }
+
+                        found = true;
+                    } else if (found === true) {
+                        break;
                     }
-
-                    found = true;
-                } else if (found === true) {
-                    break;
                 }
             }
-        }
 
-        return patternList;
+            return patternList;
+        });
     };
 };

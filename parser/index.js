@@ -27,6 +27,13 @@
  */
 
 "use strict";
+// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
+// backward-compatiblity with existing code that expects us to return a
+// synchronous result after doing synchronous I/O
+if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
+    var nodejs_only = "";
+    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
+}
 
 /**
  * json parser class
@@ -52,102 +59,112 @@ module.exports = function Ini (patternHelper, dataHelper) {
     this.getBrowser = function getBrowser (userAgent) {
         userAgent = userAgent.toLowerCase();
 
-        var patternList = this.patternHelper.getPatterns(userAgent);
+        return this.patternHelper.getPatterns(userAgent).then(function _patternListLoopFn(patternList) {
+            var _patternListLoop = _patternListLoopFn.bind(this);
 
-        for (var i = 0; i < patternList.length; i++) {
-            var patterns       = patternList[i];
-            var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
+            if(patternList.length > 0) {
+                var patterns = patternList.shift();
 
-            if (!patternToMatch.test(userAgent)) {
-                continue;
-            }
+                var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
 
-            for (var j = 0; j < patterns.length; j++) {
-                var pattern       = patterns[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
-                var quotedPattern = new RegExp('^' + pattern + '$', 'i');
-
-                if (!quotedPattern.test(userAgent)) {
-                    continue;
+                if (!patternToMatch.test(userAgent)) {
+                    return _patternListLoop(patternList);
                 }
 
-                var matches = userAgent.match(quotedPattern);
+                return Promise.all(patterns.map((patternText) => {
+                    var pattern       = patternText.replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+                    var quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
-                // Insert the digits back into the pattern, so that we can search the settings for it
-                if (matches.length > 1) {
-                    matches.shift();
+                    return [pattern, quotedPattern];
+                }).filter(([pattern, quotedPattern]) => {
+                    return quotedPattern.test(userAgent);
+                }).map(([pattern, quotedPattern]) => {
+                    var matches = userAgent.match(quotedPattern);
 
-                    for (var k = 0; k < matches.length; k++){
-                        var numPos = pattern.indexOf('(\\d)');
-                        var sub    = pattern.substr(numPos, 4);
-                        pattern    = pattern.replace(sub, matches[k]);
+                    // Insert the digits back into the pattern, so that we can search the settings for it
+                    if (matches.length > 1) {
+                        matches.shift();
+
+                        for (var k = 0; k < matches.length; k++){
+                            var numPos = pattern.indexOf('(\\d)');
+                            var sub    = pattern.substr(numPos, 4);
+                            pattern    = pattern.replace(sub, matches[k]);
+                        }
                     }
-                }
 
-                // Try to get settings - as digits have been replaced to speed up the pattern search,
-                // we won't always find the data in the first step - so check if settings have been found and if not,
-                // search for the next pattern.
-                var settings  = this.dataHelper.getSettings(pattern, {});
-                var hasResult = false;
+                    return this.dataHelper.getSettings(pattern, {});
+                })).then((patternSettings) => {
+                    for (var settings of patternSettings) {
+                        // Try to get settings - as digits have been replaced to speed up the pattern search,
+                        // we won't always find the data in the first step - so check if settings have been found and if not,
+                        // search for the next pattern.
+                        var hasResult = false;
 
-                for (var property in settings) {
-                    hasResult = true;
-                    break;
-                }
-                if (hasResult) {
-                    return settings;
-                }
+                        for (var property in settings) {
+                            if (settings.hasOwnProperty(property)) {
+                                hasResult = true;
+                                break;
+                            }
+                        }
+                        if (hasResult) {
+                            return settings;
+                        }
+                    }
+
+                    return _patternListLoop(patternList);
+                });
+            } else {
+                // return default
+                return {
+                    "Comment": "Default Browser",
+                    "Browser": "Default Browser",
+                    "Browser_Type": "unknown",
+                    "Browser_Bits": "0",
+                    "Browser_Maker": "unknown",
+                    "Browser_Modus": "unknown",
+                    "Version": "0.0",
+                    "MajorVer": "0",
+                    "MinorVer": "0",
+                    "Platform": "unknown",
+                    "Platform_Version": "unknown",
+                    "Platform_Description": "unknown",
+                    "Platform_Bits": "0",
+                    "Platform_Maker": "unknown",
+                    "Alpha": false,
+                    "Beta": false,
+                    "Win16": false,
+                    "Win32": false,
+                    "Win64": false,
+                    "Frames": false,
+                    "IFrames": false,
+                    "Tables": false,
+                    "Cookies": false,
+                    "BackgroundSounds": false,
+                    "JavaScript": false,
+                    "VBScript": false,
+                    "JavaApplets": false,
+                    "ActiveXControls": false,
+                    "isMobileDevice": false,
+                    "isTablet": false,
+                    "isSyndicationReader": false,
+                    "Crawler": false,
+                    "isFake": false,
+                    "isAnonymized": false,
+                    "isModified": false,
+                    "CssVersion": "0",
+                    "AolVersion": "0",
+                    "Device_Name": "unknown",
+                    "Device_Maker": "unknown",
+                    "Device_Type": "unknown",
+                    "Device_Pointing_Method": "unknown",
+                    "Device_Code_Name": "unknown",
+                    "Device_Brand_Name": "unknown",
+                    "RenderingEngine_Name": "unknown",
+                    "RenderingEngine_Version": "unknown",
+                    "RenderingEngine_Description": "unknown",
+                    "RenderingEngine_Maker": "unknown"
+                };
             }
-        }
-
-        // return default
-        return {
-          "Comment": "Default Browser",
-          "Browser": "Default Browser",
-          "Browser_Type": "unknown",
-          "Browser_Bits": "0",
-          "Browser_Maker": "unknown",
-          "Browser_Modus": "unknown",
-          "Version": "0.0",
-          "MajorVer": "0",
-          "MinorVer": "0",
-          "Platform": "unknown",
-          "Platform_Version": "unknown",
-          "Platform_Description": "unknown",
-          "Platform_Bits": "0",
-          "Platform_Maker": "unknown",
-          "Alpha": false,
-          "Beta": false,
-          "Win16": false,
-          "Win32": false,
-          "Win64": false,
-          "Frames": false,
-          "IFrames": false,
-          "Tables": false,
-          "Cookies": false,
-          "BackgroundSounds": false,
-          "JavaScript": false,
-          "VBScript": false,
-          "JavaApplets": false,
-          "ActiveXControls": false,
-          "isMobileDevice": false,
-          "isTablet": false,
-          "isSyndicationReader": false,
-          "Crawler": false,
-          "isFake": false,
-          "isAnonymized": false,
-          "isModified": false,
-          "CssVersion": "0",
-          "AolVersion": "0",
-          "Device_Name": "unknown",
-          "Device_Maker": "unknown",
-          "Device_Type": "unknown",
-          "Device_Pointing_Method": "unknown",
-          "Device_Code_Name": "unknown",
-          "Device_Brand_Name": "unknown",
-          "RenderingEngine_Name": "unknown",
-          "RenderingEngine_Version": "unknown",
-          "RenderingEngine_Description": "unknown",
-          "RenderingEngine_Maker": "unknown"
-        }
+        }.bind(this));
     };
 };
