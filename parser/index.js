@@ -76,9 +76,11 @@ module.exports = function Ini (patternHelper, dataHelper) {
                     var quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
                     return [pattern, quotedPattern];
-                }).filter(([pattern, quotedPattern]) => {
+                }).filter((item) => {
+                    var pattern = item[0], quotedPattern = item[1];
                     return quotedPattern.test(userAgent);
-                }).map(([pattern, quotedPattern]) => {
+                }).map((item) => {
+                    var pattern = item[0], quotedPattern = item[1];
                     var matches = userAgent.match(quotedPattern);
 
                     // Insert the digits back into the pattern, so that we can search the settings for it
