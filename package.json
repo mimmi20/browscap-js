@@ -21,7 +21,7 @@
   },
   "main": "browscap",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.0.0"
   },
   "licenses": [
     {
@@ -32,7 +32,8 @@
   "dependencies": {
     "md5": "^2.0.0",
     "browscap-js-cache": "^1.2.0",
-    "browscap-json-cache-files": "^1.1.6023"
+    "browscap-json-cache-files": "^1.1.6023",
+    "synchronous-promise": "^1.0.18"
   },
   "devDependencies": {
     "mocha": "*"

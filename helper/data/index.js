@@ -27,6 +27,13 @@
  */
 
 "use strict";
+// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
+// backward-compatiblity with existing code that expects us to return a
+// synchronous result after doing synchronous I/O
+if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
+    var nodejs_only = "";
+    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
+}
 
 var SubKey = require('../subkey');
 var subkeyHelper = new SubKey();
@@ -62,49 +69,49 @@ module.exports = function GetData (cache, quoter) {
         var unquotedPattern = this.quoter.pregUnQuote(pattern);
 
         // Try to get settings for the pattern
-        var addedSettings = this.getIniPart(unquotedPattern);
-
-        // set some additional data
-        if ((typeof settings !== 'Array' && typeof settings !== 'object') || settings.length === 0) {
-            // The optimization with replaced digits get can now result in setting searches, for which we
-            // won't find a result - so only add the pattern information, is settings have been found.
-            //
-            // If not an empty array will be returned and the calling function can easily check if a pattern
-            // has been found.
-            if (addedSettings.length > 0) {
-                settings['browser_name_regex']   = '/^' + $pattern + '$/';
-                settings['browser_name_pattern'] = unquotedPattern;
-            }
-        }
-
-        // check if parent pattern set, only keep the first one
-        var parentPattern = null;
-        if (typeof addedSettings['Parent'] !== 'undefined') {
-            parentPattern = addedSettings['Parent'];
-
-            if (typeof settings['Parent'] !== 'undefined') {
-                delete addedSettings['Parent'];
-            }
-        }
-
-        // merge settings
-        for (var property in addedSettings) {
-            if (!addedSettings.hasOwnProperty(property)) {
-                continue;
-            }
-            if (settings.hasOwnProperty(property)) {
-                continue;
+        return this.getIniPart(unquotedPattern).then((addedSettings) => {
+            // set some additional data
+            if ((typeof settings !== 'Array' && typeof settings !== 'object') || settings.length === 0) {
+                // The optimization with replaced digits get can now result in setting searches, for which we
+                // won't find a result - so only add the pattern information, is settings have been found.
+                //
+                // If not an empty array will be returned and the calling function can easily check if a pattern
+                // has been found.
+                if (addedSettings.length > 0) {
+                    settings['browser_name_regex']   = '/^' + $pattern + '$/';
+                    settings['browser_name_pattern'] = unquotedPattern;
+                }
             }
 
-            settings[property] = addedSettings[property];
-        }
-        //settings += addedSettings;
+            // check if parent pattern set, only keep the first one
+            var parentPattern = null;
+            if (typeof addedSettings['Parent'] !== 'undefined') {
+                parentPattern = addedSettings['Parent'];
 
-        if (parentPattern !== null) {
-            return this.getSettings(this.quoter.pregQuote(parentPattern), settings);
-        }
+                if (typeof settings['Parent'] !== 'undefined') {
+                    delete addedSettings['Parent'];
+                }
+            }
 
-        return settings;
+            // merge settings
+            for (var property in addedSettings) {
+                if (!addedSettings.hasOwnProperty(property)) {
+                    continue;
+                }
+                if (settings.hasOwnProperty(property)) {
+                    continue;
+                }
+
+                settings[property] = addedSettings[property];
+            }
+            //settings += addedSettings;
+
+            if (parentPattern !== null) {
+                return this.getSettings(this.quoter.pregQuote(parentPattern), settings);
+            }
+
+            return settings;
+        });
     };
 
     /**
@@ -118,28 +125,28 @@ module.exports = function GetData (cache, quoter) {
         var patternhash = patternHelper.getHashForParts(pattern);
         var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
 
-        var file = this.cache.getItem('browscap.iniparts.' + subkey, true);
-
-        if (!file.success) {
-            return {};
-        }
-
-        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
-            return {};
-        }
-
-        for (var i = 0; i < file.content.length; i++) {
-            var buffer    = file.content[i];
-            var contents  = buffer.split("\t");
-            var tmpBuffer = contents.shift();
-
-            if (tmpBuffer !== patternhash) {
-                continue;
+        return Promise.resolve(this.cache.getItem('browscap.iniparts.' + subkey, true)).then((file) => {
+            if (!file.success) {
+                return {};
             }
 
-            return JSON.parse(contents);
-        }
+            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+                return {};
+            }
 
-        return {};
+            for (var i = 0; i < file.content.length; i++) {
+                var buffer    = file.content[i];
+                var contents  = buffer.split("\t");
+                var tmpBuffer = contents.shift();
+
+                if (tmpBuffer !== patternhash) {
+                    continue;
+                }
+
+                return JSON.parse(contents);
+            }
+
+            return {};
+        });
     };
 };
