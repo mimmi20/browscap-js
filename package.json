@@ -35,7 +35,7 @@
     "browscap-json-cache-files": "^1.1.6023"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "^3.0.0"
   },
   "scripts": {
     "test": "mocha -u tdd ./test/*.js"
