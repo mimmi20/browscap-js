@@ -30,9 +30,9 @@
     }
   ],
   "dependencies": {
-    "md5": "^2.0.0",
     "browscap-js-cache": "^1.2.0",
-    "browscap-json-cache-files": "^1.1.6023"
+    "browscap-json-cache-files": "^1.2.6027",
+    "md5": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "^3.0.0"
