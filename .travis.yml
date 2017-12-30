@@ -3,6 +3,9 @@ sudo: false
 dist: trusty
 
 node_js:
+  - "9.3"
+  - "9.2"
+  - "9.1"
   - "9.0"
   - "8.9"
   - "8.8"
@@ -31,5 +34,10 @@ node_js:
 
 os: linux
 
+before_install:
+  - stty cols 130
+
 script: "npm test"
 
+jobs:
+  fast_finish: true
