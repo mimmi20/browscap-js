@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  tests:
+    docker:
+      - image: circleci/node:9.6.1
+        environment:
+          TZ: "/usr/share/zoneinfo/Europe/Berlin"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.json" }}
+            - composer-v1-
+      - run: composer update --optimize-autoloader --prefer-dist --prefer-stable --no-progress --no-interaction --no-suggest -vv
+      - save_cache:
+          key: composer-v1-{{ checksum "composer.json" }}
+          paths:
+            - vendor
+      - run: npm test
+
+workflows:
+  version: 2
+  tests:
+    jobs:
+      - tests
