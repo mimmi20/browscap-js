@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 513. (160 tests)', function () {
+suite('checking for issue 513. (162 tests)', function () {
   test('issue-513-A ["(){ :; }; :(){ :|:& };:"]', function () {
     browser = browscap.getBrowser('(){ :; }; :(){ :|:& };:');
 
@@ -1374,7 +1374,7 @@ suite('checking for issue 513. (160 tests)', function () {
   test('issue-513-AK ["JUC(Linux;U;Android4.2.2;Zh_cn;GT-I9060;480*800;)UCWEB7.8.0.95/139/355"]', function () {
     browser = browscap.getBrowser('JUC(Linux;U;Android4.2.2;Zh_cn;GT-I9060;480*800;)UCWEB7.8.0.95/139/355');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 7.8', 'Expected actual "Comment" to be \'UC Browser 7.8\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 7.8 for Android', 'Expected actual "Comment" to be \'UC Browser 7.8 for Android\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2856,7 +2856,7 @@ suite('checking for issue 513. (160 tests)', function () {
   test('issue-513-BW ["UCWEB/2.0 (MIDP-2.0; U; zh-CN; GT-P3100) U2/1.0.0 UCBrowser/3.4.1.483  U2/1.0.0 Mobile"]', function () {
     browser = browscap.getBrowser('UCWEB/2.0 (MIDP-2.0; U; zh-CN; GT-P3100) U2/1.0.0 UCBrowser/3.4.1.483  U2/1.0.0 Mobile');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 3.4', 'Expected actual "Comment" to be \'UC Browser 3.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 3.4 for Android', 'Expected actual "Comment" to be \'UC Browser 3.4 for Android\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5781,7 +5781,7 @@ suite('checking for issue 513. (160 tests)', function () {
   test('issue-513-EZ ["UCWEB/2.0 (Java; U; MIDP-2.0; fr-FR; SAMSUNG-SGH-T669) U2/1.0.0 UCBrowser/9.5.0.449 U2/1.0.0 Mobile"]', function () {
     browser = browscap.getBrowser('UCWEB/2.0 (Java; U; MIDP-2.0; fr-FR; SAMSUNG-SGH-T669) U2/1.0.0 UCBrowser/9.5.0.449 U2/1.0.0 Mobile');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 9.5', 'Expected actual "Comment" to be \'UC Browser 9.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 9.5 for Java', 'Expected actual "Comment" to be \'UC Browser 9.5 for Java\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

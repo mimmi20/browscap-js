@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 470. (8 tests)', function () {
+suite('checking for issue 470. (9 tests)', function () {
   test('issue-470-A ["Evernote Clip Resolver"]', function () {
     browser = browscap.getBrowser('Evernote Clip Resolver');
 
@@ -165,7 +165,7 @@ suite('checking for issue 470. (8 tests)', function () {
   test('issue-470-E ["Nokia2320c-2b/2.0(ATT.11.10) Profile/MIDP-2.1 Configuration/CLDC-1.1"]', function () {
     browser = browscap.getBrowser('Nokia2320c-2b/2.0(ATT.11.10) Profile/MIDP-2.1 Configuration/CLDC-1.1');
 
-    assert.strictEqual(browser['Comment'], 'Nokia Browser', 'Expected actual "Comment" to be \'Nokia Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'Nokia Browser for Series40', 'Expected actual "Comment" to be \'Nokia Browser for Series40\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nokia Browser', 'Expected actual "Browser" to be \'Nokia Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

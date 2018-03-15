@@ -9,7 +9,7 @@ suite('checking for issue 000-mobiles. (9 tests)', function () {
   test('issue-mobiles-G ["S8500 UCWEB6.0/UC Browser7.7.0.81"]', function () {
     browser = browscap.getBrowser('S8500 UCWEB6.0/UC Browser7.7.0.81');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 7.7', 'Expected actual "Comment" to be \'UC Browser 7.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 7.7 for Bada', 'Expected actual "Comment" to be \'UC Browser 7.7 for Bada\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

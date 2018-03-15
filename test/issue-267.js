@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 267. (134 tests)', function () {
+suite('checking for issue 267. (135 tests)', function () {
   test('issue-267-A ["BoardReader Favicon Fetcher /1.0 info@boardreader.com"]', function () {
     browser = browscap.getBrowser('BoardReader Favicon Fetcher /1.0 info@boardreader.com');
 

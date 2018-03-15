@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 651. (128 tests)', function () {
+suite('checking for issue 651. (136 tests)', function () {
   test('issue-651-A ["AdSheet/1.0 CFNetwork/548.1.4 Darwin/11.0.0"]', function () {
     browser = browscap.getBrowser('AdSheet/1.0 CFNetwork/548.1.4 Darwin/11.0.0');
 

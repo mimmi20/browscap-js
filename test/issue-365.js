@@ -243,7 +243,7 @@ suite('checking for issue 365. (15 tests)', function () {
   test('issue-365-G ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; Videocon_A15) U2/1.0.0 UCBrowser/9.2.0.419 Mobile"]', function () {
     browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; Videocon_A15) U2/1.0.0 UCBrowser/9.2.0.419 Mobile');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 9.2', 'Expected actual "Comment" to be \'UC Browser 9.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 9.2 for Android', 'Expected actual "Comment" to be \'UC Browser 9.2 for Android\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -438,7 +438,7 @@ suite('checking for issue 365. (15 tests)', function () {
   test('issue-365-M ["LG-KS20/TIM/V10b Browser/IEMobile/7.6 MMS/LG-MMS-WINCE-V1.0/1.2 Java/LGVM/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88/31/444"]', function () {
     browser = browscap.getBrowser('LG-KS20/TIM/V10b Browser/IEMobile/7.6 MMS/LG-MMS-WINCE-V1.0/1.2 Java/LGVM/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88/31/444');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 7.7', 'Expected actual "Comment" to be \'UC Browser 7.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 7.7 for WinCE', 'Expected actual "Comment" to be \'UC Browser 7.7 for WinCE\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

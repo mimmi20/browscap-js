@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1755. (4 tests)', function () {
+suite('checking for issue 1755. (6 tests)', function () {
   test('issue-1755-A ["Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L10 Build/HuaweiP7-L10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L10 Build/HuaweiP7-L10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36');
 
@@ -48,7 +48,7 @@ suite('checking for issue 1755. (4 tests)', function () {
   test('issue-1755-B ["NokiaE71/UC Browser8.0.4.121/28/444/UCWEB"]', function () {
     browser = browscap.getBrowser('NokiaE71/UC Browser8.0.4.121/28/444/UCWEB');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 8.0', 'Expected actual "Comment" to be \'UC Browser 8.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 8.0 for Symbian', 'Expected actual "Comment" to be \'UC Browser 8.0 for Symbian\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -87,7 +87,7 @@ suite('checking for issue 1755. (4 tests)', function () {
   test('issue-1755-C ["NOKIAN95 8GB/UC Browser8.0.3.107/28/444/UCWEB"]', function () {
     browser = browscap.getBrowser('NOKIAN95 8GB/UC Browser8.0.3.107/28/444/UCWEB');
 
-    assert.strictEqual(browser['Comment'], 'UC Browser 8.0', 'Expected actual "Comment" to be \'UC Browser 8.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'UC Browser 8.0 for Symbian', 'Expected actual "Comment" to be \'UC Browser 8.0 for Symbian\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Browser', 'Expected actual "Browser_Type" to be \'Browser\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '32', 'Expected actual "Browser_Bits" to be \'32\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
