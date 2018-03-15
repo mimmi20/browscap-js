@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1262. (4 tests)', function () {
+suite('checking for issue 1262. (2 tests)', function () {
   test('issue-1262-A ["WhatsApp/2.6.4 iPhone_OS/4.3.3 Device/iPhone_4"]', function () {
     browser = browscap.getBrowser('WhatsApp/2.6.4 iPhone_OS/4.3.3 Device/iPhone_4');
 

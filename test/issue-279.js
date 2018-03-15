@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 279. (50 tests)', function () {
+suite('checking for issue 279. (49 tests)', function () {
   test('issue-279-A ["Zend_Http_Client"]', function () {
     browser = browscap.getBrowser('Zend_Http_Client');
 

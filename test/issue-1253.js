@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1253. (6 tests)', function () {
+suite('checking for issue 1253. (5 tests)', function () {
   test('issue-1253-A ["Mozilla/5.0 (Linux; U; xx-xx) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Linux; U; xx-xx) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0');
 
