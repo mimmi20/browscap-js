@@ -80,45 +80,7 @@ class GetPattern {
                 return Promise.resolve(this.cache.getItem('browscap.patterns.' + tmpSubkey, true));
             })
         ).then((files) => {
-            let patternList = [];
-
-            //console.log('files: ', files.length);
-
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-
-                if (!file.success) {
-                    continue;
-                }
-
-                if ((!Array.isArray(file.content) && typeof file.content !== 'object') || file.content.length === 0) {
-                    continue;
-                }
-
-                let found = false;
-
-                for (let j = 0; j < file.content.length; j++) {
-                    const buffer = file.content[j];
-                    const split = buffer.split("\t");
-                    const tmpBuffer = split.shift();
-
-                    if (tmpBuffer === starts[i]) {
-                        const len = split.shift();
-
-                        if (len <= length) {
-                            patternList.push(split);
-
-                            found = true;
-                        } else if (found === true) {
-                            break;
-                        }
-                    }
-                }
-            }
-
-            //console.log('patternList: ', patternList.length);
-
-            const f = files
+            const patternList = files
                 .map(
                     (file, i) => {
                         return {
@@ -171,11 +133,7 @@ class GetPattern {
                     }, []
                 );
 
-            //console.log('f: ', f.length);
-
-            //console.log('"' + patternList[0][0] + '"', "\n", '"' + f[0][0] + '"', "\n", patternList == f);
-
-            return f;
+            return patternList;
         });
     }
 }
