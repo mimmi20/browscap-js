@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 573. (19 tests)', function () {
   test('issue-573-A ["Microsoft Office Word 2013 (15.0.4693) Windows NT 6.2"]', function () {

@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1402. (67 tests)', function () {
   test('issue-1402-A ["MOT-[Hybrid]/0E.30.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {

@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 562. (3 tests)', function () {
   test('issue-562-A ["Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)"]', function () {

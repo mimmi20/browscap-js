@@ -30,3 +30,7 @@ node_modules/
 
 .idea/
 sources/*
+
+coverage/
+.nyc_output/
+clover.*

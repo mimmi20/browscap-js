@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1119. (1 test)', function () {
   test('issue-1119 ["Kurio/3.1.9 Build 66400(Android Kitkat 4.4.4; Phone)"]', function () {

@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 000-mobiles. (9 tests)', function () {
   test('issue-mobiles-G ["S8500 UCWEB6.0/UC Browser7.7.0.81"]', function () {
