@@ -30,7 +30,7 @@ Alternatively you can clone the git repository
 
 # Examples
 
-There are test files which demonstrates how to use browscap.js and test
+There are test files which demonstrates how to use index.js and test
 several user agents.
 
 To run:

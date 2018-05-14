@@ -26,20 +26,18 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 // Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
 // backward-compatiblity with existing code that expects us to return a
 // synchronous result after doing synchronous I/O
-if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
-    var nodejs_only = "";
-    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
+if (typeof process === 'object' && typeof process.versions === 'object' && process.versions.node) {
+    let nodejsOnly = '';
+    global.Promise = require(nodejsOnly + 'synchronous-promise').SynchronousPromise;
 }
 
-var SubKey = require('../subkey');
-var subkeyHelper = new SubKey();
-
-var PatternHelper = require('../pattern/helper');
-var patternHelper = new PatternHelper();
+const SubKey = require('../subkey');
+const PatternHelper = require('../pattern/helper');
+const Quoter = require('../quoter');
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -51,24 +49,29 @@ var patternHelper = new PatternHelper();
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function GetData (cache, quoter) {
-    this.cache  = cache;
-    this.quoter = quoter;
+class GetData {
+    /**
+     *
+     * @param {BrowscapCache} cache
+     */
+    constructor(cache) {
+        this.cache = cache;
+    }
 
     /**
      * Gets the settings for a given pattern (method calls itself to
      * get the data from the parent patterns)
      *
-     * @param  pattern
-     * @param  settings
-     * @return array
+     * @param {string} pattern
+     * @param {object|array} settings
+     * @return {array}
      */
-    this.getSettings = function getSettings (pattern, settings) {
+    getSettings(pattern, settings) {
         // The pattern has been pre-quoted on generation to speed up the pattern search,
         // but for this check we need the unquoted version
-        var unquotedPattern = this.quoter.pregUnQuote(pattern);
+        const unquotedPattern = Quoter.pregUnQuote(pattern);
 
-        if (typeof settings !== 'Array' && typeof settings !== 'object') {
+        if (!Array.isArray(settings) && typeof settings !== 'object') {
             settings = {};
         }
 
@@ -76,10 +79,10 @@ module.exports = function GetData (cache, quoter) {
         return this.getIniPart(unquotedPattern).then((addedSettings) => {
             // fallback, if Defaultproperties are empty
             if ('DefaultProperties' === unquotedPattern) {
-                var defaultProperties = this.getDefaultProperties();
+                let defaultProperties = GetData.getDefaultProperties();
 
                 // merge settings
-                for (var property in defaultProperties) {
+                for (let property in defaultProperties) {
                     if (!defaultProperties.hasOwnProperty(property)) {
                         continue;
                     }
@@ -97,26 +100,26 @@ module.exports = function GetData (cache, quoter) {
             //
             // If not an empty array will be returned and the calling function can easily check if a pattern
             // has been found.
-            var settingsLength = false;
-            var addedLength    = false;
+            let settingsLength = false;
+            let addedLength = false;
 
-            for (var property in settings) {
+            for (let property in settings) {
                 settingsLength = true;
                 break;
             }
 
-            for (var property in addedSettings) {
+            for (let property in addedSettings) {
                 addedLength = true;
                 break;
             }
 
             if (!settingsLength && addedLength) {
-                settings['browser_name_regex']   = '/^' + pattern + '$/';
+                settings['browser_name_regex'] = '/^' + pattern + '$/';
                 settings['browser_name_pattern'] = unquotedPattern;
             }
 
             // check if parent pattern set, only keep the first one
-            var parentPattern = null;
+            let parentPattern = null;
             if (typeof addedSettings['Parent'] !== 'undefined') {
                 parentPattern = addedSettings['Parent'];
 
@@ -126,7 +129,7 @@ module.exports = function GetData (cache, quoter) {
             }
 
             // merge settings
-            for (var property in addedSettings) {
+            for (let property in addedSettings) {
                 if (!addedSettings.hasOwnProperty(property)) {
                     continue;
                 }
@@ -136,40 +139,40 @@ module.exports = function GetData (cache, quoter) {
 
                 settings[property] = addedSettings[property];
             }
-            //settings += addedSettings;
 
             if (parentPattern !== null) {
-                return this.getSettings(this.quoter.pregQuote(parentPattern), settings);
+                return this.getSettings(Quoter.pregQuote(parentPattern), settings);
             }
 
             return settings;
         });
-    };
+    }
 
     /**
      * Gets the relevant part (array of settings) of the ini file for a given pattern.
      *
-     * @param  pattern
-     * @return Object
+     * @param  {string} pattern
+     * @return {object}
      */
-    this.getIniPart = function getIniPart (pattern) {
-        pattern         = pattern.toLowerCase();
-        var patternhash = patternHelper.getHashForParts(pattern);
-        var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
+    getIniPart(pattern) {
+        pattern = pattern.toLowerCase();
+
+        const patternhash = PatternHelper.getHashForParts(pattern);
+        const subkey = SubKey.getIniPartCacheSubKey(patternhash);
 
         return Promise.resolve(this.cache.getItem('browscap.iniparts.' + subkey, true)).then((file) => {
             if (!file.success) {
                 return {};
             }
 
-            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+            if ((!Array.isArray(file.content) && typeof file.content !== 'object') || file.content.length === 0) {
                 return {};
             }
 
-            for (var i = 0; i < file.content.length; i++) {
-                var buffer    = file.content[i];
-                var contents  = buffer.split("\t");
-                var tmpBuffer = contents.shift();
+            for (let i = 0; i < file.content.length; i++) {
+                const buffer = file.content[i];
+                const contents = buffer.split("\t");
+                const tmpBuffer = contents.shift();
 
                 if (tmpBuffer !== patternhash) {
                     continue;
@@ -180,60 +183,62 @@ module.exports = function GetData (cache, quoter) {
 
             return {};
         });
-    };
+    }
 
     /**
-     * @return Object
+     * @return {object}
      */
-    this.getDefaultProperties = function getDefaultProperties () {
+    static getDefaultProperties() {
         return {
-            "Comment": "Default Browser",
-            "Browser": "Default Browser",
-            "Browser_Type": "unknown",
-            "Browser_Bits": "0",
-            "Browser_Maker": "unknown",
-            "Browser_Modus": "unknown",
-            "Version": "0.0",
-            "MajorVer": "0",
-            "MinorVer": "0",
-            "Platform": "unknown",
-            "Platform_Version": "unknown",
-            "Platform_Description": "unknown",
-            "Platform_Bits": "0",
-            "Platform_Maker": "unknown",
-            "Alpha": false,
-            "Beta": false,
-            "Win16": false,
-            "Win32": false,
-            "Win64": false,
-            "Frames": false,
-            "IFrames": false,
-            "Tables": false,
-            "Cookies": false,
-            "BackgroundSounds": false,
-            "JavaScript": false,
-            "VBScript": false,
-            "JavaApplets": false,
-            "ActiveXControls": false,
-            "isMobileDevice": false,
-            "isTablet": false,
-            "isSyndicationReader": false,
-            "Crawler": false,
-            "isFake": false,
-            "isAnonymized": false,
-            "isModified": false,
-            "CssVersion": "0",
-            "AolVersion": "0",
-            "Device_Name": "unknown",
-            "Device_Maker": "unknown",
-            "Device_Type": "unknown",
-            "Device_Pointing_Method": "unknown",
-            "Device_Code_Name": "unknown",
-            "Device_Brand_Name": "unknown",
-            "RenderingEngine_Name": "unknown",
-            "RenderingEngine_Version": "unknown",
-            "RenderingEngine_Description": "unknown",
-            "RenderingEngine_Maker": "unknown"
+            Comment: 'Default Browser',
+            Browser: 'Default Browser',
+            Browser_Type: 'unknown',
+            Browser_Bits: '0',
+            Browser_Maker: 'unknown',
+            Browser_Modus: 'unknown',
+            Version: '0.0',
+            MajorVer: '0',
+            MinorVer: '0',
+            Platform: 'unknown',
+            Platform_Version: 'unknown',
+            Platform_Description: 'unknown',
+            Platform_Bits: '0',
+            Platform_Maker: 'unknown',
+            Alpha: false,
+            Beta: false,
+            Win16: false,
+            Win32: false,
+            Win64: false,
+            Frames: false,
+            IFrames: false,
+            Tables: false,
+            Cookies: false,
+            BackgroundSounds: false,
+            JavaScript: false,
+            VBScript: false,
+            JavaApplets: false,
+            ActiveXControls: false,
+            isMobileDevice: false,
+            isTablet: false,
+            isSyndicationReader: false,
+            Crawler: false,
+            isFake: false,
+            isAnonymized: false,
+            isModified: false,
+            CssVersion: '0',
+            AolVersion: '0',
+            Device_Name: 'unknown',
+            Device_Maker: 'unknown',
+            Device_Type: 'unknown',
+            Device_Pointing_Method: 'unknown',
+            Device_Code_Name: 'unknown',
+            Device_Brand_Name: 'unknown',
+            RenderingEngine_Name: 'unknown',
+            RenderingEngine_Version: 'unknown',
+            RenderingEngine_Description: 'unknown',
+            RenderingEngine_Maker: 'unknown',
         };
-    };
-};
+    }
+}
+
+module.exports = GetData;
