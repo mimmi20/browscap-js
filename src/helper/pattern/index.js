@@ -64,53 +64,95 @@ class GetPattern {
         const starts = PatternHelper.getHashForPattern(userAgent, true);
         const length = PatternHelper.getPatternLength(userAgent);
 
-        let f = starts
+        return starts
             .map((tmpStart, i) => {
                 const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
 
-                const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
-            });
-
-        let patternList = [];
-
-        // get patterns, first for the given browser and if that is not found,
-        // for the default browser (with a special key)
-        for (let i = 0; i < starts.length; i++) {
-            const tmpStart  = starts[i];
-            const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
-
-            const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
-
-            if (!file.success) {
-                continue;
-            }
-
-            if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
-                continue;
-            }
-
-            let found = false;
-
-            for (let j = 0; j < file.content.length; j++) {
-                const buffer    = file.content[j];
-                const split     = buffer.split("\t");
-                const tmpBuffer = split.shift();
-
-                if (tmpBuffer === tmpStart) {
-                    const len = split.shift();
-
-                    if (len <= length) {
-                        patternList.push(split);
-                    }
-
-                    found = true;
-                } else if (found === true) {
-                    break;
+                return {
+                    tmpStart: tmpStart,
+                    file: this.cache.getItem('browscap.patterns.' + tmpSubkey, true),
+                    index: i
                 }
-            }
-        }
+            })
+            .filter((map) => {
+                if (!map.file.success) {
+                    return false;
+                }
 
-        return patternList;
+                if (!Array.isArray(map.file.content) && typeof map.file.content !== 'object') {
+                    return false;
+                }
+
+                return map.file.content.length !== 0;
+            })
+            .map((map) => {
+                let patternList = [];
+                let found = false;
+
+                for (let j = 0; j < map.file.content.length; j++) {
+                    const buffer    = map.file.content[j];
+                    const split     = buffer.split("\t");
+                    const tmpBuffer = split.shift();
+
+                    if (tmpBuffer === map.tmpStart) {
+                        const len = split.shift();
+
+                        if (len <= length) {
+                            patternList.push(split);
+                        }
+
+                        found = true;
+                    } else if (found === true) {
+                        break;
+                    }
+                }
+
+                return patternList;
+            })
+            .concat((summary, patternList) => {
+                return summary.append(patternList);
+            }, []);
+
+        // let patternList = [];
+        //
+        // // get patterns, first for the given browser and if that is not found,
+        // // for the default browser (with a special key)
+        // for (let i = 0; i < starts.length; i++) {
+        //     const tmpStart  = starts[i];
+        //     const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
+        //
+        //     const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
+        //
+        //     if (!file.success) {
+        //         continue;
+        //     }
+        //
+        //     if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+        //         continue;
+        //     }
+        //
+        //     let found = false;
+        //
+        //     for (let j = 0; j < file.content.length; j++) {
+        //         const buffer    = file.content[j];
+        //         const split     = buffer.split("\t");
+        //         const tmpBuffer = split.shift();
+        //
+        //         if (tmpBuffer === tmpStart) {
+        //             const len = split.shift();
+        //
+        //             if (len <= length) {
+        //                 patternList.push(split);
+        //             }
+        //
+        //             found = true;
+        //         } else if (found === true) {
+        //             break;
+        //         }
+        //     }
+        // }
+        //
+        // return patternList;
     };
 }
 

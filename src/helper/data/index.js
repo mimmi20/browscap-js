@@ -150,10 +150,8 @@ class GetData {
     getIniPart (pattern) {
         pattern         = pattern.toLowerCase();
 
-        const patternHelper = new PatternHelper();
-        const patternhash   = patternHelper.getHashForParts(pattern);
-        const subkeyHelper  = new SubKey();
-        const subkey        = subkeyHelper.getIniPartCacheSubKey(patternhash);
+        const patternhash = PatternHelper.getHashForParts(pattern);
+        const subkey      = SubKey.getIniPartCacheSubKey(patternhash);
 
         const file = this.cache.getItem('browscap.iniparts.' + subkey, true);
 
