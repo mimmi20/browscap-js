@@ -70,8 +70,7 @@ class GetPattern {
 
                 return {
                     tmpStart: tmpStart,
-                    file: this.cache.getItem('browscap.patterns.' + tmpSubkey, true),
-                    index: i
+                    file: this.cache.getItem('browscap.patterns.' + tmpSubkey, true)
                 }
             })
             .filter((map) => {
@@ -86,7 +85,7 @@ class GetPattern {
                 return map.file.content.length !== 0;
             })
             .map((map) => {
-                let patternList = [];
+                let patternListInner = [];
                 let found = false;
 
                 for (let j = 0; j < map.file.content.length; j++) {
@@ -98,20 +97,72 @@ class GetPattern {
                         const len = split.shift();
 
                         if (len <= length) {
-                            patternList.push(split);
+                            found = true;
+                            patternListInner.push(split);
+                        } else if (found === true) {
+                            break;
                         }
-
-                        found = true;
-                    } else if (found === true) {
-                        break;
                     }
                 }
 
-                return patternList;
+                return patternListInner;
             })
-            .concat((summary, patternList) => {
-                return summary.append(patternList);
+            .reduce((patternListInner, result) => {
+                return patternListInner.concat(result);
             }, []);
+
+        // return files
+        //     .map(
+        //         (file, i) => {
+        //             return {
+        //                 file: file,
+        //                 index: i,
+        //                 start: starts[i]
+        //             };
+        //         },
+        //         starts
+        //     ).filter(
+        //         (map) => {
+        //             if (!map.file.success) {
+        //                 return false;
+        //             }
+        //
+        //             if (!Array.isArray(map.file.content) && typeof map.file.content !== 'object') {
+        //                 return false;
+        //             }
+        //
+        //             return map.file.content.length !== 0;
+        //         }
+        //     ).map(
+        //         (map) => {
+        //             let start = map.start;
+        //             let found = false;
+        //             let patternListInner = [];
+        //
+        //             for (let j = 0; j < map.file.content.length; j++) {
+        //                 const buffer = map.file.content[j];
+        //                 const split = buffer.split("\t");
+        //                 const tmpBuffer = split.shift();
+        //
+        //                 if (tmpBuffer === start) {
+        //                     const len = split.shift();
+        //
+        //                     if (len <= length) {
+        //                         found = true;
+        //                         patternListInner.push(split);
+        //                     } else if (found === true) {
+        //                         break;
+        //                     }
+        //                 }
+        //             }
+        //
+        //             return patternListInner;
+        //         }
+        //     ).reduce(
+        //         (patternListInner, result) => {
+        //             return patternListInner.concat(result);
+        //         }, []
+        //     );
 
         // let patternList = [];
         //
