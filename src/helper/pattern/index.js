@@ -80,7 +80,7 @@ class GetPattern {
                 return Promise.resolve(this.cache.getItem('browscap.patterns.' + tmpSubkey, true));
             })
         ).then((files) => {
-            const patternList = files
+            return files
                 .map(
                     (file, i) => {
                         return {
@@ -132,8 +132,6 @@ class GetPattern {
                         return patternListInner.concat(result);
                     }, []
                 );
-
-            return patternList;
         });
     }
 }
