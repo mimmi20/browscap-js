@@ -95,14 +95,8 @@ class Ini {
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.
                 const settings  = this.dataHelper.getSettings(pattern, {});
-                let hasResult = false;
 
-                for (let property in settings) {
-                    hasResult = true;
-                    break;
-                }
-
-                if (hasResult) {
+                if (Object.keys(settings).length) {
                     return settings;
                 }
             }

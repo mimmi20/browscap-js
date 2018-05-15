@@ -28,7 +28,7 @@
 
 'use strict';
 
-const SubKey = require('../subkey');
+const SubKey        = require('../subkey');
 const PatternHelper = require('../pattern/helper');
 const Quoter        = require('../quoter');
 
@@ -83,7 +83,7 @@ class GetData {
             }
         }
 
-        if (typeof settings !== 'Array' && typeof settings !== 'object') {
+        if (!Array.isArray(settings) && typeof settings !== 'object') {
             settings = {};
         }
 
@@ -94,26 +94,13 @@ class GetData {
         // If not an empty array will be returned and the calling function can easily check if a pattern
         // has been found.
 
-        var settingsLength = false;
-        var addedLength    = false;
-
-        for (var property in settings) {
-            settingsLength = true;
-            break;
-        }
-
-        for (var property in addedSettings) {
-            addedLength = true;
-            break;
-        }
-
-        if (!settingsLength && addedLength) {
+        if (!Object.keys(settings).length && Object.keys(addedSettings).length) {
             settings['browser_name_regex']   = '/^' + pattern + '$/';
             settings['browser_name_pattern'] = unquotedPattern;
         }
 
         // check if parent pattern set, only keep the first one
-        var parentPattern = null;
+        let parentPattern = null;
         if (typeof addedSettings['Parent'] !== 'undefined') {
             parentPattern = addedSettings['Parent'];
 
@@ -123,7 +110,7 @@ class GetData {
         }
 
         // merge settings
-        for (var property in addedSettings) {
+        for (const property in addedSettings) {
             if (!addedSettings.hasOwnProperty(property)) {
                 continue;
             }
@@ -159,7 +146,7 @@ class GetData {
             return {};
         }
 
-        if ((typeof file.content !== 'Array' && typeof file.content !== 'object') || file.content.length === 0) {
+        if ((!Array.isArray(file.content) && typeof file.content !== 'object') || file.content.length === 0) {
             return {};
         }
 
