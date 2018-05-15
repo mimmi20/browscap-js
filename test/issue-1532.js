@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1532. (8 tests)', function () {
   test('issue-1532-A ["Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)"]', function () {

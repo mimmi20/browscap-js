@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1117. (1 test)', function () {
   test('issue-1117 ["MacOutlook/15.27.0.161010 (Intelx64 Mac OS X Version 10.11.6 (Build 15G1108))"]', function () {

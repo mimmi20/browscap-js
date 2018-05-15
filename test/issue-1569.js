@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1569. (21 tests)', function () {
   test('issue-1569-A ["Mozilla/5.0 (Windows NT 10.0  NCLIENT50_AAP41CD7CD11CE) AppleWebKit/537.36 (KHTML, like Gecko) Chedot/43.0.2357.402 Safari/537.36"]', function () {

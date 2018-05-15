@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1469. (30 tests)', function () {
   test('issue-1469-A ["Mozilla/4.0 (compatible; MSIE 7.0; AOL 10.1; AOLBuild 2.1.103.1; brand=aol; Windows NT 5.2; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; CPNTDF; .NET4.0C)"]', function () {

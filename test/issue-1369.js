@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1369. (3 tests)', function () {
   test('issue-1369-A ["Reddit/Version 2.6.0/Build 200033/iOS Version 10.0.2 (Build 14A456)"]', function () {

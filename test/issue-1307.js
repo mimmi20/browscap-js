@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1307. (86 tests)', function () {
   test('issue-1307-A ["Mozilla/5.0 (Linux; Android 4.4.2; BLU STUDIO 5.5 K Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 Instagram 10.4.0 Android (19/4.4.2; 240dpi; 480x854; BLU; BLU STUDIO 5.5 K; BLU; mt6571; en_US)"]', function () {

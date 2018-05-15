@@ -26,7 +26,7 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 
 /**
  * includes general functions for the work with patterns
@@ -38,62 +38,26 @@
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function SubKey (content, success) {
+class SubKey {
     /**
      * Gets the subkey for the pattern cache file, generated from the given string
      *
-     * @param  string
-     * @return string
+     * @param  {string} string
+     * @return {string}
      */
-    this.getPatternCacheSubkey = function getPatternCacheSubkey (string) {
+    static getPatternCacheSubkey (string) {
         return string.substring(0, 2);
-    };
-
-    /**
-     * Gets all subkeys for the pattern cache files
-     *
-     * @return Object
-     */
-    this.getAllPatternCacheSubkeys = function getAllPatternCacheSubkeys () {
-        var subkeys = {};
-        var chars   = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-
-        for (var i = 0; i < chars.length; i++) {
-            for (var j = 0; j < chars.length; j++) {
-                subkeys[chars[i] + chars[j]] = '';
-            }
-        }
-
-        return subkeys;
     };
 
     /**
      * Gets the sub key for the ini parts cache file, generated from the given string
      *
-     * @param string
-     * @return string
+     * @param {string} string
+     * @return {string}
      */
-    this.getIniPartCacheSubKey = function getIniPartCacheSubKey (string) {
+    static getIniPartCacheSubKey (string) {
         return string.substring(0, 3);
     };
+}
 
-    /**
-     * Gets all sub keys for the inipart cache files
-     *
-     * @return Array
-     */
-    this.getAllIniPartCacheSubKeys = function getAllIniPartCacheSubKeys () {
-        var subKeys = [];
-        var chars   = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-
-        for (var i = 0; i < chars.length; i++) {
-            for (var j = 0; j < chars.length; j++) {
-                for (var k = 0; k < chars.length; k++) {
-                    subKeys.push(chars[i] + chars[j] + chars[k]);
-                }
-            }
-        }
-
-        return subKeys;
-    };
-};
+module.exports = SubKey;

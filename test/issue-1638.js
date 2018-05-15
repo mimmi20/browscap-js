@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1638. (1 test)', function () {
   test('issue-1638 ["Mozilla/5.0 (Freebox; Linux i686) AppleWebKit/538.1 (KHTML, like Gecko) Mail Free/1.0 Safari/538.1"]', function () {

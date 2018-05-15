@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1633. (55 tests)', function () {
   test('issue-1633-A ["AtomicBrowser/7.0.1 CFNetwork/758.5.3 Darwin/15.6.0"]', function () {

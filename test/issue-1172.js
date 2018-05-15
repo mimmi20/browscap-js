@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1172. (2 tests)', function () {
   test('issue-1172-1 ["TestApp/1.0 CFNetwork/808.1.4 Darwin/16.1.0"]', function () {

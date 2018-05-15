@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 637. (1 test)', function () {
   test('issue-637 ["iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9"]', function () {

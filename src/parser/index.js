@@ -26,7 +26,9 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
+
+const GetData = require('../helper/data');
 
 /**
  * json parser class
@@ -38,59 +40,64 @@
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function Ini (patternHelper, dataHelper) {
-    this.patternHelper = patternHelper;
-    this.dataHelper    = dataHelper;
+class Ini {
+    /**
+     * @param {GetPattern} patternHelper
+     * @param {GetData} dataHelper
+     */
+    constructor (patternHelper, dataHelper) {
+        this.patternHelper = patternHelper;
+        this.dataHelper    = dataHelper;
+    }
 
     /**
      * Gets the browser data formatr for the given user agent
      * (or null if no data avaailble, no even the default browser)
      *
-     * @param  userAgent
-     * @return Object|null
+     * @param  {string} userAgent
+     * @return {object|null}
      */
-    this.getBrowser = function getBrowser (userAgent) {
+    getBrowser (userAgent) {
         userAgent = userAgent.toLowerCase();
 
-        var patternList = this.patternHelper.getPatterns(userAgent);
+        const patternList = this.patternHelper.getPatterns(userAgent);
 
-        for (var i = 0; i < patternList.length; i++) {
-            var patterns       = patternList[i];
-            var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
+        for (let i = 0; i < patternList.length; i++) {
+            const patterns       = patternList[i];
+            const patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
 
             if (!patternToMatch.test(userAgent)) {
                 continue;
             }
 
-            for (var j = 0; j < patterns.length; j++) {
-                var pattern       = patterns[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
-                var quotedPattern = new RegExp('^' + pattern + '$', 'i');
+            for (let j = 0; j < patterns.length; j++) {
+                let pattern       = patterns[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+                const quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
                 if (!quotedPattern.test(userAgent)) {
                     continue;
                 }
 
-                var matches = userAgent.match(quotedPattern);
+                const matches = userAgent.match(quotedPattern);
 
                 // Insert the digits back into the pattern, so that we can search the settings for it
                 if (matches.length > 1) {
                     matches.shift();
 
-                    for (var k = 0; k < matches.length; k++){
-                        var numPos = pattern.indexOf('(\\d)');
-                        var sub    = pattern.substr(numPos, 4);
-                        pattern    = pattern.replace(sub, matches[k]);
+                    for (let k = 0; k < matches.length; k++){
+                        const numPos = pattern.indexOf('(\\d)');
+                        const sub    = pattern.substr(numPos, 4);
+                        pattern      = pattern.replace(sub, matches[k]);
                     }
                 }
 
                 // Try to get settings - as digits have been replaced to speed up the pattern search,
                 // we won't always find the data in the first step - so check if settings have been found and if not,
                 // search for the next pattern.
-                var settings  = this.dataHelper.getSettings(pattern, {});
-                var hasResult = false;
-                var property;
+                const settings  = this.dataHelper.getSettings(pattern, {});
+                let hasResult = false;
 
-                for (property in settings) {
+                for (let property in settings) {
                     hasResult = true;
                     break;
                 }
@@ -102,6 +109,8 @@ module.exports = function Ini (patternHelper, dataHelper) {
         }
 
         // return default
-        return this.dataHelper.getDefaultProperties();
+        return GetData.getDefaultProperties();
     };
-};
+}
+
+module.exports = Ini;

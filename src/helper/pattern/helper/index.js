@@ -26,9 +26,9 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 
-var md5 = require('md5');
+const md5 = require('md5');
 
 /**
  * includes general functions for the work with patterns
@@ -40,7 +40,7 @@ var md5 = require('md5');
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function PatternHelper () {
+class PatternHelper {
     /**
      * Gets a hash or an array of hashes from the first characters of a pattern/user agent, that can
      * be used for a fast comparison, by comparing only the hashes, without having to match the
@@ -60,12 +60,12 @@ module.exports = function PatternHelper () {
      * results in an array with hashes for "Mozilla/5.0", "Mozilla/5.", "Mozilla/5",
      * "Mozilla/" ... "M", so that the pattern hash is included.
      *
-     * @return string|Array
-     * @param pattern
-     * @param variants
+     * @param {string} pattern
+     * @param {boolean} variants
+     * @return {string|array}
      */
-    this.getHashForPattern = function getHashForPattern (pattern, variants) {
-        var regex   = new RegExp('^([^\\.\\*\\?\\s\\r\\n\\\\]+).*$');
+    static getHashForPattern (pattern, variants) {
+        const regex   = new RegExp('^([^\\.\\*\\?\\s\\r\\n\\\\]+).*$');
         pattern     = pattern.substring(0, 32);
 
         if (typeof variants === 'undefined') {
@@ -76,18 +76,18 @@ module.exports = function PatternHelper () {
             return variants ? [md5('')] :  md5('');
         }
 
-        var matches = pattern.match(regex);
+        const matches = pattern.match(regex);
 
         if (typeof matches[1] === 'undefined') {
             return variants ? [md5('')] :  md5('');
         }
 
-        var string = matches[1];
+        let string = matches[1];
 
         if (variants) {
-            var patternStarts = [];
+            let patternStarts = [];
 
-            for (var i = string.length; i >= 1; i--) {
+            for (let i = string.length; i >= 1; i--) {
                 string          = string.substring(0, i);
                 patternStarts.push(md5(string));
             }
@@ -108,11 +108,11 @@ module.exports = function PatternHelper () {
     /**
      * returns a hash for one pattern
      *
-     * @param pattern
+     * @param {string} pattern
      *
-     * @return string
+     * @return {string}
      */
-    this.getHashForParts = function getHashForParts (pattern) {
+    static getHashForParts (pattern) {
         return md5(pattern);
     };
 
@@ -120,10 +120,12 @@ module.exports = function PatternHelper () {
      * Gets the minimum length of the patern (used in the getPatterns() method to
      * check against the user agent length)
      *
-     * @param  pattern
-     * @return int
+     * @param  {string} pattern
+     * @return {int}
      */
-    this.getPatternLength = function getPatternLength (pattern) {
+    static getPatternLength (pattern) {
         return pattern.replace('*', '').length;
     };
-};
+}
+
+module.exports = PatternHelper;

@@ -26,13 +26,11 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 
-var SubKey = require('../subkey');
-var subkeyHelper = new SubKey();
-
-var PatternHelper = require('../pattern/helper');
-var patternHelper = new PatternHelper();
+const SubKey = require('../subkey');
+const PatternHelper = require('../pattern/helper');
+const Quoter        = require('../quoter');
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -44,32 +42,36 @@ var patternHelper = new PatternHelper();
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function GetData (cache, quoter) {
-    this.cache  = cache;
-    this.quoter = quoter;
+class GetData {
+    /**
+     * @param {BrowscapCache} cache
+     */
+    constructor (cache) {
+        this.cache  = cache;
+    }
 
     /**
      * Gets the settings for a given pattern (method calls itself to
      * get the data from the parent patterns)
      *
-     * @param  pattern
-     * @param  settings
-     * @return array
+     * @param  {string} pattern
+     * @param  {object|array} settings
+     * @return {array}
      */
-    this.getSettings = function getSettings (pattern, settings) {
+    getSettings (pattern, settings) {
         // The pattern has been pre-quoted on generation to speed up the pattern search,
         // but for this check we need the unquoted version
-        var unquotedPattern = this.quoter.pregUnQuote(pattern);
+        const unquotedPattern = Quoter.pregUnQuote(pattern);
 
         // Try to get settings for the pattern
-        var addedSettings = this.getIniPart(unquotedPattern);
+        let addedSettings = this.getIniPart(unquotedPattern);
 
         // fallback, if Defaultproperties are empty
         if ('DefaultProperties' === unquotedPattern) {
-            var defaultProperties = this.getDefaultProperties();
+            const defaultProperties = GetData.getDefaultProperties();
 
             // merge settings
-            for (var property in defaultProperties) {
+            for (const property in defaultProperties) {
                 if (!defaultProperties.hasOwnProperty(property)) {
                     continue;
                 }
@@ -133,7 +135,7 @@ module.exports = function GetData (cache, quoter) {
         }
 
         if (parentPattern !== null) {
-            return this.getSettings(this.quoter.pregQuote(parentPattern), settings);
+            return this.getSettings(Quoter.pregQuote(parentPattern), settings);
         }
 
         return settings;
@@ -142,15 +144,18 @@ module.exports = function GetData (cache, quoter) {
     /**
      * Gets the relevant part (array of settings) of the ini file for a given pattern.
      *
-     * @param  pattern
-     * @return Object
+     * @param  {string} pattern
+     * @return {object}
      */
-    this.getIniPart = function getIniPart (pattern) {
+    getIniPart (pattern) {
         pattern         = pattern.toLowerCase();
-        var patternhash = patternHelper.getHashForParts(pattern);
-        var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
 
-        var file = this.cache.getItem('browscap.iniparts.' + subkey, true);
+        const patternHelper = new PatternHelper();
+        const patternhash   = patternHelper.getHashForParts(pattern);
+        const subkeyHelper  = new SubKey();
+        const subkey        = subkeyHelper.getIniPartCacheSubKey(patternhash);
+
+        const file = this.cache.getItem('browscap.iniparts.' + subkey, true);
 
         if (!file.success) {
             return {};
@@ -160,10 +165,10 @@ module.exports = function GetData (cache, quoter) {
             return {};
         }
 
-        for (var i = 0; i < file.content.length; i++) {
-            var buffer    = file.content[i];
-            var contents  = buffer.split("\t");
-            var tmpBuffer = contents.shift();
+        for (let i = 0; i < file.content.length; i++) {
+            const buffer    = file.content[i];
+            const contents  = buffer.split("\t");
+            const tmpBuffer = contents.shift();
 
             if (tmpBuffer !== patternhash) {
                 continue;
@@ -176,9 +181,9 @@ module.exports = function GetData (cache, quoter) {
     };
 
     /**
-     * @return Object
+     * @return {object}
      */
-    this.getDefaultProperties = function getDefaultProperties () {
+    static getDefaultProperties () {
         return {
             "Comment": "Default Browser",
             "Browser": "Default Browser",
@@ -229,4 +234,6 @@ module.exports = function GetData (cache, quoter) {
             "RenderingEngine_Maker": "unknown"
         };
     };
-};
+}
+
+module.exports = GetData;

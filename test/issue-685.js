@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 685. (2 tests)', function () {
   test('issue-685-A ["UCWEB/2.0 (MIDP-2.0; U; Adr 5.0.2; en-US; AO5510) U2/1.0.0 UCBrowser"]', function () {

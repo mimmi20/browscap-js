@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1364. (8 tests)', function () {
   test('issue-1364-A ["UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1067_1005) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile"]', function () {

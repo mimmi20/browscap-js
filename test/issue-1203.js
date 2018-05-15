@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1203. (5 tests)', function () {
   test('issue-1203-1 ["Callpod Keeper for Android 1.0 (10.5.0/264) Dalvik/2.1.0 (Linux; U; Android 6.0; LG-H810 Build/MRA58K)"]', function () {

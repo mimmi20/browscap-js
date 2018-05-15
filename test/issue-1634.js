@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1634. (1 test)', function () {
   test('issue-1634 ["Microsoft Office/16.0 (Microsoft Outlook 16.0.8241; Pro)"]', function () {

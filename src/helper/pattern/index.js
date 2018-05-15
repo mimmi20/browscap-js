@@ -26,7 +26,10 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
+
+const PatternHelper = require('./helper');
+const SubKey        = require('../subkey');
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -38,8 +41,13 @@
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function GetPattern (cache) {
-    this.cache = cache;
+class GetPattern {
+    /**
+     * @param {BrowscapCache} cache
+     */
+    constructor (cache) {
+        this.cache = cache;
+    }
 
     /**
      * Gets some possible patterns that have to be matched against the user agent. With the given
@@ -48,29 +56,30 @@ module.exports = function GetPattern (cache) {
      * - We compare the length of the pattern with the length of the user agent
      *   (the pattern cannot be longer than the user agent!)
      *
-     * @param userAgent
+     * @param {string} userAgent
      *
-     * @return Array
+     * @return {array}
      */
-    this.getPatterns = function getPatterns (userAgent) {
-        var PatternHelper = require('./helper');
-        var patternHelper = new PatternHelper();
+    getPatterns (userAgent) {
+        const starts = PatternHelper.getHashForPattern(userAgent, true);
+        const length = PatternHelper.getPatternLength(userAgent);
 
-        var SubKey       = require('../subkey');
-        var subkeyHelper = new SubKey();
+        let f = starts
+            .map((tmpStart, i) => {
+                const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
 
-        var starts = patternHelper.getHashForPattern(userAgent, true);
-        var length = patternHelper.getPatternLength(userAgent);
+                const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
+            });
 
-        var patternList = [];
+        let patternList = [];
 
         // get patterns, first for the given browser and if that is not found,
         // for the default browser (with a special key)
-        for (var i = 0; i < starts.length; i++) {
-            var tmpStart  = starts[i];
-            var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
+        for (let i = 0; i < starts.length; i++) {
+            const tmpStart  = starts[i];
+            const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
 
-            var file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
+            const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
 
             if (!file.success) {
                 continue;
@@ -80,16 +89,15 @@ module.exports = function GetPattern (cache) {
                 continue;
             }
 
-            var found = false;
+            let found = false;
 
-            for (var j = 0; j < file.content.length; j++) {
-                var buffer    = file.content[j];
-
-                var split     = buffer.split("\t");
-                var tmpBuffer = split.shift();
+            for (let j = 0; j < file.content.length; j++) {
+                const buffer    = file.content[j];
+                const split     = buffer.split("\t");
+                const tmpBuffer = split.shift();
 
                 if (tmpBuffer === tmpStart) {
-                    var len = split.shift();
+                    const len = split.shift();
 
                     if (len <= length) {
                         patternList.push(split);
@@ -104,4 +112,6 @@ module.exports = function GetPattern (cache) {
 
         return patternList;
     };
-};
+}
+
+module.exports = GetPattern;

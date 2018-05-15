@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 651. (136 tests)', function () {
   test('issue-651-A ["AdSheet/1.0 CFNetwork/548.1.4 Darwin/11.0.0"]', function () {

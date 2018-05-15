@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1646. (1 test)', function () {
   test('issue-1646-A ["Athens15_TD/V2 Linux/3.0.13 Android/5.1 andy_5EI3 Release/02.15.2012 Browser/AppleWebKit534.30 Mobile Safari/534.30 System/Android 5.1;"]', function () {

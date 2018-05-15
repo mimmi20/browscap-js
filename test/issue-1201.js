@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1201. (1 test)', function () {
   test('issue-1201 ["Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.3 (KHTML, like Gecko) SecondLife/3.7.28.300847 (Second Life Release; default skin) Safari/533.3"]', function () {

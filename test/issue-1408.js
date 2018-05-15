@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1408. (106 tests)', function () {
   test('issue-1408-A ["SAMSUNG-B5722/B5722XXJA1, SAMSUNG-GT-B5722/B5722XXJA1 Profile/MIDP-2.0 Configuration/CLDC-1.1 Untrusted/1.0"]', function () {

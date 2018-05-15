@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 849. (17 tests)', function () {
   test('issue-849-A ["SophosUpdateManager/1.5.7.50 SDDS/2.0 (u= EO2ANA123G c= 6342da15-f351-4ab7-9656-3f5f2d50885d )"]', function () {

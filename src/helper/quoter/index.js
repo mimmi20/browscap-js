@@ -26,7 +26,7 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 
 /**
  * class to help quoting strings for using a regex
@@ -38,22 +38,15 @@
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function Quoter () {
+class Quoter {
     /**
      * Converts browscap match patterns into preg match patterns.
      *
-     * @param userAgent
-     *
-     * @return string
+     * @param {string} userAgent
+     * @param {string} delimiter
+     * @return {string}
      */
-    this.pregQuote = function pregQuote (userAgent) {
-        var pattern = this.preg_quote(userAgent);
-
-        // the \\x replacement is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
-        return pattern.replace('\\\\*', '.*').replace('\\\\?', '.').replace('\\x', '\\\\x');
-    };
-
-    this.preg_quote = function preg_quote (str, delimiter) {
+    static pregQuote (userAgent, delimiter) {
         //  discuss at: http://phpjs.org/functions/preg_quote/
         // original by: booeyOH
         // improved by: Ates Goral (http://magnetiq.com)
@@ -67,37 +60,22 @@ module.exports = function Quoter () {
         //   example 3: preg_quote("\\.+*?[^]$(){}=!<>|:");
         //   returns 3: '\\\\\\.\\+\\*\\?\\[\\^\\]\\$\\(\\)\\{\\}\\=\\!\\<\\>\\|\\:'
 
-        return String(str)
-            .replace(new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]', 'g'), '\\$&');
+        return String(userAgent)
+            .replace(new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]', 'g'), '\\$&')
+            .replace('\\\\*', '.*')
+            .replace('\\\\?', '.')
+            // the \\x replacement is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
+            .replace('\\x', '\\\\x');
     };
-
-    this.preg_unquote = function preg_unquote (str, delimiter) {
-        //  discuss at: http://phpjs.org/functions/preg_quote/
-        // original by: booeyOH
-        // improved by: Ates Goral (http://magnetiq.com)
-        // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-        // improved by: Brett Zamir (http://brett-zamir.me)
-        // bugfixed by: Onno Marsman
-        //   example 1: preg_quote("$40");
-        //   returns 1: '\\$40'
-        //   example 2: preg_quote("*RRRING* Hello?");
-        //   returns 2: '\\*RRRING\\* Hello\\?'
-        //   example 3: preg_quote("\\.+*?[^]$(){}=!<>|:");
-        //   returns 3: '\\\\\\.\\+\\*\\?\\[\\^\\]\\$\\(\\)\\{\\}\\=\\!\\<\\>\\|\\:'
-
-        return String(str)
-            .replace(new RegExp('(\\\\\\\\[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-])', 'g'), '$&');
-    };
-
 
     /**
      * Reverts the quoting of a pattern.
      *
-     * @param pattern
-     * @return string
+     * @param {string} pattern
+     * @return {string}
      */
-    this.pregUnQuote = function pregUnQuote (pattern) {
-        var regex = new RegExp('[^a-z0-9\\s]', 'i');
+    static pregUnQuote (pattern) {
+        const regex = new RegExp('[^a-z0-9\\s]', 'i');
 
         if (!regex.test(pattern)) {
             return pattern;
@@ -105,12 +83,13 @@ module.exports = function Quoter () {
 
         // Undo the \\x replacement, that is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
         // @source https://github.com/browscap/browscap-php
-        pattern = pattern.replace('/(?<!\\\\)\\.\\*/gi', '\\*')
+        pattern = pattern
+            .replace('/(?<!\\\\)\\.\\*/gi', '\\*')
             .replace('/(?<!\\\\)\\./gi', '\\?')
             .replace('/(?<!\\\\)\\\\x/gi', '\\x');
 
         // replace \@ -> @
-        var re = new RegExp('\\\\\\@', 'gi');
+        let re = new RegExp('\\\\\\@', 'gi');
         pattern = pattern.replace(re, '@');
 
         // replace \. -> \?
@@ -206,4 +185,6 @@ module.exports = function Quoter () {
         pattern = pattern.replace(re, '/');
         return pattern;
     };
-};
+}
+
+module.exports = Quoter;

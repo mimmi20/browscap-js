@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1202. (4 tests)', function () {
   test('issue-1202-1 ["Mozilla/5.0 (compatible; IBrowse 3.0; AmigaOS4.0)"]', function () {

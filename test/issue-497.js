@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 497. (25 tests)', function () {
   test('issue-497-A ["Superfeedr bot/2.0 http://superfeedr.com - Make your feeds realtime: get in touch"]', function () {
