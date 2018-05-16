@@ -55,10 +55,14 @@ class GetData {
      * get the data from the parent patterns)
      *
      * @param  {string} pattern
-     * @param  {object|array} settings
-     * @return {array}
+     * @param  {object} settings
+     * @return {object}
      */
-    getSettings (pattern, settings) {
+    getSettings (pattern, settings = {}) {
+        if (typeof settings !== 'object') {
+            settings = {};
+        }
+
         // The pattern has been pre-quoted on generation to speed up the pattern search,
         // but for this check we need the unquoted version
         const unquotedPattern = Quoter.pregUnQuote(pattern);
@@ -71,20 +75,7 @@ class GetData {
             const defaultProperties = GetData.getDefaultProperties();
 
             // merge settings
-            for (const property in defaultProperties) {
-                if (!defaultProperties.hasOwnProperty(property)) {
-                    continue;
-                }
-                if (addedSettings.hasOwnProperty(property)) {
-                    continue;
-                }
-
-                addedSettings[property] = defaultProperties[property];
-            }
-        }
-
-        if (!Array.isArray(settings) && typeof settings !== 'object') {
-            settings = {};
+            addedSettings = Object.assign(defaultProperties, addedSettings);
         }
 
         // set some additional data
@@ -110,16 +101,7 @@ class GetData {
         }
 
         // merge settings
-        for (const property in addedSettings) {
-            if (!addedSettings.hasOwnProperty(property)) {
-                continue;
-            }
-            if (settings.hasOwnProperty(property)) {
-                continue;
-            }
-
-            settings[property] = addedSettings[property];
-        }
+        settings = Object.assign(addedSettings, settings);
 
         if (parentPattern !== null) {
             return this.getSettings(Quoter.pregQuote(parentPattern), settings);
@@ -150,8 +132,7 @@ class GetData {
             return {};
         }
 
-        for (let i = 0; i < file.content.length; i++) {
-            const buffer    = file.content[i];
+        for (const buffer of file.content) {
             const contents  = buffer.split("\t");
             const tmpBuffer = contents.shift();
 

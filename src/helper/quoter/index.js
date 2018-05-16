@@ -43,10 +43,9 @@ class Quoter {
      * Converts browscap match patterns into preg match patterns.
      *
      * @param {string} userAgent
-     * @param {string} delimiter
      * @return {string}
      */
-    static pregQuote (userAgent, delimiter) {
+    static pregQuote (userAgent) {
         //  discuss at: http://phpjs.org/functions/preg_quote/
         // original by: booeyOH
         // improved by: Ates Goral (http://magnetiq.com)
@@ -61,7 +60,7 @@ class Quoter {
         //   returns 3: '\\\\\\.\\+\\*\\?\\[\\^\\]\\$\\(\\)\\{\\}\\=\\!\\<\\>\\|\\:'
 
         return String(userAgent)
-            .replace(new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]', 'g'), '\\$&')
+            .replace(new RegExp('[.\\\\+*?\\[^\\]$(){}=!<>|:\\-]', 'g'), '\\$&')
             .replace('\\\\*', '.*')
             .replace('\\\\?', '.')
             // the \\x replacement is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
@@ -83,107 +82,24 @@ class Quoter {
 
         // Undo the \\x replacement, that is a fix for "Der gro\xdfe BilderSauger 2.00u" user agent match
         // @source https://github.com/browscap/browscap-php
-        pattern = pattern
+        return pattern
             .replace('/(?<!\\\\)\\.\\*/gi', '\\*')
             .replace('/(?<!\\\\)\\./gi', '\\?')
-            .replace('/(?<!\\\\)\\\\x/gi', '\\x');
-
-        // replace \@ -> @
-        let re = new RegExp('\\\\\\@', 'gi');
-        pattern = pattern.replace(re, '@');
-
-        // replace \. -> \?
-        re = new RegExp('\\\\\\.', 'gi');
-        pattern = pattern.replace(re, '\\?');
-
-        // replace \\ -> \
-        re = new RegExp('\\\\\\\\', 'gi');
-        pattern = pattern.replace(re, '\\');
-
-        // replace \+ -> +
-        re = new RegExp('\\\\\\+', 'gi');
-        pattern = pattern.replace(re, '+');
-
-        // replace \[ -> [
-        re = new RegExp('\\\\\\[', 'gi');
-        pattern = pattern.replace(re, '[');
-
-        // replace \^ -> ^
-        re = new RegExp('\\\\\\^', 'gi');
-        pattern = pattern.replace(re, '^');
-
-        // replace \] -> ]
-        re = new RegExp('\\\\\\]', 'gi');
-        pattern = pattern.replace(re, ']');
-
-        // replace \$ -> $
-        re = new RegExp('\\\\\\$', 'gi');
-        pattern = pattern.replace(re, '$');
-
-        // replace \( -> (
-        re = new RegExp('\\\\\\(', 'gi');
-        pattern = pattern.replace(re, '(');
-
-        // replace \) -> )
-        re = new RegExp('\\\\\\)', 'gi');
-        pattern = pattern.replace(re, ')');
-
-        // replace \{ -> {
-        re = new RegExp('\\\\\\{', 'gi');
-        pattern = pattern.replace(re, '{');
-
-        // replace \} -> }
-        re = new RegExp('\\\\\\}', 'gi');
-        pattern = pattern.replace(re, '}');
-
-        // replace \= -> =
-        re = new RegExp('\\\\\\=', 'gi');
-        pattern = pattern.replace(re, '=');
-
-        // replace \! -> !
-        re = new RegExp('\\\\\\!', 'gi');
-        pattern = pattern.replace(re, '!');
-
-        // replace \< -> <
-        re = new RegExp('\\\\\\<', 'gi');
-        pattern = pattern.replace(re, '<');
-
-        // replace \> -> >
-        re = new RegExp('\\\\\\>', 'gi');
-        pattern = pattern.replace(re, '>');
-
-        // replace \| -> |
-        re = new RegExp('\\\\\\|', 'gi');
-        pattern = pattern.replace(re, '|');
-
-        // replace \: -> :
-        re = new RegExp('\\\\\\:', 'gi');
-        pattern = pattern.replace(re, ':');
-
-        // replace \- -> -
-        re = new RegExp('\\\\\\-', 'gi');
-        pattern = pattern.replace(re, '-');
-
-        // replace \+ -> +
-        re = new RegExp('\\\\\\+', 'gi');
-        pattern = pattern.replace(re, '+');
-
-        // replace .* -> *
-        re = new RegExp('\\.\\*', 'gi');
-        pattern = pattern.replace(re, '*');
-
-        // replace . -> ?
-        re = new RegExp('\\.', 'gi');
-        pattern = pattern.replace(re, '?');
-
-        // replace \? -> .
-        re = new RegExp('\\\\\\?', 'gi');
-        pattern = pattern.replace(re, '.');
-
-        // replace \/ -> /
-        re = new RegExp('\\\\\\/', 'gi');
-        pattern = pattern.replace(re, '/');
-        return pattern;
+            .replace('/(?<!\\\\)\\\\x/gi', '\\x')
+            // replace \. -> \?
+            .replace(new RegExp('\\\\\\.', 'gi'), '\\?')
+            // replace \\ -> \
+            .replace(new RegExp('\\\\\\\\', 'gi'), '\\')
+            // replace \+ -> +
+            .replace(new RegExp('\\\\([.\\\\+*\\[^\\]$(){}=!<>|:\\-@])', 'gi'), '$1')
+            // replace .* -> *
+            .replace(new RegExp('\\.\\*', 'gi'), '*')
+            // replace . -> ?
+            .replace(new RegExp('\\.', 'gi'), '?')
+            // replace \? -> .
+            .replace(new RegExp('\\\\\\?', 'gi'), '.')
+            // replace \/ -> /
+            .replace(new RegExp('\\\\\\/', 'gi'), '/');
     };
 }
 

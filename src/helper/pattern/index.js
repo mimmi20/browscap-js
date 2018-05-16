@@ -60,56 +60,43 @@ class GetPattern {
      *
      * @return {array}
      */
-    getPatterns (userAgent) {
-        const starts = PatternHelper.getHashForPattern(userAgent, true);
+    *getPatterns (userAgent) {
         const length = PatternHelper.getPatternLength(userAgent);
 
-        return starts
-            .map((tmpStart, i) => {
-                const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
+        // get patterns, first for the given browser and if that is not found,
+        // for the default browser (with a special key)
+        for (const tmpStart of PatternHelper.getHashForPattern(userAgent)) {
+            const tmpSubkey = SubKey.getPatternCacheSubkey(tmpStart);
 
-                return {
-                    tmpStart: tmpStart,
-                    file: this.cache.getItem('browscap.patterns.' + tmpSubkey, true)
-                }
-            })
-            .filter((map) => {
-                if (!map.file.success) {
-                    return false;
-                }
+            const file = this.cache.getItem('browscap.patterns.' + tmpSubkey, true);
 
-                if (!Array.isArray(map.file.content) && typeof map.file.content !== 'object') {
-                    return false;
-                }
+            if (!file.success) {
+                continue;
+            }
 
-                return map.file.content.length !== 0;
-            })
-            .map((map) => {
-                let patternListInner = [];
-                let found = false;
+            if ((!Array.isArray(file.content) && typeof file.content !== 'object') || file.content.length === 0) {
+                continue;
+            }
 
-                for (let j = 0; j < map.file.content.length; j++) {
-                    const buffer    = map.file.content[j];
-                    const split     = buffer.split("\t");
-                    const tmpBuffer = split.shift();
+            let found = false;
 
-                    if (tmpBuffer === map.tmpStart) {
-                        const len = split.shift();
+            for (const buffer of file.content) {
+                const split     = buffer.split("\t");
+                const tmpBuffer = split.shift();
 
-                        if (len <= length) {
-                            found = true;
-                            patternListInner.push(split);
-                        } else if (found === true) {
-                            break;
-                        }
+                if (tmpBuffer === tmpStart) {
+                    const len = split.shift();
+
+                    if (len <= length) {
+                        yield split;
                     }
-                }
 
-                return patternListInner;
-            })
-            .reduce((patternListInner, result) => {
-                return patternListInner.concat(result);
-            }, []);
+                    found = true;
+                } else if (found === true) {
+                    break;
+                }
+            }
+        }
     };
 }
 

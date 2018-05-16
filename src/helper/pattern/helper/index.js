@@ -61,48 +61,37 @@ class PatternHelper {
      * "Mozilla/" ... "M", so that the pattern hash is included.
      *
      * @param {string} pattern
-     * @param {boolean} variants
      * @return {string|array}
      */
-    static getHashForPattern (pattern, variants) {
-        const regex   = new RegExp('^([^\\.\\*\\?\\s\\r\\n\\\\]+).*$');
+    static *getHashForPattern (pattern) {
+        const regex   = new RegExp('^([^.*?\\s\\r\\n\\\\]+).*$');
         pattern     = pattern.substring(0, 32);
 
-        if (typeof variants === 'undefined') {
-            variants = false;
-        }
-
         if (!regex.test(pattern)){
-            return variants ? [md5('')] :  md5('');
+            yield md5('');
+            return;
         }
 
         const matches = pattern.match(regex);
 
         if (typeof matches[1] === 'undefined') {
-            return variants ? [md5('')] :  md5('');
+            yield md5('');
+            return;
         }
 
         let string = matches[1];
 
-        if (variants) {
-            let patternStarts = [];
-
-            for (let i = string.length; i >= 1; i--) {
-                string          = string.substring(0, i);
-                patternStarts.push(md5(string));
-            }
-
-            // Add empty pattern start to include patterns that start with "*",
-            // e.g. "*FAST Enterprise Crawler*"
-            patternStarts.push(md5(''));
-
-            // add special key to fall back to the default browser
-            patternStarts.push('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz');
-
-            return patternStarts;
+        for (let i = string.length; i >= 1; i--) {
+            string          = string.substring(0, i);
+            yield md5(string);
         }
 
-        return md5(string);
+        // Add empty pattern start to include patterns that start with "*",
+        // e.g. "*FAST Enterprise Crawler*"
+        yield md5('');
+
+        // add special key to fall back to the default browser
+        yield 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
     };
 
     /**

@@ -60,18 +60,15 @@ class Ini {
     getBrowser (userAgent) {
         userAgent = userAgent.toLowerCase();
 
-        const patternList = this.patternHelper.getPatterns(userAgent);
-
-        for (let i = 0; i < patternList.length; i++) {
-            const patterns       = patternList[i];
+        for (const patterns of this.patternHelper.getPatterns(userAgent)) {
             const patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
 
             if (!patternToMatch.test(userAgent)) {
                 continue;
             }
 
-            for (let j = 0; j < patterns.length; j++) {
-                let pattern       = patterns[j].replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+            for (let pattern of patterns) {
+                pattern             = pattern.replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
                 const quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
                 if (!quotedPattern.test(userAgent)) {
