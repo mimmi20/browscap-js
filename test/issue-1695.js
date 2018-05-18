@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1695. (57 tests)', function () {
   test('issue-1695-A ["Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)"]', function () {

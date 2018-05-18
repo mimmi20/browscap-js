@@ -26,14 +26,16 @@
  * @link       https://github.com/mimmi20/browscap-js/
  */
 
-"use strict";
+'use strict';
 // Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
 // backward-compatiblity with existing code that expects us to return a
 // synchronous result after doing synchronous I/O
-if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
-    var nodejs_only = "";
-    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
+if (typeof process === 'object' && typeof process.versions === 'object' && process.versions.node) {
+    let nodejsOnly = '';
+    global.Promise = require(nodejsOnly + 'synchronous-promise').SynchronousPromise;
 }
+
+const GetData = require('../helper/data');
 
 /**
  * json parser class
@@ -45,64 +47,81 @@ if (typeof(process) === 'object' && typeof(process.versions) === 'object' && pro
  * @license    http://www.opensource.org/licenses/MIT MIT License
  * @link       https://github.com/mimmi20/browscap-js/
  */
-module.exports = function Ini (patternHelper, dataHelper) {
-    this.patternHelper = patternHelper;
-    this.dataHelper    = dataHelper;
+class Ini {
+    /**
+     * @param {PatternHelper} patternHelper
+     * @param {GetData} dataHelper
+     */
+    constructor(patternHelper, dataHelper) {
+        this.patternHelper = patternHelper;
+        this.dataHelper = dataHelper;
+    }
 
     /**
      * Gets the browser data formatr for the given user agent
      * (or null if no data avaailble, no even the default browser)
      *
-     * @param  userAgent
-     * @return Object|null
+     * @param {string} userAgent
+     * @return {object|null}
      */
-    this.getBrowser = function getBrowser (userAgent) {
+    getBrowser(userAgent) {
         userAgent = userAgent.toLowerCase();
 
-        return this.patternHelper.getPatterns(userAgent).then(function _patternListLoopFn(patternList) {
-            var _patternListLoop = _patternListLoopFn.bind(this);
+        return this.patternHelper.getPatterns(userAgent).then(
+            function _patternListLoopFn(patternList) {
+                const _patternListLoop = _patternListLoopFn.bind(this);
 
-            if(patternList.length > 0) {
-                var patterns = patternList.shift();
+                if (patternList.length === 0) {
+                    // return default
+                    return GetData.getDefaultProperties();
+                }
 
-                var patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
+                const patterns = patternList.shift();
+
+                const patternToMatch = new RegExp('^(?:' + patterns.join(')|(?:') + ')$', 'i');
 
                 if (!patternToMatch.test(userAgent)) {
                     return _patternListLoop(patternList);
                 }
 
-                return Promise.all(patterns.map((patternText) => {
-                    var pattern       = patternText.replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
-                    var quotedPattern = new RegExp('^' + pattern + '$', 'i');
+                return Promise.all(
+                    patterns
+                        .map((patternText) => {
+                            const pattern = patternText.replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
+                            const quotedPattern = new RegExp('^' + pattern + '$', 'i');
 
-                    return [pattern, quotedPattern];
-                }).filter((item) => {
-                    var pattern = item[0], quotedPattern = item[1];
-                    return quotedPattern.test(userAgent);
-                }).map((item) => {
-                    var pattern = item[0], quotedPattern = item[1];
-                    var matches = userAgent.match(quotedPattern);
+                            return [pattern, quotedPattern];
+                        })
+                        .filter((item) => {
+                            const quotedPattern = item[1];
+                            return quotedPattern.test(userAgent);
+                        })
+                        .map((item) => {
+                            let pattern = item[0];
+                            const quotedPattern = item[1];
+                            const matches = userAgent.match(quotedPattern);
 
-                    // Insert the digits back into the pattern, so that we can search the settings for it
-                    if (matches.length > 1) {
-                        matches.shift();
+                            // Insert the digits back into the pattern, so that we can search the settings for it
+                            if (matches.length > 1) {
+                                matches.shift();
 
-                        for (var k = 0; k < matches.length; k++){
-                            var numPos = pattern.indexOf('(\\d)');
-                            var sub    = pattern.substr(numPos, 4);
-                            pattern    = pattern.replace(sub, matches[k]);
-                        }
-                    }
+                                for (let k = 0; k < matches.length; k++) {
+                                    const numPos = pattern.indexOf('(\\d)');
+                                    const sub = pattern.substr(numPos, 4);
+                                    pattern = pattern.replace(sub, matches[k]);
+                                }
+                            }
 
-                    return this.dataHelper.getSettings(pattern, {});
-                })).then((patternSettings) => {
-                    for (var settings of patternSettings) {
+                            return this.dataHelper.getSettings(pattern, {});
+                        })
+                ).then((patternSettings) => {
+                    for (let settings of patternSettings) {
                         // Try to get settings - as digits have been replaced to speed up the pattern search,
                         // we won't always find the data in the first step - so check if settings have been found and if not,
                         // search for the next pattern.
-                        var hasResult = false;
+                        let hasResult = false;
 
-                        for (var property in settings) {
+                        for (let property in settings) {
                             if (settings.hasOwnProperty(property)) {
                                 hasResult = true;
                                 break;
@@ -115,10 +134,9 @@ module.exports = function Ini (patternHelper, dataHelper) {
 
                     return _patternListLoop(patternList);
                 });
-            } else {
-                // return default
-                return this.dataHelper.getDefaultProperties();
-            }
-        }.bind(this));
-    };
-};
+            }.bind(this)
+        );
+    }
+}
+
+module.exports = Ini;

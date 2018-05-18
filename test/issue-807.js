@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 807. (1 test)', function () {
   test('issue-807 ["Mozilla/5.0 (compatible; Orangebot/2.0; support.orangebot@orange.com)"]', function () {

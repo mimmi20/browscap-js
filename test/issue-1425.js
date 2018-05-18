@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1425. (115 tests)', function () {
   test('issue-1425-A ["JUC (Linux; U; 2.3.4; zh-cn; GT-S5570; 240*320) UCWEB7.9.0.94/139/352"]', function () {

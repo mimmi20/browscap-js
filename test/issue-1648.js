@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 1648. (1 test)', function () {
   test('issue-1648 ["Mozilla/5.0 (Windows; U; Windows NT 6.2; fr-FR; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)"]', function () {

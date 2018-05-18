@@ -1,9 +1,9 @@
 "use strict";
 
-var assert = require('assert'),
-    Browscap = require('../browscap.js'),
-    browscap = new Browscap(),
-    browser;
+const assert = require('assert');
+const Browscap = require('../src/index.js');
+const browscap = new Browscap();
+let browser;
 
 suite('checking for issue 329. (12 tests)', function () {
   test('issue-329-A ["AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)"]', function () {
