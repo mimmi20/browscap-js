@@ -27,13 +27,8 @@
  */
 
 "use strict";
-// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
-// backward-compatiblity with existing code that expects us to return a
-// synchronous result after doing synchronous I/O
-if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
-    var nodejs_only = "";
-    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
-}
+
+var SynchronousPromise = require('synchronous-promise').SynchronousPromise;
 
 /**
  * json parser class
@@ -71,7 +66,7 @@ module.exports = function Ini (patternHelper, dataHelper) {
                     return _patternListLoop(patternList);
                 }
 
-                return Promise.all(patterns.map((patternText) => {
+                return SynchronousPromise.all(patterns.map((patternText) => {
                     var pattern       = patternText.replace(new RegExp('\\[\\\\d\\]', 'gi'), '(\\d)');
                     var quotedPattern = new RegExp('^' + pattern + '$', 'i');
 

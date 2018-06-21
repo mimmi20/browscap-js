@@ -27,19 +27,14 @@
  */
 
 "use strict";
-// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
-// backward-compatiblity with existing code that expects us to return a
-// synchronous result after doing synchronous I/O
-if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
-    var nodejs_only = "";
-    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
-}
 
 var SubKey = require('../subkey');
 var subkeyHelper = new SubKey();
 
 var PatternHelper = require('../pattern/helper');
 var patternHelper = new PatternHelper();
+
+var SynchronousPromise = require('synchronous-promise').SynchronousPromise;
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -157,7 +152,7 @@ module.exports = function GetData (cache, quoter) {
         var patternhash = patternHelper.getHashForParts(pattern);
         var subkey      = subkeyHelper.getIniPartCacheSubKey(patternhash);
 
-        return Promise.resolve(this.cache.getItem('browscap.iniparts.' + subkey, true)).then((file) => {
+        return SynchronousPromise.resolve(this.cache.getItem('browscap.iniparts.' + subkey, true)).then((file) => {
             if (!file.success) {
                 return {};
             }

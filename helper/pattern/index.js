@@ -27,13 +27,8 @@
  */
 
 "use strict";
-// Override `Promise` with `SynchronousPromise` in NodeJS in order to provide
-// backward-compatiblity with existing code that expects us to return a
-// synchronous result after doing synchronous I/O
-if (typeof(process) === 'object' && typeof(process.versions) === 'object' && process.versions.node) {
-    var nodejs_only = "";
-    global.Promise = require(nodejs_only + "synchronous-promise").SynchronousPromise;
-}
+
+var SynchronousPromise = require('synchronous-promise').SynchronousPromise;
 
 /**
  * extracts the pattern and the data for theses pattern from the ini content, optimized for PHP 5.5+
@@ -71,10 +66,10 @@ module.exports = function GetPattern (cache) {
 
         // get patterns, first for the given browser and if that is not found,
         // for the default browser (with a special key)
-        return Promise.all(starts.map((tmpStart) => {
+        return SynchronousPromise.all(starts.map((tmpStart) => {
             var tmpSubkey = subkeyHelper.getPatternCacheSubkey(tmpStart);
 
-            return Promise.resolve(this.cache.getItem('browscap.patterns.' + tmpSubkey, true));
+            return SynchronousPromise.resolve(this.cache.getItem('browscap.patterns.' + tmpSubkey, true));
         })).then((files) => {
             var patternList = [];
 
