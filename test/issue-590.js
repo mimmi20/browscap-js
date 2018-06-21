@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 590. (3 tests)', function () {
   test('issue-590-A ["Mozilla/5.0 (compatible; HyperCrawl/0.2; +http://www.seograph.net/bot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; HyperCrawl/0.2; +http://www.seograph.net/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; HyperCrawl/0.2; +http://www.seograph.net/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'HyperCrawl', 'Expected actual "Browser" to be \'HyperCrawl\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 590. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-590-B ["iZSearch.com"]', function () {
-    browser = browscap.getBrowser('iZSearch.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iZSearch.com');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iZSearch Bot', 'Expected actual "Browser" to be \'iZSearch Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 590. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-590-C ["Mozilla/2.0 (compatible; ARCHIVE.ORG.UA crawler)"]', function () {
-    browser = browscap.getBrowser('Mozilla/2.0 (compatible; ARCHIVE.ORG.UA crawler)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/2.0 (compatible; ARCHIVE.ORG.UA crawler)');
 
     assert.strictEqual(browser['Comment'], 'Internet Archive', 'Expected actual "Comment" to be \'Internet Archive\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Internet Archive', 'Expected actual "Browser" to be \'Internet Archive\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

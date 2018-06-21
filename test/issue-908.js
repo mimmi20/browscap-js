@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 908. (3 tests)', function () {
   test('issue-908-A ["GetintentCrawler getintent.com"]', function () {
-    browser = browscap.getBrowser('GetintentCrawler getintent.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('GetintentCrawler getintent.com');
 
     assert.strictEqual(browser['Comment'], 'GetintentCrawler', 'Expected actual "Comment" to be \'GetintentCrawler\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Getintent Crawler', 'Expected actual "Browser" to be \'Getintent Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 908. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-908-B ["MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)"]', function () {
-    browser = browscap.getBrowser('MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MonitorBacklinksWP (+http://monitorbacklinks.com/blog/incoming-links/)');
 
     assert.strictEqual(browser['Comment'], 'BCKLINKS', 'Expected actual "Comment" to be \'BCKLINKS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Incoming Links - WordPress Plugin', 'Expected actual "Browser" to be \'Incoming Links - WordPress Plugin\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 908. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-908-C ["AddThis.com (http://support.addthis.com/)"]', function () {
-    browser = browscap.getBrowser('AddThis.com (http://support.addthis.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AddThis.com (http://support.addthis.com/)');
 
     assert.strictEqual(browser['Comment'], 'AddThis.com robot', 'Expected actual "Comment" to be \'AddThis.com robot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AddThis.com robot', 'Expected actual "Browser" to be \'AddThis.com robot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

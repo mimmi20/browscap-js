@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1618. (2 tests)', function () {
   test('issue-1618-A ["CamelHttpStream/1.0 Evolution/3.2.3"]', function () {
-    browser = browscap.getBrowser('CamelHttpStream/1.0 Evolution/3.2.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('CamelHttpStream/1.0 Evolution/3.2.3');
 
     assert.strictEqual(browser['Comment'], 'Evolution 3.2', 'Expected actual "Comment" to be \'Evolution 3.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Evolution', 'Expected actual "Browser" to be \'Evolution\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1618. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1618-B ["Evolution/3.26.1"]', function () {
-    browser = browscap.getBrowser('Evolution/3.26.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Evolution/3.26.1');
 
     assert.strictEqual(browser['Comment'], 'Evolution 3.26', 'Expected actual "Comment" to be \'Evolution 3.26\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Evolution', 'Expected actual "Browser" to be \'Evolution\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

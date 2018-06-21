@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1057. (3 tests)', function () {
   test('issue-1057-A ["Mozilla/5.0(Linux;Android 4.4.2;es-us;CHC-U03 Build/HuweiCHC-U03)AppleWebKit/537.36 (KHTML, likeGecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0(Linux;Android 4.4.2;es-us;CHC-U03 Build/HuweiCHC-U03)AppleWebKit/537.36 (KHTML, likeGecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0(Linux;Android 4.4.2;es-us;CHC-U03 Build/HuweiCHC-U03)AppleWebKit/537.36 (KHTML, likeGecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36');
 
     assert.strictEqual(browser['Comment'], 'Android WebView 4.0', 'Expected actual "Comment" to be \'Android WebView 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Android WebView', 'Expected actual "Browser" to be \'Android WebView\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1057. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc', 'Expected actual "RenderingEngine_Maker" to be \'Google Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1057-B ["Mozilla/5.1 (Linux; U; Android 5.1; es-cl; Bmobile_AX810 Build/ JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.1 (Linux; U; Android 5.1; es-cl; Bmobile_AX810 Build/ JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.1 (Linux; U; Android 5.1; es-cl; Bmobile_AX810 Build/ JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30');
 
     assert.strictEqual(browser['Comment'], 'Android Browser 4.0', 'Expected actual "Comment" to be \'Android Browser 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Android', 'Expected actual "Browser" to be \'Android\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1057. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1057-C ["Mozilla/5.0(Linux;U;Android 4.2.2;ru-ru;MTC 982 Build/JDQ39) AppleWebKit/534.30(KHTML,like Gecko) Version/4.2 Mobile Safari/534.30 SVN/160HVG1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0(Linux;U;Android 4.2.2;ru-ru;MTC 982 Build/JDQ39) AppleWebKit/534.30(KHTML,like Gecko) Version/4.2 Mobile Safari/534.30 SVN/160HVG1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0(Linux;U;Android 4.2.2;ru-ru;MTC 982 Build/JDQ39) AppleWebKit/534.30(KHTML,like Gecko) Version/4.2 Mobile Safari/534.30 SVN/160HVG1');
 
     assert.strictEqual(browser['Comment'], 'Android Browser 4.2', 'Expected actual "Comment" to be \'Android Browser 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Android', 'Expected actual "Browser" to be \'Android\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

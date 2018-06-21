@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1172. (2 tests)', function () {
   test('issue-1172-1 ["TestApp/1.0 CFNetwork/808.1.4 Darwin/16.1.0"]', function () {
-    browser = browscap.getBrowser('TestApp/1.0 CFNetwork/808.1.4 Darwin/16.1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('TestApp/1.0 CFNetwork/808.1.4 Darwin/16.1.0');
 
     assert.strictEqual(browser['Comment'], 'CFNetwork for iOS', 'Expected actual "Comment" to be \'CFNetwork for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'CFNetwork', 'Expected actual "Browser" to be \'CFNetwork\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1172. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1172-2 ["TestApp/1.0 CFNetwork/808.2.16 Darwin/16.3.0"]', function () {
-    browser = browscap.getBrowser('TestApp/1.0 CFNetwork/808.2.16 Darwin/16.3.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('TestApp/1.0 CFNetwork/808.2.16 Darwin/16.3.0');
 
     assert.strictEqual(browser['Comment'], 'CFNetwork for iOS', 'Expected actual "Comment" to be \'CFNetwork for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'CFNetwork', 'Expected actual "Browser" to be \'CFNetwork\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

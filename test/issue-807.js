@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 807. (1 test)', function () {
   test('issue-807 ["Mozilla/5.0 (compatible; Orangebot/2.0; support.orangebot@orange.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Orangebot/2.0; support.orangebot@orange.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Orangebot/2.0; support.orangebot@orange.com)');
 
     assert.strictEqual(browser['Comment'], 'Orangebot', 'Expected actual "Comment" to be \'Orangebot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Orangebot', 'Expected actual "Browser" to be \'Orangebot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1289. (4 tests)', function () {
   test('issue-1289-A ["Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SEO Scanners Bot', 'Expected actual "Browser" to be \'SEO Scanners Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1289. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1289-B ["Mozilla/5.0 (compatible; TeeRaidBot; +https://teeraid.com/bot/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; TeeRaidBot; +https://teeraid.com/bot/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; TeeRaidBot; +https://teeraid.com/bot/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'TeeRaidBot', 'Expected actual "Browser" to be \'TeeRaidBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1289. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1289-C ["Mozilla/5.0 (compatible; ToutiaoSpider/1.0; http://web.toutiao.com/media_cooperation/;)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; ToutiaoSpider/1.0; http://web.toutiao.com/media_cooperation/;)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; ToutiaoSpider/1.0; http://web.toutiao.com/media_cooperation/;)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'ToutiaoSpider', 'Expected actual "Browser" to be \'ToutiaoSpider\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1289. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1289-D ["Mozilla/5.0 (compatible; TrialPay URL checker; +http://www.trialpay.com) Gecko/20100101 Firefox/19.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; TrialPay URL checker; +http://www.trialpay.com) Gecko/20100101 Firefox/19.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; TrialPay URL checker; +http://www.trialpay.com) Gecko/20100101 Firefox/19.0');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'TrialPay URL Checker', 'Expected actual "Browser" to be \'TrialPay URL Checker\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

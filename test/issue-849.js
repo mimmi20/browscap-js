@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 849. (17 tests)', function () {
   test('issue-849-A ["SophosUpdateManager/1.5.7.50 SDDS/2.0 (u= EO2ANA123G c= 6342da15-f351-4ab7-9656-3f5f2d50885d )"]', function () {
-    browser = browscap.getBrowser('SophosUpdateManager/1.5.7.50 SDDS/2.0 (u= EO2ANA123G c= 6342da15-f351-4ab7-9656-3f5f2d50885d )');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SophosUpdateManager/1.5.7.50 SDDS/2.0 (u= EO2ANA123G c= 6342da15-f351-4ab7-9656-3f5f2d50885d )');
 
     assert.strictEqual(browser['Comment'], 'SophosUpdateManager', 'Expected actual "Comment" to be \'SophosUpdateManager\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SophosUpdateManager', 'Expected actual "Browser" to be \'SophosUpdateManager\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-B ["Debian APT-HTTP/1.3 (1.0.1ubuntu2)"]', function () {
-    browser = browscap.getBrowser('Debian APT-HTTP/1.3 (1.0.1ubuntu2)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Debian APT-HTTP/1.3 (1.0.1ubuntu2)');
 
     assert.strictEqual(browser['Comment'], 'Debian APT-HTTP', 'Expected actual "Comment" to be \'Debian APT-HTTP\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apt HTTP Transport', 'Expected actual "Browser" to be \'Apt HTTP Transport\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-C ["Windows-Update-Agent/7.9.9600.17729 Client-Protocol/1.21"]', function () {
-    browser = browscap.getBrowser('Windows-Update-Agent/7.9.9600.17729 Client-Protocol/1.21');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Windows-Update-Agent/7.9.9600.17729 Client-Protocol/1.21');
 
     assert.strictEqual(browser['Comment'], 'Windows-Update-Agent', 'Expected actual "Comment" to be \'Windows-Update-Agent\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Windows-Update-Agent', 'Expected actual "Browser" to be \'Windows-Update-Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-D ["urlgrabber/3.9.1 yum/3.2.29"]', function () {
-    browser = browscap.getBrowser('urlgrabber/3.9.1 yum/3.2.29');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('urlgrabber/3.9.1 yum/3.2.29');
 
     assert.strictEqual(browser['Comment'], 'urlgrabber', 'Expected actual "Comment" to be \'urlgrabber\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'URL Grabber', 'Expected actual "Browser" to be \'URL Grabber\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-F ["urlgrabber/3.10 yum/3.4.3"]', function () {
-    browser = browscap.getBrowser('urlgrabber/3.10 yum/3.4.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('urlgrabber/3.10 yum/3.4.3');
 
     assert.strictEqual(browser['Comment'], 'urlgrabber', 'Expected actual "Comment" to be \'urlgrabber\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'URL Grabber', 'Expected actual "Browser" to be \'URL Grabber\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-G ["UCS (ESX) - 4.0-3 errata302 - 28d414cc-2dac-4c0e-a34a-734020b8af66 - 00000000-0000-0000-0000-000000000000 -"]', function () {
-    browser = browscap.getBrowser('UCS (ESX) - 4.0-3 errata302 - 28d414cc-2dac-4c0e-a34a-734020b8af66 - 00000000-0000-0000-0000-000000000000 -');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCS (ESX) - 4.0-3 errata302 - 28d414cc-2dac-4c0e-a34a-734020b8af66 - 00000000-0000-0000-0000-000000000000 -');
 
     assert.strictEqual(browser['Comment'], 'Univention Corporate Server 4.0', 'Expected actual "Comment" to be \'Univention Corporate Server 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Univention Corporate Server', 'Expected actual "Browser" to be \'Univention Corporate Server\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-H ["Ubuntu APT-HTTP/1.3 (0.7.20.2ubuntu6)"]', function () {
-    browser = browscap.getBrowser('Ubuntu APT-HTTP/1.3 (0.7.20.2ubuntu6)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Ubuntu APT-HTTP/1.3 (0.7.20.2ubuntu6)');
 
     assert.strictEqual(browser['Comment'], 'Ubuntu APT-HTTP', 'Expected actual "Comment" to be \'Ubuntu APT-HTTP\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apt HTTP Transport', 'Expected actual "Browser" to be \'Apt HTTP Transport\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-I ["Chrome LINUX 45.0.2454.85 (4c2743615eaa2806ad014c59bf6acbb652cf3aa8)-devel"]', function () {
-    browser = browscap.getBrowser('Chrome LINUX 45.0.2454.85 (4c2743615eaa2806ad014c59bf6acbb652cf3aa8)-devel');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Chrome LINUX 45.0.2454.85 (4c2743615eaa2806ad014c59bf6acbb652cf3aa8)-devel');
 
     assert.strictEqual(browser['Comment'], 'Default Browser', 'Expected actual "Comment" to be \'Default Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Default Browser', 'Expected actual "Browser" to be \'Default Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-J ["Microsoft-CryptoAPI/6.3"]', function () {
-    browser = browscap.getBrowser('Microsoft-CryptoAPI/6.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft-CryptoAPI/6.3');
 
     assert.strictEqual(browser['Comment'], 'Microsoft CryptoAPI', 'Expected actual "Comment" to be \'Microsoft CryptoAPI\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Microsoft CryptoAPI', 'Expected actual "Browser" to be \'Microsoft CryptoAPI\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-K ["libwww-perl/6.05"]', function () {
-    browser = browscap.getBrowser('libwww-perl/6.05');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('libwww-perl/6.05');
 
     assert.strictEqual(browser['Comment'], 'libwww', 'Expected actual "Comment" to be \'libwww\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'libwww', 'Expected actual "Browser" to be \'libwww\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-L ["OpenBSD ftp"]', function () {
-    browser = browscap.getBrowser('OpenBSD ftp');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('OpenBSD ftp');
 
     assert.strictEqual(browser['Comment'], 'OpenBSD ftp', 'Expected actual "Comment" to be \'OpenBSD ftp\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'OpenBSD ftp', 'Expected actual "Browser" to be \'OpenBSD ftp\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-M ["SophosAgent/1.0 (type= spa )"]', function () {
-    browser = browscap.getBrowser('SophosAgent/1.0 (type= spa )');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SophosAgent/1.0 (type= spa )');
 
     assert.strictEqual(browser['Comment'], 'SophosAgent', 'Expected actual "Comment" to be \'SophosAgent\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SophosAgent', 'Expected actual "Browser" to be \'SophosAgent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-N ["libcurl-agent/1.0"]', function () {
-    browser = browscap.getBrowser('libcurl-agent/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('libcurl-agent/1.0');
 
     assert.strictEqual(browser['Comment'], 'libcurl', 'Expected actual "Comment" to be \'libcurl\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'libcurl', 'Expected actual "Browser" to be \'libcurl\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-O ["Wget/1.14 (linux-gnu)"]', function () {
-    browser = browscap.getBrowser('Wget/1.14 (linux-gnu)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Wget/1.14 (linux-gnu)');
 
     assert.strictEqual(browser['Comment'], 'wget 1.14', 'Expected actual "Comment" to be \'wget 1.14\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'wget', 'Expected actual "Browser" to be \'wget\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-P ["Windows-Update-Agent/7.9.9600.18094 Client-Protocol/1.21"]', function () {
-    browser = browscap.getBrowser('Windows-Update-Agent/7.9.9600.18094 Client-Protocol/1.21');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Windows-Update-Agent/7.9.9600.18094 Client-Protocol/1.21');
 
     assert.strictEqual(browser['Comment'], 'Windows-Update-Agent', 'Expected actual "Comment" to be \'Windows-Update-Agent\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Windows-Update-Agent', 'Expected actual "Browser" to be \'Windows-Update-Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-Q ["curl/7.29.0"]', function () {
-    browser = browscap.getBrowser('curl/7.29.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('curl/7.29.0');
 
     assert.strictEqual(browser['Comment'], 'cURL', 'Expected actual "Comment" to be \'cURL\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'cURL', 'Expected actual "Browser" to be \'cURL\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 849. (17 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-849-R ["jupdate"]', function () {
-    browser = browscap.getBrowser('jupdate');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('jupdate');
 
     assert.strictEqual(browser['Comment'], 'Jupdate', 'Expected actual "Comment" to be \'Jupdate\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Jupdate', 'Expected actual "Browser" to be \'Jupdate\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

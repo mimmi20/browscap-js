@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1277. (2 tests)', function () {
   test('issue-1277-A ["Mozilla/5.0 (compatible; Yeti/1.1; +http://help.naver.com/support/robots.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Yeti/1.1; +http://help.naver.com/support/robots.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Yeti/1.1; +http://help.naver.com/support/robots.html)');
 
     assert.strictEqual(browser['Comment'], 'NaverBot', 'Expected actual "Comment" to be \'NaverBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NaverBot', 'Expected actual "Browser" to be \'NaverBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1277. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1277-B ["Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/bot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/bot)');
 
     assert.strictEqual(browser['Comment'], 'NaverBot', 'Expected actual "Comment" to be \'NaverBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NaverBot', 'Expected actual "Browser" to be \'NaverBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

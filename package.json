@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "browscap-js-cache": "^2.0.1",
-    "browscap-json-cache-files": "^1.2.6000028",
+    "browscap-json-cache-files": "^1.2.6000029",
     "md5": "^2.0.0",
     "synchronous-promise": "^2.0.5"
   },

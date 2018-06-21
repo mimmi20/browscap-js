@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 330. (16 tests)', function () {
+suite('checking for issue 330. (10 tests)', function () {
   test('issue-330-A ["Instagram 4.2.5 (iPad3,6; iPhone OS 7_0_6; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 4.2.5 (iPad3,6; iPhone OS 7_0_6; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 4.2.5 (iPad3,6; iPhone OS 7_0_6; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 4.2 for iOS', 'Expected actual "Comment" to be \'Instagram App 4.2 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-B ["Instagram 6.0.1 (iPad3,4; iPhone OS 7_0_3; en_AU; en-GB) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 6.0.1 (iPad3,4; iPhone OS 7_0_3; en_AU; en-GB) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 6.0.1 (iPad3,4; iPhone OS 7_0_3; en_AU; en-GB) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 6.0 for iOS', 'Expected actual "Comment" to be \'Instagram App 6.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-C ["Instagram 4.1.0 (iPad3,3; iPhone OS 6_1_3; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 4.1.0 (iPad3,3; iPhone OS 6_1_3; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 4.1.0 (iPad3,3; iPhone OS 6_1_3; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 4.1 for iOS', 'Expected actual "Comment" to be \'Instagram App 4.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-D ["Instagram 4.2.7 (iPhone6,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 4.2.7 (iPhone6,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 4.2.7 (iPhone6,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 4.2 for iOS', 'Expected actual "Comment" to be \'Instagram App 4.2 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-E ["Instagram 5.0.3 (iPad3,6; iPhone OS 7_1; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 5.0.3 (iPad3,6; iPhone OS 7_1; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 5.0.3 (iPad3,6; iPhone OS 7_1; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 5.0 for iOS', 'Expected actual "Comment" to be \'Instagram App 5.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-F ["Instagram 6.0.1 (iPhone3,3; iPhone OS 7_1; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 6.0.1 (iPhone3,3; iPhone OS 7_1; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 6.0.1 (iPhone3,3; iPhone OS 7_1; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 6.0 for iOS', 'Expected actual "Comment" to be \'Instagram App 6.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-G ["Instagram 5.0.9 (iPhone6,2; iPhone OS 7_0_4; ar_SA; ar) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 5.0.9 (iPhone6,2; iPhone OS 7_0_4; ar_SA; ar) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 5.0.9 (iPhone6,2; iPhone OS 7_0_4; ar_SA; ar) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 5.0 for iOS', 'Expected actual "Comment" to be \'Instagram App 5.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-H ["Instagram 4.1.2 (iPhone5,1; iPhone OS 6_1_4; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 4.1.2 (iPhone5,1; iPhone OS 6_1_4; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 4.1.2 (iPhone5,1; iPhone OS 6_1_4; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 4.1 for iOS', 'Expected actual "Comment" to be \'Instagram App 4.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-I ["Instagram 4.1.4 (iPhone3,1; iPhone OS 5_0_1; en_MT; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 4.1.4 (iPhone3,1; iPhone OS 5_0_1; en_MT; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 4.1.4 (iPhone3,1; iPhone OS 5_0_1; en_MT; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 4.1 for iOS', 'Expected actual "Comment" to be \'Instagram App 4.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 330. (16 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-330-K ["Instagram 6.0.0 (iPhone4,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+"]', function () {
-    browser = browscap.getBrowser('Instagram 6.0.0 (iPhone4,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Instagram 6.0.0 (iPhone4,1; iPhone OS 7_1_1; en_US; en) AppleWebKit/420+');
 
     assert.strictEqual(browser['Comment'], 'Instagram App 6.0 for iOS', 'Expected actual "Comment" to be \'Instagram App 6.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instagram App', 'Expected actual "Browser" to be \'Instagram App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

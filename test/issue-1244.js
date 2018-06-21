@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1244. (2 tests)', function () {
+suite('checking for issue 1244. (1 test)', function () {
   test('issue-1244 ["RedFlagDealsApp/3.7.2 (Linux; U; Android 4.1.1; en-ca; Arc Build/JRO03L) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"]', function () {
-    browser = browscap.getBrowser('RedFlagDealsApp/3.7.2 (Linux; U; Android 4.1.1; en-ca; Arc Build/JRO03L) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('RedFlagDealsApp/3.7.2 (Linux; U; Android 4.1.1; en-ca; Arc Build/JRO03L) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30');
 
     assert.strictEqual(browser['Comment'], 'RedFlagDeals Mobile App', 'Expected actual "Comment" to be \'RedFlagDeals Mobile App\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'RedFlagDeals Mobile App', 'Expected actual "Browser" to be \'RedFlagDeals Mobile App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

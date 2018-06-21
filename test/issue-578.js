@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 578. (2 tests)', function () {
   test('issue-578-A ["check_http/v1.4.16 (nagios-plugins 1.4.16)"]', function () {
-    browser = browscap.getBrowser('check_http/v1.4.16 (nagios-plugins 1.4.16)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('check_http/v1.4.16 (nagios-plugins 1.4.16)');
 
     assert.strictEqual(browser['Comment'], 'Nagios', 'Expected actual "Comment" to be \'Nagios\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nagios', 'Expected actual "Browser" to be \'Nagios\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 578. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-578-B ["check_http/v2.0 (nagios-plugins 2.0)"]', function () {
-    browser = browscap.getBrowser('check_http/v2.0 (nagios-plugins 2.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('check_http/v2.0 (nagios-plugins 2.0)');
 
     assert.strictEqual(browser['Comment'], 'Nagios', 'Expected actual "Comment" to be \'Nagios\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nagios', 'Expected actual "Browser" to be \'Nagios\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

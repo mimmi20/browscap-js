@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 928. (3 tests)', function () {
   test('issue-928-A ["Mozilla/5.0 (iOS; U; en) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
 
     assert.strictEqual(browser['Comment'], 'Adobe AIR 13.0 for iOS', 'Expected actual "Comment" to be \'Adobe AIR 13.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adobe AIR', 'Expected actual "Browser" to be \'Adobe AIR\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 928. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-928-B ["Mozilla/5.0 (iOS; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
 
     assert.strictEqual(browser['Comment'], 'Adobe AIR 13.0 for iOS', 'Expected actual "Comment" to be \'Adobe AIR 13.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adobe AIR', 'Expected actual "Browser" to be \'Adobe AIR\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 928. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-928-C ["Mozilla/5.0 (iOS; U; en-GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en-GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (iOS; U; en-GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
 
     assert.strictEqual(browser['Comment'], 'Adobe AIR 13.0 for iOS', 'Expected actual "Comment" to be \'Adobe AIR 13.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adobe AIR', 'Expected actual "Browser" to be \'Adobe AIR\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

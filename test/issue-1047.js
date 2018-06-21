@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1047. (2 tests)', function () {
   test('issue-1047-A ["Kodi/16.1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/16.1-Git:20160424-c327c53"]', function () {
-    browser = browscap.getBrowser('Kodi/16.1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/16.1-Git:20160424-c327c53');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Kodi/16.1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/16.1-Git:20160424-c327c53');
 
     assert.strictEqual(browser['Comment'], 'Kodi Media Center 16.1', 'Expected actual "Comment" to be \'Kodi Media Center 16.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Kodi Media Center', 'Expected actual "Browser" to be \'Kodi Media Center\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1047. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1047-B ["Kodi/17.0-BETA1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/17.0-BETA1-Git:20160821-81d5d26"]', function () {
-    browser = browscap.getBrowser('Kodi/17.0-BETA1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/17.0-BETA1-Git:20160821-81d5d26');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Kodi/17.0-BETA1 (Windows NT 10.0; WOW64) App_Bitness/32 Version/17.0-BETA1-Git:20160821-81d5d26');
 
     assert.strictEqual(browser['Comment'], 'Kodi Media Center 17.0', 'Expected actual "Comment" to be \'Kodi Media Center 17.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Kodi Media Center', 'Expected actual "Browser" to be \'Kodi Media Center\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

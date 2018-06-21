@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1362. (23 tests)', function () {
+suite('checking for issue 1362. (22 tests)', function () {
   test('issue-1362-A ["Opera/8.50 (Macintosh; U; fr)"]', function () {
-    browser = browscap.getBrowser('Opera/8.50 (Macintosh; U; fr)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.50 (Macintosh; U; fr)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.50', 'Expected actual "Comment" to be \'Opera 8.50\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-B ["Opera/8.51 (Macintosh; U; fr)"]', function () {
-    browser = browscap.getBrowser('Opera/8.51 (Macintosh; U; fr)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.51 (Macintosh; U; fr)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.51', 'Expected actual "Comment" to be \'Opera 8.51\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-C ["Opera/8.52 (Macintosh; U; da)"]', function () {
-    browser = browscap.getBrowser('Opera/8.52 (Macintosh; U; da)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.52 (Macintosh; U; da)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.52', 'Expected actual "Comment" to be \'Opera 8.52\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-D ["Opera/8.53 (Macintosh; U; la)"]', function () {
-    browser = browscap.getBrowser('Opera/8.53 (Macintosh; U; la)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.53 (Macintosh; U; la)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.53', 'Expected actual "Comment" to be \'Opera 8.53\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-E ["Opera/8.54 (Macintosh; U; br)"]', function () {
-    browser = browscap.getBrowser('Opera/8.54 (Macintosh; U; br)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.54 (Macintosh; U; br)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.54', 'Expected actual "Comment" to be \'Opera 8.54\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-F ["Opera/7.0 (Macintosh; U; es)"]', function () {
-    browser = browscap.getBrowser('Opera/7.0 (Macintosh; U; es)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.0 (Macintosh; U; es)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.0', 'Expected actual "Comment" to be \'Opera 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-G ["Opera/7.10 (Macintosh; U; br)"]', function () {
-    browser = browscap.getBrowser('Opera/7.10 (Macintosh; U; br)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.10 (Macintosh; U; br)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.10', 'Expected actual "Comment" to be \'Opera 7.10\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-H ["Opera/7.11 (Macintosh; U; ko)"]', function () {
-    browser = browscap.getBrowser('Opera/7.11 (Macintosh; U; ko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.11 (Macintosh; U; ko)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.11', 'Expected actual "Comment" to be \'Opera 7.11\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-I ["Opera/7.51 (Macintosh; U; ru)"]', function () {
-    browser = browscap.getBrowser('Opera/7.51 (Macintosh; U; ru)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.51 (Macintosh; U; ru)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.51', 'Expected actual "Comment" to be \'Opera 7.51\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-J ["Opera/9.12 (Macintosh; U; br)"]', function () {
-    browser = browscap.getBrowser('Opera/9.12 (Macintosh; U; br)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.12 (Macintosh; U; br)');
 
     assert.strictEqual(browser['Comment'], 'Opera 9.12', 'Expected actual "Comment" to be \'Opera 9.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-L ["Opera/6.01 (Windows; U; tu)"]', function () {
-    browser = browscap.getBrowser('Opera/6.01 (Windows; U; tu)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/6.01 (Windows; U; tu)');
 
     assert.strictEqual(browser['Comment'], 'Opera 6.01', 'Expected actual "Comment" to be \'Opera 6.01\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-M ["Opera/6.04 (Windows XP; U; [de])"]', function () {
-    browser = browscap.getBrowser('Opera/6.04 (Windows XP; U; [de])');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/6.04 (Windows XP; U; [de])');
 
     assert.strictEqual(browser['Comment'], 'Opera 6.04', 'Expected actual "Comment" to be \'Opera 6.04\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-N ["Opera/7.21 (Windows; U; nb)"]', function () {
-    browser = browscap.getBrowser('Opera/7.21 (Windows; U; nb)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.21 (Windows; U; nb)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.21', 'Expected actual "Comment" to be \'Opera 7.21\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-O ["Opera/7.22 (Windows; U; nl)"]', function () {
-    browser = browscap.getBrowser('Opera/7.22 (Windows; U; nl)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.22 (Windows; U; nl)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.22', 'Expected actual "Comment" to be \'Opera 7.22\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-P ["Opera/7.52 (Windows; U; fi)"]', function () {
-    browser = browscap.getBrowser('Opera/7.52 (Windows; U; fi)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/7.52 (Windows; U; fi)');
 
     assert.strictEqual(browser['Comment'], 'Opera 7.52', 'Expected actual "Comment" to be \'Opera 7.52\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-Q ["Opera/8.02 (Windows; U; lt)"]', function () {
-    browser = browscap.getBrowser('Opera/8.02 (Windows; U; lt)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.02 (Windows; U; lt)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.02', 'Expected actual "Comment" to be \'Opera 8.02\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-R ["Opera/8.50 (Windows; U; pt)"]', function () {
-    browser = browscap.getBrowser('Opera/8.50 (Windows; U; pt)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.50 (Windows; U; pt)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.50', 'Expected actual "Comment" to be \'Opera 8.50\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-S ["Opera/8.51 (Windows; U; cs)"]', function () {
-    browser = browscap.getBrowser('Opera/8.51 (Windows; U; cs)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.51 (Windows; U; cs)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.51', 'Expected actual "Comment" to be \'Opera 8.51\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-T ["Opera/8.52 (Windows; U; ca)"]', function () {
-    browser = browscap.getBrowser('Opera/8.52 (Windows; U; ca)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.52 (Windows; U; ca)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.52', 'Expected actual "Comment" to be \'Opera 8.52\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-U ["Opera/8.53 (Windows; U; br)"]', function () {
-    browser = browscap.getBrowser('Opera/8.53 (Windows; U; br)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.53 (Windows; U; br)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.53', 'Expected actual "Comment" to be \'Opera 8.53\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-V ["Opera/8.54 (Windows; U; es)"]', function () {
-    browser = browscap.getBrowser('Opera/8.54 (Windows; U; es)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/8.54 (Windows; U; es)');
 
     assert.strictEqual(browser['Comment'], 'Opera 8.54', 'Expected actual "Comment" to be \'Opera 8.54\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1362. (23 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1362-W ["Opera/9.12 (Windows; U; hu)"]', function () {
-    browser = browscap.getBrowser('Opera/9.12 (Windows; U; hu)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.12 (Windows; U; hu)');
 
     assert.strictEqual(browser['Comment'], 'Opera 9.12', 'Expected actual "Comment" to be \'Opera 9.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

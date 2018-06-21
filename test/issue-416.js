@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 416. (1 test)', function () {
   test('issue-416 ["Pinterest/0.2 (+http://www.pinterest.com/)"]', function () {
-    browser = browscap.getBrowser('Pinterest/0.2 (+http://www.pinterest.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Pinterest/0.2 (+http://www.pinterest.com/)');
 
     assert.strictEqual(browser['Comment'], 'Pinterest Bot 0.2', 'Expected actual "Comment" to be \'Pinterest Bot 0.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Pinterest Bot', 'Expected actual "Browser" to be \'Pinterest Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

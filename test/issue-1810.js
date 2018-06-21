@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1810. (6 tests)', function () {
   test('issue-1810-A ["Jersey/2.6 (HttpUrlConnection 1.8.0_152)"]', function () {
-    browser = browscap.getBrowser('Jersey/2.6 (HttpUrlConnection 1.8.0_152)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Jersey/2.6 (HttpUrlConnection 1.8.0_152)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Jersey HttpUrlConnection', 'Expected actual "Browser" to be \'Jersey HttpUrlConnection\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1810. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1810-B ["Zabbix"]', function () {
-    browser = browscap.getBrowser('Zabbix');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Zabbix');
 
     assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Zabbix', 'Expected actual "Browser" to be \'Zabbix\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1810. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1810-C ["SentiBot www.sentibot.eu (compatible with Googlebot)"]', function () {
-    browser = browscap.getBrowser('SentiBot www.sentibot.eu (compatible with Googlebot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SentiBot www.sentibot.eu (compatible with Googlebot)');
 
     assert.strictEqual(browser['Comment'], 'Social Bookmarkers', 'Expected actual "Comment" to be \'Social Bookmarkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SentiBot', 'Expected actual "Browser" to be \'SentiBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1810. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1810-D ["Toweya.com bot; report abuse to abuse@toweya.net"]', function () {
-    browser = browscap.getBrowser('Toweya.com bot; report abuse to abuse@toweya.net');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Toweya.com bot; report abuse to abuse@toweya.net');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Toweya.com Bot', 'Expected actual "Browser" to be \'Toweya.com Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1810. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1810-E ["Mozilla/3.01 (compatible; Netbox/3.5 R92; Linux 2.2)"]', function () {
-    browser = browscap.getBrowser('Mozilla/3.01 (compatible; Netbox/3.5 R92; Linux 2.2)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/3.01 (compatible; Netbox/3.5 R92; Linux 2.2)');
 
     assert.strictEqual(browser['Comment'], 'Netbox', 'Expected actual "Comment" to be \'Netbox\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Netbox', 'Expected actual "Browser" to be \'Netbox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1810. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1810-F ["elefent/1.2 (web crawler; crawler.elefent.net; webmaster at elefent dot net)"]', function () {
-    browser = browscap.getBrowser('elefent/1.2 (web crawler; crawler.elefent.net; webmaster at elefent dot net)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('elefent/1.2 (web crawler; crawler.elefent.net; webmaster at elefent dot net)');
 
     assert.strictEqual(browser['Comment'], 'Elefent 1.2', 'Expected actual "Comment" to be \'Elefent 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Elefent', 'Expected actual "Browser" to be \'Elefent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

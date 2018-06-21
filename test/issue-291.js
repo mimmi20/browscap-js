@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 291. (6 tests)', function () {
   test('issue-291-A ["Browsershots"]', function () {
-    browser = browscap.getBrowser('Browsershots');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Browsershots');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Browsershots', 'Expected actual "Browser" to be \'Browsershots\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 291. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-291-B ["DomainSCAN"]', function () {
-    browser = browscap.getBrowser('DomainSCAN');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('DomainSCAN');
 
     assert.strictEqual(browser['Comment'], 'DomainScan Server Monitoring', 'Expected actual "Comment" to be \'DomainScan Server Monitoring\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'DomainScan Server Monitoring', 'Expected actual "Browser" to be \'DomainScan Server Monitoring\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 291. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-291-C ["Dillo/2.1.1"]', function () {
-    browser = browscap.getBrowser('Dillo/2.1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dillo/2.1.1');
 
     assert.strictEqual(browser['Comment'], 'Dillo 2.1', 'Expected actual "Comment" to be \'Dillo 2.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dillo', 'Expected actual "Browser" to be \'Dillo\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 291. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-291-D ["revolt"]', function () {
-    browser = browscap.getBrowser('revolt');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('revolt');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Bot Revolt', 'Expected actual "Browser" to be \'Bot Revolt\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 291. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-291-E ["Mozilla/5.0 (Linux i686) AppleWebKit/535.22+ (KHTML, like Gecko) WebKitGTK+/1.8.0 luakit"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Linux i686) AppleWebKit/535.22+ (KHTML, like Gecko) WebKitGTK+/1.8.0 luakit');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Linux i686) AppleWebKit/535.22+ (KHTML, like Gecko) WebKitGTK+/1.8.0 luakit');
 
     assert.strictEqual(browser['Comment'], 'luakit', 'Expected actual "Comment" to be \'luakit\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'luakit', 'Expected actual "Browser" to be \'luakit\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 291. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-291-F ["Cloud mapping experiment. Contact research@pdrlabs.net"]', function () {
-    browser = browscap.getBrowser('Cloud mapping experiment. Contact research@pdrlabs.net');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Cloud mapping experiment. Contact research@pdrlabs.net');
 
     assert.strictEqual(browser['Comment'], 'Research Projects', 'Expected actual "Comment" to be \'Research Projects\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'pdrlabs Bot', 'Expected actual "Browser" to be \'pdrlabs Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1695. (57 tests)', function () {
+suite('checking for issue 1695. (54 tests)', function () {
   test('issue-1695-A ["Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.2', 'Expected actual "Comment" to be \'Dalvik 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-B ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T315 Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T315 Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T315 Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-C ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T110 Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T110 Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-T110 Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-D ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; B1-A71 Build/JZO54K)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; B1-A71 Build/JZO54K)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; B1-A71 Build/JZO54K)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-E ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; A3-A20 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; A3-A20 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; A3-A20 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-F ["Dalvik/1.6.0 (Linux; U; Android 4.2; Nexus 10 Build/JVP15P)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2; Nexus 10 Build/JVP15P)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2; Nexus 10 Build/JVP15P)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-G ["Dalvik/1.2.0 (Linux; U; Android 2.2; HTC Desire Build/FRF91)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2; HTC Desire Build/FRF91)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2; HTC Desire Build/FRF91)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.2', 'Expected actual "Comment" to be \'Dalvik 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-H ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-G386F Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-G386F Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; SM-G386F Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-I ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P600 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P600 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P600 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-J ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P905 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P905 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-P905 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-K ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200 Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200 Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200 Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-L ["Dalvik/1.2.0 (Linux; U; Android 2.2.2; GT-P1010 Build/FROYO)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2.2; GT-P1010 Build/FROYO)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2.2; GT-P1010 Build/FROYO)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.2', 'Expected actual "Comment" to be \'Dalvik 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-M ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-T230 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-T230 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-T230 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-N ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-S7580 Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-S7580 Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-S7580 Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-O ["Dalvik/1.6.0 (Linux; U; Android 4.3; C1905 Build/15.4.A.1.9)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; C1905 Build/15.4.A.1.9)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; C1905 Build/15.4.A.1.9)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-P ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9082 Build/JZO54K)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9082 Build/JZO54K)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9082 Build/JZO54K)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-Q ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-N7100 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-N7100 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-N7100 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-R ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9100 Build/JZO54K)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9100 Build/JZO54K)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; GT-I9100 Build/JZO54K)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-S ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I9105P Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I9105P Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I9105P Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-T ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200N Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200N Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; GT-I8200N Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-U ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9500 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9500 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9500 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-V ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9195 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9195 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9195 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-W ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G800H Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G800H Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G800H Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-X ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-P5210 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-P5210 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-P5210 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-Y ["Dalvik/1.4.0 (Linux; U; Android 2.3.4; Nexus One Build/GRJ22)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.4; Nexus One Build/GRJ22)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.4; Nexus One Build/GRJ22)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.4', 'Expected actual "Comment" to be \'Dalvik 1.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-Z ["Dalvik/1.6.0 (Linux; U; Android 4.3; PMT3277_3G Build/JLS36C)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; PMT3277_3G Build/JLS36C)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; PMT3277_3G Build/JLS36C)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AA ["Dalvik/1.6.0 (Linux; U; Android 4.3; LT29i Build/9.2.A.1.199)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; LT29i Build/9.2.A.1.199)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; LT29i Build/9.2.A.1.199)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AB ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G355HN Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G355HN Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; SM-G355HN Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AC ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9301I Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9301I Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; GT-I9301I Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AD ["Dalvik/1.6.0 (Linux; U; Android 4.1.1; HTC One X Build/JRO03C)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.1; HTC One X Build/JRO03C)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.1; HTC One X Build/JRO03C)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AE ["Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One X Build/IMM76D)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One X Build/IMM76D)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One X Build/IMM76D)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AF ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT26i Build/6.2.B.1.96)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT26i Build/6.2.B.1.96)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT26i Build/6.2.B.1.96)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AG ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2005 Build/15.2.A.2.5)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2005 Build/15.2.A.2.5)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2005 Build/15.2.A.2.5)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AH ["Dalvik/1.6.0 (Linux; U; Android 4.3; C5303 Build/12.1.A.1.205)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; C5303 Build/12.1.A.1.205)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; C5303 Build/12.1.A.1.205)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AI ["Dalvik/1.6.0 (Linux; U; Android 4.3; D5503 Build/14.2.A.1.114)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; D5503 Build/14.2.A.1.114)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.3; D5503 Build/14.2.A.1.114)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AJ ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; PMT3037_3G Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; PMT3037_3G Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; PMT3037_3G Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AK ["Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One VX Build/IMM76I)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One VX Build/IMM76I)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.0.4; HTC One VX Build/IMM76I)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AL ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; TRA-901G Build/TRA-901G)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; TRA-901G Build/TRA-901G)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; TRA-901G Build/TRA-901G)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AM ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2305 Build/16.0.B.2.16)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2305 Build/16.0.B.2.16)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; C2305 Build/16.0.B.2.16)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AN ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT28h Build/6.2.B.0.211)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT28h Build/6.2.B.0.211)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT28h Build/6.2.B.0.211)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AO ["Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT30p Build/9.1.A.1.140)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT30p Build/9.1.A.1.140)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.1.2; LT30p Build/9.1.A.1.140)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AP ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; C6903 Build/14.3.A.0.757)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; C6903 Build/14.3.A.0.757)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; C6903 Build/14.3.A.0.757)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AQ ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E4.5 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E4.5 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E4.5 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AR ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E5 HD Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E5 HD Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; Aquaris E5 HD Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AS ["Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-S5830 Build/GINGERBREAD)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-S5830 Build/GINGERBREAD)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-S5830 Build/GINGERBREAD)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.4', 'Expected actual "Comment" to be \'Dalvik 1.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AT ["Dalvik/1.4.0 (Linux; U; Android 2.3.3; GT-I9100 Build/GINGERBREAD)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.3; GT-I9100 Build/GINGERBREAD)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.3; GT-I9100 Build/GINGERBREAD)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.4', 'Expected actual "Comment" to be \'Dalvik 1.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AU ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; LIFETAB_S831X Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; LIFETAB_S831X Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; LIFETAB_S831X Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AV ["Dalvik/1.6.0 (Linux; U; Android 4.2.1; bq Aquaris 5.7 Build/JOP40D)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.1; bq Aquaris 5.7 Build/JOP40D)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.1; bq Aquaris 5.7 Build/JOP40D)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AW ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; PMP5785C3G_QUAD Build/JDQ39)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; PMP5785C3G_QUAD Build/JDQ39)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; PMP5785C3G_QUAD Build/JDQ39)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AX ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; HTC One mini 2 Build/KOT49H)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; HTC One mini 2 Build/KOT49H)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; HTC One mini 2 Build/KOT49H)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AY ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; LG-D605 Build/KOT49I.D60520e)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; LG-D605 Build/KOT49I.D60520e)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; LG-D605 Build/KOT49I.D60520e)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-AZ ["Dalvik/1.4.0 (Linux; U; Android 2.3.3; HTC Sensation Z710e Build/GRI40)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.3; HTC Sensation Z710e Build/GRI40)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.4.0 (Linux; U; Android 2.3.3; HTC Sensation Z710e Build/GRI40)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.4', 'Expected actual "Comment" to be \'Dalvik 1.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-BA ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; HUAWEI Y221-U12 Build/HUAWEIY221-U12)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; HUAWEI Y221-U12 Build/HUAWEIY221-U12)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; HUAWEI Y221-U12 Build/HUAWEIY221-U12)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1695. (57 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1695-BB ["Dalvik/1.6.0 (Linux; U; Android 4.2.2; HUAWEI Y511-U30 Build/HUAWEIY511-U30)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; HUAWEI Y511-U30 Build/HUAWEIY511-U30)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.2.2; HUAWEI Y511-U30 Build/HUAWEIY511-U30)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.6', 'Expected actual "Comment" to be \'Dalvik 1.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

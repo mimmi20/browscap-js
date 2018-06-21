@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1402. (67 tests)', function () {
   test('issue-1402-A ["MOT-[Hybrid]/0E.30.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-[Hybrid]/0E.30.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-[Hybrid]/0E.30.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-B ["MOT-280/00.00.00 MIB/2.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-280/00.00.00 MIB/2.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-280/00.00.00 MIB/2.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-C ["MOT-A668/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-A668/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A668/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-D ["MOT-A728/R505_G_00.02.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-A728/R505_G_00.02.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A728/R505_G_00.02.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-E ["MOT-A732/ WAP.Browser/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-A732/ WAP.Browser/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A732/ WAP.Browser/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-F ["MOT-A760i/R501_G_00.06.A3I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-A760i/R501_G_00.06.A3I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A760i/R501_G_00.06.A3I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-G ["MOT-A768i/R503_G_00.17.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-A768i/R503_G_00.17.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A768i/R503_G_00.17.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-H ["MOT-A820/00.00.00 MIB/2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-A820/00.00.00 MIB/2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A820/00.00.00 MIB/2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.1', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-I ["MOT-C168i/1.0 Release/13.07.2007 Browser/CMCS1.0 Software/2.350"]', function () {
-    browser = browscap.getBrowser('MOT-C168i/1.0 Release/13.07.2007 Browser/CMCS1.0 Software/2.350');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-C168i/1.0 Release/13.07.2007 Browser/CMCS1.0 Software/2.350');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-J ["MOT-c350/G_09.04.35R MIB/2.0"]', function () {
-    browser = browscap.getBrowser('MOT-c350/G_09.04.35R MIB/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-c350/G_09.04.35R MIB/2.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-K ["MOT-c350M/AS_G_09.04.23R MIB/2.0 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('MOT-c350M/AS_G_09.04.23R MIB/2.0 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-c350M/AS_G_09.04.23R MIB/2.0 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-L ["MOT-C550/0A.10.12R MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-C550/0A.10.12R MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-C550/0A.10.12R MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-M ["MOT-Canary/SJUG1361AA 08.02.27I/10.21.2005 MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('MOT-Canary/SJUG1361AA 08.02.27I/10.21.2005 MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-Canary/SJUG1361AA 08.02.27I/10.21.2005 MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-N ["MOT-E550/08.83.21I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-E550/08.83.21I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-E550/08.83.21I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-O ["MOT-E680/R51_G_0F.26.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-E680/R51_G_0F.26.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-E680/R51_G_0F.26.A1R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-P ["MOT-E825/03.0F.01. MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-E825/03.0F.01. MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-E825/03.0F.01. MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-Q ["MOT-KLGO iTunes/0E.30.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-KLGO iTunes/0E.30.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-KLGO iTunes/0E.30.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-R ["MOT-L6/00.00.00 MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-L6/00.00.00 MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-L6/00.00.00 MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-S ["MOT-l7/08.B7.ACR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-l7/08.B7.ACR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-l7/08.B7.ACR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-T ["MOT-RAZRV3xv/85.83.E1P MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-RAZRV3xv/85.83.E1P MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-RAZRV3xv/85.83.E1P MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-U ["MOT-T720/05.05.21R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-T720/05.05.21R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-T720/05.05.21R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-V ["MOT-T720M/AS_G_05.06.20R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-T720M/AS_G_05.06.20R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-T720M/AS_G_05.06.20R MIB/2.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-W ["MOT-TA02/06.03.25R MIB/1.2.1 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('MOT-TA02/06.03.25R MIB/1.2.1 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-TA02/06.03.25R MIB/1.2.1 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-X ["MOT-ta02/06.04.2fr_columbia_3mnc_fix MIB/1.2.1"]', function () {
-    browser = browscap.getBrowser('MOT-ta02/06.04.2fr_columbia_3mnc_fix MIB/1.2.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-ta02/06.04.2fr_columbia_3mnc_fix MIB/1.2.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-Y ["MOT-U15/71.20.18. MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-U15/71.20.18. MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-U15/71.20.18. MIB/2.2 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-Z ["MOT-Unx/0B.D1.1FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-Unx/0B.D1.1FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-Unx/0B.D1.1FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AA ["MOT-V180/0B.D1.09R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V180/0B.D1.09R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V180/0B.D1.09R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AB ["MOT-V180ENS/0B.D1.32R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V180ENS/0B.D1.32R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V180ENS/0B.D1.32R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AC ["MOT-V185/0B.D1.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V185/0B.D1.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V185/0B.D1.1ER MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AD ["MOT-V186/08.30.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V186/08.30.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V186/08.30.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AE ["MOT-V188/0B.D2.2BR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V188/0B.D2.2BR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V188/0B.D2.2BR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AF ["MOT-V270/0A.50.22R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V270/0A.50.22R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V270/0A.50.22R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AG ["MOT-V280/0A.50.1AR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V280/0A.50.1AR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V280/0A.50.1AR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AH ["MOT-V300/0B.08.03I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V300/0B.08.03I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V300/0B.08.03I MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AI ["MOT-V365/08.C8.37R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V365/08.C8.37R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V365/08.C8.37R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AJ ["MOT-V3e/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V3e/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3e/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AK ["MOT-V3i_iTunes/08.22.09R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V3i_iTunes/08.22.09R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3i_iTunes/08.22.09R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AL ["MOT-V3ire/08.00.31R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V3ire/08.00.31R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3ire/08.00.31R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AM ["MOT-V3r"]', function () {
-    browser = browscap.getBrowser('MOT-V3r');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3r');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AN ["MOT-V3re"]', function () {
-    browser = browscap.getBrowser('MOT-V3re');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3re');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AO ["MOT-V400/0B.08.9FR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V400/0B.08.9FR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V400/0B.08.9FR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AP ["MOT-V525M/0B.09.1DR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V525M/0B.09.1DR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V525M/0B.09.1DR MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AQ ["MOT-V535/0E.65.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V535/0E.65.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V535/0E.65.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AR ["MOT-V545/0E.66.04R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V545/0E.66.04R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V545/0E.66.04R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AS ["MOT-V547/08.17.15R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V547/08.17.15R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V547/08.17.15R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AT ["MOT-V551/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V551/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V551/08.00.11I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AU ["MOT-V551J/08.18.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V551J/08.18.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V551J/08.18.16R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AV ["MOT-V555/08.17.21R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V555/08.17.21R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V555/08.17.21R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AW ["MOT-V557p/08.27.3CR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V557p/08.27.3CR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V557p/08.27.3CR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AX ["MOT-V6/08.83.37I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V6/08.83.37I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V6/08.83.37I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AY ["MOT-V600i/0E.65.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V600i/0E.65.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V600i/0E.65.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-AZ ["MOT-V60M/03.30.10R MIB/1.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V60M/03.30.10R MIB/1.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V60M/03.30.10R MIB/1.2.1 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BA ["MOT-V620/08.17.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V620/08.17.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V620/08.17.0FR MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BB ["MOT-V690/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V690/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V690/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2113,7 +2165,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BC ["MOT-V730/1.0 MIB1.2/v1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V730/1.0 MIB1.2/v1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V730/1.0 MIB1.2/v1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2152,7 +2205,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BD ["MOT-V80/0E.03.0EI MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V80/0E.03.0EI MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V80/0E.03.0EI MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2191,7 +2245,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BE ["MOT-V868/1.0 MIB1.2/v1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V868/1.0 MIB1.2/v1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V868/1.0 MIB1.2/v1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2230,7 +2285,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BF ["MOT-V878/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V878/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V878/ WAP.Browser/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 1.0', 'Expected actual "Comment" to be \'Motorola Internet Browser 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2269,7 +2325,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BG ["MOT-V975/80.3F.64I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V975/80.3F.64I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V975/80.3F.64I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2308,7 +2365,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BH ["MOT-V980/80.2A.06I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V980/80.2A.06I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V980/80.2A.06I MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2347,7 +2405,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BI ["MOT-V980M/80.2F.63. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-V980M/80.2F.63. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V980M/80.2F.63. MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2386,7 +2445,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BJ ["MOT-V551/08.17.0FR MIB/2.2.1"]', function () {
-    browser = browscap.getBrowser('MOT-V551/08.17.0FR MIB/2.2.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V551/08.17.0FR MIB/2.2.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2425,7 +2485,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BK ["MOT-V3/0E.42.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V3/0E.42.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3/0E.42.10R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2464,7 +2525,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BL ["MOT-V300/0B.09.19R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('MOT-V300/0B.09.19R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V300/0B.09.19R MIB/2.2 Profile/MIDP-2.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2503,7 +2565,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BM ["MOT-V3i/08.B4.34R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/6.3.0.0.0"]', function () {
-    browser = browscap.getBrowser('MOT-V3i/08.B4.34R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/6.3.0.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-V3i/08.B4.34R MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/6.3.0.0.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2542,7 +2605,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BN ["MOT-Z3/08.00.10R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0"]', function () {
-    browser = browscap.getBrowser('MOT-Z3/08.00.10R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-Z3/08.00.10R MIB/BER2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 EGE/1.0');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2581,7 +2645,8 @@ suite('checking for issue 1402. (67 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1402-BO ["MOT-L7/NA.ACR_RB MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('MOT-L7/NA.ACR_RB MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-L7/NA.ACR_RB MIB/2.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Motorola Internet Browser 2.2', 'Expected actual "Comment" to be \'Motorola Internet Browser 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Motorola Internet Browser', 'Expected actual "Browser" to be \'Motorola Internet Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

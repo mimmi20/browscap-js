@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 751. (1 test)', function () {
   test('issue-751 ["Opera/9.27"]', function () {
-    browser = browscap.getBrowser('Opera/9.27');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.27');
 
     assert.strictEqual(browser['Comment'], 'Opera 9.27', 'Expected actual "Comment" to be \'Opera 9.27\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

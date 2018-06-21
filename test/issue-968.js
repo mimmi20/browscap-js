@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 968. (3 tests)', function () {
   test('issue-968-A ["HbbTV/1.1.1 (;;;;;) Maple_2011"]', function () {
-    browser = browscap.getBrowser('HbbTV/1.1.1 (;;;;;) Maple_2011');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('HbbTV/1.1.1 (;;;;;) Maple_2011');
 
     assert.strictEqual(browser['Comment'], 'Samsung Generic TV', 'Expected actual "Comment" to be \'Samsung Generic TV\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Samsung TV', 'Expected actual "Browser" to be \'Samsung TV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 968. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-968-B ["HbbTV/1.1.1 (;Panasonic;VIERA 2011;1.805;0071-7702 2000-0000;)"]', function () {
-    browser = browscap.getBrowser('HbbTV/1.1.1 (;Panasonic;VIERA 2011;1.805;0071-7702 2000-0000;)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('HbbTV/1.1.1 (;Panasonic;VIERA 2011;1.805;0071-7702 2000-0000;)');
 
     assert.strictEqual(browser['Comment'], 'SmartViera Generic', 'Expected actual "Comment" to be \'SmartViera Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SmartViera', 'Expected actual "Browser" to be \'SmartViera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 968. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-968-C ["HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit"]', function () {
-    browser = browscap.getBrowser('HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit');
 
     assert.strictEqual(browser['Comment'], 'Samsung Generic TV', 'Expected actual "Comment" to be \'Samsung Generic TV\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Samsung TV', 'Expected actual "Browser" to be \'Samsung TV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 308. (1 test)', function () {
   test('issue-308 ["Microsoft Office Excel 2013"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Excel 2013');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Excel 2013');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Excel', 'Expected actual "Comment" to be \'Microsoft Excel\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Excel', 'Expected actual "Browser" to be \'Excel\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1438. (234 tests)', function () {
+suite('checking for issue 1438. (134 tests)', function () {
   test('issue-1438-A ["BlackBerry7100/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry7100/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7100/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.0', 'Expected actual "Comment" to be \'BlackBerry 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-B ["BlackBerry7100/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry7100/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7100/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-C ["BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103"]', function () {
-    browser = browscap.getBrowser('BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-D ["BlackBerry7130/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry7130/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7130/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-E ["BlackBerry7130/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry7130/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7130/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-F ["BlackBerry7130e/5.0.0.351Profile/MIDP-2.1Configuration/"]', function () {
-    browser = browscap.getBrowser('BlackBerry7130e/5.0.0.351Profile/MIDP-2.1Configuration/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7130e/5.0.0.351Profile/MIDP-2.1Configuration/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-G ["BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.0', 'Expected actual "Comment" to be \'BlackBerry 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-H ["BlackBerry7250/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry7250/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7250/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-I ["BlackBerry7290/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/"]', function () {
-    browser = browscap.getBrowser('BlackBerry7290/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7290/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-J ["BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.0', 'Expected actual "Comment" to be \'BlackBerry 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-K ["BlackBerry7520/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry7520/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7520/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-L ["BlackBerry8100/4.2.0 Profile/MIDP-2.0 Configuration/ CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8100/4.2.0 Profile/MIDP-2.0 Configuration/ CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8100/4.2.0 Profile/MIDP-2.0 Configuration/ CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-M ["BlackBerry8100/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8100/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8100/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-N ["BlackBerry8110/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8110/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8110/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.3', 'Expected actual "Comment" to be \'BlackBerry 4.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-O ["BlackBerry8110/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8110/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8110/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-P ["BlackBerry8120/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8120/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8120/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.3', 'Expected actual "Comment" to be \'BlackBerry 4.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-Q ["BlackBerry8120/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/107"]', function () {
-    browser = browscap.getBrowser('BlackBerry8120/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/107');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8120/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/107');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-R ["BlackBerry8130/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8130/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8130/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.3', 'Expected actual "Comment" to be \'BlackBerry 4.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-S ["BlackBerry8130/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106"]', function () {
-    browser = browscap.getBrowser('BlackBerry8130/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8130/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-T ["BlackBerry8130m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/"]', function () {
-    browser = browscap.getBrowser('BlackBerry8130m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8130m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-U ["BlackBerry8220/4.6.0.151 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8220/4.6.0.151 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8220/4.6.0.151 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-V ["BlackBerry8230/4.6.1.182 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109"]', function () {
-    browser = browscap.getBrowser('BlackBerry8230/4.6.1.182 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8230/4.6.1.182 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-W ["BlackBerry8230f/4.6.1.208 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/-1"]', function () {
-    browser = browscap.getBrowser('BlackBerry8230f/4.6.1.208 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/-1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8230f/4.6.1.208 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/-1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-X ["BlackBerry8300/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8300/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8300/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-Y ["BlackBerry8300/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/122"]', function () {
-    browser = browscap.getBrowser('BlackBerry8300/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/122');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8300/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/122');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-Z ["BlackBerry8310/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8310/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8310/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AA ["BlackBerry8310/4.5.0.10 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8310/4.5.0.10 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8310/4.5.0.10 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AB ["BlackBerry8320/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8320/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8320/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AC ["BlackBerry8320/4.3.1 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry8320/4.3.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8320/4.3.1 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.3', 'Expected actual "Comment" to be \'BlackBerry 4.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AD ["BlackBerry8320/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/179"]', function () {
-    browser = browscap.getBrowser('BlackBerry8320/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/179');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8320/4.5.0.102 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/179');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AE ["BlackBerry8330/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8330/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8330/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.3', 'Expected actual "Comment" to be \'BlackBerry 4.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AF ["BlackBerry8330/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106"]', function () {
-    browser = browscap.getBrowser('BlackBerry8330/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8330/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/106');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AG ["BlackBerry8330/5.0.0.230 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry8330/5.0.0.230 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8330/5.0.0.230 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AH ["BlackBerry8330m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/0"]', function () {
-    browser = browscap.getBrowser('BlackBerry8330m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8330m/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/0');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AI ["BlackBerry8350i/4.6.1.128 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103"]', function () {
-    browser = browscap.getBrowser('BlackBerry8350i/4.6.1.128 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8350i/4.6.1.128 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AJ ["BlackBerry8350i/5.0.0.1051 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/103"]', function () {
-    browser = browscap.getBrowser('BlackBerry8350i/5.0.0.1051 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/103');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8350i/5.0.0.1051 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/103');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AK ["BlackBerry8520/4.6.1.259 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8520/4.6.1.259 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8520/4.6.1.259 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AL ["BlackBerry8520/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/613"]', function () {
-    browser = browscap.getBrowser('BlackBerry8520/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/613');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8520/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/613');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AM ["BlackBerry8530/5.0.0.1000 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8530/5.0.0.1000 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8530/5.0.0.1000 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AN ["BlackBerry8700/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8700/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8700/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AO ["BlackBerry8700/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/"]', function () {
-    browser = browscap.getBrowser('BlackBerry8700/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8700/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AP ["BlackBerry8700/4.5.0.124 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8700/4.5.0.124 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8700/4.5.0.124 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AQ ["BlackBerry8703e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8703e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8703e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AR ["BlackBerry8703e/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/"]', function () {
-    browser = browscap.getBrowser('BlackBerry8703e/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8703e/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AS ["BlackBerry8703e/4.5.0.191 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/236"]', function () {
-    browser = browscap.getBrowser('BlackBerry8703e/4.5.0.191 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/236');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8703e/4.5.0.191 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/236');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AT ["BlackBerry8707/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/120"]', function () {
-    browser = browscap.getBrowser('BlackBerry8707/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/120');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8707/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/120');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.1', 'Expected actual "Comment" to be \'BlackBerry 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AU ["BlackBerry8707/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/128"]', function () {
-    browser = browscap.getBrowser('BlackBerry8707/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/128');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8707/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/128');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AV ["BlackBerry8800/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8800/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8800/4.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AW ["BlackBerry8800/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8800/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8800/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AX ["BlackBerry8820/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8820/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8820/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AY ["BlackBerry8820/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry8820/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8820/4.5.0.110 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-AZ ["BlackBerry8830/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8830/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8830/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BA ["BlackBerry8830/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109"]', function () {
-    browser = browscap.getBrowser('BlackBerry8830/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8830/4.5.0.127 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/109');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BB ["BlackBerry8830m/4.5.0.135 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry8830m/4.5.0.135 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8830m/4.5.0.135 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.5', 'Expected actual "Comment" to be \'BlackBerry 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2113,7 +2165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BC ["BlackBerry8900/4.6.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry8900/4.6.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8900/4.6.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2152,7 +2205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BD ["BlackBerry8900/5.0.0.100 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/142"]', function () {
-    browser = browscap.getBrowser('BlackBerry8900/5.0.0.100 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/142');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8900/5.0.0.100 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/142');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2191,7 +2245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BE ["BlackBerry8980/5.0.0.978 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/168"]', function () {
-    browser = browscap.getBrowser('BlackBerry8980/5.0.0.978 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/168');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry8980/5.0.0.978 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/168');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2230,7 +2285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BF ["BlackBerry9000/4.6 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/125"]', function () {
-    browser = browscap.getBrowser('BlackBerry9000/4.6 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/125');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9000/4.6 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/125');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2269,7 +2325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BG ["BlackBerry9000/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1"]', function () {
-    browser = browscap.getBrowser('BlackBerry9000/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9000/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2308,7 +2365,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BH ["BlackBerry9100/4.6.0.31 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/"]', function () {
-    browser = browscap.getBrowser('BlackBerry9100/4.6.0.31 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9100/4.6.0.31 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.6', 'Expected actual "Comment" to be \'BlackBerry 4.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2347,7 +2405,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BI ["BlackBerry9100/5.0.0.449 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1"]', function () {
-    browser = browscap.getBrowser('BlackBerry9100/5.0.0.449 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9100/5.0.0.449 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2386,7 +2445,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BJ ["BlackBerry9105/5.0.0.604 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173"]', function () {
-    browser = browscap.getBrowser('BlackBerry9105/5.0.0.604 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9105/5.0.0.604 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2425,7 +2485,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BK ["Blackberry9220/7.1.0.1033 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/608"]', function () {
-    browser = browscap.getBrowser('Blackberry9220/7.1.0.1033 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/608');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9220/7.1.0.1033 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/608');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2464,7 +2525,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BL ["BlackBerry9300/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry9300/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9300/5.0.0.1007 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2503,7 +2565,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BM ["BlackBerry9300/6.0.0.448 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173"]', function () {
-    browser = browscap.getBrowser('BlackBerry9300/6.0.0.448 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9300/6.0.0.448 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2542,7 +2605,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BN ["Blackberry9320/7.1.0.398 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173"]', function () {
-    browser = browscap.getBrowser('Blackberry9320/7.1.0.398 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9320/7.1.0.398 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2581,7 +2645,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BO ["BlackBerry9330/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry9330/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9330/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2620,7 +2685,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BP ["Blackberry9330/6.0.0.522 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('Blackberry9330/6.0.0.522 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9330/6.0.0.522 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2659,7 +2725,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BQ ["BlackBerry9360/7.0.0.319 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry9360/7.0.0.319 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9360/7.0.0.319 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2698,7 +2765,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BR ["Blackberry9360/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125"]', function () {
-    browser = browscap.getBrowser('Blackberry9360/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9360/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2737,7 +2805,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BS ["BlackBerry9380/7.0.0.513 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/142"]', function () {
-    browser = browscap.getBrowser('BlackBerry9380/7.0.0.513 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/142');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9380/7.0.0.513 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/142');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2776,7 +2845,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BT ["BlackBerry9500/4.7.0.106 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/124"]', function () {
-    browser = browscap.getBrowser('BlackBerry9500/4.7.0.106 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/124');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9500/4.7.0.106 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/124');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.7', 'Expected actual "Comment" to be \'BlackBerry 4.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2815,7 +2885,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BU ["BlackBerry9500/5.0.0.1005 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/120"]', function () {
-    browser = browscap.getBrowser('BlackBerry9500/5.0.0.1005 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/120');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9500/5.0.0.1005 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/120');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2854,7 +2925,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BV ["BlackBerry9520/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/136"]', function () {
-    browser = browscap.getBrowser('BlackBerry9520/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/136');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9520/5.0.0.1036 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/136');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2893,7 +2965,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BW ["BlackBerry9530/4.7 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry9530/4.7 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9530/4.7 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.7', 'Expected actual "Comment" to be \'BlackBerry 4.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2932,7 +3005,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BX ["BlackBerry9530/5.0.0.1041 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry9530/5.0.0.1041 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9530/5.0.0.1041 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2971,7 +3045,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BY ["BlackBerry9550/5.0.0.1015 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry9550/5.0.0.1015 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9550/5.0.0.1015 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3010,7 +3085,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-BZ ["BlackBerry9630/4.2.0.424 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('BlackBerry9630/4.2.0.424 Profile/MIDP-2.0 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9630/4.2.0.424 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.2', 'Expected actual "Comment" to be \'BlackBerry 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3049,7 +3125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CA ["BlackBerry9630/4.7.1.40 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry9630/4.7.1.40 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9630/4.7.1.40 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 4.7', 'Expected actual "Comment" to be \'BlackBerry 4.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3088,7 +3165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CB ["BlackBerry9630/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('BlackBerry9630/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9630/5.0.0.1030 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3127,7 +3205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CC ["BlackBerry9650/5.0.0.1006 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry9650/5.0.0.1006 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9650/5.0.0.1006 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3166,7 +3245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CD ["Blackberry9650/6.0.0.415 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('Blackberry9650/6.0.0.415 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9650/6.0.0.415 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3205,7 +3285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CE ["Blackberry9670/6.0.0.407 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104"]', function () {
-    browser = browscap.getBrowser('Blackberry9670/6.0.0.407 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9670/6.0.0.407 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/104');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3244,7 +3325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CF ["BlackBerry9700/5.0.0.1014 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/-1"]', function () {
-    browser = browscap.getBrowser('BlackBerry9700/5.0.0.1014 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/-1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9700/5.0.0.1014 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/-1');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3283,7 +3365,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CG ["BlackBerry9700/6.0.0.418 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600"]', function () {
-    browser = browscap.getBrowser('BlackBerry9700/6.0.0.418 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9700/6.0.0.418 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3322,7 +3405,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CH ["Blackberry9720/7.1.0.1046 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173"]', function () {
-    browser = browscap.getBrowser('Blackberry9720/7.1.0.1046 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9720/7.1.0.1046 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/173');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3361,7 +3445,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CI ["BlackBerry9780/6.0.0.285 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry9780/6.0.0.285 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9780/6.0.0.285 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3400,7 +3485,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CJ ["Blackberry9790/7.0.0.528 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600"]', function () {
-    browser = browscap.getBrowser('Blackberry9790/7.0.0.528 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9790/7.0.0.528 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/600');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3439,7 +3525,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CK ["Blackberry9790/7.1.0.569 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/131"]', function () {
-    browser = browscap.getBrowser('Blackberry9790/7.1.0.569 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/131');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9790/7.1.0.569 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/131');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3478,7 +3565,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CL ["BlackBerry9800/5.0.0.862 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100"]', function () {
-    browser = browscap.getBrowser('BlackBerry9800/5.0.0.862 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9800/5.0.0.862 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/100');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 5.0', 'Expected actual "Comment" to be \'BlackBerry 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3517,7 +3605,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CM ["Blackberry9800/6.0.0.141 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('Blackberry9800/6.0.0.141 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9800/6.0.0.141 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3556,7 +3645,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CN ["BlackBerry9810/7.0.0.261 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry9810/7.0.0.261 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9810/7.0.0.261 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3595,7 +3685,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CO ["BlackBerry9810/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125"]', function () {
-    browser = browscap.getBrowser('BlackBerry9810/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9810/7.1.0.1098 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/125');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3634,7 +3725,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CP ["BlackBerry9850/7.1.0.1066 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105"]', function () {
-    browser = browscap.getBrowser('BlackBerry9850/7.1.0.1066 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9850/7.1.0.1066 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/105');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3673,7 +3765,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CQ ["BlackBerry9860/7.0.0.440 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry9860/7.0.0.440 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9860/7.0.0.440 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3712,7 +3805,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CR ["BlackBerry9860/7.1.0.694 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102"]', function () {
-    browser = browscap.getBrowser('BlackBerry9860/7.1.0.694 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9860/7.1.0.694 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/102');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3751,7 +3845,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CS ["Blackberry9900/7.0.0.296 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/369"]', function () {
-    browser = browscap.getBrowser('Blackberry9900/7.0.0.296 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/369');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Blackberry9900/7.0.0.296 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/369');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3790,7 +3885,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CT ["BlackBerry9900/7.1.0.267 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/331"]', function () {
-    browser = browscap.getBrowser('BlackBerry9900/7.1.0.267 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/331');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry9900/7.1.0.267 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/331');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3829,7 +3925,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CU ["Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1483 Mobile Safari/537.10+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1483 Mobile Safari/537.10+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1483 Mobile Safari/537.10+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 10.1', 'Expected actual "Comment" to be \'BlackBerry 10.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3868,7 +3965,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CV ["Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1+ (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1+ (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1+ (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 10.0', 'Expected actual "Comment" to be \'BlackBerry 10.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3907,7 +4005,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CW ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9100; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.461 Mobile Safari/534.8+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9100; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.461 Mobile Safari/534.8+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9100; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.461 Mobile Safari/534.8+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3946,7 +4045,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CX ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9105; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.481 Mobile Safari/534.8+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9105; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.481 Mobile Safari/534.8+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9105; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.481 Mobile Safari/534.8+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3985,7 +4085,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CY ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9300; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.448 Mobile Safari/534.8+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9300; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.448 Mobile Safari/534.8+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9300; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.448 Mobile Safari/534.8+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4024,7 +4125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-CZ ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9310; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.380 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9310; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.380 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9310; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.380 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4063,7 +4165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DA ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9315; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.523 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9315; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.523 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9315; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.523 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4102,7 +4205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DB ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.431 Mobile Safari/534.1+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.431 Mobile Safari/534.1+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.431 Mobile Safari/534.1+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4141,7 +4245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DC ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.346 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.346 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9330; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.346 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4180,7 +4285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DD ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4219,7 +4325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DE ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9350; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4258,7 +4365,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DF ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.353 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.353 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.353 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4297,7 +4405,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DG ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9360; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4336,7 +4445,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DH ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4375,7 +4485,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DI ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9370; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.261 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4414,7 +4525,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DJ ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.513 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.513 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.513 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4453,7 +4565,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DK ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.336 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.336 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9380; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.336 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4492,7 +4605,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DL ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9620; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.807 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9620; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.807 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9620; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.807 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4531,7 +4645,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DM ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9650; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.222 Mobile Safari/534.1+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9650; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.222 Mobile Safari/534.1+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9650; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.222 Mobile Safari/534.1+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4570,7 +4685,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DN ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9670; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.407 Mobile Safari/534.1+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9670; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.407 Mobile Safari/534.1+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9670; en) AppleWebKit/534.1+ (KHTML, like Gecko) Version/6.0.0.407 Mobile Safari/534.1+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4609,7 +4725,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DO ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9700; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.344 Mobile Safari/534.8+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9700; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.344 Mobile Safari/534.8+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9700; ar) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.344 Mobile Safari/534.8+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 6.0', 'Expected actual "Comment" to be \'BlackBerry 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4648,7 +4765,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DP ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9720; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1046 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9720; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1046 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9720; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1046 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4687,7 +4805,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DQ ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.528 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.528 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.528 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4726,7 +4845,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DR ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1070 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1070 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9790; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1070 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4765,7 +4885,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DS ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9810; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9810; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9810; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4804,7 +4925,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DT ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11  (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11  (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11  (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4843,7 +4965,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DU ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4882,7 +5005,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DV ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.296 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4921,7 +5045,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DW ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9860; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4960,7 +5085,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DX ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.176 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.176 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.176 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4999,7 +5125,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DY ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1033 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5038,7 +5165,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-DZ ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5077,7 +5205,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-EA ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9930; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.1066 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5116,7 +5245,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-EB ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.579 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.579 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.579 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.0', 'Expected actual "Comment" to be \'BlackBerry 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5155,7 +5285,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-EC ["Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (BlackBerry; U; BlackBerry 9981; ar) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.342 Mobile Safari/534.11+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry 7.1', 'Expected actual "Comment" to be \'BlackBerry 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BlackBerry', 'Expected actual "Browser" to be \'BlackBerry\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5194,7 +5325,8 @@ suite('checking for issue 1438. (234 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1438-ED ["Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+');
 
     assert.strictEqual(browser['Comment'], 'BlackBerry Playbook Tablet', 'Expected actual "Comment" to be \'BlackBerry Playbook Tablet\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Blackberry Playbook Tablet', 'Expected actual "Browser" to be \'Blackberry Playbook Tablet\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

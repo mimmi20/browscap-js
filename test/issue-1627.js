@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1627. (3 tests)', function () {
   test('issue-1627-A ["Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4');
 
     assert.strictEqual(browser['Comment'], 'Eudora Open Source Edition', 'Expected actual "Comment" to be \'Eudora Open Source Edition\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Eudora OSE', 'Expected actual "Browser" to be \'Eudora OSE\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1627. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1627-B ["Mozilla/5.0 (Windows; U; Windows NT 6.2; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; en-US; rv:1.9.1.9) Gecko/20100722 Eudora/3.0.4');
 
     assert.strictEqual(browser['Comment'], 'Eudora Open Source Edition', 'Expected actual "Comment" to be \'Eudora Open Source Edition\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Eudora OSE', 'Expected actual "Browser" to be \'Eudora OSE\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1627. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1627-C ["Eudora/6.2.4b8 (MacOS)"]', function () {
-    browser = browscap.getBrowser('Eudora/6.2.4b8 (MacOS)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Eudora/6.2.4b8 (MacOS)');
 
     assert.strictEqual(browser['Comment'], 'Eudora', 'Expected actual "Comment" to be \'Eudora\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Eudora', 'Expected actual "Browser" to be \'Eudora\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

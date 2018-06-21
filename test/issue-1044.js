@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1044. (6 tests)', function () {
+suite('checking for issue 1044. (5 tests)', function () {
   test('issue-1044-A ["Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)');
 
     assert.strictEqual(browser['Comment'], 'Lotus Notes 5.0', 'Expected actual "Comment" to be \'Lotus Notes 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Lotus Notes', 'Expected actual "Browser" to be \'Lotus Notes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1044. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1044-B ["YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90)"]', function () {
-    browser = browscap.getBrowser('YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90)');
 
     assert.strictEqual(browser['Comment'], 'Yahoo Mail Mobile 1.0', 'Expected actual "Comment" to be \'Yahoo Mail Mobile 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yahoo Mail Mobile', 'Expected actual "Browser" to be \'Yahoo Mail Mobile\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1044. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1044-C ["Barca/2.8.2"]', function () {
-    browser = browscap.getBrowser('Barca/2.8.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Barca/2.8.2');
 
     assert.strictEqual(browser['Comment'], 'Barca Mail Client', 'Expected actual "Comment" to be \'Barca Mail Client\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Barca Mail Client', 'Expected actual "Browser" to be \'Barca Mail Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1044. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1044-D ["BarcaPro/1.4.12"]', function () {
-    browser = browscap.getBrowser('BarcaPro/1.4.12');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BarcaPro/1.4.12');
 
     assert.strictEqual(browser['Comment'], 'Barca Mail Client', 'Expected actual "Comment" to be \'Barca Mail Client\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Barca Mail Client', 'Expected actual "Browser" to be \'Barca Mail Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1044. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1044-E ["The Bat! 4.0.0.22"]', function () {
-    browser = browscap.getBrowser('The Bat! 4.0.0.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('The Bat! 4.0.0.22');
 
     assert.strictEqual(browser['Comment'], 'The Bat!', 'Expected actual "Comment" to be \'The Bat!\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'The Bat!', 'Expected actual "Browser" to be \'The Bat!\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

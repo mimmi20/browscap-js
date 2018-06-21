@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1653. (20 tests)', function () {
   test('issue-1653-A ["python-requests/2.18.4"]', function () {
-    browser = browscap.getBrowser('python-requests/2.18.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.18.4');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.18', 'Expected actual "Comment" to be \'python-requests 2.18\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-B ["python-requests/2.18.3"]', function () {
-    browser = browscap.getBrowser('python-requests/2.18.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.18.3');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.18', 'Expected actual "Comment" to be \'python-requests 2.18\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-C ["python-requests/2.18.2"]', function () {
-    browser = browscap.getBrowser('python-requests/2.18.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.18.2');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.18', 'Expected actual "Comment" to be \'python-requests 2.18\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-D ["python-requests/2.18.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.18.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.18.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.18', 'Expected actual "Comment" to be \'python-requests 2.18\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-E ["python-requests/2.17.3"]', function () {
-    browser = browscap.getBrowser('python-requests/2.17.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.17.3');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.17', 'Expected actual "Comment" to be \'python-requests 2.17\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-F ["python-requests/2.16.5"]', function () {
-    browser = browscap.getBrowser('python-requests/2.16.5');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.16.5');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.16', 'Expected actual "Comment" to be \'python-requests 2.16\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-G ["python-requests/2.16.4"]', function () {
-    browser = browscap.getBrowser('python-requests/2.16.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.16.4');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.16', 'Expected actual "Comment" to be \'python-requests 2.16\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-H ["python-requests/2.14.2"]', function () {
-    browser = browscap.getBrowser('python-requests/2.14.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.14.2');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.14', 'Expected actual "Comment" to be \'python-requests 2.14\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-I ["python-requests/2.14.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.14.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.14.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.14', 'Expected actual "Comment" to be \'python-requests 2.14\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-J ["python-requests/2.13.0"]', function () {
-    browser = browscap.getBrowser('python-requests/2.13.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.13.0');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.13', 'Expected actual "Comment" to be \'python-requests 2.13\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-K ["python-requests/2.12.5"]', function () {
-    browser = browscap.getBrowser('python-requests/2.12.5');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.12.5');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.12', 'Expected actual "Comment" to be \'python-requests 2.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-L ["python-requests/2.11.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.11.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.11.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.11', 'Expected actual "Comment" to be \'python-requests 2.11\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-M ["python-requests/2.12.4"]', function () {
-    browser = browscap.getBrowser('python-requests/2.12.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.12.4');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.12', 'Expected actual "Comment" to be \'python-requests 2.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-N ["python-requests/2.9.2"]', function () {
-    browser = browscap.getBrowser('python-requests/2.9.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.9.2');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.9', 'Expected actual "Comment" to be \'python-requests 2.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-O ["python-requests/2.8.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.8.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.8.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.8', 'Expected actual "Comment" to be \'python-requests 2.8\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-P ["python-requests/2.6.0 CPython/2.7.13 Windows/8.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.6.0 CPython/2.7.13 Windows/8.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.6.0 CPython/2.7.13 Windows/8.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.6', 'Expected actual "Comment" to be \'python-requests 2.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-Q ["python-requests/2.7.0 CPython/3.6.1 Darwin/17.2.0"]', function () {
-    browser = browscap.getBrowser('python-requests/2.7.0 CPython/3.6.1 Darwin/17.2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.7.0 CPython/3.6.1 Darwin/17.2.0');
 
     assert.strictEqual(browser['Comment'], 'python-requests 2.7', 'Expected actual "Comment" to be \'python-requests 2.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-R ["python-requests/2.19.0"]', function () {
-    browser = browscap.getBrowser('python-requests/2.19.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.19.0');
 
     assert.strictEqual(browser['Comment'], 'python-requests Generic', 'Expected actual "Comment" to be \'python-requests Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-S ["python-requests/2.19.0 CPython/2.7.13 Windows/8.1"]', function () {
-    browser = browscap.getBrowser('python-requests/2.19.0 CPython/2.7.13 Windows/8.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.19.0 CPython/2.7.13 Windows/8.1');
 
     assert.strictEqual(browser['Comment'], 'python-requests Generic', 'Expected actual "Comment" to be \'python-requests Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1653. (20 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1653-T ["python-requests/2.19.0 CPython/3.6.1 Darwin/17.2.0"]', function () {
-    browser = browscap.getBrowser('python-requests/2.19.0 CPython/3.6.1 Darwin/17.2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('python-requests/2.19.0 CPython/3.6.1 Darwin/17.2.0');
 
     assert.strictEqual(browser['Comment'], 'python-requests Generic', 'Expected actual "Comment" to be \'python-requests Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'python-requests', 'Expected actual "Browser" to be \'python-requests\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

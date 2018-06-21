@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 985. (9 tests)', function () {
   test('issue-985-A ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF2.0)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF2.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF2.0)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser Generic for Dalvik', 'Expected actual "Comment" to be \'Miui Browser Generic for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-B ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF3.0)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF3.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF3.0)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser Generic for Dalvik', 'Expected actual "Comment" to be \'Miui Browser Generic for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-C ["Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF5.0)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF5.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.2; MI PAD MIUI/KXFCNBF5.0)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser Generic for Dalvik', 'Expected actual "Comment" to be \'Miui Browser Generic for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-D ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.11.28)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.11.28)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.11.28)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 4.11 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 4.11 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-E ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.12.19)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.12.19)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.12.19)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 4.12 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 4.12 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-F ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.8.22)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.8.22)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/4.8.22)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 4.8 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 4.8 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-G ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.1.16)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.1.16)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.1.16)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 5.1 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 5.1 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-H ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.10.22)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.10.22)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.10.22)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 5.10 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 5.10 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 985. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-985-I ["Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.11.1)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.11.1)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.6.0 (Linux; U; Android 4.4.4; MI PAD MIUI/5.11.1)');
 
     assert.strictEqual(browser['Comment'], 'Miui Browser 5.11 for Dalvik', 'Expected actual "Comment" to be \'Miui Browser 5.11 for Dalvik\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Miui Browser', 'Expected actual "Browser" to be \'Miui Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

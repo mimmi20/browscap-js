@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1400. (135 tests)', function () {
+suite('checking for issue 1400. (134 tests)', function () {
   test('issue-1400-A ["Alcatel-BF3/1.0 UP.Browser/4.1.23a"]', function () {
-    browser = browscap.getBrowser('Alcatel-BF3/1.0 UP.Browser/4.1.23a');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Alcatel-BF3/1.0 UP.Browser/4.1.23a');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-B ["Alcatel-BF5/1.0 UP.Browser/5.0.3"]', function () {
-    browser = browscap.getBrowser('Alcatel-BF5/1.0 UP.Browser/5.0.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Alcatel-BF5/1.0 UP.Browser/5.0.3');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-C ["Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2"]', function () {
-    browser = browscap.getBrowser('Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-D ["Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Alcatel-BG3/1.0 UP.Browser/5.0.3.1.2 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-E ["BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/5.0.3.3 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/5.0.3.3 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BlackBerry7520/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/5.0.3.3 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-F ["KDDI-CA26 UP.Browser/6.2.0.6.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('KDDI-CA26 UP.Browser/6.2.0.6.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('KDDI-CA26 UP.Browser/6.2.0.6.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-G ["KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-H ["LG-C1300i UP.Browser/6.2.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-C1300i UP.Browser/6.2.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-C1300i UP.Browser/6.2.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-I ["LG-C2000 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Link/6.3.0.0.0"]', function () {
-    browser = browscap.getBrowser('LG-C2000 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Link/6.3.0.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-C2000 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Link/6.3.0.0.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-J ["LG-C810/1.0 UP.Browser/4.1.26l"]', function () {
-    browser = browscap.getBrowser('LG-C810/1.0 UP.Browser/4.1.26l');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-C810/1.0 UP.Browser/4.1.26l');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-K ["LG-C950/1.0UP.Browser/6.2.3.2(GUI)MMp/2.0UP.Link/6.3.0.0.0"]', function () {
-    browser = browscap.getBrowser('LG-C950/1.0UP.Browser/6.2.3.2(GUI)MMp/2.0UP.Link/6.3.0.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-C950/1.0UP.Browser/6.2.3.2(GUI)MMp/2.0UP.Link/6.3.0.0.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-L ["LG-CG300 UP.Browser/6.2.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-CG300 UP.Browser/6.2.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-CG300 UP.Browser/6.2.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-M ["LG-G4015 UP.Browser/6.2.2 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-G4015 UP.Browser/6.2.2 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-G4015 UP.Browser/6.2.2 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-N ["LG-G4050 UP.Browser/6.2.2 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-G4050 UP.Browser/6.2.2 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-G4050 UP.Browser/6.2.2 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-O ["LG-G5500 UP.Browser/6.2.2 (GUI) MMP/1.0 Profile/MIDP-1.0 Configuration/CLDC-1.0"]', function () {
-    browser = browscap.getBrowser('LG-G5500 UP.Browser/6.2.2 (GUI) MMP/1.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-G5500 UP.Browser/6.2.2 (GUI) MMP/1.0 Profile/MIDP-1.0 Configuration/CLDC-1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-P ["LG-L1150 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LG-L1150 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-L1150 UP.Browser/6.2.3 (GUI) MMP/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-Q ["LG-LG220C[TF268435458416230421000000015123647440] UP.Browser/6.2.3.8 (GUI) MMP/2.0,gzip(gfe),gzip(gfe),gzip(gfe)"]', function () {
-    browser = browscap.getBrowser('LG-LG220C[TF268435458416230421000000015123647440] UP.Browser/6.2.3.8 (GUI) MMP/2.0,gzip(gfe),gzip(gfe),gzip(gfe)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-LG220C[TF268435458416230421000000015123647440] UP.Browser/6.2.3.8 (GUI) MMP/2.0,gzip(gfe),gzip(gfe),gzip(gfe)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-R ["LG-LG220C[TF268435459307191073000000013049751856] UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LG-LG220C[TF268435459307191073000000013049751856] UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-LG220C[TF268435459307191073000000013049751856] UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-S ["LG-MG130 UP.Browser/6.2.3 GUI MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-MG130 UP.Browser/6.2.3 GUI MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-MG130 UP.Browser/6.2.3 GUI MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-T ["LG-MG270 UP.Browser/6.2.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('LG-MG270 UP.Browser/6.2.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-MG270 UP.Browser/6.2.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-U ["LG-W800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LG-W800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG-W800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-V ["LG535/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0 UP.Link/6.2.3.17.0"]', function () {
-    browser = browscap.getBrowser('LG535/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0 UP.Link/6.2.3.17.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LG535/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0 UP.Link/6.2.3.17.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-W ["LGE-AD5235/1.0 UP.Browser/4.1.26l"]', function () {
-    browser = browscap.getBrowser('LGE-AD5235/1.0 UP.Browser/4.1.26l');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AD5235/1.0 UP.Browser/4.1.26l');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-X ["LGE-AD6335/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-AD6335/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AD6335/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-Y ["LGE-AX260/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-AX260/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX260/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-Z ["LGE-AX3200 UP.Browser/4.1.26l UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('LGE-AX3200 UP.Browser/4.1.26l UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX3200 UP.Browser/4.1.26l UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AA ["LGE-AX4270/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-AX4270/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX4270/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AB ["LGE-AX4750/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-AX4750/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX4750/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AC ["LGE-AX490/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-AX490/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX490/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AD ["LGE-AX5450 UP.Browser/4.1.27"]', function () {
-    browser = browscap.getBrowser('LGE-AX5450 UP.Browser/4.1.27');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-AX5450 UP.Browser/4.1.27');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AE ["LGE-BX6170/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-BX6170/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-BX6170/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AF ["LGE-CU8080/1.0 UP.Browser/4.1.26l UP.Link/5.1.2.9"]', function () {
-    browser = browscap.getBrowser('LGE-CU8080/1.0 UP.Browser/4.1.26l UP.Link/5.1.2.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-CU8080/1.0 UP.Browser/4.1.26l UP.Link/5.1.2.9');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AG ["LGE-LG290C/1.0[TF268435458412745825000000016182403470] UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG290C/1.0[TF268435458412745825000000016182403470] UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG290C/1.0[TF268435458412745825000000016182403470] UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AH ["LGE-LG300/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG300/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG300/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AI ["LGE-LG3200 UP.Browser/4.1.27 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('LGE-LG3200 UP.Browser/4.1.27 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG3200 UP.Browser/4.1.27 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AJ ["LGE-LG325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AK ["LGE-LG3300/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG3300/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG3300/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AL ["LGE-LG4600 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG4600 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG4600 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AM ["LGE-LG6070 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG6070 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG6070 UP.Browser/6.2.2.3.d.2.100 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AN ["LGE-LG6200/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LG6200/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LG6200/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AO ["LGE-LX5350/1.0 UP.Browser/6.1.0.2.135 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-LX5350/1.0 UP.Browser/6.1.0.2.135 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-LX5350/1.0 UP.Browser/6.1.0.2.135 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AP ["LGE-MN240/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-MN240/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-MN240/1.0 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AQ ["LGE-MX200_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-MX200_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-MX200_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AR ["LGE-MX500_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-MX500_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-MX500_VEZ/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AS ["LGE-MX7000/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-MX7000/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-MX7000/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AT ["LGE-PM225/1.0 UP.Browser/6.2.3.7.e.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-PM225/1.0 UP.Browser/6.2.3.7.e.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-PM225/1.0 UP.Browser/6.2.3.7.e.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AU ["LGE-PM325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-PM325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-PM325/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AV ["LGE-TM520/1.0 UP.Browser/4.1.22b UP.Link/4.3.4.4d"]', function () {
-    browser = browscap.getBrowser('LGE-TM520/1.0 UP.Browser/4.1.22b UP.Link/4.3.4.4d');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-TM520/1.0 UP.Browser/4.1.22b UP.Link/4.3.4.4d');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AW ["LGE-VX6000 UP.Browser/4.1.27"]', function () {
-    browser = browscap.getBrowser('LGE-VX6000 UP.Browser/4.1.27');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX6000 UP.Browser/4.1.27');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AX ["LGE-VX6100/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX6100/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX6100/1.0 UP.Browser/6.2.3.1 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AY ["LGE-VX7000/1.0 UP.Browser/6.2.3.1.174 (GUI) MMP/2.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('LGE-VX7000/1.0 UP.Browser/6.2.3.1.174 (GUI) MMP/2.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX7000/1.0 UP.Browser/6.2.3.1.174 (GUI) MMP/2.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-AZ ["LGE-VX8100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX8100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX8100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BA ["LGE-VX8350/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX8350/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX8350/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BB ["LGE-VX8500/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX8500/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX8500/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2113,7 +2165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BC ["LGE-VX8610/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX8610/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX8610/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2152,7 +2205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BD ["LGE-VX9100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX9100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX9100/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2191,7 +2245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BE ["LGE-VX9800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX9800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX9800/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2230,7 +2285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BF ["LGE-VX9900/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('LGE-VX9900/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('LGE-VX9900/1.0 UP.Browser/6.2.3.2 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2269,7 +2325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BG ["MOT-1.2.0/11.03 UP.Browser/4.1.27a UP.Link/4.3.2 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('MOT-1.2.0/11.03 UP.Browser/4.1.27a UP.Link/4.3.2 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-1.2.0/11.03 UP.Browser/4.1.27a UP.Link/4.3.2 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2308,7 +2365,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BH ["MOT-76/02.06 UP.Browser/4.1.26m.737 UP.Link/5.1.2.16"]', function () {
-    browser = browscap.getBrowser('MOT-76/02.06 UP.Browser/4.1.26m.737 UP.Link/5.1.2.16');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-76/02.06 UP.Browser/4.1.26m.737 UP.Link/5.1.2.16');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2347,7 +2405,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BI ["MOT-A-0A/00.00 UP.Browser/4.1.27a1"]', function () {
-    browser = browscap.getBrowser('MOT-A-0A/00.00 UP.Browser/4.1.27a1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A-0A/00.00 UP.Browser/4.1.27a1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2386,7 +2445,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BJ ["MOT-A-0A/00.06 UP.Browser/4.1.27a1 UP.Link/4.2.3.5h"]', function () {
-    browser = browscap.getBrowser('MOT-A-0A/00.06 UP.Browser/4.1.27a1 UP.Link/4.2.3.5h');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A-0A/00.06 UP.Browser/4.1.27a1 UP.Link/4.2.3.5h');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2425,7 +2485,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BK ["MOT-A-1F/00.04 UP.Browser/4.1.27a1 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('MOT-A-1F/00.04 UP.Browser/4.1.27a1 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A-1F/00.04 UP.Browser/4.1.27a1 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2464,7 +2525,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BL ["MOT-A-88/01.05 UP.Browser/4.1.26m.737 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('MOT-A-88/01.05 UP.Browser/4.1.26m.737 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-A-88/01.05 UP.Browser/4.1.26m.737 UP.Link/5.1.2.12 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2503,7 +2565,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BM ["MOT-AF/4.1.8 UP/4.1.16s"]', function () {
-    browser = browscap.getBrowser('MOT-AF/4.1.8 UP/4.1.16s');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-AF/4.1.8 UP/4.1.16s');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2542,7 +2605,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BN ["MOT-EF/06.12 KM.Browser/5.0.2.4"]', function () {
-    browser = browscap.getBrowser('MOT-EF/06.12 KM.Browser/5.0.2.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-EF/06.12 KM.Browser/5.0.2.4');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2581,7 +2645,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BO ["MOT-F5/4.1.9 UP.Browser/4.1.23c"]', function () {
-    browser = browscap.getBrowser('MOT-F5/4.1.9 UP.Browser/4.1.23c');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-F5/4.1.9 UP.Browser/4.1.23c');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2620,7 +2685,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BP ["MOT-F6/00.28.26 UP.Browser/4.1.23b"]', function () {
-    browser = browscap.getBrowser('MOT-F6/00.28.26 UP.Browser/4.1.23b');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-F6/00.28.26 UP.Browser/4.1.23b');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2659,7 +2725,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BQ ["MOT-FE/07.07 UP.Browser/5.0.2.4"]', function () {
-    browser = browscap.getBrowser('MOT-FE/07.07 UP.Browser/5.0.2.4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-FE/07.07 UP.Browser/5.0.2.4');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2698,7 +2765,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BR ["MOT-MCCB/7582 UP.Browser/4.1.23 UP.Link/4.2.1.1"]', function () {
-    browser = browscap.getBrowser('MOT-MCCB/7582 UP.Browser/4.1.23 UP.Link/4.2.1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-MCCB/7582 UP.Browser/4.1.23 UP.Link/4.2.1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2737,7 +2805,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BS ["MOT-PAN4_/11.03 UP.Browser/4.1.23c"]', function () {
-    browser = browscap.getBrowser('MOT-PAN4_/11.03 UP.Browser/4.1.23c');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-PAN4_/11.03 UP.Browser/4.1.23c');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2776,7 +2845,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BT ["MOT-SAP4_/11.03 UP.Browser/4.1.23c"]', function () {
-    browser = browscap.getBrowser('MOT-SAP4_/11.03 UP.Browser/4.1.23c');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MOT-SAP4_/11.03 UP.Browser/4.1.23c');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2815,7 +2885,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BU ["Motorola-E365 UP.Browser/6.1.0.7 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('Motorola-E365 UP.Browser/6.1.0.7 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Motorola-E365 UP.Browser/6.1.0.7 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2854,7 +2925,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BV ["Motorola-T33/1.5.1a UP.Browser/5.0.1.7 (GUI)"]', function () {
-    browser = browscap.getBrowser('Motorola-T33/1.5.1a UP.Browser/5.0.1.7 (GUI)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Motorola-T33/1.5.1a UP.Browser/5.0.1.7 (GUI)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2893,7 +2965,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BW ["Motorola-T33/1.5.1a UP.Browser/5.0.1.7.c.2 (GUI) (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('Motorola-T33/1.5.1a UP.Browser/5.0.1.7.c.2 (GUI) (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Motorola-T33/1.5.1a UP.Browser/5.0.1.7.c.2 (GUI) (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2932,7 +3005,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BX ["NEC-525/1.0 up.Browser/6.1.0.6.1 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('NEC-525/1.0 up.Browser/6.1.0.6.1 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NEC-525/1.0 up.Browser/6.1.0.6.1 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2971,7 +3045,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BY ["NOKIA-NPD-4AW/V B105V0400.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('NOKIA-NPD-4AW/V B105V0400.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NOKIA-NPD-4AW/V B105V0400.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3010,7 +3085,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-BZ ["NOKIA-RH-17/V F100V0400.nep.0 UP.Browser/4.1.26l1"]', function () {
-    browser = browscap.getBrowser('NOKIA-RH-17/V F100V0400.nep.0 UP.Browser/4.1.26l1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NOKIA-RH-17/V F100V0400.nep.0 UP.Browser/4.1.26l1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3049,7 +3125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CA ["NOKIA-RH-44/V D126V0602.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('NOKIA-RH-44/V D126V0602.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NOKIA-RH-44/V D126V0602.nep.0 UP.Browser/4.1.26l1 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3088,7 +3165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CB ["Nokia1100/1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('Nokia1100/1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Nokia1100/1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3127,7 +3205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CC ["Nokia2112/1.0 (O100V0300.nep) UP.Browser/4.1.26l1 UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('Nokia2112/1.0 (O100V0300.nep) UP.Browser/4.1.26l1 UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Nokia2112/1.0 (O100V0300.nep) UP.Browser/4.1.26l1 UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3166,7 +3245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CD ["SAMSUNG-C3050-ORANGE/C3050BVIH2 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-C3050-ORANGE/C3050BVIH2 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-C3050-ORANGE/C3050BVIH2 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3205,7 +3285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CE ["SAMSUNG-C3053/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-C3053/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-C3053/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3244,7 +3325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CF ["SAMSUNG-SGH-A800/1.0 UP.Browser/5.0.3.3 (GUI)"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-A800/1.0 UP.Browser/5.0.3.3 (GUI)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-A800/1.0 UP.Browser/5.0.3.3 (GUI)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3283,7 +3365,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CG ["SAMSUNG-SGH-D488/1.0*MDA0NDAwMDA2MjM1NzMx UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-D488/1.0*MDA0NDAwMDA2MjM1NzMx UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-D488/1.0*MDA0NDAwMDA2MjM1NzMx UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3322,7 +3405,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CH ["SAMSUNG-SGH-E335/E335UVEE1 UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E335/E335UVEE1 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E335/E335UVEE1 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3361,7 +3445,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CI ["SAMSUNG-SGH-E368/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E368/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E368/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3400,7 +3485,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CJ ["SAMSUNG-SGH-E635/E635UVEF3 UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E635/E635UVEF3 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E635/E635UVEF3 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3439,7 +3525,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CK ["SAMSUNG-SGH-E648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3478,7 +3565,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CL ["SAMSUNG-SGH-E700-OLYMPIC2004/1.0 UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E700-OLYMPIC2004/1.0 UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E700-OLYMPIC2004/1.0 UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3517,7 +3605,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CM ["SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3556,7 +3645,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CN ["SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E700/BSI UP.Browser/6.1.0.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3595,7 +3685,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CO ["SAMSUNG-SGH-E736/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E736/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E736/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3634,7 +3725,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CP ["SAMSUNG-SGH-E758/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-E758/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-E758/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3673,7 +3765,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CQ ["SAMSUNG-SGH-I858/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.4 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-I858/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.4 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-I858/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.4 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3712,7 +3805,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CR ["SAMSUNG-SGH-P200-ORANGE/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-P200-ORANGE/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-P200-ORANGE/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3751,7 +3845,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CS ["SAMSUNG-SGH-S508/1.0*MzU0NTMxMDA2MDczMzYx UP.Browser/5.0.5.1 (GUI) UP.Link/1.1"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-S508/1.0*MzU0NTMxMDA2MDczMzYx UP.Browser/5.0.5.1 (GUI) UP.Link/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-S508/1.0*MzU0NTMxMDA2MDczMzYx UP.Browser/5.0.5.1 (GUI) UP.Link/1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3790,7 +3885,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CT ["SAMSUNG-SGH-T100/1.0 UP.Browser/4.1.26c4"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-T100/1.0 UP.Browser/4.1.26c4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-T100/1.0 UP.Browser/4.1.26c4');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 4.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3829,7 +3925,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CU ["SAMSUNG-SGH-T578/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-T578/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-T578/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3868,7 +3965,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CV ["SAMSUNG-SGH-X496/X496UZEI1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X496/X496UZEI1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X496/X496UZEI1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3907,7 +4005,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CW ["SAMSUNG-SGH-X600/K3 UP.Browser/6.1.0.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X600/K3 UP.Browser/6.1.0.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X600/K3 UP.Browser/6.1.0.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3946,7 +4045,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CX ["SAMSUNG-SGH-X628/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X628/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X628/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1/*MDAwMDAwMDAwMDAwMDAw UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -3985,7 +4085,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CY ["SAMSUNG-SGH-X640/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X640/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X640/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4024,7 +4125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-CZ ["SAMSUNG-SGH-X640C/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X640C/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X640C/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4063,7 +4165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DA ["SAMSUNG-SGH-X648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1*MDA0NDAwMDAxODg3MTA2 UP.Browser/6.2.2.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1*MDA0NDAwMDAxODg3MTA2 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X648/1.0/WAP2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1*MDA0NDAwMDAxODg3MTA2 UP.Browser/6.2.2.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4102,7 +4205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DB ["SAMSUNG-SGH-X658/1.0 UP.Browser/6.2.3.3 (GUI) MMP/2.0 Push/PO"]', function () {
-    browser = browscap.getBrowser('SAMSUNG-SGH-X658/1.0 UP.Browser/6.2.3.3 (GUI) MMP/2.0 Push/PO');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SAMSUNG-SGH-X658/1.0 UP.Browser/6.2.3.3 (GUI) MMP/2.0 Push/PO');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4141,7 +4245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DC ["SCH-R210 UP.Browser/6.2.3.8 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('SCH-R210 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SCH-R210 UP.Browser/6.2.3.8 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4180,7 +4285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DD ["SIE-A31/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A31/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A31/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4219,7 +4325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DE ["SIE-A31a/03 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A31a/03 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A31a/03 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4258,7 +4365,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DF ["SIE-A60/10 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A60/10 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A60/10 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4297,7 +4405,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DG ["SIE-A62/02 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A62/02 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A62/02 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4336,7 +4445,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DH ["SIE-A65C/(2005.05.16)SW07/WAP1.2.1 profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A65C/(2005.05.16)SW07/WAP1.2.1 profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A65C/(2005.05.16)SW07/WAP1.2.1 profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4375,7 +4485,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DI ["SIE-A75/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A75/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A75/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4414,7 +4525,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DJ ["SIE-A76/34 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-A76/34 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-A76/34 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4453,7 +4565,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DK ["SIE-AF51/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-AF51/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-AF51/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4492,7 +4605,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DL ["SIE-C110/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-C110/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-C110/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4531,7 +4645,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DM ["SIE-C60/12 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-C60/12 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-C60/12 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4570,7 +4685,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DN ["SIE-C60A/24 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-C60A/24 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-C60A/24 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4609,7 +4725,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DO ["SIE-CF6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-CF6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-CF6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4648,7 +4765,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DP ["SIE-CX65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-CX65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-CX65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 7.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4687,7 +4805,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DQ ["SIE-M55/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-M55/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-M55/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4726,7 +4845,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DR ["SIE-M55e/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-M55e/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-M55e/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4765,7 +4885,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DS ["SIE-M55Z/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-M55Z/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-M55Z/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4804,7 +4925,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DT ["SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4843,7 +4965,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DU ["SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/5.1.1.5a"]', function () {
-    browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/5.1.1.5a');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/5.1.1.5a');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4882,7 +5005,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DV ["SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/6.6.4.0.0"]', function () {
-    browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/6.6.4.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0 UP.Link/6.6.4.0.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4921,7 +5045,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DW ["SIE-MC6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-MC6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-MC6C/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4960,7 +5085,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DX ["SIE-S55/11 UP.Browser/6.1.0.5.c.2 (GUI) MMP/1.0 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-S55/11 UP.Browser/6.1.0.5.c.2 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-S55/11 UP.Browser/6.1.0.5.c.2 (GUI) MMP/1.0 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -4999,7 +5125,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DY ["SIE-S55/20 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 UP.Link/1.1 (Google WAP Proxy/1.0)"]', function () {
-    browser = browscap.getBrowser('SIE-S55/20 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 UP.Link/1.1 (Google WAP Proxy/1.0)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-S55/20 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 UP.Link/1.1 (Google WAP Proxy/1.0)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5038,7 +5165,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-DZ ["SIE-ST55/1.0 UP.Browser/6.1.0.6.d.2.100 (GUI) MMP/1.0"]', function () {
-    browser = browscap.getBrowser('SIE-ST55/1.0 UP.Browser/6.1.0.6.d.2.100 (GUI) MMP/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SIE-ST55/1.0 UP.Browser/6.1.0.6.d.2.100 (GUI) MMP/1.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.1', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5077,7 +5205,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-EA ["SonyEricssonK500/R1 UP.Browser/5.0.3.3 (GUI)"]', function () {
-    browser = browscap.getBrowser('SonyEricssonK500/R1 UP.Browser/5.0.3.3 (GUI)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SonyEricssonK500/R1 UP.Browser/5.0.3.3 (GUI)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5116,7 +5245,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-EB ["SonyEricssonK500i/R UP.Browser/5.0.3.3 (GUI)"]', function () {
-    browser = browscap.getBrowser('SonyEricssonK500i/R UP.Browser/5.0.3.3 (GUI)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SonyEricssonK500i/R UP.Browser/5.0.3.3 (GUI)');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 5.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 5.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5155,7 +5285,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-EC ["SonyEricssonS312/R1DA Browser/OpenWave/1.0 Profile/MIDP-2.1 Configuration/CLDC-1.1"]', function () {
-    browser = browscap.getBrowser('SonyEricssonS312/R1DA Browser/OpenWave/1.0 Profile/MIDP-2.1 Configuration/CLDC-1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SonyEricssonS312/R1DA Browser/OpenWave/1.0 Profile/MIDP-2.1 Configuration/CLDC-1.1');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 1.0', 'Expected actual "Comment" to be \'Openwave Mobile Browser 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -5194,7 +5325,8 @@ suite('checking for issue 1400. (135 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1400-ED ["Vodafone/1.0/SAMSUNG-SGH-J700V/AUHA3/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0"]', function () {
-    browser = browscap.getBrowser('Vodafone/1.0/SAMSUNG-SGH-J700V/AUHA3/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Vodafone/1.0/SAMSUNG-SGH-J700V/AUHA3/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0');
 
     assert.strictEqual(browser['Comment'], 'Openwave Mobile Browser 6.2', 'Expected actual "Comment" to be \'Openwave Mobile Browser 6.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Openwave Mobile Browser', 'Expected actual "Browser" to be \'Openwave Mobile Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

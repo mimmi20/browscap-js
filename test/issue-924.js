@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 924. (1 test)', function () {
   test('issue-924 ["PayPal IPN ( https://www.paypal.com/ipn )"]', function () {
-    browser = browscap.getBrowser('PayPal IPN ( https://www.paypal.com/ipn )');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('PayPal IPN ( https://www.paypal.com/ipn )');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Instant Payment Notification', 'Expected actual "Browser" to be \'Instant Payment Notification\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

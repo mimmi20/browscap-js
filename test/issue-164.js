@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 164. (2 tests)', function () {
+suite('checking for issue 164. (1 test)', function () {
   test('issue-164 ["Mozilla/4.0 (compatible; MSIE 10.0; Trident/6.0; Windows 98; MyIE2)"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 (compatible; MSIE 10.0; Trident/6.0; Windows 98; MyIE2)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 (compatible; MSIE 10.0; Trident/6.0; Windows 98; MyIE2)');
 
     assert.strictEqual(browser['Comment'], 'Maxthon 2.0', 'Expected actual "Comment" to be \'Maxthon 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Maxthon', 'Expected actual "Browser" to be \'Maxthon\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

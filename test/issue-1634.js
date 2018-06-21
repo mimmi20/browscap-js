@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1634. (1 test)', function () {
   test('issue-1634 ["Microsoft Office/16.0 (Microsoft Outlook 16.0.8241; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/16.0 (Microsoft Outlook 16.0.8241; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/16.0 (Microsoft Outlook 16.0.8241; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2016', 'Expected actual "Comment" to be \'Microsoft Outlook 2016\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

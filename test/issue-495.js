@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 495. (1 test)', function () {
   test('issue-495 ["JoobleBot (compatible; http://jooble.org/jooble-bot)"]', function () {
-    browser = browscap.getBrowser('JoobleBot (compatible; http://jooble.org/jooble-bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('JoobleBot (compatible; http://jooble.org/jooble-bot)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'JoobleBot', 'Expected actual "Browser" to be \'JoobleBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

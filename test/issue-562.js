@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 562. (3 tests)', function () {
+suite('checking for issue 562. (2 tests)', function () {
   test('issue-562-A ["Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)"]', function () {
-    browser = browscap.getBrowser('Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)');
 
     assert.strictEqual(browser['Comment'], 'Cyberduck', 'Expected actual "Comment" to be \'Cyberduck\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Cyberduck', 'Expected actual "Browser" to be \'Cyberduck\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 562. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-562-B ["Lynx/2.8.5rel.1 libwww-FM/2.15FC SSL-MM/1.4.1c OpenSSL/0.9.7e-dev"]', function () {
-    browser = browscap.getBrowser('Lynx/2.8.5rel.1 libwww-FM/2.15FC SSL-MM/1.4.1c OpenSSL/0.9.7e-dev');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Lynx/2.8.5rel.1 libwww-FM/2.15FC SSL-MM/1.4.1c OpenSSL/0.9.7e-dev');
 
     assert.strictEqual(browser['Comment'], 'Lynx', 'Expected actual "Comment" to be \'Lynx\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Lynx', 'Expected actual "Browser" to be \'Lynx\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

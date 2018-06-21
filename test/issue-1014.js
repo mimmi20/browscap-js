@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1014. (2 tests)', function () {
   test('issue-1014-A ["Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)"]', function () {
-    browser = browscap.getBrowser('Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)');
 
     assert.strictEqual(browser['Comment'], 'Social Bookmarkers', 'Expected actual "Comment" to be \'Social Bookmarkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Slackbot-Link-Expanding', 'Expected actual "Browser" to be \'Slackbot-Link-Expanding\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1014. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1014-B ["Slack-ImgProxy 1.136 (+https://api.slack.com/robots)"]', function () {
-    browser = browscap.getBrowser('Slack-ImgProxy 1.136 (+https://api.slack.com/robots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Slack-ImgProxy 1.136 (+https://api.slack.com/robots)');
 
     assert.strictEqual(browser['Comment'], 'Social Bookmarkers', 'Expected actual "Comment" to be \'Social Bookmarkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Slack-ImgProxy', 'Expected actual "Browser" to be \'Slack-ImgProxy\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

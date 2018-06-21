@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 573. (19 tests)', function () {
   test('issue-573-A ["Microsoft Office Word 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Word 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Word 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Word', 'Expected actual "Comment" to be \'Microsoft Word\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Word', 'Expected actual "Browser" to be \'Word\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-B ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft Word 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Word 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Word 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Word', 'Expected actual "Comment" to be \'Microsoft Word\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Word', 'Expected actual "Browser" to be \'Word\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-C ["Microsoft Office Excel 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Excel 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Excel 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Excel', 'Expected actual "Comment" to be \'Microsoft Excel\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Excel', 'Expected actual "Browser" to be \'Excel\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-D ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft Excel 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Excel 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Excel 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Excel', 'Expected actual "Comment" to be \'Microsoft Excel\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Excel', 'Expected actual "Browser" to be \'Excel\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-E ["Microsoft Office OneNote 2013"]', function () {
-    browser = browscap.getBrowser('Microsoft Office OneNote 2013');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office OneNote 2013');
 
     assert.strictEqual(browser['Comment'], 'Microsoft OneNote', 'Expected actual "Comment" to be \'Microsoft OneNote\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'OneNote', 'Expected actual "Browser" to be \'OneNote\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-F ["Microsoft Office OneNote 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office OneNote 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office OneNote 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft OneNote', 'Expected actual "Comment" to be \'Microsoft OneNote\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'OneNote', 'Expected actual "Browser" to be \'OneNote\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-G ["Microsoft Office Outlook 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Outlook 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Outlook 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2013', 'Expected actual "Comment" to be \'Microsoft Outlook 2013\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-H ["Microsoft Outlook Social Connector (15.0.4569) MsoStatic (15.0.4569)"]', function () {
-    browser = browscap.getBrowser('Microsoft Outlook Social Connector (15.0.4569) MsoStatic (15.0.4569)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Outlook Social Connector (15.0.4569) MsoStatic (15.0.4569)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2013', 'Expected actual "Comment" to be \'Microsoft Outlook 2013\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-I ["Microsoft Office PowerPoint 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office PowerPoint 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office PowerPoint 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft PowerPoint', 'Expected actual "Comment" to be \'Microsoft PowerPoint\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PowerPoint', 'Expected actual "Browser" to be \'PowerPoint\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-J ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft PowerPoint 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft PowerPoint 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft PowerPoint 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft PowerPoint', 'Expected actual "Comment" to be \'Microsoft PowerPoint\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PowerPoint', 'Expected actual "Browser" to be \'PowerPoint\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-K ["Microsoft Office Visio 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Visio 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Visio 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Visio', 'Expected actual "Comment" to be \'Microsoft Visio\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Visio', 'Expected actual "Browser" to be \'Visio\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-L ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft Visio 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Visio 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Visio 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Visio', 'Expected actual "Comment" to be \'Microsoft Visio\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Visio', 'Expected actual "Browser" to be \'Visio\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-M ["Microsoft Office/15.0 (Windows NT 6.2; Access Web Datasheet 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Access Web Datasheet 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Access Web Datasheet 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Access', 'Expected actual "Comment" to be \'Microsoft Access\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Access', 'Expected actual "Browser" to be \'Access\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-N ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft Access 15.0.4693; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Access 15.0.4693; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Access 15.0.4693; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Access', 'Expected actual "Comment" to be \'Microsoft Access\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Access', 'Expected actual "Browser" to be \'Access\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-O ["Microsoft Office/15.0 (Windows NT 6.2; Microsoft Lync 15.0.4675; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Lync 15.0.4675; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/15.0 (Windows NT 6.2; Microsoft Lync 15.0.4675; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Lync', 'Expected actual "Comment" to be \'Microsoft Lync\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Lync', 'Expected actual "Browser" to be \'Lync\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-P ["MSFrontPage/15.0"]', function () {
-    browser = browscap.getBrowser('MSFrontPage/15.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MSFrontPage/15.0');
 
     assert.strictEqual(browser['Comment'], 'Microsoft FrontPage', 'Expected actual "Comment" to be \'Microsoft FrontPage\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FrontPage', 'Expected actual "Browser" to be \'FrontPage\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-Q ["Microsoft Office SyncProc 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office SyncProc 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office SyncProc 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Office SyncProc', 'Expected actual "Comment" to be \'Microsoft Office SyncProc\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Office SyncProc', 'Expected actual "Browser" to be \'Office SyncProc\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-R ["Microsoft Office Upload Center 2013 (15.0.4693) Windows NT 6.2"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Upload Center 2013 (15.0.4693) Windows NT 6.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Upload Center 2013 (15.0.4693) Windows NT 6.2');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Office Upload Center', 'Expected actual "Comment" to be \'Microsoft Office Upload Center\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Office Upload Center', 'Expected actual "Browser" to be \'Office Upload Center\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 573. (19 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-573-S ["non-browser; Microsoft Office/15.0 (Windows NT 6.2; 15.0.4691; Pro)"]', function () {
-    browser = browscap.getBrowser('non-browser; Microsoft Office/15.0 (Windows NT 6.2; 15.0.4691; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('non-browser; Microsoft Office/15.0 (Windows NT 6.2; 15.0.4691; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Office', 'Expected actual "Comment" to be \'Microsoft Office\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Office', 'Expected actual "Browser" to be \'Office\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

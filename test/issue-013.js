@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 013. (1 test)', function () {
   test('issue-013 ["Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Android; Tablet; rv:23.0) Gecko/23.0 Firefox/23.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 23.0', 'Expected actual "Comment" to be \'Firefox 23.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

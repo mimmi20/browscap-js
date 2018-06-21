@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 418. (3 tests)', function () {
   test('issue-418-A ["Mozilla/5.0 (compatible; 200PleaseBot/1.0; +http://www.200please.com/bot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; 200PleaseBot/1.0; +http://www.200please.com/bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; 200PleaseBot/1.0; +http://www.200please.com/bot)');
 
     assert.strictEqual(browser['Comment'], '200PleaseBot', 'Expected actual "Comment" to be \'200PleaseBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], '200PleaseBot', 'Expected actual "Browser" to be \'200PleaseBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 418. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-418-B ["Mozilla/5.0 (compatible; Abonti/0.92 - http://www.abonti.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Abonti/0.92 - http://www.abonti.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Abonti/0.92 - http://www.abonti.com)');
 
     assert.strictEqual(browser['Comment'], 'Abonti WebSearch', 'Expected actual "Comment" to be \'Abonti WebSearch\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Abonti WebSearch', 'Expected actual "Browser" to be \'Abonti WebSearch\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 418. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-418-C ["GG PeekBot 2.0 ( http://gg.pl/ http://info.gadu-gadu.pl/praca )"]', function () {
-    browser = browscap.getBrowser('GG PeekBot 2.0 ( http://gg.pl/ http://info.gadu-gadu.pl/praca )');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('GG PeekBot 2.0 ( http://gg.pl/ http://info.gadu-gadu.pl/praca )');
 
     assert.strictEqual(browser['Comment'], 'GG PeekBot', 'Expected actual "Comment" to be \'GG PeekBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'GG PeekBot', 'Expected actual "Browser" to be \'GG PeekBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

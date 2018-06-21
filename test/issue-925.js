@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 925. (1 test)', function () {
   test('issue-925 ["Comodo SSL Checker"]', function () {
-    browser = browscap.getBrowser('Comodo SSL Checker');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Comodo SSL Checker');
 
     assert.strictEqual(browser['Comment'], 'Comodo SSL Checker', 'Expected actual "Comment" to be \'Comodo SSL Checker\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Comodo SSL Checker', 'Expected actual "Browser" to be \'Comodo SSL Checker\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

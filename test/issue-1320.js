@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1320. (73 tests)', function () {
   test('issue-1320-A ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:44.0) adbeat.com/policy Gecko/20100101 Firefox/44.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:44.0) adbeat.com/policy Gecko/20100101 Firefox/44.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:44.0) adbeat.com/policy Gecko/20100101 Firefox/44.0');
 
     assert.strictEqual(browser['Comment'], 'Adbeat', 'Expected actual "Comment" to be \'Adbeat\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adbeat Bot', 'Expected actual "Browser" to be \'Adbeat Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-B ["Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) adbeat.com/policy Gecko/20100101 Firefox/51.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) adbeat.com/policy Gecko/20100101 Firefox/51.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) adbeat.com/policy Gecko/20100101 Firefox/51.0');
 
     assert.strictEqual(browser['Comment'], 'Adbeat', 'Expected actual "Comment" to be \'Adbeat\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adbeat Bot', 'Expected actual "Browser" to be \'Adbeat Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-C ["Feedbin feed-id:163192 - 2 subscribers"]', function () {
-    browser = browscap.getBrowser('Feedbin feed-id:163192 - 2 subscribers');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Feedbin feed-id:163192 - 2 subscribers');
 
     assert.strictEqual(browser['Comment'], 'FeedBin', 'Expected actual "Comment" to be \'FeedBin\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FeedBin', 'Expected actual "Browser" to be \'FeedBin\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-D ["Fever/1.31 (Feed Parser; http://feedafever.com; Allow like Gecko)"]', function () {
-    browser = browscap.getBrowser('Fever/1.31 (Feed Parser; http://feedafever.com; Allow like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Fever/1.31 (Feed Parser; http://feedafever.com; Allow like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Fever', 'Expected actual "Comment" to be \'Fever\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Fever', 'Expected actual "Browser" to be \'Fever\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-E ["Ant bot/1.1 (https://www.ant.com; admin@ant.com)"]', function () {
-    browser = browscap.getBrowser('Ant bot/1.1 (https://www.ant.com; admin@ant.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Ant bot/1.1 (https://www.ant.com; admin@ant.com)');
 
     assert.strictEqual(browser['Comment'], 'AntBot', 'Expected actual "Comment" to be \'AntBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AntBot', 'Expected actual "Browser" to be \'AntBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-F ["Mediatoolkitbot (complaints@mediatoolkit.com)"]', function () {
-    browser = browscap.getBrowser('Mediatoolkitbot (complaints@mediatoolkit.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mediatoolkitbot (complaints@mediatoolkit.com)');
 
     assert.strictEqual(browser['Comment'], 'Mediatoolkit Bot', 'Expected actual "Comment" to be \'Mediatoolkit Bot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mediatoolkit Bot', 'Expected actual "Browser" to be \'Mediatoolkit Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-G ["AWeber Communications Inc. Link Validator - For info, visit https://help.aweber.com/entries/21774298-how-are-messages-checked-for-broken-links"]', function () {
-    browser = browscap.getBrowser('AWeber Communications Inc. Link Validator - For info, visit https://help.aweber.com/entries/21774298-how-are-messages-checked-for-broken-links');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AWeber Communications Inc. Link Validator - For info, visit https://help.aweber.com/entries/21774298-how-are-messages-checked-for-broken-links');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AWeber Link Validator', 'Expected actual "Browser" to be \'AWeber Link Validator\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-H ["BoardReader Blog Indexer(http://boardreader.com)"]', function () {
-    browser = browscap.getBrowser('BoardReader Blog Indexer(http://boardreader.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('BoardReader Blog Indexer(http://boardreader.com)');
 
     assert.strictEqual(browser['Comment'], 'BoardReader', 'Expected actual "Comment" to be \'BoardReader\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'BoardReader Indexer', 'Expected actual "Browser" to be \'BoardReader Indexer\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-I ["Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)');
 
     assert.strictEqual(browser['Comment'], 'MSN', 'Expected actual "Comment" to be \'MSN\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'adidxbot', 'Expected actual "Browser" to be \'adidxbot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-J ["FeedBucket/1.0 (+http://www.feedbucket.com)"]', function () {
-    browser = browscap.getBrowser('FeedBucket/1.0 (+http://www.feedbucket.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('FeedBucket/1.0 (+http://www.feedbucket.com)');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FeedBucket', 'Expected actual "Browser" to be \'FeedBucket\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-K ["everyfeed-spider/2.0 (http://www.everyfeed.com)"]', function () {
-    browser = browscap.getBrowser('everyfeed-spider/2.0 (http://www.everyfeed.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('everyfeed-spider/2.0 (http://www.everyfeed.com)');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Everyfeed Spider', 'Expected actual "Browser" to be \'Everyfeed Spider\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-L ["feedjira http://feedjira.com"]', function () {
-    browser = browscap.getBrowser('feedjira http://feedjira.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('feedjira http://feedjira.com');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Feedjira', 'Expected actual "Browser" to be \'Feedjira\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-M ["wp.com feedbot/1.0 (+https://wp.com)"]', function () {
-    browser = browscap.getBrowser('wp.com feedbot/1.0 (+https://wp.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('wp.com feedbot/1.0 (+https://wp.com)');
 
     assert.strictEqual(browser['Comment'], 'Feeds Blogs', 'Expected actual "Comment" to be \'Feeds Blogs\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wordpress.com Feed Bot', 'Expected actual "Browser" to be \'Wordpress.com Feed Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-N ["TrapitAgent/0.1 (feed processor; +http://trapit.com/about)"]', function () {
-    browser = browscap.getBrowser('TrapitAgent/0.1 (feed processor; +http://trapit.com/about)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('TrapitAgent/0.1 (feed processor; +http://trapit.com/about)');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'TrapitAgent Feed Processor', 'Expected actual "Browser" to be \'TrapitAgent Feed Processor\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-O ["SeobilityBot (SEO-Check; http://bit.ly/1dJuuzs)"]', function () {
-    browser = browscap.getBrowser('SeobilityBot (SEO-Check; http://bit.ly/1dJuuzs)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SeobilityBot (SEO-Check; http://bit.ly/1dJuuzs)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Seobility Bot', 'Expected actual "Browser" to be \'Seobility Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-P ["Domain Re-Animator Bot (http://domainreanimator.com) - support@domainreanimator.com"]', function () {
-    browser = browscap.getBrowser('Domain Re-Animator Bot (http://domainreanimator.com) - support@domainreanimator.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Domain Re-Animator Bot (http://domainreanimator.com) - support@domainreanimator.com');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Domain Re-Animator Bot', 'Expected actual "Browser" to be \'Domain Re-Animator Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-Q ["NewRelicPinger/1.0 (331891)"]', function () {
-    browser = browscap.getBrowser('NewRelicPinger/1.0 (331891)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NewRelicPinger/1.0 (331891)');
 
     assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'New Relic Pinger', 'Expected actual "Browser" to be \'New Relic Pinger\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-R ["montastic-monitor http://www.montastic.com"]', function () {
-    browser = browscap.getBrowser('montastic-monitor http://www.montastic.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('montastic-monitor http://www.montastic.com');
 
     assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Montastic Monitor', 'Expected actual "Browser" to be \'Montastic Monitor\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-S ["Nuzzel"]', function () {
-    browser = browscap.getBrowser('Nuzzel');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Nuzzel');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nuzzel Bot', 'Expected actual "Browser" to be \'Nuzzel Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-T ["Mozilla/5.0 (compatible; AdlesseBot/1.0; feedback@adlesse.com) v1490676842.3287"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; AdlesseBot/1.0; feedback@adlesse.com) v1490676842.3287');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; AdlesseBot/1.0; feedback@adlesse.com) v1490676842.3287');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adlesse Bot', 'Expected actual "Browser" to be \'Adlesse Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-U ["Mozilla/5.0 (compatible; AndersPinkBot/1.0; +http://anderspink.com/bot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; AndersPinkBot/1.0; +http://anderspink.com/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; AndersPinkBot/1.0; +http://anderspink.com/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Anders Pink Bot', 'Expected actual "Browser" to be \'Anders Pink Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-V ["Mozilla/5.0 (compatible; Caroline/4.3; +http://justpicsplease.com/caroline.php)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Caroline/4.3; +http://justpicsplease.com/caroline.php)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Caroline/4.3; +http://justpicsplease.com/caroline.php)');
 
     assert.strictEqual(browser['Comment'], 'Image Crawlers', 'Expected actual "Comment" to be \'Image Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Caroline Bot', 'Expected actual "Browser" to be \'Caroline Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-W ["Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Coccoc Bot', 'Expected actual "Browser" to be \'Coccoc Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-X ["Mozilla/5.0 (compatible; Greplerbot/0.2; +http://www.grepler.com/bot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Greplerbot/0.2; +http://www.grepler.com/bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Greplerbot/0.2; +http://www.grepler.com/bot)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Grepler Bot', 'Expected actual "Browser" to be \'Grepler Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-Y ["Mozilla/5.0 (compatible; Let\'s Encrypt validation server; +https://www.letsencrypt.org)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Let\'s Encrypt validation server; +https://www.letsencrypt.org)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Let\'s Encrypt validation server; +https://www.letsencrypt.org)');
 
     assert.strictEqual(browser['Comment'], 'Validation Checkers', 'Expected actual "Comment" to be \'Validation Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Let\'s Encrypt Validator', 'Expected actual "Browser" to be \'Let\\\'s Encrypt Validator\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-Z ["Mozilla/5.0 (compatible; YesupBot/1.0; +http://www.yesup.net/bot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YesupBot/1.0; +http://www.yesup.net/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YesupBot/1.0; +http://www.yesup.net/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yesup Bot', 'Expected actual "Browser" to be \'Yesup Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AA ["Mozilla/5.0 (compatible; PingAdmin.Ru/1.1; +http://pingadmin.ru/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; PingAdmin.Ru/1.1; +http://pingadmin.ru/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; PingAdmin.Ru/1.1; +http://pingadmin.ru/)');
 
     assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PingAdmin.ru Monitor', 'Expected actual "Browser" to be \'PingAdmin.ru Monitor\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AB ["Mozilla/5.0 (compatible; LinkisBot/1.0; bot@linkis.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; LinkisBot/1.0; bot@linkis.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; LinkisBot/1.0; bot@linkis.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Linkis Bot', 'Expected actual "Browser" to be \'Linkis Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AC ["PerfectMail/2.0 (http://perfectmail.com/kb/web_probe)"]', function () {
-    browser = browscap.getBrowser('PerfectMail/2.0 (http://perfectmail.com/kb/web_probe)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('PerfectMail/2.0 (http://perfectmail.com/kb/web_probe)');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PerfectMail Web Probe', 'Expected actual "Browser" to be \'PerfectMail Web Probe\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AD ["Mozilla/5.0 (compatible; houzzbot; +http://www.houzz.com/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; houzzbot; +http://www.houzz.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; houzzbot; +http://www.houzz.com/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Houzz Bot', 'Expected actual "Browser" to be \'Houzz Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AE ["Mozilla/5.0 (compatible; vebidoobot/1.0; +https://blog.vebidoo.de/vebidoobot/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; vebidoobot/1.0; +https://blog.vebidoo.de/vebidoobot/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; vebidoobot/1.0; +https://blog.vebidoo.de/vebidoobot/)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Vebidoo Bot', 'Expected actual "Browser" to be \'Vebidoo Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AF ["Twiends Crawler 1.1 created by twiends.com. See http://twiends.com/msg/crawler for more information."]', function () {
-    browser = browscap.getBrowser('Twiends Crawler 1.1 created by twiends.com. See http://twiends.com/msg/crawler for more information.');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Twiends Crawler 1.1 created by twiends.com. See http://twiends.com/msg/crawler for more information.');
 
     assert.strictEqual(browser['Comment'], 'Image Crawlers', 'Expected actual "Comment" to be \'Image Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Twiends Crawler', 'Expected actual "Browser" to be \'Twiends Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AG ["Mozilla/5.0 (compatible; Findxbot/1.0; +http://www.findxbot.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Findxbot/1.0; +http://www.findxbot.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Findxbot/1.0; +http://www.findxbot.com)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Findx Bot', 'Expected actual "Browser" to be \'Findx Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AH ["Mozilla/5.0 (compatible; YaK/1.0; http://linkfluence.com/; bot@linkfluence.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YaK/1.0; http://linkfluence.com/; bot@linkfluence.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YaK/1.0; http://linkfluence.com/; bot@linkfluence.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Linkfluence Yak Bot', 'Expected actual "Browser" to be \'Linkfluence Yak Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AI ["Mozilla/5.0 (compatible; SurdotlyBot/1.0; +http://sur.ly/bot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; SurdotlyBot/1.0; +http://sur.ly/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; SurdotlyBot/1.0; +http://sur.ly/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Sur.ly Bot', 'Expected actual "Browser" to be \'Sur.ly Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AJ ["Mozilla/5.0 (compatible; FTT2 Toplist Thumb Grabber; http://www.ftt2.com/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; FTT2 Toplist Thumb Grabber; http://www.ftt2.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; FTT2 Toplist Thumb Grabber; http://www.ftt2.com/)');
 
     assert.strictEqual(browser['Comment'], 'Thumbnail Generators', 'Expected actual "Comment" to be \'Thumbnail Generators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FTT2 Toplist Thumb Grabber', 'Expected actual "Browser" to be \'FTT2 Toplist Thumb Grabber\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AK ["Yahoo! Slurp China"]', function () {
-    browser = browscap.getBrowser('Yahoo! Slurp China');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Yahoo! Slurp China');
 
     assert.strictEqual(browser['Comment'], 'Yahoo! Slurp', 'Expected actual "Comment" to be \'Yahoo! Slurp\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yahoo! Slurp China', 'Expected actual "Browser" to be \'Yahoo! Slurp China\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AL ["WP Engine Domain Verification (http://support.wpengine.com abuse@wpengine.com)"]', function () {
-    browser = browscap.getBrowser('WP Engine Domain Verification (http://support.wpengine.com abuse@wpengine.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('WP Engine Domain Verification (http://support.wpengine.com abuse@wpengine.com)');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WP Engine Domain Verifier', 'Expected actual "Browser" to be \'WP Engine Domain Verifier\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AM ["Mozilla/5.0 (compatible; Faveeo/1.0; +http://www.faveeo.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Faveeo/1.0; +http://www.faveeo.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Faveeo/1.0; +http://www.faveeo.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Faveeo Bot', 'Expected actual "Browser" to be \'Faveeo Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AN ["Mozilla/5.0 (compatible; Dataprovider/6.92; +https://www.dataprovider.com/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Dataprovider/6.92; +https://www.dataprovider.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Dataprovider/6.92; +https://www.dataprovider.com/)');
 
     assert.strictEqual(browser['Comment'], 'Data Mining', 'Expected actual "Comment" to be \'Data Mining\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dataprovider Bot', 'Expected actual "Browser" to be \'Dataprovider Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AO ["Mozilla/5.0 (compatible; Sysomos/1.0; +http://www.sysomos.com/; Sysomos)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Sysomos/1.0; +http://www.sysomos.com/; Sysomos)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Sysomos/1.0; +http://www.sysomos.com/; Sysomos)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Sysomos Bot', 'Expected actual "Browser" to be \'Sysomos Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AP ["scrapy-redis (+https://github.com/rolando/scrapy-redis)"]', function () {
-    browser = browscap.getBrowser('scrapy-redis (+https://github.com/rolando/scrapy-redis)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('scrapy-redis (+https://github.com/rolando/scrapy-redis)');
 
     assert.strictEqual(browser['Comment'], 'Rippers', 'Expected actual "Comment" to be \'Rippers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Scrapy-Redis', 'Expected actual "Browser" to be \'Scrapy-Redis\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AQ ["Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) khtml2png Safari/534.34"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) khtml2png Safari/534.34');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) khtml2png Safari/534.34');
 
     assert.strictEqual(browser['Comment'], 'Thumbnail Generators', 'Expected actual "Comment" to be \'Thumbnail Generators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'khtml2png', 'Expected actual "Browser" to be \'khtml2png\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AR ["Mozilla/5.0 AppEngine-Google; (+http://code.google.com/appengine; appid: e~finscience-1253)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 AppEngine-Google; (+http://code.google.com/appengine; appid: e~finscience-1253)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 AppEngine-Google; (+http://code.google.com/appengine; appid: e~finscience-1253)');
 
     assert.strictEqual(browser['Comment'], 'Google App Engine', 'Expected actual "Comment" to be \'Google App Engine\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Google App Engine', 'Expected actual "Browser" to be \'Google App Engine\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AS ["Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)"]', function () {
-    browser = browscap.getBrowser('Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Flamingo Bot', 'Expected actual "Browser" to be \'Flamingo Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AT ["Mozilla/5.0 (compatible; U; AnyEvent-HTTP/2.21; +http://software.schmorp.de/pkg/AnyEvent)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; U; AnyEvent-HTTP/2.21; +http://software.schmorp.de/pkg/AnyEvent)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; U; AnyEvent-HTTP/2.21; +http://software.schmorp.de/pkg/AnyEvent)');
 
     assert.strictEqual(browser['Comment'], 'Rippers', 'Expected actual "Comment" to be \'Rippers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AnyEvent HTTP Client', 'Expected actual "Browser" to be \'AnyEvent HTTP Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AU ["Mozilla/5.0 (compatible; DomainSONOCrawler/0.1; +http://domainsono.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; DomainSONOCrawler/0.1; +http://domainsono.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; DomainSONOCrawler/0.1; +http://domainsono.com)');
 
     assert.strictEqual(browser['Comment'], 'Validation Checkers', 'Expected actual "Comment" to be \'Validation Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'DomainSONO Crawler', 'Expected actual "Browser" to be \'DomainSONO Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AV ["Bumble Bee/1.0 (WikiApiary; +http://wikiapiary.com/wiki/User:Bumble_Bee)"]', function () {
-    browser = browscap.getBrowser('Bumble Bee/1.0 (WikiApiary; +http://wikiapiary.com/wiki/User:Bumble_Bee)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Bumble Bee/1.0 (WikiApiary; +http://wikiapiary.com/wiki/User:Bumble_Bee)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Bumble Bee Bot', 'Expected actual "Browser" to be \'Bumble Bee Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AW ["SocialRankIOBot; http://socialrank.io/about"]', function () {
-    browser = browscap.getBrowser('SocialRankIOBot; http://socialrank.io/about');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SocialRankIOBot; http://socialrank.io/about');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Socialrank.io Bot', 'Expected actual "Browser" to be \'Socialrank.io Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AX ["PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)"]', function () {
-    browser = browscap.getBrowser('PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PocketParser Bot', 'Expected actual "Browser" to be \'PocketParser Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AY ["Seeker v.1 http://LookSeek.com/seeker/"]', function () {
-    browser = browscap.getBrowser('Seeker v.1 http://LookSeek.com/seeker/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Seeker v.1 http://LookSeek.com/seeker/');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Seeker', 'Expected actual "Browser" to be \'Seeker\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-AZ ["Ruby, Twurly v1.1 (http://twurly.org)"]', function () {
-    browser = browscap.getBrowser('Ruby, Twurly v1.1 (http://twurly.org)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Ruby, Twurly v1.1 (http://twurly.org)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Twurly Bot', 'Expected actual "Browser" to be \'Twurly Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BA ["SafeDNSBot (https://www.safedns.com/searchbot)"]', function () {
-    browser = browscap.getBrowser('SafeDNSBot (https://www.safedns.com/searchbot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SafeDNSBot (https://www.safedns.com/searchbot)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SafeDNS Bot', 'Expected actual "Browser" to be \'SafeDNS Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BB ["Easy-Thumb (https://www.easy-thumb.net/)"]', function () {
-    browser = browscap.getBrowser('Easy-Thumb (https://www.easy-thumb.net/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Easy-Thumb (https://www.easy-thumb.net/)');
 
     assert.strictEqual(browser['Comment'], 'Thumbnail Generators', 'Expected actual "Comment" to be \'Thumbnail Generators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Easy-Thumb Bot', 'Expected actual "Browser" to be \'Easy-Thumb Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2113,7 +2165,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BC ["TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)"]', function () {
-    browser = browscap.getBrowser('TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)');
 
     assert.strictEqual(browser['Comment'], 'TurnitinBot', 'Expected actual "Comment" to be \'TurnitinBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'TurnitinBot', 'Expected actual "Browser" to be \'TurnitinBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2152,7 +2205,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BD ["Web-sniffer/1.1.0 (+http://web-sniffer.net/)"]', function () {
-    browser = browscap.getBrowser('Web-sniffer/1.1.0 (+http://web-sniffer.net/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Web-sniffer/1.1.0 (+http://web-sniffer.net/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Web Sniffer Bot', 'Expected actual "Browser" to be \'Web Sniffer Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2191,7 +2245,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BE ["msnbot-Products/1.0 (+http://search.msn.com/msnbot.htm)"]', function () {
-    browser = browscap.getBrowser('msnbot-Products/1.0 (+http://search.msn.com/msnbot.htm)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('msnbot-Products/1.0 (+http://search.msn.com/msnbot.htm)');
 
     assert.strictEqual(browser['Comment'], 'msn Products bot', 'Expected actual "Comment" to be \'msn Products bot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'msnbot', 'Expected actual "Browser" to be \'msnbot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2230,7 +2285,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BF ["SkyGrid/1.0 (+http://skygrid.com/partners)"]', function () {
-    browser = browscap.getBrowser('SkyGrid/1.0 (+http://skygrid.com/partners)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SkyGrid/1.0 (+http://skygrid.com/partners)');
 
     assert.strictEqual(browser['Comment'], 'Data Mining', 'Expected actual "Comment" to be \'Data Mining\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SkyGrid Bot', 'Expected actual "Browser" to be \'SkyGrid Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2269,7 +2325,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BG ["SEMrushBot"]', function () {
-    browser = browscap.getBrowser('SEMrushBot');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SEMrushBot');
 
     assert.strictEqual(browser['Comment'], 'SemrushBot', 'Expected actual "Comment" to be \'SemrushBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SemrushBot', 'Expected actual "Browser" to be \'SemrushBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2308,7 +2365,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BH ["datagnionbot (+http://www.datagnion.com/bot.html)"]', function () {
-    browser = browscap.getBrowser('datagnionbot (+http://www.datagnion.com/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('datagnionbot (+http://www.datagnion.com/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Datagnion Bot', 'Expected actual "Browser" to be \'Datagnion Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2347,7 +2405,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BI ["myTaste image cacher v.0.6"]', function () {
-    browser = browscap.getBrowser('myTaste image cacher v.0.6');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('myTaste image cacher v.0.6');
 
     assert.strictEqual(browser['Comment'], 'Image Crawlers', 'Expected actual "Comment" to be \'Image Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'myTaste Image Cacher', 'Expected actual "Browser" to be \'myTaste Image Cacher\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2386,7 +2445,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BJ ["OrgProbe/0.9.4 (+http://www.blocked.org.uk)"]', function () {
-    browser = browscap.getBrowser('OrgProbe/0.9.4 (+http://www.blocked.org.uk)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('OrgProbe/0.9.4 (+http://www.blocked.org.uk)');
 
     assert.strictEqual(browser['Comment'], 'Link Checkers', 'Expected actual "Comment" to be \'Link Checkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Open Rights Group Probe', 'Expected actual "Browser" to be \'Open Rights Group Probe\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2425,7 +2485,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BK ["cuwhois/1.0 (+http://www.cuwhois.com/)"]', function () {
-    browser = browscap.getBrowser('cuwhois/1.0 (+http://www.cuwhois.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('cuwhois/1.0 (+http://www.cuwhois.com/)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'cuWhois Bot', 'Expected actual "Browser" to be \'cuWhois Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2464,7 +2525,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BL ["NetTrack Anonymous Web Statistics https://nettrack.info/support.php"]', function () {
-    browser = browscap.getBrowser('NetTrack Anonymous Web Statistics https://nettrack.info/support.php');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NetTrack Anonymous Web Statistics https://nettrack.info/support.php');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NetTrack Scanner', 'Expected actual "Browser" to be \'NetTrack Scanner\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2503,7 +2565,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BM ["omgili/0.5 +http://omgili.com"]', function () {
-    browser = browscap.getBrowser('omgili/0.5 +http://omgili.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('omgili/0.5 +http://omgili.com');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Omgili Bot', 'Expected actual "Browser" to be \'Omgili Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2542,7 +2605,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BN ["IAS crawler (ias_crawler; http://integralads.com/site-indexing-policy/)"]', function () {
-    browser = browscap.getBrowser('IAS crawler (ias_crawler; http://integralads.com/site-indexing-policy/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('IAS crawler (ias_crawler; http://integralads.com/site-indexing-policy/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'IAS Crawler', 'Expected actual "Browser" to be \'IAS Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2581,7 +2645,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BO ["YOTPO - https://www.yotpo.com/terms-of-service/"]', function () {
-    browser = browscap.getBrowser('YOTPO - https://www.yotpo.com/terms-of-service/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('YOTPO - https://www.yotpo.com/terms-of-service/');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yotpo Bot', 'Expected actual "Browser" to be \'Yotpo Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2620,7 +2685,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BP ["GermCrawler"]', function () {
-    browser = browscap.getBrowser('GermCrawler');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('GermCrawler');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Germ Crawler', 'Expected actual "Browser" to be \'Germ Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2659,7 +2725,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BQ ["Fyrebot/1.0"]', function () {
-    browser = browscap.getBrowser('Fyrebot/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Fyrebot/1.0');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Fyre Bot', 'Expected actual "Browser" to be \'Fyre Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2698,7 +2765,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BR ["istellabot/t.1"]', function () {
-    browser = browscap.getBrowser('istellabot/t.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('istellabot/t.1');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Istella Bot', 'Expected actual "Browser" to be \'Istella Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2737,7 +2805,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BS ["Clickagy Intelligence Bot v2"]', function () {
-    browser = browscap.getBrowser('Clickagy Intelligence Bot v2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Clickagy Intelligence Bot v2');
 
     assert.strictEqual(browser['Comment'], 'Data Mining', 'Expected actual "Comment" to be \'Data Mining\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Clickagy Intelligence Bot', 'Expected actual "Browser" to be \'Clickagy Intelligence Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2776,7 +2845,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BT ["Mozilla/5.0 (compatible; um-LN/1.0; mailto: techinfo@ubermetrics-technologies.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; um-LN/1.0; mailto: techinfo@ubermetrics-technologies.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; um-LN/1.0; mailto: techinfo@ubermetrics-technologies.com)');
 
     assert.strictEqual(browser['Comment'], 'uMBot', 'Expected actual "Comment" to be \'uMBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'uMBot', 'Expected actual "Browser" to be \'uMBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2815,7 +2885,8 @@ suite('checking for issue 1320. (73 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1320-BU ["ganarvisitas/1.0 (+http://www.ganarvisitas.com/)"]', function () {
-    browser = browscap.getBrowser('ganarvisitas/1.0 (+http://www.ganarvisitas.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('ganarvisitas/1.0 (+http://www.ganarvisitas.com/)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Ganar Visitas Bot', 'Expected actual "Browser" to be \'Ganar Visitas Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

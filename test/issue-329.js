@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 329. (12 tests)', function () {
+suite('checking for issue 329. (6 tests)', function () {
   test('issue-329-A ["AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 329. (12 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-329-B ["AppStore/2.0 iOS/7.0.4 model/iPhone6,1 (6; dt:89)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.0.4 model/iPhone6,1 (6; dt:89)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.0.4 model/iPhone6,1 (6; dt:89)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 329. (12 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-329-C ["AppStore/2.0 iOS/7.1.1 model/iPhone3,2 build/11D201 (4; dt:27)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone3,2 build/11D201 (4; dt:27)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone3,2 build/11D201 (4; dt:27)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 329. (12 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-329-D ["AppStore/2.0 iOS/7.1.1 model/iPhone6,1 build/11D201 (6; dt:89)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone6,1 build/11D201 (6; dt:89)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone6,1 build/11D201 (6; dt:89)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 329. (12 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-329-E ["AppStore/2.0 iOS/7.1.1 model/iPhone4,1 build/11D201 (6; dt:73)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone4,1 build/11D201 (6; dt:73)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone4,1 build/11D201 (6; dt:73)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 329. (12 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-329-F ["AppStore/2.0 iOS/7.0.6 model/iPhone6,1 (6; dt:89)"]', function () {
-    browser = browscap.getBrowser('AppStore/2.0 iOS/7.0.6 model/iPhone6,1 (6; dt:89)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppStore/2.0 iOS/7.0.6 model/iPhone6,1 (6; dt:89)');
 
     assert.strictEqual(browser['Comment'], 'Apple AppStore App 2.0', 'Expected actual "Comment" to be \'Apple AppStore App 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple AppStore App', 'Expected actual "Browser" to be \'Apple AppStore App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

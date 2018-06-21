@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1082. (5 tests)', function () {
   test('issue-1082-A ["msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)"]', function () {
-    browser = browscap.getBrowser('msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)');
 
     assert.strictEqual(browser['Comment'], 'MSN-Media', 'Expected actual "Comment" to be \'MSN-Media\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'msnbot-media', 'Expected actual "Browser" to be \'msnbot-media\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1082. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1082-B ["msnbot/2.0b (+http://search.msn.com/msnbot.htm)"]', function () {
-    browser = browscap.getBrowser('msnbot/2.0b (+http://search.msn.com/msnbot.htm)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('msnbot/2.0b (+http://search.msn.com/msnbot.htm)');
 
     assert.strictEqual(browser['Comment'], 'msnbot', 'Expected actual "Comment" to be \'msnbot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'msnbot', 'Expected actual "Browser" to be \'msnbot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1082. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1082-C ["SklikBot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)"]', function () {
-    browser = browscap.getBrowser('SklikBot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SklikBot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)');
 
     assert.strictEqual(browser['Comment'], 'SklikBot', 'Expected actual "Comment" to be \'SklikBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SklikBot', 'Expected actual "Browser" to be \'SklikBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1082. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1082-D ["Interdose AntiSpamBot/2.0 (+http://www.piep.net)"]', function () {
-    browser = browscap.getBrowser('Interdose AntiSpamBot/2.0 (+http://www.piep.net)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Interdose AntiSpamBot/2.0 (+http://www.piep.net)');
 
     assert.strictEqual(browser['Comment'], 'AntiSpamBot', 'Expected actual "Comment" to be \'AntiSpamBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AntiSpamBot', 'Expected actual "Browser" to be \'AntiSpamBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1082. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1082-E ["Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)');
 
     assert.strictEqual(browser['Comment'], 'Wayback Archive Bot', 'Expected actual "Comment" to be \'Wayback Archive Bot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wayback Archive Bot', 'Expected actual "Browser" to be \'Wayback Archive Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 806. (2 tests)', function () {
   test('issue-806-A ["Mozilla/5.0 (compatible; DeuSu/0.1.0; +https://deusu.de/robot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; DeuSu/0.1.0; +https://deusu.de/robot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; DeuSu/0.1.0; +https://deusu.de/robot.html)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Werbefreie Deutsche Suchmaschine', 'Expected actual "Browser" to be \'Werbefreie Deutsche Suchmaschine\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 806. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-806-B ["Mozilla/5.0 (compatible; DeuSu/5.0.2; +https://deusu.de/robot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; DeuSu/5.0.2; +https://deusu.de/robot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; DeuSu/5.0.2; +https://deusu.de/robot.html)');
 
     assert.strictEqual(browser['Comment'], 'Search Engines', 'Expected actual "Comment" to be \'Search Engines\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Werbefreie Deutsche Suchmaschine', 'Expected actual "Browser" to be \'Werbefreie Deutsche Suchmaschine\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

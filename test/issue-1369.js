@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1369. (3 tests)', function () {
   test('issue-1369-A ["Reddit/Version 2.6.0/Build 200033/iOS Version 10.0.2 (Build 14A456)"]', function () {
-    browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.0.2 (Build 14A456)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.0.2 (Build 14A456)');
 
     assert.strictEqual(browser['Comment'], 'Reddit App', 'Expected actual "Comment" to be \'Reddit App\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Reddit App', 'Expected actual "Browser" to be \'Reddit App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1369. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1369-B ["Reddit/Version 2.6.0/Build 200033/iOS Version 10.1.1 (Build 14B100)"]', function () {
-    browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.1.1 (Build 14B100)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.1.1 (Build 14B100)');
 
     assert.strictEqual(browser['Comment'], 'Reddit App', 'Expected actual "Comment" to be \'Reddit App\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Reddit App', 'Expected actual "Browser" to be \'Reddit App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1369. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1369-C ["Reddit/Version 2.6.0/Build 200033/iOS Version 10.2.1 (Build 14D27)"]', function () {
-    browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.2.1 (Build 14D27)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Reddit/Version 2.6.0/Build 200033/iOS Version 10.2.1 (Build 14D27)');
 
     assert.strictEqual(browser['Comment'], 'Reddit App', 'Expected actual "Comment" to be \'Reddit App\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Reddit App', 'Expected actual "Browser" to be \'Reddit App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1646. (1 test)', function () {
   test('issue-1646-A ["Athens15_TD/V2 Linux/3.0.13 Android/5.1 andy_5EI3 Release/02.15.2012 Browser/AppleWebKit534.30 Mobile Safari/534.30 System/Android 5.1;"]', function () {
-    browser = browscap.getBrowser('Athens15_TD/V2 Linux/3.0.13 Android/5.1 andy_5EI3 Release/02.15.2012 Browser/AppleWebKit534.30 Mobile Safari/534.30 System/Android 5.1;');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Athens15_TD/V2 Linux/3.0.13 Android/5.1 andy_5EI3 Release/02.15.2012 Browser/AppleWebKit534.30 Mobile Safari/534.30 System/Android 5.1;');
 
     assert.strictEqual(browser['Comment'], 'Android Browser 4.0', 'Expected actual "Comment" to be \'Android Browser 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Android', 'Expected actual "Browser" to be \'Android\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

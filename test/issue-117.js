@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 117. (1 test)', function () {
   test('issue-117 ["netEstate NE Crawler (+http://www.website-datenbank.de/)"]', function () {
-    browser = browscap.getBrowser('netEstate NE Crawler (+http://www.website-datenbank.de/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('netEstate NE Crawler (+http://www.website-datenbank.de/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'netEstate NE Crawler', 'Expected actual "Browser" to be \'netEstate NE Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

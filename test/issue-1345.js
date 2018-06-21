@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1345. (63 tests)', function () {
+suite('checking for issue 1345. (59 tests)', function () {
   test('issue-1345-A ["iTunes/10.2.1 (Macintosh; Intel Mac OS X 10.7) AppleWebKit/534.20.8"]', function () {
-    browser = browscap.getBrowser('iTunes/10.2.1 (Macintosh; Intel Mac OS X 10.7) AppleWebKit/534.20.8');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.2.1 (Macintosh; Intel Mac OS X 10.7) AppleWebKit/534.20.8');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.2', 'Expected actual "Comment" to be \'iTunes 10.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-B ["iTunes/10.2.1 (Windows; Microsoft Windows 7 Enterprise Edition Service Pack 1 (Build 7601)) AppleWebKit/533.20.25"]', function () {
-    browser = browscap.getBrowser('iTunes/10.2.1 (Windows; Microsoft Windows 7 Enterprise Edition Service Pack 1 (Build 7601)) AppleWebKit/533.20.25');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.2.1 (Windows; Microsoft Windows 7 Enterprise Edition Service Pack 1 (Build 7601)) AppleWebKit/533.20.25');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.2', 'Expected actual "Comment" to be \'iTunes 10.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-C ["iTunes/10.4.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/534.50"]', function () {
-    browser = browscap.getBrowser('iTunes/10.4.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/534.50');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.4.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/534.50');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.4', 'Expected actual "Comment" to be \'iTunes 10.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-D ["iTunes/10.5 (Macintosh; Intel Mac OS X 10.6.8) AppleWebKit/534.51.22"]', function () {
-    browser = browscap.getBrowser('iTunes/10.5 (Macintosh; Intel Mac OS X 10.6.8) AppleWebKit/534.51.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.5 (Macintosh; Intel Mac OS X 10.6.8) AppleWebKit/534.51.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.5', 'Expected actual "Comment" to be \'iTunes 10.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-E ["iTunes/10.5 (Macintosh; Intel Mac OS X 10.7.2) AppleWebKit/534.51.22"]', function () {
-    browser = browscap.getBrowser('iTunes/10.5 (Macintosh; Intel Mac OS X 10.7.2) AppleWebKit/534.51.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.5 (Macintosh; Intel Mac OS X 10.7.2) AppleWebKit/534.51.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.5', 'Expected actual "Comment" to be \'iTunes 10.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-F ["iTunes/10.5 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/534.51.22"]', function () {
-    browser = browscap.getBrowser('iTunes/10.5 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/534.51.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.5 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/534.51.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.5', 'Expected actual "Comment" to be \'iTunes 10.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-G ["iTunes/10.5 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/534.51.22"]', function () {
-    browser = browscap.getBrowser('iTunes/10.5 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/534.51.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.5 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/534.51.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.5', 'Expected actual "Comment" to be \'iTunes 10.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-H ["iTunes/10.7 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 1 (Build 6001)) AppleWebKit/536.26.9"]', function () {
-    browser = browscap.getBrowser('iTunes/10.7 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 1 (Build 6001)) AppleWebKit/536.26.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/10.7 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 1 (Build 6001)) AppleWebKit/536.26.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 10.7', 'Expected actual "Comment" to be \'iTunes 10.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-I ["iTunes/11.0.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-J ["iTunes/11.0.2 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.2 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.2 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-K ["iTunes/11.0.2 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.2 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.2 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.27.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-L ["iTunes/11.0.4 (Macintosh; OS X 10.6.8) AppleWebKit/534.59.8"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.4 (Macintosh; OS X 10.6.8) AppleWebKit/534.59.8');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.4 (Macintosh; OS X 10.6.8) AppleWebKit/534.59.8');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-M ["iTunes/11.0.4 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.4 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.4 (Windows; Microsoft Windows 7 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-N ["iTunes/11.0.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.0.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.0.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.0', 'Expected actual "Comment" to be \'iTunes 11.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-O ["iTunes/11.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.1 (Windows; Microsoft Windows 7 x64 Business Edition Service Pack 1 (Build 7601)) AppleWebKit/536.30.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.1', 'Expected actual "Comment" to be \'iTunes 11.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-P ["iTunes/11.1 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/536.30.1"]', function () {
-    browser = browscap.getBrowser('iTunes/11.1 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/536.30.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.1 (Windows; Microsoft Windows Vista Home Premium Edition Service Pack 2 (Build 6002)) AppleWebKit/536.30.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.1', 'Expected actual "Comment" to be \'iTunes 11.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-Q ["iTunes/11.2.2 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.15"]', function () {
-    browser = browscap.getBrowser('iTunes/11.2.2 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.15');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.2.2 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.15');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.2', 'Expected actual "Comment" to be \'iTunes 11.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-R ["iTunes/11.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/537.60.17"]', function () {
-    browser = browscap.getBrowser('iTunes/11.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/537.60.17');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.4 (Windows; Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601)) AppleWebKit/537.60.17');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.4', 'Expected actual "Comment" to be \'iTunes 11.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-S ["iTunes/11.4 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.17"]', function () {
-    browser = browscap.getBrowser('iTunes/11.4 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.17');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/11.4 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/537.60.17');
 
     assert.strictEqual(browser['Comment'], 'iTunes 11.4', 'Expected actual "Comment" to be \'iTunes 11.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-T ["iTunes/12.0.1 (Macintosh; OS X 10.8.5) AppleWebKit/536.30.1"]', function () {
-    browser = browscap.getBrowser('iTunes/12.0.1 (Macintosh; OS X 10.8.5) AppleWebKit/536.30.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.0.1 (Macintosh; OS X 10.8.5) AppleWebKit/536.30.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.0', 'Expected actual "Comment" to be \'iTunes 12.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-U ["iTunes/12.0.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200)) AppleWebKit/7600.1017.0.24"]', function () {
-    browser = browscap.getBrowser('iTunes/12.0.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200)) AppleWebKit/7600.1017.0.24');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.0.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200)) AppleWebKit/7600.1017.0.24');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.0', 'Expected actual "Comment" to be \'iTunes 12.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-V ["iTunes/12.0.1 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/7600.1017.0.24"]', function () {
-    browser = browscap.getBrowser('iTunes/12.0.1 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/7600.1017.0.24');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.0.1 (Windows; Microsoft Windows XP Home Edition Service Pack 3 (Build 2600)) AppleWebKit/7600.1017.0.24');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.0', 'Expected actual "Comment" to be \'iTunes 12.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-W ["iTunes/12.1 (Macintosh; OS X 10.10) AppleWebKit/0600.1.25"]', function () {
-    browser = browscap.getBrowser('iTunes/12.1 (Macintosh; OS X 10.10) AppleWebKit/0600.1.25');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.1 (Macintosh; OS X 10.10) AppleWebKit/0600.1.25');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.1', 'Expected actual "Comment" to be \'iTunes 12.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-X ["iTunes/12.1.2 (Macintosh; OS X 10.7.5) AppleWebKit/534.57.7"]', function () {
-    browser = browscap.getBrowser('iTunes/12.1.2 (Macintosh; OS X 10.7.5) AppleWebKit/534.57.7');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.1.2 (Macintosh; OS X 10.7.5) AppleWebKit/534.57.7');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.1', 'Expected actual "Comment" to be \'iTunes 12.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-Y ["iTunes/12.1.2 (Windows Microsoft Windows 8 x64 Home Premium Edition (Build 9200) x64) AppleWebKit/7600.1017.9000.3"]', function () {
-    browser = browscap.getBrowser('iTunes/12.1.2 (Windows Microsoft Windows 8 x64 Home Premium Edition (Build 9200) x64) AppleWebKit/7600.1017.9000.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.1.2 (Windows Microsoft Windows 8 x64 Home Premium Edition (Build 9200) x64) AppleWebKit/7600.1017.9000.3');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.1', 'Expected actual "Comment" to be \'iTunes 12.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-Z ["iTunes/12.2 (Macintosh; OS X 10.10.4) AppleWebKit/0600.7.12"]', function () {
-    browser = browscap.getBrowser('iTunes/12.2 (Macintosh; OS X 10.10.4) AppleWebKit/0600.7.12');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.2 (Macintosh; OS X 10.10.4) AppleWebKit/0600.7.12');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.2', 'Expected actual "Comment" to be \'iTunes 12.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AA ["iTunes/12.2.1 (Macintosh; OS X 10.10.4) AppleWebKit/600.7.12"]', function () {
-    browser = browscap.getBrowser('iTunes/12.2.1 (Macintosh; OS X 10.10.4) AppleWebKit/600.7.12');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.2.1 (Macintosh; OS X 10.10.4) AppleWebKit/600.7.12');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.2', 'Expected actual "Comment" to be \'iTunes 12.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AB ["iTunes/12.2.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200); x64) AppleWebKit/7600.5017.0.22"]', function () {
-    browser = browscap.getBrowser('iTunes/12.2.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200); x64) AppleWebKit/7600.5017.0.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.2.1 (Windows; Microsoft Windows 8 x64 Home Premium Edition (Build 9200); x64) AppleWebKit/7600.5017.0.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.2', 'Expected actual "Comment" to be \'iTunes 12.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AC ["iTunes/12.2.2 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9"]', function () {
-    browser = browscap.getBrowser('iTunes/12.2.2 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.2.2 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.2', 'Expected actual "Comment" to be \'iTunes 12.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AD ["iTunes/12.2.2 (Windows Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601) x64) AppleWebKit/7600.5017.0.22"]', function () {
-    browser = browscap.getBrowser('iTunes/12.2.2 (Windows Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601) x64) AppleWebKit/7600.5017.0.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.2.2 (Windows Microsoft Windows 7 x64 Home Premium Edition Service Pack 1 (Build 7601) x64) AppleWebKit/7600.5017.0.22');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.2', 'Expected actual "Comment" to be \'iTunes 12.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AE ["iTunes/12.3.2 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2"]', function () {
-    browser = browscap.getBrowser('iTunes/12.3.2 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.3.2 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.3', 'Expected actual "Comment" to be \'iTunes 12.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AF ["iTunes/12.4 (Windows; Microsoft Windows 8.1 x64 Business Edition (Build 9200); x64) AppleWebKit/7601.6016.1000.1"]', function () {
-    browser = browscap.getBrowser('iTunes/12.4 (Windows; Microsoft Windows 8.1 x64 Business Edition (Build 9200); x64) AppleWebKit/7601.6016.1000.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.4 (Windows; Microsoft Windows 8.1 x64 Business Edition (Build 9200); x64) AppleWebKit/7601.6016.1000.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.4', 'Expected actual "Comment" to be \'iTunes 12.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1255,7 +1285,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AG ["iTunes/12.5.5 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9"]', function () {
-    browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.5', 'Expected actual "Comment" to be \'iTunes 12.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1294,7 +1325,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AH ["iTunes/12.5.5 (Macintosh; OS X 10.11.5) AppleWebKit/601.6.17"]', function () {
-    browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.11.5) AppleWebKit/601.6.17');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.11.5) AppleWebKit/601.6.17');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.5', 'Expected actual "Comment" to be \'iTunes 12.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1333,7 +1365,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AI ["iTunes/12.5.5 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2"]', function () {
-    browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.5.5 (Macintosh; OS X 10.9.5) AppleWebKit/537.78.2');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.5', 'Expected actual "Comment" to be \'iTunes 12.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1372,7 +1405,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AJ ["iTunes/12.6 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9"]', function () {
-    browser = browscap.getBrowser('iTunes/12.6 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.6 (Macintosh; OS X 10.10.5) AppleWebKit/600.8.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.6', 'Expected actual "Comment" to be \'iTunes 12.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1411,7 +1445,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AK ["iTunes/12.6 (Macintosh; OS X 10.11.6) AppleWebKit/601.7.8"]', function () {
-    browser = browscap.getBrowser('iTunes/12.6 (Macintosh; OS X 10.11.6) AppleWebKit/601.7.8');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.6 (Macintosh; OS X 10.11.6) AppleWebKit/601.7.8');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.6', 'Expected actual "Comment" to be \'iTunes 12.6\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1450,7 +1485,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AL ["iTunes/4.2 (Macintosh; U; PPC Mac OS X 10.2)"]', function () {
-    browser = browscap.getBrowser('iTunes/4.2 (Macintosh; U; PPC Mac OS X 10.2)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/4.2 (Macintosh; U; PPC Mac OS X 10.2)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 4.2', 'Expected actual "Comment" to be \'iTunes 4.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1489,7 +1525,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AM ["iTunes/4.7 (Macintosh; N; PPC)"]', function () {
-    browser = browscap.getBrowser('iTunes/4.7 (Macintosh; N; PPC)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/4.7 (Macintosh; N; PPC)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 4.7', 'Expected actual "Comment" to be \'iTunes 4.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1528,7 +1565,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AN ["iTunes/4.7 (Macintosh; U; PPC Mac OS X 10.2)"]', function () {
-    browser = browscap.getBrowser('iTunes/4.7 (Macintosh; U; PPC Mac OS X 10.2)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/4.7 (Macintosh; U; PPC Mac OS X 10.2)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 4.7', 'Expected actual "Comment" to be \'iTunes 4.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1567,7 +1605,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AO ["iTunes/7.0 (Macintosh; U; PPC Mac OS X 10.4.7)"]', function () {
-    browser = browscap.getBrowser('iTunes/7.0 (Macintosh; U; PPC Mac OS X 10.4.7)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/7.0 (Macintosh; U; PPC Mac OS X 10.4.7)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 7.0', 'Expected actual "Comment" to be \'iTunes 7.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1606,7 +1645,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AP ["iTunes/7.1.1 (Macintosh; N; PPC)"]', function () {
-    browser = browscap.getBrowser('iTunes/7.1.1 (Macintosh; N; PPC)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/7.1.1 (Macintosh; N; PPC)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 7.1', 'Expected actual "Comment" to be \'iTunes 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1645,7 +1685,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AQ ["iTunes/7.4.1"]', function () {
-    browser = browscap.getBrowser('iTunes/7.4.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/7.4.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 7.4', 'Expected actual "Comment" to be \'iTunes 7.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1684,7 +1725,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AR ["iTunes/7.5 (Windows; N)"]', function () {
-    browser = browscap.getBrowser('iTunes/7.5 (Windows; N)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/7.5 (Windows; N)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 7.5', 'Expected actual "Comment" to be \'iTunes 7.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1723,7 +1765,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AS ["iTunes/8.1"]', function () {
-    browser = browscap.getBrowser('iTunes/8.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/8.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 8.1', 'Expected actual "Comment" to be \'iTunes 8.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1762,7 +1805,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AT ["iTunes/8.2 (Macintosh; U; PPC Mac OS X 10_5_6)"]', function () {
-    browser = browscap.getBrowser('iTunes/8.2 (Macintosh; U; PPC Mac OS X 10_5_6)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/8.2 (Macintosh; U; PPC Mac OS X 10_5_6)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 8.2', 'Expected actual "Comment" to be \'iTunes 8.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1801,7 +1845,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AU ["iTunes/9.0 (Macintosh; Intel Mac OS X 10.5.8) AppleWebKit/531.9"]', function () {
-    browser = browscap.getBrowser('iTunes/9.0 (Macintosh; Intel Mac OS X 10.5.8) AppleWebKit/531.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/9.0 (Macintosh; Intel Mac OS X 10.5.8) AppleWebKit/531.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 9.0', 'Expected actual "Comment" to be \'iTunes 9.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1840,7 +1885,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AV ["iTunes/9.0.2 (Windows; N)"]', function () {
-    browser = browscap.getBrowser('iTunes/9.0.2 (Windows; N)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/9.0.2 (Windows; N)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 9.0', 'Expected actual "Comment" to be \'iTunes 9.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1879,7 +1925,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AW ["iTunes/9.0.3 (Macintosh; U; Intel Mac OS X 10_6_2; en-ca)"]', function () {
-    browser = browscap.getBrowser('iTunes/9.0.3 (Macintosh; U; Intel Mac OS X 10_6_2; en-ca)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/9.0.3 (Macintosh; U; Intel Mac OS X 10_6_2; en-ca)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 9.0', 'Expected actual "Comment" to be \'iTunes 9.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1918,7 +1965,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AX ["iTunes/9.1.1"]', function () {
-    browser = browscap.getBrowser('iTunes/9.1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/9.1.1');
 
     assert.strictEqual(browser['Comment'], 'iTunes 9.1', 'Expected actual "Comment" to be \'iTunes 9.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1957,7 +2005,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AY ["iTunes/9.2.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/"]', function () {
-    browser = browscap.getBrowser('iTunes/9.2.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/9.2.1 (Windows; Microsoft Windows Vista Home Basic Edition Service Pack 2 (Build 6002)) AppleWebKit/');
 
     assert.strictEqual(browser['Comment'], 'iTunes 9.2', 'Expected actual "Comment" to be \'iTunes 9.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1996,7 +2045,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-AZ ["iTunes-iPad-M/5.1.1 (16GB; dt:28)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPad-M/5.1.1 (16GB; dt:28)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPad-M/5.1.1 (16GB; dt:28)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 5.1 for iOS', 'Expected actual "Comment" to be \'iTunes 5.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2035,7 +2085,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BA ["iTunes-iPad-M/6.1.2 (2; 32GB; dt:75)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPad-M/6.1.2 (2; 32GB; dt:75)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPad-M/6.1.2 (2; 32GB; dt:75)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 6.1 for iOS', 'Expected actual "Comment" to be \'iTunes 6.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2074,7 +2125,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BB ["iTunes-iPad/5.1.1 (2; 16GB; dt:74)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPad/5.1.1 (2; 16GB; dt:74)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPad/5.1.1 (2; 16GB; dt:74)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 5.1 for iOS', 'Expected actual "Comment" to be \'iTunes 5.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2113,7 +2165,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BC ["iTunes-iPhone/5.0.1 (6; 64GB)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPhone/5.0.1 (6; 64GB)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPhone/5.0.1 (6; 64GB)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 5.0 for iOS', 'Expected actual "Comment" to be \'iTunes 5.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2152,7 +2205,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BD ["iTunes-iPhone/5.1 (6; 16GB; dt:73)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPhone/5.1 (6; 16GB; dt:73)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPhone/5.1 (6; 16GB; dt:73)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 5.1 for iOS', 'Expected actual "Comment" to be \'iTunes 5.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2191,7 +2245,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BE ["iTunes-iPod/4.2.1 (2; 8GB)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPod/4.2.1 (2; 8GB)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPod/4.2.1 (2; 8GB)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 4.2 for iOS', 'Expected actual "Comment" to be \'iTunes 4.2 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2230,7 +2285,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BF ["iTunes-iPod/5.0.1 (4; 32GB)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPod/5.0.1 (4; 32GB)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPod/5.0.1 (4; 32GB)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 5.0 for iOS', 'Expected actual "Comment" to be \'iTunes 5.0 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -2269,7 +2325,8 @@ suite('checking for issue 1345. (63 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1345-BG ["iTunes-iPod/6.1.6 (4; 8GB; dt:71)"]', function () {
-    browser = browscap.getBrowser('iTunes-iPod/6.1.6 (4; 8GB; dt:71)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes-iPod/6.1.6 (4; 8GB; dt:71)');
 
     assert.strictEqual(browser['Comment'], 'iTunes 6.1 for iOS', 'Expected actual "Comment" to be \'iTunes 6.1 for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1176. (1 test)', function () {
   test('issue-1176 ["Mozilla/5.0 (compatible; PRTG Network Monitor (www.paessler.com); Windows)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; PRTG Network Monitor (www.paessler.com); Windows)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; PRTG Network Monitor (www.paessler.com); Windows)');
 
     assert.strictEqual(browser['Comment'], 'Site Monitors', 'Expected actual "Comment" to be \'Site Monitors\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'PRTG Network Monitor', 'Expected actual "Browser" to be \'PRTG Network Monitor\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

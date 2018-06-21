@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1119. (1 test)', function () {
   test('issue-1119 ["Kurio/3.1.9 Build 66400(Android Kitkat 4.4.4; Phone)"]', function () {
-    browser = browscap.getBrowser('Kurio/3.1.9 Build 66400(Android Kitkat 4.4.4; Phone)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Kurio/3.1.9 Build 66400(Android Kitkat 4.4.4; Phone)');
 
     assert.strictEqual(browser['Comment'], 'Kurio App', 'Expected actual "Comment" to be \'Kurio App\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Kurio App', 'Expected actual "Browser" to be \'Kurio App\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

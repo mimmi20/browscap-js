@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1350. (24 tests)', function () {
+suite('checking for issue 1350. (18 tests)', function () {
   test('issue-1350-A ["Mozilla/5.0 (Mobile; OPENC; rv:40.0) Gecko/40.0 Firefox/40.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:40.0) Gecko/40.0 Firefox/40.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:40.0) Gecko/40.0 Firefox/40.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 40.0 for FirefoxOS 2.2', 'Expected actual "Comment" to be \'Firefox 40.0 for FirefoxOS 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-B ["Mozilla/5.0 (Mobile; OPENC; rv:41.0) Gecko/41.0 Firefox/41.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:41.0) Gecko/41.0 Firefox/41.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:41.0) Gecko/41.0 Firefox/41.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 41.0 for FirefoxOS 2.2', 'Expected actual "Comment" to be \'Firefox 41.0 for FirefoxOS 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-C ["Mozilla/5.0 (Mobile; OPENC; rv:42.0) Gecko/42.0 Firefox/42.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:42.0) Gecko/42.0 Firefox/42.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:42.0) Gecko/42.0 Firefox/42.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 42.0 for FirefoxOS 2.2', 'Expected actual "Comment" to be \'Firefox 42.0 for FirefoxOS 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-D ["Mozilla/5.0 (Mobile; OPENC; rv:43.0) Gecko/43.0 Firefox/43.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:43.0) Gecko/43.0 Firefox/43.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:43.0) Gecko/43.0 Firefox/43.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 43.0 for FirefoxOS 2.2', 'Expected actual "Comment" to be \'Firefox 43.0 for FirefoxOS 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-E ["Mozilla/5.0 (Mobile; OPENC; rv:44.0) Gecko/44.0 Firefox/44.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:44.0) Gecko/44.0 Firefox/44.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:44.0) Gecko/44.0 Firefox/44.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 44.0 for FirefoxOS 2.5', 'Expected actual "Comment" to be \'Firefox 44.0 for FirefoxOS 2.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-F ["Mozilla/5.0 (Mobile; OPENC; rv:45.0) Gecko/45.0 Firefox/45.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:45.0) Gecko/45.0 Firefox/45.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:45.0) Gecko/45.0 Firefox/45.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 45.0 for FirefoxOS 2.5', 'Expected actual "Comment" to be \'Firefox 45.0 for FirefoxOS 2.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-G ["Mozilla/5.0 (Mobile; OPENC; rv:48.0) Gecko/48.0 Firefox/48.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:48.0) Gecko/48.0 Firefox/48.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:48.0) Gecko/48.0 Firefox/48.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 48.0 for FirefoxOS 2.5', 'Expected actual "Comment" to be \'Firefox 48.0 for FirefoxOS 2.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-H ["Mozilla/5.0 (Mobile; OPENC; rv:49.0) Gecko/49.0 Firefox/49.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:49.0) Gecko/49.0 Firefox/49.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:49.0) Gecko/49.0 Firefox/49.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 49.0 for FirefoxOS 2.5', 'Expected actual "Comment" to be \'Firefox 49.0 for FirefoxOS 2.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-I ["Mozilla/5.0 (Mobile; OPENC; rv:37.0) Gecko/37.0 Firefox/37.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:37.0) Gecko/37.0 Firefox/37.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:37.0) Gecko/37.0 Firefox/37.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 37.0 for FirefoxOS 2.2', 'Expected actual "Comment" to be \'Firefox 37.0 for FirefoxOS 2.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-J ["Mozilla/5.0 (Mobile; Orange KLIF; rv:32.0) Gecko/32.0 Firefox/32.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; Orange KLIF; rv:32.0) Gecko/32.0 Firefox/32.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; Orange KLIF; rv:32.0) Gecko/32.0 Firefox/32.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 32.0 for FirefoxOS 2.0', 'Expected actual "Comment" to be \'Firefox 32.0 for FirefoxOS 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-K ["Mozilla/5.0 (Mobile; Orange KLIFD; rv:32.0) Gecko/32.0 Firefox/32.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; Orange KLIFD; rv:32.0) Gecko/32.0 Firefox/32.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; Orange KLIFD; rv:32.0) Gecko/32.0 Firefox/32.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 32.0 for FirefoxOS 2.0', 'Expected actual "Comment" to be \'Firefox 32.0 for FirefoxOS 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-L ["Mozilla/5.0 (Mobile; OPENC; rv:33.0) Gecko/33.0 Firefox/33.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:33.0) Gecko/33.0 Firefox/33.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:33.0) Gecko/33.0 Firefox/33.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 33.0 for FirefoxOS 2.0', 'Expected actual "Comment" to be \'Firefox 33.0 for FirefoxOS 2.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-M ["Mozilla/5.0 (Mobile; ALCATELOneTouch4012A; rv:18.1) Gecko/18.1 Firefox/18.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch4012A; rv:18.1) Gecko/18.1 Firefox/18.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch4012A; rv:18.1) Gecko/18.1 Firefox/18.1');
 
     assert.strictEqual(browser['Comment'], 'Firefox 18.1 for FirefoxOS 1.1', 'Expected actual "Comment" to be \'Firefox 18.1 for FirefoxOS 1.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-N ["Mozilla/5.0 (Mobile; ALCATELOneTouch6015X SVN:01004P MMS:1.1; rv:28.0) Gecko/28.0 Firefox/28.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch6015X SVN:01004P MMS:1.1; rv:28.0) Gecko/28.0 Firefox/28.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch6015X SVN:01004P MMS:1.1; rv:28.0) Gecko/28.0 Firefox/28.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 28.0 for FirefoxOS 1.3', 'Expected actual "Comment" to be \'Firefox 28.0 for FirefoxOS 1.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-O ["Mozilla/5.0 (Mobile; ALCATELOneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; ALCATELOneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 28.0 for FirefoxOS 1.3', 'Expected actual "Comment" to be \'Firefox 28.0 for FirefoxOS 1.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-P ["Mozilla/5.0 (Mobile; OneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OneTouch4019A; rv:28.0) Gecko/28.0 Firefox/28.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 28.0 for FirefoxOS 1.3', 'Expected actual "Comment" to be \'Firefox 28.0 for FirefoxOS 1.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-Q ["Mozilla/5.0 (Mobile; OPEN2; rv:28.0) Gecko/28.0 Firefox/28.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPEN2; rv:28.0) Gecko/28.0 Firefox/28.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPEN2; rv:28.0) Gecko/28.0 Firefox/28.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 28.0 for FirefoxOS 1.3', 'Expected actual "Comment" to be \'Firefox 28.0 for FirefoxOS 1.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1350. (24 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1350-R ["Mozilla/5.0 (Mobile; OPENC; rv:28.0) Gecko/28.0 Firefox/28.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:28.0) Gecko/28.0 Firefox/28.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:28.0) Gecko/28.0 Firefox/28.0');
 
     assert.strictEqual(browser['Comment'], 'Firefox 28.0 for FirefoxOS 1.3', 'Expected actual "Comment" to be \'Firefox 28.0 for FirefoxOS 1.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Firefox', 'Expected actual "Browser" to be \'Firefox\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

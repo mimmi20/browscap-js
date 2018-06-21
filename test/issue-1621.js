@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1621. (4 tests)', function () {
   test('issue-1621-A ["Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.5"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.5');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.5');
 
     assert.strictEqual(browser['Comment'], 'Zimbra Desktop', 'Expected actual "Comment" to be \'Zimbra Desktop\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Zimbra Desktop', 'Expected actual "Browser" to be \'Zimbra Desktop\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1621. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1621-B ["Mozilla/5.0 (Windows; U; Windows NT 6.1; fr; rv:1.9.0.1) Gecko/2008072406 Prism (zdesktop/1.0.4)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.1; fr; rv:1.9.0.1) Gecko/2008072406 Prism (zdesktop/1.0.4)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.1; fr; rv:1.9.0.1) Gecko/2008072406 Prism (zdesktop/1.0.4)');
 
     assert.strictEqual(browser['Comment'], 'Zimbra Desktop', 'Expected actual "Comment" to be \'Zimbra Desktop\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Zimbra Desktop', 'Expected actual "Browser" to be \'Zimbra Desktop\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1621. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1621-C ["Mozilla/5.0 (Windows; U; Windows NT 6.2; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.7"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.7');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; fr; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.7');
 
     assert.strictEqual(browser['Comment'], 'Zimbra Desktop', 'Expected actual "Comment" to be \'Zimbra Desktop\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Zimbra Desktop', 'Expected actual "Browser" to be \'Zimbra Desktop\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1621. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1621-D ["Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.16pre) Gecko/20110902 Prism zdesktop/7.1.2"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.16pre) Gecko/20110902 Prism zdesktop/7.1.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.16pre) Gecko/20110902 Prism zdesktop/7.1.2');
 
     assert.strictEqual(browser['Comment'], 'Zimbra Desktop', 'Expected actual "Comment" to be \'Zimbra Desktop\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Zimbra Desktop', 'Expected actual "Browser" to be \'Zimbra Desktop\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

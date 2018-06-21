@@ -1,13 +1,12 @@
-"use strict";
+'use strict';
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 648. (3 tests)', function () {
   test('issue-648-A ["AppleCoreMedia/1.0.0.12F69 (Apple TV; U; CPU OS 8_3 like Mac OS X; en_us)"]', function () {
-    browser = browscap.getBrowser('AppleCoreMedia/1.0.0.12F69 (Apple TV; U; CPU OS 8_3 like Mac OS X; en_us)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AppleCoreMedia/1.0.0.12F69 (Apple TV; U; CPU OS 8_3 like Mac OS X; en_us)');
 
     assert.strictEqual(browser['Comment'], 'AppleCoreMedia 1.0', 'Expected actual "Comment" to be \'AppleCoreMedia 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AppleCoreMedia', 'Expected actual "Browser" to be \'AppleCoreMedia\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 648. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-648-B ["Mail/53 CFNetwork/711.2.23 Darwin/14.0.0"]', function () {
-    browser = browscap.getBrowser('Mail/53 CFNetwork/711.2.23 Darwin/14.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mail/53 CFNetwork/711.2.23 Darwin/14.0.0');
 
     assert.strictEqual(browser['Comment'], 'Apple Mail for Darwin', 'Expected actual "Comment" to be \'Apple Mail for Darwin\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Apple Mail', 'Expected actual "Browser" to be \'Apple Mail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 648. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-648-C ["Safari/10600.3.18 CFNetwork/720.2.4 Darwin/14.1.0 (x86_64)"]', function () {
-    browser = browscap.getBrowser('Safari/10600.3.18 CFNetwork/720.2.4 Darwin/14.1.0 (x86_64)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Safari/10600.3.18 CFNetwork/720.2.4 Darwin/14.1.0 (x86_64)');
 
     assert.strictEqual(browser['Comment'], 'Safari 8.0', 'Expected actual "Comment" to be \'Safari 8.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Safari', 'Expected actual "Browser" to be \'Safari\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
