@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 492. (155 tests)', function () {
+suite('checking for issue 492. (125 tests)', function () {
   test('issue-492-A ["Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
 

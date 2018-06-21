@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1406. (625 tests)', function () {
+suite('checking for issue 1406. (387 tests)', function () {
   test('issue-1406-A ["Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 Nokia5230/50.0.001; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.25 Mobile Safari/533.4 3gpp-gba"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 Nokia5230/50.0.001; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.25 Mobile Safari/533.4 3gpp-gba');
 

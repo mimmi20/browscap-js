@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1532. (8 tests)', function () {
+suite('checking for issue 1532. (4 tests)', function () {
   test('issue-1532-A ["Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)"]', function () {
     browser = browscap.getBrowser('Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)');
 

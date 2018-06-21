@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 513. (162 tests)', function () {
+suite('checking for issue 513. (149 tests)', function () {
   test('issue-513-A ["(){ :; }; :(){ :|:& };:"]', function () {
     browser = browscap.getBrowser('(){ :; }; :(){ :|:& };:');
 

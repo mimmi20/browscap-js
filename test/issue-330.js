@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 330. (16 tests)', function () {
+suite('checking for issue 330. (10 tests)', function () {
   test('issue-330-A ["Instagram 4.2.5 (iPad3,6; iPhone OS 7_0_6; en_US; en) AppleWebKit/420+"]', function () {
     browser = browscap.getBrowser('Instagram 4.2.5 (iPad3,6; iPhone OS 7_0_6; en_US; en) AppleWebKit/420+');
 

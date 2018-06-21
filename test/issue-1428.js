@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1428. (2 tests)', function () {
+suite('checking for issue 1428. (1 test)', function () {
   test('issue-1428-A ["LG-GS290/V100 Obigo/WAP2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1"]', function () {
     browser = browscap.getBrowser('LG-GS290/V100 Obigo/WAP2.0 Profile/MIDP-2.1 Configuration/CLDC-1.1');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1044. (6 tests)', function () {
+suite('checking for issue 1044. (5 tests)', function () {
   test('issue-1044-A ["Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)"]', function () {
     browser = browscap.getBrowser('Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)');
 

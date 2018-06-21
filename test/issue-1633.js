@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1633. (55 tests)', function () {
+suite('checking for issue 1633. (41 tests)', function () {
   test('issue-1633-A ["AtomicBrowser/7.0.1 CFNetwork/758.5.3 Darwin/15.6.0"]', function () {
     browser = browscap.getBrowser('AtomicBrowser/7.0.1 CFNetwork/758.5.3 Darwin/15.6.0');
 

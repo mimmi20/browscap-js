@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1612. (26 tests)', function () {
+suite('checking for issue 1612. (19 tests)', function () {
   test('issue-1612-A ["Mozilla/5.0 (ClickMagick Link Monitor v1.4)"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (ClickMagick Link Monitor v1.4)');
 

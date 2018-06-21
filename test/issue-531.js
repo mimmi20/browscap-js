@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 531. (118 tests)', function () {
+suite('checking for issue 531. (69 tests)', function () {
   test('issue-531-A ["Mozilla/5.0 (iPad; CPU OS 7_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D167 [FBAN/FBIOS;FBAV/20.1.0.15.10;FBBV/5758778;FBDV/iPad2,4;FBMD/iPad;FBSN/iPhone OS;FBSV/7.1;FBSS/1; FBCR/;FBID/tablet;FBLC/da_DK;FBOP/1]"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (iPad; CPU OS 7_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D167 [FBAN/FBIOS;FBAV/20.1.0.15.10;FBBV/5758778;FBDV/iPad2,4;FBMD/iPad;FBSN/iPhone OS;FBSV/7.1;FBSS/1; FBCR/;FBID/tablet;FBLC/da_DK;FBOP/1]');
 

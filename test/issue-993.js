@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 993. (144 tests)', function () {
+suite('checking for issue 993. (138 tests)', function () {
   test('issue-993-A ["okhttp/2.7.5"]', function () {
     browser = browscap.getBrowser('okhttp/2.7.5');
 

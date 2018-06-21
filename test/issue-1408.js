@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1408. (106 tests)', function () {
+suite('checking for issue 1408. (96 tests)', function () {
   test('issue-1408-A ["SAMSUNG-B5722/B5722XXJA1, SAMSUNG-GT-B5722/B5722XXJA1 Profile/MIDP-2.0 Configuration/CLDC-1.1 Untrusted/1.0"]', function () {
     browser = browscap.getBrowser('SAMSUNG-B5722/B5722XXJA1, SAMSUNG-GT-B5722/B5722XXJA1 Profile/MIDP-2.0 Configuration/CLDC-1.1 Untrusted/1.0');
 

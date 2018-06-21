@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 329. (12 tests)', function () {
+suite('checking for issue 329. (6 tests)', function () {
   test('issue-329-A ["AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)"]', function () {
     browser = browscap.getBrowser('AppStore/2.0 iOS/7.1.1 model/iPhone5,1 build/11D201 (6; dt:79)');
 

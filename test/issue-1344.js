@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1344. (38 tests)', function () {
+suite('checking for issue 1344. (36 tests)', function () {
   test('issue-1344-A ["Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 539. (77 tests)', function () {
+suite('checking for issue 539. (69 tests)', function () {
   test('issue-539-A ["ALCATEL-OT871A/980 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q05A"]', function () {
     browser = browscap.getBrowser('ALCATEL-OT871A/980 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q05A');
 

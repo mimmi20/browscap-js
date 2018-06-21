@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1059. (59 tests)', function () {
+suite('checking for issue 1059. (52 tests)', function () {
   test('issue-1059-4 ["DVBViewer/TV HbbTV/1.1.1 (+PVR+DL;CMUV;DVBViewer;1.0;1.0;) SmartTV"]', function () {
     browser = browscap.getBrowser('DVBViewer/TV HbbTV/1.1.1 (+PVR+DL;CMUV;DVBViewer;1.0;1.0;) SmartTV');
 
@@ -1539,9 +1539,9 @@ suite('checking for issue 1059. (59 tests)', function () {
     assert.strictEqual(browser['Version'], '7.00', 'Expected actual "Version" to be \'7.00\' (was \'' + browser['Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform'], 'webOS', 'Expected actual "Platform" to be \'webOS\' (was \'' + browser['Platform'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform_Version'], '2.0', 'Expected actual "Platform_Version" to be \'2.0\' (was \'' + browser['Platform_Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Platform_Description'], 'HP webOS', 'Expected actual "Platform_Description" to be \'HP webOS\' (was \'' + browser['Platform_Description'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Platform_Description'], 'LG webOS', 'Expected actual "Platform_Description" to be \'LG webOS\' (was \'' + browser['Platform_Description'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform_Bits'], '32', 'Expected actual "Platform_Bits" to be \'32\' (was \'' + browser['Platform_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Platform_Maker'], 'HP', 'Expected actual "Platform_Maker" to be \'HP\' (was \'' + browser['Platform_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Platform_Maker'], 'LG', 'Expected actual "Platform_Maker" to be \'LG\' (was \'' + browser['Platform_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Alpha'], false, 'Expected actual "Alpha" to be false (was \'' + browser['Alpha'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Beta'], false, 'Expected actual "Beta" to be false (was \'' + browser['Beta'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1578,9 +1578,9 @@ suite('checking for issue 1059. (59 tests)', function () {
     assert.strictEqual(browser['Version'], '7.00', 'Expected actual "Version" to be \'7.00\' (was \'' + browser['Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform'], 'webOS', 'Expected actual "Platform" to be \'webOS\' (was \'' + browser['Platform'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform_Version'], '2.0', 'Expected actual "Platform_Version" to be \'2.0\' (was \'' + browser['Platform_Version'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Platform_Description'], 'HP webOS', 'Expected actual "Platform_Description" to be \'HP webOS\' (was \'' + browser['Platform_Description'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Platform_Description'], 'LG webOS', 'Expected actual "Platform_Description" to be \'LG webOS\' (was \'' + browser['Platform_Description'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Platform_Bits'], '32', 'Expected actual "Platform_Bits" to be \'32\' (was \'' + browser['Platform_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
-    assert.strictEqual(browser['Platform_Maker'], 'HP', 'Expected actual "Platform_Maker" to be \'HP\' (was \'' + browser['Platform_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Platform_Maker'], 'LG', 'Expected actual "Platform_Maker" to be \'LG\' (was \'' + browser['Platform_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Alpha'], false, 'Expected actual "Alpha" to be false (was \'' + browser['Alpha'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Beta'], false, 'Expected actual "Beta" to be false (was \'' + browser['Beta'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Frames'], true, 'Expected actual "Frames" to be true (was \'' + browser['Frames'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
