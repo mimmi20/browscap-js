@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1020. (11 tests)', function () {
   test('issue-1020-A ["Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-B ["Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-C ["Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-D ["Mozilla/5.0 (Windows NT 6.0) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.0) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.0) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-E ["Mozilla/5.0 (Windows NT 5.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 5.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 5.1) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-F ["Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-G ["Mozilla/5.0 (Windows NT 6.2) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.2) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.2) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-H ["Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-I ["Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-J ["Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1020. (11 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1020-K ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) WahOO Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'Wahoo Browser', 'Expected actual "Comment" to be \'Wahoo Browser\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wahoo Browser', 'Expected actual "Browser" to be \'Wahoo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

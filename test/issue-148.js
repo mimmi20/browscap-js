@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 148. (1 test)', function () {
   test('issue-148 ["Yahoo:LinkExpander:Slingstone"]', function () {
-    browser = browscap.getBrowser('Yahoo:LinkExpander:Slingstone');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Yahoo:LinkExpander:Slingstone');
 
     assert.strictEqual(browser['Comment'], 'Yahoo', 'Expected actual "Comment" to be \'Yahoo\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yahoo Slingstone', 'Expected actual "Browser" to be \'Yahoo Slingstone\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

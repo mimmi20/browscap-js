@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 225. (1 test)', function () {
   test('issue-225 ["New-Sogou-Spider/1.0 (compatible; MSIE 5.5; Windows 98)"]', function () {
-    browser = browscap.getBrowser('New-Sogou-Spider/1.0 (compatible; MSIE 5.5; Windows 98)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('New-Sogou-Spider/1.0 (compatible; MSIE 5.5; Windows 98)');
 
     assert.strictEqual(browser['Comment'], 'Sogou', 'Expected actual "Comment" to be \'Sogou\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Sogou Spider', 'Expected actual "Browser" to be \'Sogou Spider\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

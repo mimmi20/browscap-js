@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1656. (1 test)', function () {
   test('issue-1656-A ["Java/1.8.0_141"]', function () {
-    browser = browscap.getBrowser('Java/1.8.0_141');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Java/1.8.0_141');
 
     assert.strictEqual(browser['Comment'], 'Java Standard Library', 'Expected actual "Comment" to be \'Java Standard Library\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Java Standard Library', 'Expected actual "Browser" to be \'Java Standard Library\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

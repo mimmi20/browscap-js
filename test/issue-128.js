@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 128. (1 test)', function () {
   test('issue-128 ["Mozilla/5.0 (compatible; Another Web Mining Tool 1.0; +none; awmt)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Another Web Mining Tool 1.0; +none; awmt)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Another Web Mining Tool 1.0; +none; awmt)');
 
     assert.strictEqual(browser['Comment'], 'Another Web Mining Tool', 'Expected actual "Comment" to be \'Another Web Mining Tool\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Another Web Mining Tool', 'Expected actual "Browser" to be \'Another Web Mining Tool\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

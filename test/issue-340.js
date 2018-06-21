@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 340. (1 test)', function () {
   test('issue-340 ["Mozilla/5.0 (Android; U; -GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Android; U; -GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Android; U; -GB) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/13.0');
 
     assert.strictEqual(browser['Comment'], 'Adobe AIR 13.0 for Android', 'Expected actual "Comment" to be \'Adobe AIR 13.0 for Android\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Adobe AIR', 'Expected actual "Browser" to be \'Adobe AIR\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

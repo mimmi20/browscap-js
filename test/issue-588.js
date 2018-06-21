@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 588. (9 tests)', function () {
   test('issue-588-A ["Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +https://www.megaindex.ru/?tab=linkAnalyze)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +https://www.megaindex.ru/?tab=linkAnalyze)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +https://www.megaindex.ru/?tab=linkAnalyze)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'MegaIndex Bot', 'Expected actual "Browser" to be \'MegaIndex Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-B ["Mozilla/5.0 (compatible; Cliqzbot/0.1 +http://cliqz.com/company/cliqzbot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Cliqzbot/0.1 +http://cliqz.com/company/cliqzbot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Cliqzbot/0.1 +http://cliqz.com/company/cliqzbot)');
 
     assert.strictEqual(browser['Comment'], 'Cliqzbot', 'Expected actual "Comment" to be \'Cliqzbot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Cliqzbot', 'Expected actual "Browser" to be \'Cliqzbot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-C ["Mozilla/4.0 (compatible; DAWINCI ANTIPLAG SPIDER)"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 (compatible; DAWINCI ANTIPLAG SPIDER)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 (compatible; DAWINCI ANTIPLAG SPIDER)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'DAWINCI ANTIPLAG SPIDER', 'Expected actual "Browser" to be \'DAWINCI ANTIPLAG SPIDER\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-D ["AccServer[HOGANMIDSCHOOL]/5.0.2.20(24517) 64-bit HTTP-Agent"]', function () {
-    browser = browscap.getBrowser('AccServer[HOGANMIDSCHOOL]/5.0.2.20(24517) 64-bit HTTP-Agent');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AccServer[HOGANMIDSCHOOL]/5.0.2.20(24517) 64-bit HTTP-Agent');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AccServer', 'Expected actual "Browser" to be \'AccServer\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-E ["SafeSearch microdata crawler (https://safesearch.avira.com, safesearch-abuse@avira.com)"]', function () {
-    browser = browscap.getBrowser('SafeSearch microdata crawler (https://safesearch.avira.com, safesearch-abuse@avira.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SafeSearch microdata crawler (https://safesearch.avira.com, safesearch-abuse@avira.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SafeSearch microdata crawler', 'Expected actual "Browser" to be \'SafeSearch microdata crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-F ["Mozilla/5.0 (compatible; AdvBot/2.0; +http://advbot.net/bot.html)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; AdvBot/2.0; +http://advbot.net/bot.html)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; AdvBot/2.0; +http://advbot.net/bot.html)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AdvBot', 'Expected actual "Browser" to be \'AdvBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-G ["Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)');
 
     assert.strictEqual(browser['Comment'], 'DuckDuckBot', 'Expected actual "Comment" to be \'DuckDuckBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'DuckDuck Favicons Bot', 'Expected actual "Browser" to be \'DuckDuck Favicons Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-H ["Mozilla/4.0 compatible ZyBorg/1.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 compatible ZyBorg/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 compatible ZyBorg/1.0');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WiseNut search engine crawler', 'Expected actual "Browser" to be \'WiseNut search engine crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 588. (9 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-588-I ["Mozilla/5.0 (Macintosh; Butterfly/1.0; +http://labs.topsy.com/butterfly/) Gecko/2009032608 Firefox/3.0.8"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Butterfly/1.0; +http://labs.topsy.com/butterfly/) Gecko/2009032608 Firefox/3.0.8');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Macintosh; Butterfly/1.0; +http://labs.topsy.com/butterfly/) Gecko/2009032608 Firefox/3.0.8');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Butterfly Robot', 'Expected actual "Browser" to be \'Butterfly Robot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

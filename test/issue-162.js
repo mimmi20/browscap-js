@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 162. (1 test)', function () {
   test('issue-162 ["Google-HTTP-Java-Client/1.17.0-rc (gzip)"]', function () {
-    browser = browscap.getBrowser('Google-HTTP-Java-Client/1.17.0-rc (gzip)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Google-HTTP-Java-Client/1.17.0-rc (gzip)');
 
     assert.strictEqual(browser['Comment'], 'Google HTTP Client Library for Java', 'Expected actual "Comment" to be \'Google HTTP Client Library for Java\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Google HTTP Client Library for Java', 'Expected actual "Browser" to be \'Google HTTP Client Library for Java\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

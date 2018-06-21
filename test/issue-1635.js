@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1635. (7 tests)', function () {
   test('issue-1635-A ["Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34');
 
     assert.strictEqual(browser['Comment'], 'KMail2 Generic', 'Expected actual "Comment" to be \'KMail2 Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-B ["Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21');
 
     assert.strictEqual(browser['Comment'], 'KMail2 Generic', 'Expected actual "Comment" to be \'KMail2 Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-C ["Mozilla/5.0 (X11; Linux i686) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'KMail2 5.2', 'Expected actual "Comment" to be \'KMail2 5.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-D ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2 Safari/534.34');
 
     assert.strictEqual(browser['Comment'], 'KMail2 Generic', 'Expected actual "Comment" to be \'KMail2 Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-E ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/4.12.5 Safari/534.34"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/4.12.5 Safari/534.34');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/4.12.5 Safari/534.34');
 
     assert.strictEqual(browser['Comment'], 'KMail2 4.12', 'Expected actual "Comment" to be \'KMail2 4.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-F ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.21 (KHTML, like Gecko) kmail2 Safari/537.21');
 
     assert.strictEqual(browser['Comment'], 'KMail2 Generic', 'Expected actual "Comment" to be \'KMail2 Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1635. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1635-G ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) kmail2/5.2.3 Safari/538.1');
 
     assert.strictEqual(browser['Comment'], 'KMail2 5.2', 'Expected actual "Comment" to be \'KMail2 5.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'KMail2', 'Expected actual "Browser" to be \'KMail2\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

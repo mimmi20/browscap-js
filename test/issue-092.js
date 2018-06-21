@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 092. (3 tests)', function () {
+suite('checking for issue 092. (2 tests)', function () {
   test('issue-092-B ["Mozilla/5.0 (Series40; Nokia306/03.63; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/3.9.0.0.22"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Series40; Nokia306/03.63; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/3.9.0.0.22');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Series40; Nokia306/03.63; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/3.9.0.0.22');
 
     assert.strictEqual(browser['Comment'], 'Nokia Proxy Browser 3.9', 'Expected actual "Comment" to be \'Nokia Proxy Browser 3.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nokia Proxy Browser', 'Expected actual "Browser" to be \'Nokia Proxy Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 092. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-092-A ["Mozilla/5.0 (compatible; proximic; +http://www.proximic.com/info/spider.php)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; proximic; +http://www.proximic.com/info/spider.php)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; proximic; +http://www.proximic.com/info/spider.php)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'proximic', 'Expected actual "Browser" to be \'proximic\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

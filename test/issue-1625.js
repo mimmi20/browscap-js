@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1625. (32 tests)', function () {
   test('issue-1625-A ["Mozilla/5.0 (compatible Konqueror/3.0 i686 Linux 20020825)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.0 i686 Linux 20020825)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.0 i686 Linux 20020825)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.0', 'Expected actual "Comment" to be \'Konqueror 3.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-B ["Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.2', 'Expected actual "Comment" to be \'Konqueror 3.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-C ["Mozilla/5.0 (compatible Konqueror/3.2 FreeBSD) (KHTML, like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.2 FreeBSD) (KHTML, like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.2 FreeBSD) (KHTML, like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.2', 'Expected actual "Comment" to be \'Konqueror 3.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-D ["Mozilla/5.0 (compatible Konqueror/3.2) (KHTML, like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.2) (KHTML, like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.2) (KHTML, like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.2', 'Expected actual "Comment" to be \'Konqueror 3.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-E ["Mozilla/5.0 (compatible; Konqueror/3.3; Linux 2.6.11; X11; i686; de) KHTML/3.3.2 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.3; Linux 2.6.11; X11; i686; de) KHTML/3.3.2 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.3; Linux 2.6.11; X11; i686; de) KHTML/3.3.2 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.3', 'Expected actual "Comment" to be \'Konqueror 3.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-F ["Mozilla/5.0 (compatible; Konqueror/3.3) KHTML/3.3.2 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.3) KHTML/3.3.2 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.3) KHTML/3.3.2 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.3', 'Expected actual "Comment" to be \'Konqueror 3.3\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-G ["Mozilla/5.0 (compatible; Konqueror/3.4; SunOS) KHTML/3.4.1 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.4; SunOS) KHTML/3.4.1 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.4; SunOS) KHTML/3.4.1 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.4', 'Expected actual "Comment" to be \'Konqueror 3.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-H ["Mozilla/5.0 (compatible; Konqueror/3.4; CYGWIN_NT-5.1) KHTML/3.4.89 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.4; CYGWIN_NT-5.1) KHTML/3.4.89 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.4; CYGWIN_NT-5.1) KHTML/3.4.89 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.4', 'Expected actual "Comment" to be \'Konqueror 3.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-I ["Mozilla/5.0 (compatible; Konqueror/3.5; NetBSD 4.0_RC3; X11) KHTML/3.5.7 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; NetBSD 4.0_RC3; X11) KHTML/3.5.7 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; NetBSD 4.0_RC3; X11) KHTML/3.5.7 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-J ["Mozilla/5.0 (compatible; Konqueror/3.5; Darwin)  KHTML/3.5.6 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Darwin)  KHTML/3.5.6 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Darwin)  KHTML/3.5.6 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-K ["Mozilla/5.0 (compatible; Konqueror/3.5; Linux; x86_64; en_US) KHTML/3.5.10 (like Gecko) SUSE"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Linux; x86_64; en_US) KHTML/3.5.10 (like Gecko) SUSE');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Linux; x86_64; en_US) KHTML/3.5.10 (like Gecko) SUSE');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-L ["Mozilla/5.0 (compatible; Konqueror/3.5; SunOS)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; SunOS)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; SunOS)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-M ["Mozilla/5.0 (compatible; Konqueror/3.5; Windows NT 6.0) KHTML/3.5.6 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Windows NT 6.0) KHTML/3.5.6 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Windows NT 6.0) KHTML/3.5.6 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-N ["Mozilla/5.0 (compatible; Konqueror/3.5; Darwin) KHTML/3.5.6 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Darwin) KHTML/3.5.6 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; Darwin) KHTML/3.5.6 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-O ["Mozilla/5.0 (compatible; Konqueror/3.5; FreeBSD) KHTML/3.5.10 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; FreeBSD) KHTML/3.5.10 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/3.5; FreeBSD) KHTML/3.5.10 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-P ["Mozilla/5.0 (compatible Konqueror/3.5 NetBSD 3.0 X11) KHTML/3.5.2 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 NetBSD 3.0 X11) KHTML/3.5.2 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 NetBSD 3.0 X11) KHTML/3.5.2 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-Q ["Mozilla/5.0 (compatible Konqueror/3.5 Darwin) KHTML/3.5.6 (like F4FF7)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 Darwin) KHTML/3.5.6 (like F4FF7)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 Darwin) KHTML/3.5.6 (like F4FF7)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-R ["Mozilla/5.0 (compatible Konqueror/3.5 SunOS)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 SunOS)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 SunOS)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-S ["Mozilla/5.0 (compatible Konqueror/3.5 Linux x86_64) KHTML/3.5.5 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 Linux x86_64) KHTML/3.5.5 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible Konqueror/3.5 Linux x86_64) KHTML/3.5.5 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 3.5', 'Expected actual "Comment" to be \'Konqueror 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-T ["Mozilla/5.0 (compatible; Konqueror/4.0; Linux) KHTML/4.0.82 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Linux) KHTML/4.0.82 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Linux) KHTML/4.0.82 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.0', 'Expected actual "Comment" to be \'Konqueror 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-U ["Mozilla/5.0 (compatible; Konqueror/4.0; Microsoft Windows) KHTML/4.0.80 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Microsoft Windows) KHTML/4.0.80 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Microsoft Windows) KHTML/4.0.80 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.0', 'Expected actual "Comment" to be \'Konqueror 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -826,7 +845,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-V ["Mozilla/5.0 (compatible; Konqueror/4.0; Linux; x86_64) KHTML/4.0.2 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Linux; x86_64) KHTML/4.0.2 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; Linux; x86_64) KHTML/4.0.2 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.0', 'Expected actual "Comment" to be \'Konqueror 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -865,7 +885,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-W ["Mozilla/5.0 (compatible; Konqueror/4.0; X11) KHTML/4.0.3 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; X11) KHTML/4.0.3 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.0; X11) KHTML/4.0.3 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.0', 'Expected actual "Comment" to be \'Konqueror 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -904,7 +925,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-X ["Mozilla/5.0 (compatible; Konqueror/4.1; DragonFly) KHTML/4.1.4 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.1; DragonFly) KHTML/4.1.4 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.1; DragonFly) KHTML/4.1.4 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.1', 'Expected actual "Comment" to be \'Konqueror 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -943,7 +965,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-Y ["Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.1', 'Expected actual "Comment" to be \'Konqueror 4.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -982,7 +1005,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-Z ["Mozilla/5.0 (Windows; Windows i686) KHTML/4.10.2 (like Gecko) Konqueror/4.10"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; Windows i686) KHTML/4.10.2 (like Gecko) Konqueror/4.10');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; Windows i686) KHTML/4.10.2 (like Gecko) Konqueror/4.10');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.10', 'Expected actual "Comment" to be \'Konqueror 4.10\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1021,7 +1045,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AA ["Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) konqueror/4.14.16 Safari/537.21"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) konqueror/4.14.16 Safari/537.21');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.21 (KHTML, like Gecko) konqueror/4.14.16 Safari/537.21');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.14', 'Expected actual "Comment" to be \'Konqueror 4.14\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1060,7 +1085,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AB ["Mozilla/5.0 (compatible; Konqueror/4.5; Windows) KHTML/4.5.4 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; Windows) KHTML/4.5.4 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; Windows) KHTML/4.5.4 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.5', 'Expected actual "Comment" to be \'Konqueror 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1099,7 +1125,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AC ["Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.5', 'Expected actual "Comment" to be \'Konqueror 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1138,7 +1165,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AD ["Mozilla/5.0 (compatible; Konqueror/4.5; NetBSD 5.0.2; X11; amd64; en_US) KHTML/4.5.4 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; NetBSD 5.0.2; X11; amd64; en_US) KHTML/4.5.4 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; NetBSD 5.0.2; X11; amd64; en_US) KHTML/4.5.4 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.5', 'Expected actual "Comment" to be \'Konqueror 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1177,7 +1205,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AE ["Mozilla/5.0 (compatible; Konqueror/4.5; Linux) KHTML/4.5.3 (like Gecko) Kubuntu"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; Linux) KHTML/4.5.3 (like Gecko) Kubuntu');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5; Linux) KHTML/4.5.3 (like Gecko) Kubuntu');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.5', 'Expected actual "Comment" to be \'Konqueror 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -1216,7 +1245,8 @@ suite('checking for issue 1625. (32 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'KDE e.V.', 'Expected actual "RenderingEngine_Maker" to be \'KDE e.V.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1625-AF ["Mozilla/5.0 (compatible; Konqueror/4.5) KHTML/4.5.5 (like Gecko)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5) KHTML/4.5.5 (like Gecko)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Konqueror/4.5) KHTML/4.5.5 (like Gecko)');
 
     assert.strictEqual(browser['Comment'], 'Konqueror 4.5', 'Expected actual "Comment" to be \'Konqueror 4.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Konqueror', 'Expected actual "Browser" to be \'Konqueror\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

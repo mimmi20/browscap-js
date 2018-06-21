@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 099. (3 tests)', function () {
   test('issue-099-C ["DavClnt"]', function () {
-    browser = browscap.getBrowser('DavClnt');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('DavClnt');
 
     assert.strictEqual(browser['Comment'], 'Microsoft-WebDAV', 'Expected actual "Comment" to be \'Microsoft-WebDAV\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Microsoft-WebDAV', 'Expected actual "Browser" to be \'Microsoft-WebDAV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 099. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-099-B ["XING-contenttabreceiver/2.0"]', function () {
-    browser = browscap.getBrowser('XING-contenttabreceiver/2.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('XING-contenttabreceiver/2.0');
 
     assert.strictEqual(browser['Comment'], 'Xing', 'Expected actual "Comment" to be \'Xing\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'XING Contenttabreceiver', 'Expected actual "Browser" to be \'XING Contenttabreceiver\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 099. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-099-A ["Opera/9.60 (Windows NT 5.1; U; de) Presto/2.1.1"]', function () {
-    browser = browscap.getBrowser('Opera/9.60 (Windows NT 5.1; U; de) Presto/2.1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.60 (Windows NT 5.1; U; de) Presto/2.1.1');
 
     assert.strictEqual(browser['Comment'], 'Opera 9.60', 'Expected actual "Comment" to be \'Opera 9.60\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Opera', 'Expected actual "Browser" to be \'Opera\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

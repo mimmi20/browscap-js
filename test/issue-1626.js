@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1626. (1 test)', function () {
   test('issue-1626 ["lua-resty-http/0.10 (Lua) ngx_lua/10000"]', function () {
-    browser = browscap.getBrowser('lua-resty-http/0.10 (Lua) ngx_lua/10000');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('lua-resty-http/0.10 (Lua) ngx_lua/10000');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Lua HTTP client cosocket driver', 'Expected actual "Browser" to be \'Lua HTTP client cosocket driver\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

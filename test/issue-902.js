@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 902. (3 tests)', function () {
   test('issue-902-A ["Microsoft Office/16.0 (Microsoft Outlook Mail 16.0.6416; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/16.0 (Microsoft Outlook Mail 16.0.6416; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/16.0 (Microsoft Outlook Mail 16.0.6416; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2016', 'Expected actual "Comment" to be \'Microsoft Outlook 2016\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 902. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-902-B ["Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.6326; Pro)"]', function () {
-    browser = browscap.getBrowser('Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.6326; Pro)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.6326; Pro)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2016', 'Expected actual "Comment" to be \'Microsoft Outlook 2016\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 902. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-902-C ["Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.6366; ms-office; MSOffice 16)"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.6366; ms-office; MSOffice 16)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.6366; ms-office; MSOffice 16)');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2016', 'Expected actual "Comment" to be \'Microsoft Outlook 2016\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 644. (1 test)', function () {
   test('issue-644 ["MS Web Services Client Protocol 1.0.3705.0"]', function () {
-    browser = browscap.getBrowser('MS Web Services Client Protocol 1.0.3705.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MS Web Services Client Protocol 1.0.3705.0');
 
     assert.strictEqual(browser['Comment'], 'Microsoft', 'Expected actual "Comment" to be \'Microsoft\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], '.NET Framework CLR', 'Expected actual "Browser" to be \'.NET Framework CLR\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

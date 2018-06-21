@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 808. (2 tests)', function () {
   test('issue-808-A ["Googlebot"]', function () {
-    browser = browscap.getBrowser('Googlebot');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Googlebot');
 
     assert.strictEqual(browser['Comment'], 'Googlebot', 'Expected actual "Comment" to be \'Googlebot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Google Bot', 'Expected actual "Browser" to be \'Google Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 808. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-808-B ["test certificate info"]', function () {
-    browser = browscap.getBrowser('test certificate info');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('test certificate info');
 
     assert.strictEqual(browser['Comment'], 'Vulnerability Scanners', 'Expected actual "Comment" to be \'Vulnerability Scanners\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'test certificate info', 'Expected actual "Browser" to be \'test certificate info\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 163. (1 test)', function () {
   test('issue-163 ["Validator.nu/LV http://validator.w3.org/services"]', function () {
-    browser = browscap.getBrowser('Validator.nu/LV http://validator.w3.org/services');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Validator.nu/LV http://validator.w3.org/services');
 
     assert.strictEqual(browser['Comment'], 'W3C', 'Expected actual "Comment" to be \'W3C\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Validator.nu/LV', 'Expected actual "Browser" to be \'Validator.nu/LV\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

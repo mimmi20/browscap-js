@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 637. (1 test)', function () {
   test('issue-637 ["iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9"]', function () {
-    browser = browscap.getBrowser('iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('iTunes/12.0.1 (Macintosh; OS X 10.9.2) AppleWebKit/537.74.9');
 
     assert.strictEqual(browser['Comment'], 'iTunes 12.0', 'Expected actual "Comment" to be \'iTunes 12.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'iTunes', 'Expected actual "Browser" to be \'iTunes\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

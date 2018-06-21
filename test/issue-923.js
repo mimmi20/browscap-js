@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 923. (1 test)', function () {
   test('issue-923 ["FeedlyBot/1.0 (http://feedly.com)"]', function () {
-    browser = browscap.getBrowser('FeedlyBot/1.0 (http://feedly.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('FeedlyBot/1.0 (http://feedly.com)');
 
     assert.strictEqual(browser['Comment'], 'Feeds Syndicators', 'Expected actual "Comment" to be \'Feeds Syndicators\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FeedlyBot', 'Expected actual "Browser" to be \'FeedlyBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

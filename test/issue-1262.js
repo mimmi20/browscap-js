@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1262. (2 tests)', function () {
   test('issue-1262-A ["WhatsApp/2.6.4 iPhone_OS/4.3.3 Device/iPhone_4"]', function () {
-    browser = browscap.getBrowser('WhatsApp/2.6.4 iPhone_OS/4.3.3 Device/iPhone_4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('WhatsApp/2.6.4 iPhone_OS/4.3.3 Device/iPhone_4');
 
     assert.strictEqual(browser['Comment'], 'WhatsApp', 'Expected actual "Comment" to be \'WhatsApp\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WhatsApp', 'Expected actual "Browser" to be \'WhatsApp\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1262. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1262-B ["WhatsApp/2.6.4 iPhone_OS/5.0.1 Device/iPhone_4"]', function () {
-    browser = browscap.getBrowser('WhatsApp/2.6.4 iPhone_OS/5.0.1 Device/iPhone_4');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('WhatsApp/2.6.4 iPhone_OS/5.0.1 Device/iPhone_4');
 
     assert.strictEqual(browser['Comment'], 'WhatsApp', 'Expected actual "Comment" to be \'WhatsApp\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WhatsApp', 'Expected actual "Browser" to be \'WhatsApp\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

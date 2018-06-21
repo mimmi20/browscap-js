@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1023. (1 test)', function () {
   test('issue-1023 ["Netcraft SSL Server Survey - contact info@netcraft.com"]', function () {
-    browser = browscap.getBrowser('Netcraft SSL Server Survey - contact info@netcraft.com');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Netcraft SSL Server Survey - contact info@netcraft.com');
 
     assert.strictEqual(browser['Comment'], 'Netcraft', 'Expected actual "Comment" to be \'Netcraft\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Netcraft SSL Server Survey', 'Expected actual "Browser" to be \'Netcraft SSL Server Survey\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

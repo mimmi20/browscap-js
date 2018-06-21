@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1771. (1 test)', function () {
   test('issue-1771-A ["Mozilla/5.0 (compatible; Taboolabot/3.7; +http://www.taboola.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Taboolabot/3.7; +http://www.taboola.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Taboolabot/3.7; +http://www.taboola.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Taboola Bot', 'Expected actual "Browser" to be \'Taboola Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

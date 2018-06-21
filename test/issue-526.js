@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 526. (2 tests)', function () {
   test('issue-526-A ["bot-pge.chlooe.com/1.0.0 (+http://www.chlooe.com/)"]', function () {
-    browser = browscap.getBrowser('bot-pge.chlooe.com/1.0.0 (+http://www.chlooe.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('bot-pge.chlooe.com/1.0.0 (+http://www.chlooe.com/)');
 
     assert.strictEqual(browser['Comment'], 'SEO & Analytics', 'Expected actual "Comment" to be \'SEO & Analytics\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'chlooe Bot', 'Expected actual "Browser" to be \'chlooe Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 526. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-526-B ["seebot/2.0 (+http://www.seegnify.com/bot)"]', function () {
-    browser = browscap.getBrowser('seebot/2.0 (+http://www.seegnify.com/bot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('seebot/2.0 (+http://www.seegnify.com/bot)');
 
     assert.strictEqual(browser['Comment'], 'Social Bookmarkers', 'Expected actual "Comment" to be \'Social Bookmarkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SeeBot', 'Expected actual "Browser" to be \'SeeBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

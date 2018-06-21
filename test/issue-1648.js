@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1648. (1 test)', function () {
   test('issue-1648 ["Mozilla/5.0 (Windows; U; Windows NT 6.2; fr-FR; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; fr-FR; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 6.2; fr-FR; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)');
 
     assert.strictEqual(browser['Comment'], 'Netscape 7.1', 'Expected actual "Comment" to be \'Netscape 7.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Netscape', 'Expected actual "Browser" to be \'Netscape\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

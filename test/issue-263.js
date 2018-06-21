@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 263. (1 test)', function () {
   test('issue-263 ["Domnutch-Bot/Nutch-1.0 (Domnutch; http://www.Nutch.de/)"]', function () {
-    browser = browscap.getBrowser('Domnutch-Bot/Nutch-1.0 (Domnutch; http://www.Nutch.de/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Domnutch-Bot/Nutch-1.0 (Domnutch; http://www.Nutch.de/)');
 
     assert.strictEqual(browser['Comment'], 'Nutch', 'Expected actual "Comment" to be \'Nutch\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Domnutch Bot', 'Expected actual "Browser" to be \'Domnutch Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

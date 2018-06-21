@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 046. (2 tests)', function () {
   test('issue-046-a ["Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)');
 
     assert.strictEqual(browser['Comment'], 'Ezooms', 'Expected actual "Comment" to be \'Ezooms\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Ezooms', 'Expected actual "Browser" to be \'Ezooms\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 046. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-046-b ["Mozilla/5.0 (compatible; Ezooms/1.0; help@moz.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Ezooms/1.0; help@moz.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Ezooms/1.0; help@moz.com)');
 
     assert.strictEqual(browser['Comment'], 'Ezooms', 'Expected actual "Comment" to be \'Ezooms\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Ezooms', 'Expected actual "Browser" to be \'Ezooms\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

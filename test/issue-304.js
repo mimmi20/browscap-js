@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 304. (1 test)', function () {
   test('issue-304 ["Slackbot-LinkExpanding+(+https://api.slack.com/robots)"]', function () {
-    browser = browscap.getBrowser('Slackbot-LinkExpanding+(+https://api.slack.com/robots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Slackbot-LinkExpanding+(+https://api.slack.com/robots)');
 
     assert.strictEqual(browser['Comment'], 'Social Bookmarkers', 'Expected actual "Comment" to be \'Social Bookmarkers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Slackbot-Link-Expanding', 'Expected actual "Browser" to be \'Slackbot-Link-Expanding\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

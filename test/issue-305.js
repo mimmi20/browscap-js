@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 305. (1 test)', function () {
   test('issue-305 ["Microsoft Office Protocol Discovery"]', function () {
-    browser = browscap.getBrowser('Microsoft Office Protocol Discovery');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Microsoft Office Protocol Discovery');
 
     assert.strictEqual(browser['Comment'], 'Microsoft', 'Expected actual "Comment" to be \'Microsoft\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'MS OPD', 'Expected actual "Browser" to be \'MS OPD\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

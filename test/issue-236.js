@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 236. (1 test)', function () {
   test('issue-236 ["Mozilla/5.0 (compatible;picmole/1.0 +http://www.picmole.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible;picmole/1.0 +http://www.picmole.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible;picmole/1.0 +http://www.picmole.com)');
 
     assert.strictEqual(browser['Comment'], 'picmole Bot', 'Expected actual "Comment" to be \'picmole Bot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'picmole Bot', 'Expected actual "Browser" to be \'picmole Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

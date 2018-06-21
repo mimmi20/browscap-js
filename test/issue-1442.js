@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1442. (3 tests)', function () {
+suite('checking for issue 1442. (2 tests)', function () {
   test('issue-1442-A ["Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)"]', function () {
-    browser = browscap.getBrowser('Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)');
 
     assert.strictEqual(browser['Comment'], 'Access NetFront 3.4', 'Expected actual "Comment" to be \'Access NetFront 3.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NetFront', 'Expected actual "Browser" to be \'NetFront\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1442. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Access', 'Expected actual "RenderingEngine_Maker" to be \'Access\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1442-B ["SonyEricssonJ10i2/R7CA Browser/NetFront/3.5 Profile/MIDP-2.1 Configuration/CLDC-1.1 JavaPlatform/JP-8.5.2"]', function () {
-    browser = browscap.getBrowser('SonyEricssonJ10i2/R7CA Browser/NetFront/3.5 Profile/MIDP-2.1 Configuration/CLDC-1.1 JavaPlatform/JP-8.5.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('SonyEricssonJ10i2/R7CA Browser/NetFront/3.5 Profile/MIDP-2.1 Configuration/CLDC-1.1 JavaPlatform/JP-8.5.2');
 
     assert.strictEqual(browser['Comment'], 'Access NetFront 3.5', 'Expected actual "Comment" to be \'Access NetFront 3.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NetFront', 'Expected actual "Browser" to be \'NetFront\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

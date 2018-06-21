@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1530. (21 tests)', function () {
   test('issue-1530-A ["Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexBot/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'YandexBot', 'Expected actual "Comment" to be \'YandexBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexBot', 'Expected actual "Browser" to be \'YandexBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-B ["Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexAccessibilityBot', 'Expected actual "Browser" to be \'YandexAccessibilityBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-C ["Mozilla/5.0 (compatible; YandexDirectDyn/1.0; +http://yandex.com/bots"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexDirectDyn/1.0; +http://yandex.com/bots');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexDirectDyn/1.0; +http://yandex.com/bots');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexDynamicBannerBot', 'Expected actual "Browser" to be \'YandexDynamicBannerBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-D ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 (compatible; YandexScreenshotBot/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 (compatible; YandexScreenshotBot/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 (compatible; YandexScreenshotBot/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexScreenshotBot', 'Expected actual "Browser" to be \'YandexScreenshotBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-E ["Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexImages', 'Expected actual "Browser" to be \'YandexImages\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-F ["Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexVideo', 'Expected actual "Browser" to be \'YandexVideo\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-G ["Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexVideoParser', 'Expected actual "Browser" to be \'YandexVideoParser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-H ["Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexMedia', 'Expected actual "Browser" to be \'YandexMedia\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -319,7 +325,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-I ["Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexBlogs/0.99; robot; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexBlogs', 'Expected actual "Browser" to be \'YandexBlogs\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -358,7 +365,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-J ["Mozilla/5.0 (compatible; YandexFavicons/1.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexFavicons/1.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexFavicons/1.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexFavicons', 'Expected actual "Browser" to be \'YandexFavicons\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -397,7 +405,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-K ["Mozilla/5.0 (compatible; YandexWebmaster/2.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexWebmaster/2.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexWebmaster/2.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexWebmaster', 'Expected actual "Browser" to be \'YandexWebmaster\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -436,7 +445,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-L ["Mozilla/5.0 (compatible; YandexPagechecker/1.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexPagechecker/1.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexPagechecker/1.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexPagechecker', 'Expected actual "Browser" to be \'YandexPagechecker\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -475,7 +485,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-M ["Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexImageResizer/2.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexImageResizer', 'Expected actual "Browser" to be \'YandexImageResizer\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -514,7 +525,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-N ["Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YaDirectFetcher/1.0; Dyatel; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexDirectFetcher', 'Expected actual "Browser" to be \'YandexDirectFetcher\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -553,7 +565,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-O ["Mozilla/5.0 (compatible; YandexCalendar/1.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexCalendar/1.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexCalendar/1.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexCalendarBot', 'Expected actual "Browser" to be \'YandexCalendarBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -592,7 +605,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-P ["Mozilla/5.0 (compatible; YandexSitelinks; Dyatel; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexSitelinks; Dyatel; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexSitelinks; Dyatel; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexSitelinksBot', 'Expected actual "Browser" to be \'YandexSitelinksBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -631,7 +645,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-Q ["Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexMetrika', 'Expected actual "Browser" to be \'YandexMetrika\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -670,7 +685,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-R ["Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexNews', 'Expected actual "Browser" to be \'YandexNews\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -709,7 +725,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-S ["Mozilla/5.0 (compatible; YandexVertis/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVertis/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexVertis/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexVertisBot', 'Expected actual "Browser" to be \'YandexVertisBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -748,7 +765,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-T ["Mozilla/5.0 (compatible; YandexBot/3.0; MirrorDetector; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexBot/3.0; MirrorDetector; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; YandexBot/3.0; MirrorDetector; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'Yandex', 'Expected actual "Comment" to be \'Yandex\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Yandex MirrorDetector', 'Expected actual "Browser" to be \'Yandex MirrorDetector\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -787,7 +805,8 @@ suite('checking for issue 1530. (21 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1530-U [": Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"]', function () {
-    browser = browscap.getBrowser(': Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser(': Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
 
     assert.strictEqual(browser['Comment'], 'YandexBot', 'Expected actual "Comment" to be \'YandexBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'YandexBot', 'Expected actual "Browser" to be \'YandexBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

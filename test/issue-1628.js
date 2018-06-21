@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1628. (5 tests)', function () {
   test('issue-1628-A ["mobmail android 5.7.0.22182 ru.mail.mailapp"]', function () {
-    browser = browscap.getBrowser('mobmail android 5.7.0.22182 ru.mail.mailapp');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('mobmail android 5.7.0.22182 ru.mail.mailapp');
 
     assert.strictEqual(browser['Comment'], 'Mobmail 5.7', 'Expected actual "Comment" to be \'Mobmail 5.7\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mobmail', 'Expected actual "Browser" to be \'Mobmail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1628. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1628-B ["mobmail android 5.8.1.22646 ru.mail.mailapp"]', function () {
-    browser = browscap.getBrowser('mobmail android 5.8.1.22646 ru.mail.mailapp');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('mobmail android 5.8.1.22646 ru.mail.mailapp');
 
     assert.strictEqual(browser['Comment'], 'Mobmail 5.8', 'Expected actual "Comment" to be \'Mobmail 5.8\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mobmail', 'Expected actual "Browser" to be \'Mobmail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1628. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1628-C ["mobmail android 6.0.0.22977 ru.mail.mailapp"]', function () {
-    browser = browscap.getBrowser('mobmail android 6.0.0.22977 ru.mail.mailapp');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('mobmail android 6.0.0.22977 ru.mail.mailapp');
 
     assert.strictEqual(browser['Comment'], 'Mobmail 6.0', 'Expected actual "Comment" to be \'Mobmail 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mobmail', 'Expected actual "Browser" to be \'Mobmail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1628. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1628-D ["mobmail android 6.1.0.23122 ru.mail.mailapp"]', function () {
-    browser = browscap.getBrowser('mobmail android 6.1.0.23122 ru.mail.mailapp');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('mobmail android 6.1.0.23122 ru.mail.mailapp');
 
     assert.strictEqual(browser['Comment'], 'Mobmail 6.1', 'Expected actual "Comment" to be \'Mobmail 6.1\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mobmail', 'Expected actual "Browser" to be \'Mobmail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1628. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1628-E ["mobmail android 6.0.0.22977 com.my.mail"]', function () {
-    browser = browscap.getBrowser('mobmail android 6.0.0.22977 com.my.mail');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('mobmail android 6.0.0.22977 com.my.mail');
 
     assert.strictEqual(browser['Comment'], 'Mobmail 6.0', 'Expected actual "Comment" to be \'Mobmail 6.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mobmail', 'Expected actual "Browser" to be \'Mobmail\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

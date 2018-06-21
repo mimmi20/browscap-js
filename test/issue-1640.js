@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1640. (2 tests)', function () {
   test('issue-1640-A ["Mozilla/5.0 SeznamEmailProxy/1.0"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 SeznamEmailProxy/1.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 SeznamEmailProxy/1.0');
 
     assert.strictEqual(browser['Comment'], 'Seznam Email Proxy', 'Expected actual "Comment" to be \'Seznam Email Proxy\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Seznam Email Proxy', 'Expected actual "Browser" to be \'Seznam Email Proxy\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1640. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1640-B ["Mozilla/5.0 SeznamEmailProxy/2.0.178"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 SeznamEmailProxy/2.0.178');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 SeznamEmailProxy/2.0.178');
 
     assert.strictEqual(browser['Comment'], 'Seznam Email Proxy', 'Expected actual "Comment" to be \'Seznam Email Proxy\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Seznam Email Proxy', 'Expected actual "Browser" to be \'Seznam Email Proxy\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

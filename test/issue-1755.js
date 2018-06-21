@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1755. (6 tests)', function () {
+suite('checking for issue 1755. (4 tests)', function () {
   test('issue-1755-A ["Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L10 Build/HuaweiP7-L10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L10 Build/HuaweiP7-L10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L10 Build/HuaweiP7-L10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36');
 
     assert.strictEqual(browser['Comment'], 'Android WebView 4.0', 'Expected actual "Comment" to be \'Android WebView 4.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Android WebView', 'Expected actual "Browser" to be \'Android WebView\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1755. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Google Inc', 'Expected actual "RenderingEngine_Maker" to be \'Google Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1755-B ["NokiaE71/UC Browser8.0.4.121/28/444/UCWEB"]', function () {
-    browser = browscap.getBrowser('NokiaE71/UC Browser8.0.4.121/28/444/UCWEB');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NokiaE71/UC Browser8.0.4.121/28/444/UCWEB');
 
     assert.strictEqual(browser['Comment'], 'UC Browser 8.0 for Symbian', 'Expected actual "Comment" to be \'UC Browser 8.0 for Symbian\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1755. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1755-C ["NOKIAN95 8GB/UC Browser8.0.3.107/28/444/UCWEB"]', function () {
-    browser = browscap.getBrowser('NOKIAN95 8GB/UC Browser8.0.3.107/28/444/UCWEB');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('NOKIAN95 8GB/UC Browser8.0.3.107/28/444/UCWEB');
 
     assert.strictEqual(browser['Comment'], 'UC Browser 8.0 for Symbian', 'Expected actual "Comment" to be \'UC Browser 8.0 for Symbian\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1755. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1755-D ["Tumblr/141 CFNetwork/672.1.14 Darwin/14.0.0"]', function () {
-    browser = browscap.getBrowser('Tumblr/141 CFNetwork/672.1.14 Darwin/14.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Tumblr/141 CFNetwork/672.1.14 Darwin/14.0.0');
 
     assert.strictEqual(browser['Comment'], 'Tumblr Agent Generic', 'Expected actual "Comment" to be \'Tumblr Agent Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Tumblr Agent', 'Expected actual "Browser" to be \'Tumblr Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

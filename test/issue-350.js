@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 350. (6 tests)', function () {
   test('issue-350-A ["Mozilla/5.0 (compatible; XoviBot/2.0; +http://www.xovibot.net/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; XoviBot/2.0; +http://www.xovibot.net/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; XoviBot/2.0; +http://www.xovibot.net/)');
 
     assert.strictEqual(browser['Comment'], 'XoviBot', 'Expected actual "Comment" to be \'XoviBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'XoviBot', 'Expected actual "Browser" to be \'XoviBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 350. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-350-B ["Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)');
 
     assert.strictEqual(browser['Comment'], 'Sistrix Crawler', 'Expected actual "Comment" to be \'Sistrix Crawler\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], '007AC9 Crawler', 'Expected actual "Browser" to be \'007AC9 Crawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 350. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-350-C ["Mozilla/5.0 (compatible; AOLbot/4.0; +http://www.aol-soft.com/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; AOLbot/4.0; +http://www.aol-soft.com/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; AOLbot/4.0; +http://www.aol-soft.com/)');
 
     assert.strictEqual(browser['Comment'], 'AOLbot', 'Expected actual "Comment" to be \'AOLbot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'AOLbot', 'Expected actual "Browser" to be \'AOLbot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 350. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-350-D ["Go 1.1 package http"]', function () {
-    browser = browscap.getBrowser('Go 1.1 package http');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Go 1.1 package http');
 
     assert.strictEqual(browser['Comment'], 'HttpClient for Google Go Programming Language', 'Expected actual "Comment" to be \'HttpClient for Google Go Programming Language\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'GO HttpClient', 'Expected actual "Browser" to be \'GO HttpClient\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 350. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-350-E ["Mozilla/5.0 (compatible; DomainSCAN/2.0; +http://domainscan.info/robot/)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; DomainSCAN/2.0; +http://domainscan.info/robot/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; DomainSCAN/2.0; +http://domainscan.info/robot/)');
 
     assert.strictEqual(browser['Comment'], 'DomainScan Server Monitoring', 'Expected actual "Comment" to be \'DomainScan Server Monitoring\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'DomainScan Server Monitoring', 'Expected actual "Browser" to be \'DomainScan Server Monitoring\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 350. (6 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-350-F ["Proxy Gear Pro/2.1 (Windows; N; Windows NT 6.1; en)"]', function () {
-    browser = browscap.getBrowser('Proxy Gear Pro/2.1 (Windows; N; Windows NT 6.1; en)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Proxy Gear Pro/2.1 (Windows; N; Windows NT 6.1; en)');
 
     assert.strictEqual(browser['Comment'], 'Proxy Gear Pro', 'Expected actual "Comment" to be \'Proxy Gear Pro\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Proxy Gear Pro', 'Expected actual "Browser" to be \'Proxy Gear Pro\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

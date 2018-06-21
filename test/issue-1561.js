@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1561. (1 test)', function () {
   test('issue-1561-A ["Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Discord Bot', 'Expected actual "Browser" to be \'Discord Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

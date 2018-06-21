@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1801. (1 test)', function () {
   test('issue-1801-A ["WhatsApp/2.18.20 i"]', function () {
-    browser = browscap.getBrowser('WhatsApp/2.18.20 i');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('WhatsApp/2.18.20 i');
 
     assert.strictEqual(browser['Comment'], 'WhatsApp Bot 2.18', 'Expected actual "Comment" to be \'WhatsApp Bot 2.18\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WhatsApp Bot', 'Expected actual "Browser" to be \'WhatsApp Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

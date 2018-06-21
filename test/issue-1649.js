@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1649. (1 test)', function () {
   test('issue-1649-A ["gvfs/1.22.2"]', function () {
-    browser = browscap.getBrowser('gvfs/1.22.2');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('gvfs/1.22.2');
 
     assert.strictEqual(browser['Comment'], 'gvfs 1.22', 'Expected actual "Comment" to be \'gvfs 1.22\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'gvfs', 'Expected actual "Browser" to be \'gvfs\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

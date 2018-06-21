@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1117. (1 test)', function () {
   test('issue-1117 ["MacOutlook/15.27.0.161010 (Intelx64 Mac OS X Version 10.11.6 (Build 15G1108))"]', function () {
-    browser = browscap.getBrowser('MacOutlook/15.27.0.161010 (Intelx64 Mac OS X Version 10.11.6 (Build 15G1108))');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('MacOutlook/15.27.0.161010 (Intelx64 Mac OS X Version 10.11.6 (Build 15G1108))');
 
     assert.strictEqual(browser['Comment'], 'Microsoft Outlook 2013', 'Expected actual "Comment" to be \'Microsoft Outlook 2013\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Outlook', 'Expected actual "Browser" to be \'Outlook\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

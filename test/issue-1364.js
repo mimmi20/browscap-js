@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1364. (8 tests)', function () {
   test('issue-1364-A ["UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1067_1005) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1067_1005) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1067_1005) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser 4.2 for WinPhone', 'Expected actual "Comment" to be \'UC Browser 4.2 for WinPhone\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-B ["UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1090_1001) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1090_1001) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1090_1001) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser 4.2 for WinPhone', 'Expected actual "Comment" to be \'UC Browser 4.2 for WinPhone\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-C ["UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1141_1000) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1141_1000) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Windows; U; wds 10.0; en-IN; Microsoft; RM-1141_1000) U2/1.0.0 UCBrowser/4.2.1.541 U2/1.0.0 Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser 4.2 for WinPhone', 'Expected actual "Comment" to be \'UC Browser 4.2 for WinPhone\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser', 'Expected actual "Browser" to be \'UC Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-D ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; pt-BR; SM-G530BT Build/LRX22G) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.0.2; SM-G530BT Build/LRX22G) Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; pt-BR; SM-G530BT Build/LRX22G) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.0.2; SM-G530BT Build/LRX22G) Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; pt-BR; SM-G530BT Build/LRX22G) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.0.2; SM-G530BT Build/LRX22G) Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser Mini 10.9', 'Expected actual "Comment" to be \'UC Browser Mini 10.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser Mini', 'Expected actual "Browser" to be \'UC Browser Mini\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-E ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; GT-N7100 Build/JZO54K) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.1.2; GT-N7100 Build/JZO54K) Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; GT-N7100 Build/JZO54K) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.1.2; GT-N7100 Build/JZO54K) Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; GT-N7100 Build/JZO54K) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.1.2; GT-N7100 Build/JZO54K) Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser Mini 10.9', 'Expected actual "Comment" to be \'UC Browser Mini 10.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser Mini', 'Expected actual "Browser" to be \'UC Browser Mini\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-F ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; SM-J120H Build/LMY47V) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1.1; SM-J120H Build/LMY47V) Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; SM-J120H Build/LMY47V) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1.1; SM-J120H Build/LMY47V) Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; ru; SM-J120H Build/LMY47V) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1.1; SM-J120H Build/LMY47V) Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser Mini 10.9', 'Expected actual "Comment" to be \'UC Browser Mini 10.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser Mini', 'Expected actual "Browser" to be \'UC Browser Mini\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-G ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; ONE LTE HD Build/KTU84P) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.4.4; ONE LTE HD Build/KTU84P) Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; ONE LTE HD Build/KTU84P) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.4.4; ONE LTE HD Build/KTU84P) Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; ONE LTE HD Build/KTU84P) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 4.4.4; ONE LTE HD Build/KTU84P) Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser Mini 10.9', 'Expected actual "Comment" to be \'UC Browser Mini 10.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser Mini', 'Expected actual "Browser" to be \'UC Browser Mini\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -280,7 +285,8 @@ suite('checking for issue 1364. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'UCWeb Inc.', 'Expected actual "RenderingEngine_Maker" to be \'UCWeb Inc.\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1364-H ["UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; QMobile Z10 Build/LMY47D) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1; QMobile Z10 Build/LMY47D) Mobile"]', function () {
-    browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; QMobile Z10 Build/LMY47D) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1; QMobile Z10 Build/LMY47D) Mobile');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.3697; en-US; QMobile Z10 Build/LMY47D) U2/1.0.0 UCMini/10.9.0.946 (SpeedMode; Android 5.1; QMobile Z10 Build/LMY47D) Mobile');
 
     assert.strictEqual(browser['Comment'], 'UC Browser Mini 10.9', 'Expected actual "Comment" to be \'UC Browser Mini 10.9\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'UC Browser Mini', 'Expected actual "Browser" to be \'UC Browser Mini\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

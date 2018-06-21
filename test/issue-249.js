@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 249. (1 test)', function () {
   test('issue-249 ["Mozilla/5.0 (FHScan Core 1.1)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (FHScan Core 1.1)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (FHScan Core 1.1)');
 
     assert.strictEqual(browser['Comment'], 'Fast HTTP Vulnerability scanner core api', 'Expected actual "Comment" to be \'Fast HTTP Vulnerability scanner core api\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'FHScan Core', 'Expected actual "Browser" to be \'FHScan Core\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

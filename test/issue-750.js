@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 750. (2 tests)', function () {
   test('issue-750-A ["TestApp/1.0 CFNetwork/758.0.2 Darwin/15.0.0"]', function () {
-    browser = browscap.getBrowser('TestApp/1.0 CFNetwork/758.0.2 Darwin/15.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('TestApp/1.0 CFNetwork/758.0.2 Darwin/15.0.0');
 
     assert.strictEqual(browser['Comment'], 'CFNetwork for iOS', 'Expected actual "Comment" to be \'CFNetwork for iOS\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'CFNetwork', 'Expected actual "Browser" to be \'CFNetwork\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 750. (2 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-750-B ["AtomicBrowser/5.8.0 CFNetwork/485.13.9 Darwin/11.0.0"]', function () {
-    browser = browscap.getBrowser('AtomicBrowser/5.8.0 CFNetwork/485.13.9 Darwin/11.0.0');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('AtomicBrowser/5.8.0 CFNetwork/485.13.9 Darwin/11.0.0');
 
     assert.strictEqual(browser['Comment'], 'Atomic Browser 5.8', 'Expected actual "Comment" to be \'Atomic Browser 5.8\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Atomic Browser', 'Expected actual "Browser" to be \'Atomic Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

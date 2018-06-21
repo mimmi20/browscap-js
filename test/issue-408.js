@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 408. (1 test)', function () {
   test('issue-408 ["Pingdom.com_bot_version_1.4_(http://www.pingdom.com)"]', function () {
-    browser = browscap.getBrowser('Pingdom.com_bot_version_1.4_(http://www.pingdom.com)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Pingdom.com_bot_version_1.4_(http://www.pingdom.com)');
 
     assert.strictEqual(browser['Comment'], 'Pingdom', 'Expected actual "Comment" to be \'Pingdom\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Pingdom', 'Expected actual "Browser" to be \'Pingdom\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

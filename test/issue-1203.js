@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1203. (5 tests)', function () {
   test('issue-1203-1 ["Callpod Keeper for Android 1.0 (10.5.0/264) Dalvik/2.1.0 (Linux; U; Android 6.0; LG-H810 Build/MRA58K)"]', function () {
-    browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.5.0/264) Dalvik/2.1.0 (Linux; U; Android 6.0; LG-H810 Build/MRA58K)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.5.0/264) Dalvik/2.1.0 (Linux; U; Android 6.0; LG-H810 Build/MRA58K)');
 
     assert.strictEqual(browser['Comment'], 'Keeper 1.0', 'Expected actual "Comment" to be \'Keeper 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Keeper', 'Expected actual "Browser" to be \'Keeper\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1203. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1203-2 ["Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1; Z812 Build/LMY47O)"]', function () {
-    browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1; Z812 Build/LMY47O)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1; Z812 Build/LMY47O)');
 
     assert.strictEqual(browser['Comment'], 'Keeper 1.0', 'Expected actual "Comment" to be \'Keeper 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Keeper', 'Expected actual "Browser" to be \'Keeper\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1203. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1203-3 ["Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.0.1; SAMSUNG-SGH-I337 Build/LRX22C)"]', function () {
-    browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.0.1; SAMSUNG-SGH-I337 Build/LRX22C)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.0.1; SAMSUNG-SGH-I337 Build/LRX22C)');
 
     assert.strictEqual(browser['Comment'], 'Keeper 1.0', 'Expected actual "Comment" to be \'Keeper 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Keeper', 'Expected actual "Browser" to be \'Keeper\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1203. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1203-4 ["Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1.1; SAMSUNG-SM-N910A Build/LMY47X)"]', function () {
-    browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1.1; SAMSUNG-SM-N910A Build/LMY47X)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 5.1.1; SAMSUNG-SM-N910A Build/LMY47X)');
 
     assert.strictEqual(browser['Comment'], 'Keeper 1.0', 'Expected actual "Comment" to be \'Keeper 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Keeper', 'Expected actual "Browser" to be \'Keeper\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1203. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1203-5 ["Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 6.0.1; SAMSUNG-SM-G920A Build/MMB29K)"]', function () {
-    browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 6.0.1; SAMSUNG-SM-G920A Build/MMB29K)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Callpod Keeper for Android 1.0 (10.4.8/261) Dalvik/2.1.0 (Linux; U; Android 6.0.1; SAMSUNG-SM-G920A Build/MMB29K)');
 
     assert.strictEqual(browser['Comment'], 'Keeper 1.0', 'Expected actual "Comment" to be \'Keeper 1.0\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Keeper', 'Expected actual "Browser" to be \'Keeper\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

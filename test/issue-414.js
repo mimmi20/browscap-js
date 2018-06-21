@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 414. (1 test)', function () {
   test('issue-414 ["WeSEE:Ads/PageBot (http://www.wesee.com/bot/)"]', function () {
-    browser = browscap.getBrowser('WeSEE:Ads/PageBot (http://www.wesee.com/bot/)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('WeSEE:Ads/PageBot (http://www.wesee.com/bot/)');
 
     assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WeSEE:Ads', 'Expected actual "Browser" to be \'WeSEE:Ads\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

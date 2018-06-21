@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1532. (8 tests)', function () {
+suite('checking for issue 1532. (4 tests)', function () {
   test('issue-1532-A ["Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)"]', function () {
-    browser = browscap.getBrowser('Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Snapchat/10.12.0.2 (iPhone8,1; iOS 10.3.2; gzip)');
 
     assert.strictEqual(browser['Comment'], 'Snapchat Agent 10.12', 'Expected actual "Comment" to be \'Snapchat Agent 10.12\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Snapchat Agent', 'Expected actual "Browser" to be \'Snapchat Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1532. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1532-B ["Snapchat/10.11.1.0 (iPhone6,1; iOS 10.2.1; gzip)"]', function () {
-    browser = browscap.getBrowser('Snapchat/10.11.1.0 (iPhone6,1; iOS 10.2.1; gzip)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Snapchat/10.11.1.0 (iPhone6,1; iOS 10.2.1; gzip)');
 
     assert.strictEqual(browser['Comment'], 'Snapchat Agent 10.11', 'Expected actual "Comment" to be \'Snapchat Agent 10.11\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Snapchat Agent', 'Expected actual "Browser" to be \'Snapchat Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1532. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1532-C ["Snapchat/10.2.0.2 (iPhone5,1; iOS 10.1.1; gzip)"]', function () {
-    browser = browscap.getBrowser('Snapchat/10.2.0.2 (iPhone5,1; iOS 10.1.1; gzip)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Snapchat/10.2.0.2 (iPhone5,1; iOS 10.1.1; gzip)');
 
     assert.strictEqual(browser['Comment'], 'Snapchat Agent 10.2', 'Expected actual "Comment" to be \'Snapchat Agent 10.2\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Snapchat Agent', 'Expected actual "Browser" to be \'Snapchat Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1532. (8 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1532-D ["Snapchat/9.45.10.0 (iPhone6,1; iOS 10.1.1; gzip)"]', function () {
-    browser = browscap.getBrowser('Snapchat/9.45.10.0 (iPhone6,1; iOS 10.1.1; gzip)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Snapchat/9.45.10.0 (iPhone6,1; iOS 10.1.1; gzip)');
 
     assert.strictEqual(browser['Comment'], 'Snapchat Agent 9.45', 'Expected actual "Comment" to be \'Snapchat Agent 9.45\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Snapchat Agent', 'Expected actual "Browser" to be \'Snapchat Agent\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

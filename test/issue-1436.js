@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
-suite('checking for issue 1436. (4 tests)', function () {
+suite('checking for issue 1436. (2 tests)', function () {
   test('issue-1436-A ["Dalvik/1.5.1 (Linux; U; Android 3.2.1; A500 Build/HTK55D)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.5.1 (Linux; U; Android 3.2.1; A500 Build/HTK55D)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.5.1 (Linux; U; Android 3.2.1; A500 Build/HTK55D)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.5', 'Expected actual "Comment" to be \'Dalvik 1.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1436. (4 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1436-B ["Dalvik/1.5.1 (Linux; U; Android 3.1; GT-P7510 Build/HMJ37)"]', function () {
-    browser = browscap.getBrowser('Dalvik/1.5.1 (Linux; U; Android 3.1; GT-P7510 Build/HMJ37)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Dalvik/1.5.1 (Linux; U; Android 3.1; GT-P7510 Build/HMJ37)');
 
     assert.strictEqual(browser['Comment'], 'Dalvik 1.5', 'Expected actual "Comment" to be \'Dalvik 1.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Dalvik', 'Expected actual "Browser" to be \'Dalvik\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1622. (3 tests)', function () {
   test('issue-1622-A ["David Client (7044 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]"]', function () {
-    browser = browscap.getBrowser('David Client (7044 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('David Client (7044 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]');
 
     assert.strictEqual(browser['Comment'], 'David Client', 'Expected actual "Comment" to be \'David Client\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'David Client', 'Expected actual "Browser" to be \'David Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1622. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1622-B ["David Client (7152 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]"]', function () {
-    browser = browscap.getBrowser('David Client (7152 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('David Client (7152 Windows, IE 9/11) [Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko]');
 
     assert.strictEqual(browser['Comment'], 'David Client', 'Expected actual "Comment" to be \'David Client\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'David Client', 'Expected actual "Browser" to be \'David Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1622. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Microsoft Corporation', 'Expected actual "RenderingEngine_Maker" to be \'Microsoft Corporation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1622-C ["David Client (6707 Windows, IE 9/11)"]', function () {
-    browser = browscap.getBrowser('David Client (6707 Windows, IE 9/11)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('David Client (6707 Windows, IE 9/11)');
 
     assert.strictEqual(browser['Comment'], 'David Client', 'Expected actual "Comment" to be \'David Client\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'David Client', 'Expected actual "Browser" to be \'David Client\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

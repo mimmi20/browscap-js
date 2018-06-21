@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1589. (5 tests)', function () {
   test('issue-1589-A ["Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.10.9 NintendoBrowser/1.5.0.8047.EU"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.10.9 NintendoBrowser/1.5.0.8047.EU');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.10.9 NintendoBrowser/1.5.0.8047.EU');
 
     assert.strictEqual(browser['Comment'], 'Nintendo Browser 1.5', 'Expected actual "Comment" to be \'Nintendo Browser 1.5\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nintendo Browser', 'Expected actual "Browser" to be \'Nintendo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 1589. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1589-B ["Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.8 Version/1.0.0.6760.JP"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.8 Version/1.0.0.6760.JP');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.8 Version/1.0.0.6760.JP');
 
     assert.strictEqual(browser['Comment'], 'Nintendo Browser Generic', 'Expected actual "Comment" to be \'Nintendo Browser Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nintendo Browser', 'Expected actual "Browser" to be \'Nintendo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 1589. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Apple Inc', 'Expected actual "RenderingEngine_Maker" to be \'Apple Inc\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1589-C ["Opera/9.10 (Nintendo Wii ; U; ; 1621; ja)"]', function () {
-    browser = browscap.getBrowser('Opera/9.10 (Nintendo Wii ; U; ; 1621; ja)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.10 (Nintendo Wii ; U; ; 1621; ja)');
 
     assert.strictEqual(browser['Comment'], 'Nintendo Browser Generic', 'Expected actual "Comment" to be \'Nintendo Browser Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nintendo Browser', 'Expected actual "Browser" to be \'Nintendo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 1589. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1589-D ["Opera/9.23 (Nintendo Wii; U; 1038-58; Wii Internet Channel/1.0; en)"]', function () {
-    browser = browscap.getBrowser('Opera/9.23 (Nintendo Wii; U; 1038-58; Wii Internet Channel/1.0; en)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.23 (Nintendo Wii; U; 1038-58; Wii Internet Channel/1.0; en)');
 
     assert.strictEqual(browser['Comment'], 'Nintendo Browser Generic', 'Expected actual "Comment" to be \'Nintendo Browser Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nintendo Browser', 'Expected actual "Browser" to be \'Nintendo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 1589. (5 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Opera Software ASA', 'Expected actual "RenderingEngine_Maker" to be \'Opera Software ASA\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-1589-E ["Opera/9.50 (Nintendo DSi Opera/507 U de)"]', function () {
-    browser = browscap.getBrowser('Opera/9.50 (Nintendo DSi Opera/507 U de)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Opera/9.50 (Nintendo DSi Opera/507 U de)');
 
     assert.strictEqual(browser['Comment'], 'Nintendo Browser Generic', 'Expected actual "Comment" to be \'Nintendo Browser Generic\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Nintendo Browser', 'Expected actual "Browser" to be \'Nintendo Browser\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

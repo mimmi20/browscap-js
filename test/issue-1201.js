@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1201. (1 test)', function () {
   test('issue-1201 ["Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.3 (KHTML, like Gecko) SecondLife/3.7.28.300847 (Second Life Release; default skin) Safari/533.3"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.3 (KHTML, like Gecko) SecondLife/3.7.28.300847 (Second Life Release; default skin) Safari/533.3');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.3 (KHTML, like Gecko) SecondLife/3.7.28.300847 (Second Life Release; default skin) Safari/533.3');
 
     assert.strictEqual(browser['Comment'], 'SecondLife', 'Expected actual "Comment" to be \'SecondLife\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'SecondLife', 'Expected actual "Browser" to be \'SecondLife\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

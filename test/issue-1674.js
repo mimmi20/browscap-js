@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 1674. (1 test)', function () {
   test('issue-1674 ["Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)');
 
     assert.strictEqual(browser['Comment'], 'Uptimebot', 'Expected actual "Comment" to be \'Uptimebot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Uptimebot', 'Expected actual "Browser" to be \'Uptimebot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

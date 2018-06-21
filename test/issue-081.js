@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 081. (7 tests)', function () {
   test('issue-081-G ["Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/2.0; +http://go.mail.ru/help/robots)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/2.0; +http://go.mail.ru/help/robots)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/2.0; +http://go.mail.ru/help/robots)');
 
     assert.strictEqual(browser['Comment'], 'Mail.Ru Bot', 'Expected actual "Comment" to be \'Mail.Ru Bot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Mail.Ru Bot', 'Expected actual "Browser" to be \'Mail.Ru Bot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-F ["masscan/1.0 (https://github.com/robertdavidgraham/masscan)"]', function () {
-    browser = browscap.getBrowser('masscan/1.0 (https://github.com/robertdavidgraham/masscan)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('masscan/1.0 (https://github.com/robertdavidgraham/masscan)');
 
     assert.strictEqual(browser['Comment'], 'Download Managers', 'Expected actual "Comment" to be \'Download Managers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Download Accelerator', 'Expected actual "Browser" to be \'Download Accelerator\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-E ["ZmEu"]', function () {
-    browser = browscap.getBrowser('ZmEu');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('ZmEu');
 
     assert.strictEqual(browser['Comment'], 'ZmEu', 'Expected actual "Comment" to be \'ZmEu\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'ZmEu', 'Expected actual "Browser" to be \'ZmEu\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -124,7 +125,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-D ["Mozilla/5.0 (X11; Linux i686; U;rv: 1.7.13) Gecko/20070322 Kazehakase/0.4.4.1"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686; U;rv: 1.7.13) Gecko/20070322 Kazehakase/0.4.4.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux i686; U;rv: 1.7.13) Gecko/20070322 Kazehakase/0.4.4.1');
 
     assert.strictEqual(browser['Comment'], 'Kazehakase 0.4', 'Expected actual "Comment" to be \'Kazehakase 0.4\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Kazehakase', 'Expected actual "Browser" to be \'Kazehakase\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -163,7 +165,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'Mozilla Foundation', 'Expected actual "RenderingEngine_Maker" to be \'Mozilla Foundation\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-C ["woobot/1.1"]', function () {
-    browser = browscap.getBrowser('woobot/1.1');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('woobot/1.1');
 
     assert.strictEqual(browser['Comment'], 'WooRank', 'Expected actual "Comment" to be \'WooRank\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'WooRank', 'Expected actual "Browser" to be \'WooRank\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -202,7 +205,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-B ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/27.0.1453 Safari/537.36"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/27.0.1453 Safari/537.36');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/27.0.1453 Safari/537.36');
 
     assert.strictEqual(browser['Comment'], 'Google PageSpeed Insights', 'Expected actual "Comment" to be \'Google PageSpeed Insights\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Google PageSpeed Insights', 'Expected actual "Browser" to be \'Google PageSpeed Insights\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -241,7 +245,8 @@ suite('checking for issue 081. (7 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-081-A ["Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)"]', function () {
-    browser = browscap.getBrowser('Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)');
 
     assert.strictEqual(browser['Comment'], 'Sogou', 'Expected actual "Comment" to be \'Sogou\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Sogou Web Spider', 'Expected actual "Browser" to be \'Sogou Web Spider\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');

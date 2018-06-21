@@ -2,12 +2,11 @@
 
 const assert = require('assert');
 const Browscap = require('../src/index.js');
-const browscap = new Browscap();
-let browser;
 
 suite('checking for issue 051. (3 tests)', function () {
   test('issue-051-3 ["Mozilla/5.0 (compatible; grapeFX/0.9; crawler@grapeshot.co.uk"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; grapeFX/0.9; crawler@grapeshot.co.uk');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; grapeFX/0.9; crawler@grapeshot.co.uk');
 
     assert.strictEqual(browser['Comment'], 'GrapeshotCrawler', 'Expected actual "Comment" to be \'GrapeshotCrawler\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'grapeFX', 'Expected actual "Browser" to be \'grapeFX\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -46,7 +45,8 @@ suite('checking for issue 051. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-051-2 ["Mozilla/5.0 (compatible; GrapeshotCrawler/2.0; +http://www.grapeshot.co.uk/crawler.php)"]', function () {
-    browser = browscap.getBrowser('Mozilla/5.0 (compatible; GrapeshotCrawler/2.0; +http://www.grapeshot.co.uk/crawler.php)');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('Mozilla/5.0 (compatible; GrapeshotCrawler/2.0; +http://www.grapeshot.co.uk/crawler.php)');
 
     assert.strictEqual(browser['Comment'], 'GrapeshotCrawler', 'Expected actual "Comment" to be \'GrapeshotCrawler\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'GrapeshotCrawler', 'Expected actual "Browser" to be \'GrapeshotCrawler\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
@@ -85,7 +85,8 @@ suite('checking for issue 051. (3 tests)', function () {
     assert.strictEqual(browser['RenderingEngine_Maker'], 'unknown', 'Expected actual "RenderingEngine_Maker" to be \'unknown\' (was \'' + browser['RenderingEngine_Maker'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
   });
   test('issue-051-1 ["niki-bot"]', function () {
-    browser = browscap.getBrowser('niki-bot');
+    const browscap = new Browscap();
+    const browser = browscap.getBrowser('niki-bot');
 
     assert.strictEqual(browser['Comment'], 'NikiBot', 'Expected actual "Comment" to be \'NikiBot\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'NikiBot', 'Expected actual "Browser" to be \'NikiBot\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
