@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1303. (14 tests)', function () {
+suite('checking for issue 1303. (9 tests)', function () {
   test('issue-1303-A ["Blackjack/22 CFNetwork/808.3 Darwin/16.3.0"]', function () {
     browser = browscap.getBrowser('Blackjack/22 CFNetwork/808.3 Darwin/16.3.0');
 

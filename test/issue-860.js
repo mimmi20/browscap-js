@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 860. (3 tests)', function () {
+suite('checking for issue 860. (2 tests)', function () {
   test('issue-860-A ["SoundCloud/3.0.0 build 2547; iPhone/iPhone OS/7.1.1"]', function () {
     browser = browscap.getBrowser('SoundCloud/3.0.0 build 2547; iPhone/iPhone OS/7.1.1');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 904. (54 tests)', function () {
+suite('checking for issue 904. (52 tests)', function () {
   test('issue-904-A ["Rome Client (http://tinyurl.com/64t5n)"]', function () {
     browser = browscap.getBrowser('Rome Client (http://tinyurl.com/64t5n)');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1597. (477 tests)', function () {
+suite('checking for issue 1597. (472 tests)', function () {
   test('issue-1597-A ["20090717_aa_page (larbin2.6.3@unspecified.mail)"]', function () {
     browser = browscap.getBrowser('20090717_aa_page (larbin2.6.3@unspecified.mail)');
 

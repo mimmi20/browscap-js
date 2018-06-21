@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1350. (24 tests)', function () {
+suite('checking for issue 1350. (18 tests)', function () {
   test('issue-1350-A ["Mozilla/5.0 (Mobile; OPENC; rv:40.0) Gecko/40.0 Firefox/40.0"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (Mobile; OPENC; rv:40.0) Gecko/40.0 Firefox/40.0');
 

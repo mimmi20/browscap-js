@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1378. (24 tests)', function () {
+suite('checking for issue 1378. (23 tests)', function () {
   test('issue-1378-A ["Opera/4.02 (X11; U; br)"]', function () {
     browser = browscap.getBrowser('Opera/4.02 (X11; U; br)');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1695. (57 tests)', function () {
+suite('checking for issue 1695. (54 tests)', function () {
   test('issue-1695-A ["Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)"]', function () {
     browser = browscap.getBrowser('Dalvik/1.2.0 (Linux; U; Android 2.2; GT-P1000 Build/FROYO)');
 

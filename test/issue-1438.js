@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1438. (234 tests)', function () {
+suite('checking for issue 1438. (134 tests)', function () {
   test('issue-1438-A ["BlackBerry7100/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
     browser = browscap.getBrowser('BlackBerry7100/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1425. (115 tests)', function () {
+suite('checking for issue 1425. (101 tests)', function () {
   test('issue-1425-A ["JUC (Linux; U; 2.3.4; zh-cn; GT-S5570; 240*320) UCWEB7.9.0.94/139/352"]', function () {
     browser = browscap.getBrowser('JUC (Linux; U; 2.3.4; zh-cn; GT-S5570; 240*320) UCWEB7.9.0.94/139/352');
 

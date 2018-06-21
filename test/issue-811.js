@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 811. (15 tests)', function () {
+suite('checking for issue 811. (14 tests)', function () {
   test('issue-811-A ["Mozilla/5.0 (compatible; Scopia Crawler 1.2; +http://www.scopia.co)"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (compatible; Scopia Crawler 1.2; +http://www.scopia.co)');
 

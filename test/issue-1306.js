@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1306. (2 tests)', function () {
+suite('checking for issue 1306. (1 test)', function () {
   test('issue-1306-A ["Mozilla/5.0 (iPhone; CPU OS 10_2_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) 1Password/6.5.3 (like Version/10.2.1 Mobile/14D27 Safari/600.1.4)"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (iPhone; CPU OS 10_2_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) 1Password/6.5.3 (like Version/10.2.1 Mobile/14D27 Safari/600.1.4)');
 

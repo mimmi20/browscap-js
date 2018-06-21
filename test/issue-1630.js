@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1630. (158 tests)', function () {
+suite('checking for issue 1630. (138 tests)', function () {
   test('issue-1630-A ["SAMSUNG-GT-C3590/1.0 NetFront/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1"]', function () {
     browser = browscap.getBrowser('SAMSUNG-GT-C3590/1.0 NetFront/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1');
 

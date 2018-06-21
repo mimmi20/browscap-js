@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 000-mobiles. (9 tests)', function () {
+suite('checking for issue 000-mobiles. (7 tests)', function () {
   test('issue-mobiles-G ["S8500 UCWEB6.0/UC Browser7.7.0.81"]', function () {
     browser = browscap.getBrowser('S8500 UCWEB6.0/UC Browser7.7.0.81');
 

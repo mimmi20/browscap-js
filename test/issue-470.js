@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 470. (9 tests)', function () {
+suite('checking for issue 470. (7 tests)', function () {
   test('issue-470-A ["Evernote Clip Resolver"]', function () {
     browser = browscap.getBrowser('Evernote Clip Resolver');
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 1400. (135 tests)', function () {
+suite('checking for issue 1400. (134 tests)', function () {
   test('issue-1400-A ["Alcatel-BF3/1.0 UP.Browser/4.1.23a"]', function () {
     browser = browscap.getBrowser('Alcatel-BF3/1.0 UP.Browser/4.1.23a');
 

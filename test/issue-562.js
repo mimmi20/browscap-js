@@ -5,7 +5,7 @@ var assert = require('assert'),
     browscap = new Browscap(),
     browser;
 
-suite('checking for issue 562. (3 tests)', function () {
+suite('checking for issue 562. (2 tests)', function () {
   test('issue-562-A ["Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)"]', function () {
     browser = browscap.getBrowser('Cyberduck/4.6.4 (16610) (Windows XP/5.1) (x86)');
 
