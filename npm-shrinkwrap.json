@@ -25,6 +25,11 @@
       "resolved": "https://registry.npmjs.org/browscap-js-cache/-/browscap-js-cache-1.2.0.tgz",
       "integrity": "sha1-VN8MfBREDPQxUXOFSSIZ7lqtFfI="
     },
+    "browscap-json-cache-files": {
+      "version": "1.2.6000029",
+      "resolved": "https://registry.npmjs.org/browscap-json-cache-files/-/browscap-json-cache-files-1.2.6000029.tgz",
+      "integrity": "sha512-/o2cvDyMry0X2TwYAxknXVuHbEM4LqrnKvftucU3CHEpHy71oDJRc86NF+RQLcdAHdm/w82kWnh/GfKZT/Nw8w=="
+    },
     "browser-stdout": {
       "version": "1.3.1",
       "resolved": "https://registry.npmjs.org/browser-stdout/-/browser-stdout-1.3.1.tgz",
