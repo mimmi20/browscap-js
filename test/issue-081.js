@@ -48,7 +48,7 @@ suite('checking for issue 081. (7 tests)', function () {
   test('issue-081-F ["masscan/1.0 (https://github.com/robertdavidgraham/masscan)"]', function () {
     browser = browscap.getBrowser('masscan/1.0 (https://github.com/robertdavidgraham/masscan)');
 
-    assert.strictEqual(browser['Comment'], 'Download Managers', 'Expected actual "Comment" to be \'Download Managers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'Vulnerability Scanners', 'Expected actual "Comment" to be \'Vulnerability Scanners\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Download Accelerator', 'Expected actual "Browser" to be \'Download Accelerator\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
