@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "browscap-js-cache": "^1.2.0",
-    "browscap-json-cache-files": "^1.2.6000029",
+    "browscap-json-cache-files": "^1.2.6000030",
     "md5": "^2.0.0",
     "synchronous-promise": "^1.0.18||^2.0.4"
   },
@@ -42,7 +42,7 @@
     "test": "mocha -u tdd ./test/*.js"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
-  "version": "2.2.6000029",
+  "version": "2.2.6000030",
   "directories": {
     "test": "test"
   },
