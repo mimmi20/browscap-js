@@ -33,7 +33,7 @@
     "browscap-js-cache": "^2.0.1",
     "browscap-json-cache-files": "^1.2.6000030",
     "md5": "^2.0.0",
-    "synchronous-promise": "^2.0.5"
+    "synchronous-promise": "^2.0.6"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
