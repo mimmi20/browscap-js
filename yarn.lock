@@ -1142,9 +1142,9 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-synchronous-promise@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.6.tgz#de76e0ea2b3558c1e673942e47e714a930fa64aa"
+synchronous-promise@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.7.tgz#3574b3d2fae86b145356a4b89103e1577f646fe3"
 
 to-object-path@^0.3.0:
   version "0.3.0"
