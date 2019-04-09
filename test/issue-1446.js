@@ -711,7 +711,7 @@ suite('checking for issue 1446. (19 tests)', function () {
   test('issue-1446-S ["Mozilla/5.0 (compatible; Wappalyzer; +https://github.com/AliasIO/Wappalyzer)"]', function () {
     browser = browscap.getBrowser('Mozilla/5.0 (compatible; Wappalyzer; +https://github.com/AliasIO/Wappalyzer)');
 
-    assert.strictEqual(browser['Comment'], 'General Crawlers', 'Expected actual "Comment" to be \'General Crawlers\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
+    assert.strictEqual(browser['Comment'], 'Wappalyzer', 'Expected actual "Comment" to be \'Wappalyzer\' (was \'' + browser['Comment'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser'], 'Wappalyzer', 'Expected actual "Browser" to be \'Wappalyzer\' (was \'' + browser['Browser'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Type'], 'Bot/Crawler', 'Expected actual "Browser_Type" to be \'Bot/Crawler\' (was \'' + browser['Browser_Type'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
     assert.strictEqual(browser['Browser_Bits'], '0', 'Expected actual "Browser_Bits" to be \'0\' (was \'' + browser['Browser_Bits'] + '\'; used pattern: ' + browser['browser_name_regex'] + ')');
