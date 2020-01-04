@@ -36,7 +36,7 @@
     "synchronous-promise": "^2.0.10"
   },
   "devDependencies": {
-    "mocha": "^6.0.2"
+    "mocha": "^7.0.0"
   },
   "scripts": {
     "test": "mocha -u tdd --full-trace --prof ./test/*.js"
