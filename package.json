@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/mimmi20/browscap-js.git"
+    "url": "git+https://github.com/mimmi20/browscap-js.git"
   },
   "bugs": {
-    "url": "http://github.com/mimmi20/browscap-js/issues"
+    "url": "https://github.com/mimmi20/browscap-js/issues"
   },
   "bin": {
     "browscap": "./src/index.js"
@@ -23,12 +23,6 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/mimmi20/browscap-js/README.md"
-    }
-  ],
   "dependencies": {
     "browscap-js-cache": "^2.0.1",
     "browscap-json-cache-files": "^1.2.6000032",
@@ -46,5 +40,8 @@
   "directories": {
     "test": "test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "node-version": "6.0.0"
+  }
 }

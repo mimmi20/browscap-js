@@ -1,8 +1,5 @@
 # Introduction
 
-[![dependencies Status](https://david-dm.org/mimmi20/browscap-js/status.svg)](https://david-dm.org/mimmi20/browscap-js)
-[![Known Vulnerabilities](https://snyk.io/test/github/mimmi20/browscap-js/badge.svg)](https://snyk.io/test/github/mimmi20/browscap-js)
-
 browscap-js is a port of the library `browscap-php` to JavaScript
 
 It makes available a `getBrowser` function which takes a browser user agent string

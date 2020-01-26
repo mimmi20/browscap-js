@@ -34,3 +34,5 @@ sources/*
 coverage/
 .nyc_output/
 clover.*
+package-lock.json
+yarn.lock
