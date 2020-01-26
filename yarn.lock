@@ -89,8 +89,8 @@ braces@^2.3.1:
     to-regex "^3.0.1"
 
 browscap-js-cache@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/browscap-js-cache/-/browscap-js-cache-2.0.1.tgz#608591840ca808a05f9f6fb19345207786982b3c"
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/browscap-js-cache/-/browscap-js-cache-2.0.2.tgz#94437615701281ffbd67e3aa049ac8147299c013"
 
 browscap-json-cache-files@^1.2.6000032:
   version "1.2.6000032"
