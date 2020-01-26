@@ -1,18 +1,52 @@
-#Ensure every text file uses lf
-*.markdown text eol=lf diff
-*.md text eol=lf diff
-*.js text eol=lf diff
-*.json text eol=lf diff
-*.lock text eol=lf diff
-*.html text eol=lf diff
-*.php text eol=lf diff
-*.yml text eol=lf diff
-*.xml text eol=lf diff
-*.dist text eol=lf diff
-*.txt text eol=lf diff
-*.ini text eol=lf diff
-.gitattributes text eol=lf diff
-.gitignore text eol=lf diff
-.php_cs text eol=lf diff
+# text files
+*                text=auto
+*.markdown       text eol=lf
+*.md             text eol=lf
+*.js             text eol=lf
+*.css            text eol=lf
+*.json           text eol=lf
+*.lock           text eol=lf
+*.html           text eol=lf
+*.php            text eol=lf
+*.yml            text eol=lf
+*.yaml           text eol=lf
+*.xml            text eol=lf
+*.dist           text eol=lf
+*.txt            text eol=lf
+*.ini            text eol=lf
+*.sh             text eol=lf
+*.tmp            text eol=lf
+LICENSE          text eol=lf
 
-*.zip binary
+# binary files
+*.zip            -text binary
+
+# files/folders to ignore
+/.*                    export-ignore
+.bettercodehub.yml     export-ignore text eol=lf
+.codacy.yml            export-ignore text eol=lf
+.codeclimate.yml       export-ignore text eol=lf
+.coveralls.yml         export-ignore text eol=lf
+.editorconfig          export-ignore text eol=lf
+.gitattributes         export-ignore text eol=lf
+.gitignore             export-ignore text eol=lf
+.prettierignore        export-ignore text eol=lf
+.prettierrc.json       export-ignore text eol=lf
+.eslintrc.json         export-ignore text eol=lf
+.javascript-style.json export-ignore text eol=lf
+.php_cs                export-ignore text eol=lf
+.scrutinizer.yml       export-ignore text eol=lf
+.styleci.yml           export-ignore text eol=lf
+.travis.yml            export-ignore text eol=lf
+.sensiolabs.yml        export-ignore text eol=lf
+appveyor.yml           export-ignore text eol=lf
+.circleci/config.yml   export-ignore text eol=lf
+codecov.yml            export-ignore text eol=lf
+infection.json         export-ignore text eol=lf
+phpcs.xml              export-ignore text eol=lf
+phpstan.neon           export-ignore text eol=lf
+phpunit.xml            export-ignore text eol=lf
+/cache                 export-ignore
+/test                  export-ignore
+/.github               export-ignore
+/.dependabot           export-ignore
