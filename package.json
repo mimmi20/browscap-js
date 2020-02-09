@@ -6,7 +6,6 @@
   ],
   "author": "Thomas Müller",
   "contributors": [
-    "Tor Valamo <tor.valamo@gmail.com> (http://github.com/torvalamo)",
     "Thomas Müller (http://github.com/mimmi20)"
   ],
   "repository": {
@@ -17,23 +16,45 @@
     "url": "https://github.com/mimmi20/browscap-js/issues"
   },
   "bin": {
-    "browscap": "./src/index.js"
+    "browscap": "./src/browscap.ts"
   },
-  "main": "src/index.js",
+  "main": "src/browscap.ts",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=12.0.0"
   },
   "dependencies": {
-    "browscap-js-cache": "^2.0.1",
-    "browscap-json-cache-files": "^1.2.6000032",
-    "md5": "^2.0.0",
-    "synchronous-promise": "^2.0.10"
+    "browscap-js-cache": "https://github.com/mimmi20/browscap-js-cache#1a4f1d5bc4dc227f2f00881d60442a4e41aa536c",
+    "browscap-json-cache-files": "^1.2.6000037"
   },
   "devDependencies": {
-    "mocha": "^6.0.2"
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "dtslint": "^2.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "source-map-support": "^0.5.16",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.9",
+    "typescript": "^3.7.5"
   },
   "scripts": {
-    "test": "mocha -u tdd --full-trace --prof ./test/*.js"
+    "dtslint": "dtslint types",
+    "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore --ext .js,.ts .",
+    "test": "nyc --clean --reporter=text ts-mocha -u tdd --full-trace ./test/*.ts",
+    "test-and-coverage": "nyc --clean --reporter=clover ts-mocha -u tdd --full-trace ./test/*.ts",
+    "prettier-check": "prettier -c \"**/*.ts\"",
+    "prettier-fix": "prettier --write \"**/*.ts\"",
+    "prebuild": "rm -rf dist/ && npm run lint",
+    "build": "tsc --pretty"
   },
   "homepage": "https://github.com/mimmi20/browscap-js",
   "version": "4.0.6000032",
@@ -42,6 +63,6 @@
   },
   "license": "MIT",
   "config": {
-    "node-version": "6.0.0"
+    "node-version": "12.0.0"
   }
 }

@@ -1,0 +1,16749 @@
+import assert from 'assert';
+import Browscap from '../src/browscap';
+
+suite('checking for issue 1844. (52 tests)', function() {
+  test('issue-1844-A ["Mozilla/5.0 (iPod touch; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) FxiOS/10.6b8836 Mobile/15D60 Safari/604.5.6"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPod touch; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) FxiOS/10.6b8836 Mobile/15D60 Safari/604.5.6'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Firefox 10.6 for iOS',
+      "Expected actual \"Comment\" to be 'Firefox 10.6 for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Firefox for iOS',
+      "Expected actual \"Browser\" to be 'Firefox for iOS' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Mozilla Foundation',
+      "Expected actual \"Browser_Maker\" to be 'Mozilla Foundation' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '10.6',
+      "Expected actual \"Version\" to be '10.6' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPod Touch',
+      "Expected actual \"Device_Name\" to be 'iPod Touch' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Device',
+      "Expected actual \"Device_Type\" to be 'Mobile Device' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPod Touch',
+      "Expected actual \"Device_Code_Name\" to be 'iPod Touch' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-B ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/10.6b8836 Mobile/15E5167f Safari/605.1.15"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/10.6b8836 Mobile/15E5167f Safari/605.1.15'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Firefox 10.6 for iOS',
+      "Expected actual \"Comment\" to be 'Firefox 10.6 for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Firefox for iOS',
+      "Expected actual \"Browser\" to be 'Firefox for iOS' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Mozilla Foundation',
+      "Expected actual \"Browser_Maker\" to be 'Mozilla Foundation' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '10.6',
+      "Expected actual \"Version\" to be '10.6' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-C ["Mozilla/5.0 (Windows NT 10.0; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'IceDragon 57.0',
+      "Expected actual \"Comment\" to be 'IceDragon 57.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'IceDragon',
+      "Expected actual \"Browser\" to be 'IceDragon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Comodo Group Inc',
+      "Expected actual \"Browser_Maker\" to be 'Comodo Group Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '57.0',
+      "Expected actual \"Version\" to be '57.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win10',
+      "Expected actual \"Platform\" to be 'Win10' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.0',
+      "Expected actual \"Platform_Version\" to be '10.0' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 10',
+      "Expected actual \"Platform_Description\" to be 'Windows 10' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Gecko',
+      "Expected actual \"RenderingEngine_Name\" to be 'Gecko' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '57.0',
+      "Expected actual \"RenderingEngine_Version\" to be '57.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Mozilla Foundation',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Mozilla Foundation' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-D ["Mozilla/5.0 (Windows NT 6.1; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'IceDragon 57.0',
+      "Expected actual \"Comment\" to be 'IceDragon 57.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'IceDragon',
+      "Expected actual \"Browser\" to be 'IceDragon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Comodo Group Inc',
+      "Expected actual \"Browser_Maker\" to be 'Comodo Group Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '57.0',
+      "Expected actual \"Version\" to be '57.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win7',
+      "Expected actual \"Platform\" to be 'Win7' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '6.1',
+      "Expected actual \"Platform_Version\" to be '6.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 7',
+      "Expected actual \"Platform_Description\" to be 'Windows 7' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Gecko',
+      "Expected actual \"RenderingEngine_Name\" to be 'Gecko' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '57.0',
+      "Expected actual \"RenderingEngine_Version\" to be '57.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Mozilla Foundation',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Mozilla Foundation' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-E ["Mozilla/5.0 (Windows NT 10.0; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 10.0; rv:57.0) Gecko/20100101 Firefox/57.0 IceDragon/57.0.4'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'IceDragon 57.0',
+      "Expected actual \"Comment\" to be 'IceDragon 57.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'IceDragon',
+      "Expected actual \"Browser\" to be 'IceDragon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Comodo Group Inc',
+      "Expected actual \"Browser_Maker\" to be 'Comodo Group Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '57.0',
+      "Expected actual \"Version\" to be '57.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win10',
+      "Expected actual \"Platform\" to be 'Win10' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.0',
+      "Expected actual \"Platform_Version\" to be '10.0' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 10',
+      "Expected actual \"Platform_Description\" to be 'Windows 10' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Gecko',
+      "Expected actual \"RenderingEngine_Name\" to be 'Gecko' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '57.0',
+      "Expected actual \"RenderingEngine_Version\" to be '57.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Mozilla Foundation',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Mozilla Foundation' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-F ["Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 Instagram 32.0.0.16.94 Android (27/8.1.0; 420dpi; 1080x1794; Google/google; Pixel 2; walleye; walleye; en_US; 91882539)"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 Instagram 32.0.0.16.94 Android (27/8.1.0; 420dpi; 1080x1794; Google/google; Pixel 2; walleye; walleye; en_US; 91882539)'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Instagram App 32.0 for Android',
+      "Expected actual \"Comment\" to be 'Instagram App 32.0 for Android' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Instagram App',
+      "Expected actual \"Browser\" to be 'Instagram App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '32.0',
+      "Expected actual \"Version\" to be '32.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Android',
+      "Expected actual \"Platform\" to be 'Android' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '8.1',
+      "Expected actual \"Platform_Version\" to be '8.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Android OS',
+      "Expected actual \"Platform_Description\" to be 'Android OS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Google Inc',
+      "Expected actual \"Platform_Maker\" to be 'Google Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Pixel 2',
+      "Expected actual \"Device_Name\" to be 'Pixel 2' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'HTC',
+      "Expected actual \"Device_Maker\" to be 'HTC' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Pixel 2',
+      "Expected actual \"Device_Code_Name\" to be 'Pixel 2' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Google',
+      "Expected actual \"Device_Brand_Name\" to be 'Google' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-G ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f Instagram 33.0.0.11.96 (iPhone9,3; iOS 11_3; en_US; en-US; scale=2.00; gamut=wide; 750x1334)"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f Instagram 33.0.0.11.96 (iPhone9,3; iOS 11_3; en_US; en-US; scale=2.00; gamut=wide; 750x1334)'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Instagram App 33.0 for iOS',
+      "Expected actual \"Comment\" to be 'Instagram App 33.0 for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Instagram App',
+      "Expected actual \"Browser\" to be 'Instagram App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '33.0',
+      "Expected actual \"Version\" to be '33.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-H ["Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 XL Build/OPM1.171019.018; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 Instagram 33.0.0.11.92 Android (27/8.1.0; 560dpi; 1440x2712; Google/google; Pixel 2 XL; taimen; taimen; en_US; 93117670)"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Linux; Android 8.1.0; Pixel 2 XL Build/OPM1.171019.018; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 Instagram 33.0.0.11.92 Android (27/8.1.0; 560dpi; 1440x2712; Google/google; Pixel 2 XL; taimen; taimen; en_US; 93117670)'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Instagram App 33.0 for Android',
+      "Expected actual \"Comment\" to be 'Instagram App 33.0 for Android' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Instagram App',
+      "Expected actual \"Browser\" to be 'Instagram App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '33.0',
+      "Expected actual \"Version\" to be '33.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Android',
+      "Expected actual \"Platform\" to be 'Android' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '8.1',
+      "Expected actual \"Platform_Version\" to be '8.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Android OS',
+      "Expected actual \"Platform_Description\" to be 'Android OS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Google Inc',
+      "Expected actual \"Platform_Maker\" to be 'Google Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Pixel 2 XL',
+      "Expected actual \"Device_Name\" to be 'Pixel 2 XL' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'LG',
+      "Expected actual \"Device_Maker\" to be 'LG' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Pixel 2 XL',
+      "Expected actual \"Device_Code_Name\" to be 'Pixel 2 XL' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Google',
+      "Expected actual \"Device_Brand_Name\" to be 'Google' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-I ["Mozilla/5.0 (Windows NT 6.1; rv:38.9) Gecko/20100101 Goanna/2.1 Firefox/38.9 PaleMoon/26.3.3"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 6.1; rv:38.9) Gecko/20100101 Goanna/2.1 Firefox/38.9 PaleMoon/26.3.3'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'PaleMoon 26.3',
+      "Expected actual \"Comment\" to be 'PaleMoon 26.3' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'PaleMoon',
+      "Expected actual \"Browser\" to be 'PaleMoon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"Browser_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '26.3',
+      "Expected actual \"Version\" to be '26.3' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win7',
+      "Expected actual \"Platform\" to be 'Win7' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '6.1',
+      "Expected actual \"Platform_Version\" to be '6.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 7',
+      "Expected actual \"Platform_Description\" to be 'Windows 7' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Goanna',
+      "Expected actual \"RenderingEngine_Name\" to be 'Goanna' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '2.0',
+      "Expected actual \"RenderingEngine_Version\" to be '2.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-J ["Mozilla/5.0 (Windows NT 5.1; rv:38.9) Gecko/20100101 Goanna/2.1 Firefox/38.9 PaleMoon/26.4.0"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 5.1; rv:38.9) Gecko/20100101 Goanna/2.1 Firefox/38.9 PaleMoon/26.4.0'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'PaleMoon 26.4',
+      "Expected actual \"Comment\" to be 'PaleMoon 26.4' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'PaleMoon',
+      "Expected actual \"Browser\" to be 'PaleMoon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"Browser_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '26.4',
+      "Expected actual \"Version\" to be '26.4' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'WinXP',
+      "Expected actual \"Platform\" to be 'WinXP' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '5.1',
+      "Expected actual \"Platform_Version\" to be '5.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows XP',
+      "Expected actual \"Platform_Description\" to be 'Windows XP' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Goanna',
+      "Expected actual \"RenderingEngine_Name\" to be 'Goanna' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '2.0',
+      "Expected actual \"RenderingEngine_Version\" to be '2.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-K ["Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'PaleMoon 26.5',
+      "Expected actual \"Comment\" to be 'PaleMoon 26.5' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'PaleMoon',
+      "Expected actual \"Browser\" to be 'PaleMoon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"Browser_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '26.5',
+      "Expected actual \"Version\" to be '26.5' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win7',
+      "Expected actual \"Platform\" to be 'Win7' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '6.1',
+      "Expected actual \"Platform_Version\" to be '6.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 7',
+      "Expected actual \"Platform_Description\" to be 'Windows 7' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Goanna',
+      "Expected actual \"RenderingEngine_Name\" to be 'Goanna' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '2.0',
+      "Expected actual \"RenderingEngine_Version\" to be '2.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-L ["Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'PaleMoon 26.5',
+      "Expected actual \"Comment\" to be 'PaleMoon 26.5' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'PaleMoon',
+      "Expected actual \"Browser\" to be 'PaleMoon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"Browser_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '26.5',
+      "Expected actual \"Version\" to be '26.5' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win7',
+      "Expected actual \"Platform\" to be 'Win7' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '6.1',
+      "Expected actual \"Platform_Version\" to be '6.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 7',
+      "Expected actual \"Platform_Description\" to be 'Windows 7' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Goanna',
+      "Expected actual \"RenderingEngine_Name\" to be 'Goanna' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '2.0',
+      "Expected actual \"RenderingEngine_Version\" to be '2.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-M ["Mozilla/5.0 (Windows NT 10.0; WOW64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:38.9) Gecko/20100101 Goanna/2.2 Firefox/38.9 PaleMoon/26.5.0'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'PaleMoon 26.5',
+      "Expected actual \"Comment\" to be 'PaleMoon 26.5' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'PaleMoon',
+      "Expected actual \"Browser\" to be 'PaleMoon' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"Browser_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '26.5',
+      "Expected actual \"Version\" to be '26.5' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Win10',
+      "Expected actual \"Platform\" to be 'Win10' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.0',
+      "Expected actual \"Platform_Version\" to be '10.0' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Windows 10',
+      "Expected actual \"Platform_Description\" to be 'Windows 10' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Platform_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'unknown',
+      "Expected actual \"Device_Maker\" to be 'unknown' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Windows Desktop',
+      "Expected actual \"Device_Code_Name\" to be 'Windows Desktop' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'unknown',
+      "Expected actual \"Device_Brand_Name\" to be 'unknown' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Goanna',
+      "Expected actual \"RenderingEngine_Name\" to be 'Goanna' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      '2.0',
+      "Expected actual \"RenderingEngine_Version\" to be '2.0' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Moonchild Productions',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Moonchild Productions' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-N ["Mozilla/5.0 (SMART-TV; LINUX; Tizen 3.0) AppleWebKit/538.1 (KHTML, like Gecko) Version/3.0 TV Safari/538.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (SMART-TV; LINUX; Tizen 3.0) AppleWebKit/538.1 (KHTML, like Gecko) Version/3.0 TV Safari/538.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Samsung WebView 3.0 for TV',
+      "Expected actual \"Comment\" to be 'Samsung WebView 3.0 for TV' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Samsung WebView',
+      "Expected actual \"Browser\" to be 'Samsung WebView' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Samsung',
+      "Expected actual \"Browser_Maker\" to be 'Samsung' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '3.0',
+      "Expected actual \"Version\" to be '3.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Tizen',
+      "Expected actual \"Platform\" to be 'Tizen' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '3.0',
+      "Expected actual \"Platform_Version\" to be '3.0' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Tizen',
+      "Expected actual \"Platform_Description\" to be 'Tizen' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Linux Foundation',
+      "Expected actual \"Platform_Maker\" to be 'Linux Foundation' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Smart TV',
+      "Expected actual \"Device_Name\" to be 'Smart TV' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Samsung',
+      "Expected actual \"Device_Maker\" to be 'Samsung' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'TV Device',
+      "Expected actual \"Device_Type\" to be 'TV Device' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'unknown',
+      "Expected actual \"Device_Pointing_Method\" to be 'unknown' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Smart TV',
+      "Expected actual \"Device_Code_Name\" to be 'Smart TV' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Samsung',
+      "Expected actual \"Device_Brand_Name\" to be 'Samsung' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-O ["Mozilla/5.0 (Linux; Android 7.1.1; SM-J510FN Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 SznProhlizec/5.2.1a"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Linux; Android 7.1.1; SM-J510FN Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 SznProhlizec/5.2.1a'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Seznam Browser 5.2',
+      "Expected actual \"Comment\" to be 'Seznam Browser 5.2' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Seznam Browser',
+      "Expected actual \"Browser\" to be 'Seznam Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Seznam.cz, a.s.',
+      "Expected actual \"Browser_Maker\" to be 'Seznam.cz, a.s.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '5.2',
+      "Expected actual \"Version\" to be '5.2' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Android',
+      "Expected actual \"Platform\" to be 'Android' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '7.1',
+      "Expected actual \"Platform_Version\" to be '7.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Android OS',
+      "Expected actual \"Platform_Description\" to be 'Android OS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Google Inc',
+      "Expected actual \"Platform_Maker\" to be 'Google Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Galaxy J5 4G Duos (2016, Europe)',
+      "Expected actual \"Device_Name\" to be 'Galaxy J5 4G Duos (2016, Europe)' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Samsung',
+      "Expected actual \"Device_Maker\" to be 'Samsung' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'SM-J510FN',
+      "Expected actual \"Device_Code_Name\" to be 'SM-J510FN' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Samsung',
+      "Expected actual \"Device_Brand_Name\" to be 'Samsung' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-P ["Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; Redmi Note 3 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.2.0.1089 Mobile Safari/537.36"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; Redmi Note 3 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.2.0.1089 Mobile Safari/537.36'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'UC Browser 12.2 for Android',
+      "Expected actual \"Comment\" to be 'UC Browser 12.2 for Android' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'UC Browser',
+      "Expected actual \"Browser\" to be 'UC Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'UCWeb Inc.',
+      "Expected actual \"Browser_Maker\" to be 'UCWeb Inc.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '12.2',
+      "Expected actual \"Version\" to be '12.2' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'Android',
+      "Expected actual \"Platform\" to be 'Android' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '6.0',
+      "Expected actual \"Platform_Version\" to be '6.0' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Android OS',
+      "Expected actual \"Platform_Description\" to be 'Android OS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Google Inc',
+      "Expected actual \"Platform_Maker\" to be 'Google Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Redmi Note 3',
+      "Expected actual \"Device_Name\" to be 'Redmi Note 3' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Xiaomi Tech',
+      "Expected actual \"Device_Maker\" to be 'Xiaomi Tech' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Redmi Note 3',
+      "Expected actual \"Device_Code_Name\" to be 'Redmi Note 3' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Xiaomi',
+      "Expected actual \"Device_Brand_Name\" to be 'Xiaomi' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-Q ["Mozilla/5.0 (iPad; CPU OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.6.3 NetType/WIFI Language/zh_CN"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.6.3 NetType/WIFI Language/zh_CN'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'WeChat App 6.6 for iOS',
+      "Expected actual \"Comment\" to be 'WeChat App 6.6 for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'WeChat App',
+      "Expected actual \"Browser\" to be 'WeChat App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Tencent Ltd.',
+      "Expected actual \"Browser_Maker\" to be 'Tencent Ltd.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '6.6',
+      "Expected actual \"Version\" to be '6.6' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.3',
+      "Expected actual \"Platform_Version\" to be '10.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-R ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) YaBrowser/16.3.3.4 YaApp_iOS/3.70"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) YaBrowser/16.3.3.4 YaApp_iOS/3.70'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'YaApp 3.70',
+      "Expected actual \"Comment\" to be 'YaApp 3.70' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'YaApp',
+      "Expected actual \"Browser\" to be 'YaApp' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Yandex LLC',
+      "Expected actual \"Browser_Maker\" to be 'Yandex LLC' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '3.70',
+      "Expected actual \"Version\" to be '3.70' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-S ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.1060 Yowser/2.5 Safari/537.36"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.1060 Yowser/2.5 Safari/537.36'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Yandex Browser 17.11',
+      "Expected actual \"Comment\" to be 'Yandex Browser 17.11' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Yandex Browser',
+      "Expected actual \"Browser\" to be 'Yandex Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Yandex LLC',
+      "Expected actual \"Browser_Maker\" to be 'Yandex LLC' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '17.11',
+      "Expected actual \"Version\" to be '17.11' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.13',
+      "Expected actual \"Platform_Version\" to be '10.13' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-T ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 YaBrowser/18.1.1.841 Yowser/2.5 Safari/537.36"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 YaBrowser/18.1.1.841 Yowser/2.5 Safari/537.36'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Yandex Browser 18.1',
+      "Expected actual \"Comment\" to be 'Yandex Browser 18.1' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Yandex Browser',
+      "Expected actual \"Browser\" to be 'Yandex Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Yandex LLC',
+      "Expected actual \"Browser_Maker\" to be 'Yandex LLC' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '18.1',
+      "Expected actual \"Version\" to be '18.1' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'MacOSX',
+      "Expected actual \"Platform\" to be 'MacOSX' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.11',
+      "Expected actual \"Platform_Version\" to be '10.11' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'Mac OS X',
+      "Expected actual \"Platform_Description\" to be 'Mac OS X' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-U ["Mozilla/5.0 (iPad; CPU OS 11_1_2 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 YaBrowser/18.3.1.731.11 Mobile/15B202 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_1_2 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 YaBrowser/18.3.1.731.11 Mobile/15B202 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Yandex Browser 18.3',
+      "Expected actual \"Comment\" to be 'Yandex Browser 18.3' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Yandex Browser',
+      "Expected actual \"Browser\" to be 'Yandex Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Yandex LLC',
+      "Expected actual \"Browser_Maker\" to be 'Yandex LLC' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '18.3',
+      "Expected actual \"Version\" to be '18.3' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.1',
+      "Expected actual \"Platform_Version\" to be '11.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-V ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_2 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/15C202 UCBrowser/11.8.8.1060 Mobile  AliApp(TUnionSDK/0.1.20.2)"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_2 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/15C202 UCBrowser/11.8.8.1060 Mobile  AliApp(TUnionSDK/0.1.20.2)'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'AliApp',
+      "Expected actual \"Comment\" to be 'AliApp' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'AliApp',
+      "Expected actual \"Browser\" to be 'AliApp' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Alibaba',
+      "Expected actual \"Browser_Maker\" to be 'Alibaba' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-W ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 AolApp/3.3.4.3"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 AolApp/3.3.4.3'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'AOL App',
+      "Expected actual \"Comment\" to be 'AOL App' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'AOL App',
+      "Expected actual \"Browser\" to be 'AOL App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'AOL',
+      "Expected actual \"Browser_Maker\" to be 'AOL' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-X ["Mozilla/5.0 (iPad; CPU OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 AolApp/3.3.4.3"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 AolApp/3.3.4.3'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'AOL App',
+      "Expected actual \"Comment\" to be 'AOL App' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'AOL App',
+      "Expected actual \"Browser\" to be 'AOL App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'AOL',
+      "Expected actual \"Browser_Maker\" to be 'AOL' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-Y ["Mozilla/5.0 (iPad; CPU OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 Safari/601.1 bingipadclient"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 Safari/601.1 bingipadclient'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Bing iPad',
+      "Expected actual \"Comment\" to be 'Bing iPad' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Bing iPad',
+      "Expected actual \"Browser\" to be 'Bing iPad' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Browser_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-Z ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/65.0.3325.152 Mobile/15E5216a Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/65.0.3325.152 Mobile/15E5216a Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Chrome 65.0',
+      "Expected actual \"Comment\" to be 'Chrome 65.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Chrome',
+      "Expected actual \"Browser\" to be 'Chrome' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Google Inc',
+      "Expected actual \"Browser_Maker\" to be 'Google Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '65.0',
+      "Expected actual \"Version\" to be '65.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AA ["Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/65.0.3325.152 Mobile/15E216 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/65.0.3325.152 Mobile/15E216 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Chrome 65.0',
+      "Expected actual \"Comment\" to be 'Chrome 65.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Chrome',
+      "Expected actual \"Browser\" to be 'Chrome' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Google Inc',
+      "Expected actual \"Browser_Maker\" to be 'Google Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '65.0',
+      "Expected actual \"Version\" to be '65.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AB ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_1_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Coast/5.04.110603 Mobile/15B150 Safari/7534.48.3"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Coast/5.04.110603 Mobile/15B150 Safari/7534.48.3'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Coast 5.04',
+      "Expected actual \"Comment\" to be 'Coast 5.04' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Coast',
+      "Expected actual \"Browser\" to be 'Coast' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Opera Software ASA',
+      "Expected actual \"Browser_Maker\" to be 'Opera Software ASA' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '5.04',
+      "Expected actual \"Version\" to be '5.04' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.1',
+      "Expected actual \"Platform_Version\" to be '11.1' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AC ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.108 Chrome/60.4.3112.108 Safari/537.36"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.108 Chrome/60.4.3112.108 Safari/537.36'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Coc Coc Browser 66.0',
+      "Expected actual \"Comment\" to be 'Coc Coc Browser 66.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Coc Coc Browser',
+      "Expected actual \"Browser\" to be 'Coc Coc Browser' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Coc Coc Company Limited',
+      "Expected actual \"Browser_Maker\" to be 'Coc Coc Company Limited' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '66.0',
+      "Expected actual \"Version\" to be '66.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.13',
+      "Expected actual \"Platform_Version\" to be '10.13' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AD ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) (Coda, like Safari)"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) (Coda, like Safari)'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Coda',
+      "Expected actual \"Comment\" to be 'Coda' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Coda',
+      "Expected actual \"Browser\" to be 'Coda' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Panic Software',
+      "Expected actual \"Browser_Maker\" to be 'Panic Software' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.13',
+      "Expected actual \"Platform_Version\" to be '10.13' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AE ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 EdgiOS/41.9.0.0 Mobile/15E5178f Safari/605.1.15"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 EdgiOS/41.9.0.0 Mobile/15E5178f Safari/605.1.15'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Edge 41.0',
+      "Expected actual \"Comment\" to be 'Edge 41.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Edge',
+      "Expected actual \"Browser\" to be 'Edge' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Microsoft Corporation',
+      "Expected actual \"Browser_Maker\" to be 'Microsoft Corporation' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '41.0',
+      "Expected actual \"Version\" to be '41.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AF ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f [FBAN/FBIOS;FBAV/159.0.0.48.97;FBBV/91994325;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/AT&T;FBID/phone;FBLC/en_US;FBOP/5;FBRV/0]"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f [FBAN/FBIOS;FBAV/159.0.0.48.97;FBBV/91994325;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/AT&T;FBID/phone;FBLC/en_US;FBOP/5;FBRV/0]'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Facebook App for iOS',
+      "Expected actual \"Comment\" to be 'Facebook App for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Facebook App',
+      "Expected actual \"Browser\" to be 'Facebook App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AG ["Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a [FBAN/FBIOS;FBAV/164.0.0.56.96;FBBV/98434650;FBDV/iPad6,4;FBMD/iPad;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/T-Mobile;FBID/tablet;FBLC/en_US;FBOP/5;FBRV/0]"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a [FBAN/FBIOS;FBAV/164.0.0.56.96;FBBV/98434650;FBDV/iPad6,4;FBMD/iPad;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/T-Mobile;FBID/tablet;FBLC/en_US;FBOP/5;FBRV/0]'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Facebook App for iOS',
+      "Expected actual \"Comment\" to be 'Facebook App for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Facebook App',
+      "Expected actual \"Browser\" to be 'Facebook App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AH ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a [FBAN/MessengerForiOS;FBAV/159.0.0.56.96;FBBV/99681318;FBDV/iPhone10,3;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/3;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5;FBRV/0]"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a [FBAN/MessengerForiOS;FBAV/159.0.0.56.96;FBBV/99681318;FBDV/iPhone10,3;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/3;FBCR/Verizon;FBID/phone;FBLC/en_US;FBOP/5;FBRV/0]'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Facebook Messenger App for iOS',
+      "Expected actual \"Comment\" to be 'Facebook Messenger App for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Facebook Messenger',
+      "Expected actual \"Browser\" to be 'Facebook Messenger' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Facebook',
+      "Expected actual \"Browser_Maker\" to be 'Facebook' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AI ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) GSA/46.0.189829128 Mobile/15E216 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) GSA/46.0.189829128 Mobile/15E216 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Google App for iOS',
+      "Expected actual \"Comment\" to be 'Google App for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Google App',
+      "Expected actual \"Browser\" to be 'Google App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Google Inc',
+      "Expected actual \"Browser_Maker\" to be 'Google Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AJ ["Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) GSA/42.0.183854831 Mobile/15E5178f Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) GSA/42.0.183854831 Mobile/15E5178f Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Google App for iOS',
+      "Expected actual \"Comment\" to be 'Google App for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Google App',
+      "Expected actual \"Browser\" to be 'Google App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Google Inc',
+      "Expected actual \"Browser_Maker\" to be 'Google Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AK ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 Safari Line/8.3.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 Safari Line/8.3.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Line App',
+      "Expected actual \"Comment\" to be 'Line App' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Line App',
+      "Expected actual \"Browser\" to be 'Line App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Line Corporation',
+      "Expected actual \"Browser_Maker\" to be 'Line Corporation' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AL ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5189f Listia/2.57"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5189f Listia/2.57'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Listia App',
+      "Expected actual \"Comment\" to be 'Listia App' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Listia App',
+      "Expected actual \"Browser\" to be 'Listia App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Listia Inc.',
+      "Expected actual \"Browser_Maker\" to be 'Listia Inc.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AM ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 MailMaster/6.3.1.1177"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 MailMaster/6.3.1.1177'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mail Master',
+      "Expected actual \"Comment\" to be 'Mail Master' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Mail Master',
+      "Expected actual \"Browser\" to be 'Mail Master' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Email Client',
+      "Expected actual \"Browser_Type\" to be 'Email Client' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'NetEase (Hangzhou) Network Co., Ltd.',
+      "Expected actual \"Browser_Maker\" to be 'NetEase (Hangzhou) Network Co., Ltd.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AN ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5178f'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mobile Safari UIWebView',
+      "Expected actual \"Comment\" to be 'Mobile Safari UIWebView' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Mobile Safari UIWebView',
+      "Expected actual \"Browser\" to be 'Mobile Safari UIWebView' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AO ["Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E5216a'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mobile Safari UIWebView',
+      "Expected actual \"Comment\" to be 'Mobile Safari UIWebView' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Mobile Safari UIWebView',
+      "Expected actual \"Browser\" to be 'Mobile Safari UIWebView' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AP ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) OPiOS/16.0.8.121059 Mobile/15D100 Safari/9537.53"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) OPiOS/16.0.8.121059 Mobile/15D100 Safari/9537.53'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Opera Mini 16.0 for iOS',
+      "Expected actual \"Comment\" to be 'Opera Mini 16.0 for iOS' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Opera Mini',
+      "Expected actual \"Browser\" to be 'Opera Mini' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Opera Software ASA',
+      "Expected actual \"Browser_Maker\" to be 'Opera Software ASA' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '16.0',
+      "Expected actual \"Version\" to be '16.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AQ ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 [Pinterest/iOS]"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D100 [Pinterest/iOS]'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Pinterest App Generic',
+      "Expected actual \"Comment\" to be 'Pinterest App Generic' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Pinterest App',
+      "Expected actual \"Browser\" to be 'Pinterest App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Ericsson Research',
+      "Expected actual \"Browser_Maker\" to be 'Ericsson Research' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AR ["Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [Pinterest/iOS]"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [Pinterest/iOS]'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Pinterest App Generic',
+      "Expected actual \"Comment\" to be 'Pinterest App Generic' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Pinterest App',
+      "Expected actual \"Browser\" to be 'Pinterest App' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Application',
+      "Expected actual \"Browser_Type\" to be 'Application' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Ericsson Research',
+      "Expected actual \"Browser_Maker\" to be 'Ericsson Research' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AS ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X; en-US) AppleWebKit/537.36 (KHTML, like Gecko)  Version/11.2.6 Mobile/15D100 Safari/537.36 Puffin/5.2.2IP"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X; en-US) AppleWebKit/537.36 (KHTML, like Gecko)  Version/11.2.6 Mobile/15D100 Safari/537.36 Puffin/5.2.2IP'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Puffin 5.2',
+      "Expected actual \"Comment\" to be 'Puffin 5.2' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Puffin',
+      "Expected actual \"Browser\" to be 'Puffin' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'CloudMosa Inc.',
+      "Expected actual \"Browser_Maker\" to be 'CloudMosa Inc.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '5.2',
+      "Expected actual \"Version\" to be '5.2' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AT ["Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X; en-US) AppleWebKit/537.36 (KHTML, like Gecko)  Version/11.2.5 Mobile/15D60 Safari/537.36 Puffin/5.2.2IT"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X; en-US) AppleWebKit/537.36 (KHTML, like Gecko)  Version/11.2.5 Mobile/15D60 Safari/537.36 Puffin/5.2.2IT'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Puffin 5.2',
+      "Expected actual \"Comment\" to be 'Puffin 5.2' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Puffin',
+      "Expected actual \"Browser\" to be 'Puffin' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'CloudMosa Inc.',
+      "Expected actual \"Browser_Maker\" to be 'CloudMosa Inc.' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '5.2',
+      "Expected actual \"Version\" to be '5.2' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.2',
+      "Expected actual \"Platform_Version\" to be '11.2' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AU ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) QuickLook/5.0"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) QuickLook/5.0'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'QuickLook',
+      "Expected actual \"Comment\" to be 'QuickLook' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'QuickLook',
+      "Expected actual \"Browser\" to be 'QuickLook' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '5.0',
+      "Expected actual \"Version\" to be '5.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.13',
+      "Expected actual \"Platform_Version\" to be '10.13' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AV ["Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mobile Safari 11.0',
+      "Expected actual \"Comment\" to be 'Mobile Safari 11.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Safari',
+      "Expected actual \"Browser\" to be 'Safari' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '11.0',
+      "Expected actual \"Version\" to be '11.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPhone',
+      "Expected actual \"Device_Name\" to be 'iPhone' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Phone',
+      "Expected actual \"Device_Type\" to be 'Mobile Phone' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPhone',
+      "Expected actual \"Device_Code_Name\" to be 'iPhone' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AW ["Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mobile Safari 11.0',
+      "Expected actual \"Comment\" to be 'Mobile Safari 11.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Safari',
+      "Expected actual \"Browser\" to be 'Safari' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '11.0',
+      "Expected actual \"Version\" to be '11.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPad',
+      "Expected actual \"Device_Name\" to be 'iPad' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Tablet',
+      "Expected actual \"Device_Type\" to be 'Tablet' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPad',
+      "Expected actual \"Device_Code_Name\" to be 'iPad' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AX ["Mozilla/5.0 (iPod touch; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (iPod touch; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Mobile Safari 11.0',
+      "Expected actual \"Comment\" to be 'Mobile Safari 11.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Safari',
+      "Expected actual \"Browser\" to be 'Safari' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '64',
+      "Expected actual \"Browser_Bits\" to be '64' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Apple Inc',
+      "Expected actual \"Browser_Maker\" to be 'Apple Inc' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '11.0',
+      "Expected actual \"Version\" to be '11.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'iOS',
+      "Expected actual \"Platform\" to be 'iOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '11.3',
+      "Expected actual \"Platform_Version\" to be '11.3' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'iPod, iPhone & iPad',
+      "Expected actual \"Platform_Description\" to be 'iPod, iPhone & iPad' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '64',
+      "Expected actual \"Platform_Bits\" to be '64' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      true,
+      'Expected actual "JavaApplets" to be true (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'iPod Touch',
+      "Expected actual \"Device_Name\" to be 'iPod Touch' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Mobile Device',
+      "Expected actual \"Device_Type\" to be 'Mobile Device' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'touchscreen',
+      "Expected actual \"Device_Pointing_Method\" to be 'touchscreen' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'iPod Touch',
+      "Expected actual \"Device_Code_Name\" to be 'iPod Touch' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'WebKit',
+      "Expected actual \"RenderingEngine_Name\" to be 'WebKit' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Apple Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Apple Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AY ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.189 Safari/537.36 Vivaldi/1.95.1077.55"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.189 Safari/537.36 Vivaldi/1.95.1077.55'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'Vivaldi',
+      "Expected actual \"Comment\" to be 'Vivaldi' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'Vivaldi',
+      "Expected actual \"Browser\" to be 'Vivaldi' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'Vivaldi Technologies',
+      "Expected actual \"Browser_Maker\" to be 'Vivaldi Technologies' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '0.0',
+      "Expected actual \"Version\" to be '0.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.13',
+      "Expected actual \"Platform_Version\" to be '10.13' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+  test('issue-1844-AZ ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) WhiteHat Aviator/37.0.2062.99 Chrome/37.0.2062.99 Safari/537.36"]', function() {
+    let browscap = new Browscap();
+    let browser = browscap.getBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) WhiteHat Aviator/37.0.2062.99 Chrome/37.0.2062.99 Safari/537.36'
+    );
+
+    assert.strictEqual(
+      browser['Comment'],
+      'WhiteHat Aviator 37.0',
+      "Expected actual \"Comment\" to be 'WhiteHat Aviator 37.0' (was '" +
+        browser['Comment'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser'],
+      'WhiteHat Aviator',
+      "Expected actual \"Browser\" to be 'WhiteHat Aviator' (was '" +
+        browser['Browser'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Type'],
+      'Browser',
+      "Expected actual \"Browser_Type\" to be 'Browser' (was '" +
+        browser['Browser_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Bits'],
+      '32',
+      "Expected actual \"Browser_Bits\" to be '32' (was '" +
+        browser['Browser_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Maker'],
+      'WhiteHat Security',
+      "Expected actual \"Browser_Maker\" to be 'WhiteHat Security' (was '" +
+        browser['Browser_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Browser_Modus'],
+      'unknown',
+      "Expected actual \"Browser_Modus\" to be 'unknown' (was '" +
+        browser['Browser_Modus'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Version'],
+      '37.0',
+      "Expected actual \"Version\" to be '37.0' (was '" +
+        browser['Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform'],
+      'macOS',
+      "Expected actual \"Platform\" to be 'macOS' (was '" +
+        browser['Platform'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Version'],
+      '10.12',
+      "Expected actual \"Platform_Version\" to be '10.12' (was '" +
+        browser['Platform_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Description'],
+      'macOS',
+      "Expected actual \"Platform_Description\" to be 'macOS' (was '" +
+        browser['Platform_Description'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Bits'],
+      '32',
+      "Expected actual \"Platform_Bits\" to be '32' (was '" +
+        browser['Platform_Bits'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Platform_Maker'],
+      'Apple Inc',
+      "Expected actual \"Platform_Maker\" to be 'Apple Inc' (was '" +
+        browser['Platform_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Alpha'],
+      false,
+      'Expected actual "Alpha" to be false (was \'' +
+        browser['Alpha'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Beta'],
+      false,
+      'Expected actual "Beta" to be false (was \'' +
+        browser['Beta'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Frames'],
+      true,
+      'Expected actual "Frames" to be true (was \'' +
+        browser['Frames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['IFrames'],
+      true,
+      'Expected actual "IFrames" to be true (was \'' +
+        browser['IFrames'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Tables'],
+      true,
+      'Expected actual "Tables" to be true (was \'' +
+        browser['Tables'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Cookies'],
+      true,
+      'Expected actual "Cookies" to be true (was \'' +
+        browser['Cookies'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaScript'],
+      true,
+      'Expected actual "JavaScript" to be true (was \'' +
+        browser['JavaScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['VBScript'],
+      false,
+      'Expected actual "VBScript" to be false (was \'' +
+        browser['VBScript'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['JavaApplets'],
+      false,
+      'Expected actual "JavaApplets" to be false (was \'' +
+        browser['JavaApplets'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isSyndicationReader'],
+      false,
+      'Expected actual "isSyndicationReader" to be false (was \'' +
+        browser['isSyndicationReader'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isFake'],
+      false,
+      'Expected actual "isFake" to be false (was \'' +
+        browser['isFake'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isAnonymized'],
+      false,
+      'Expected actual "isAnonymized" to be false (was \'' +
+        browser['isAnonymized'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['isModified'],
+      false,
+      'Expected actual "isModified" to be false (was \'' +
+        browser['isModified'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['CssVersion'],
+      '3',
+      "Expected actual \"CssVersion\" to be '3' (was '" +
+        browser['CssVersion'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Maker'],
+      'Apple Inc',
+      "Expected actual \"Device_Maker\" to be 'Apple Inc' (was '" +
+        browser['Device_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Type'],
+      'Desktop',
+      "Expected actual \"Device_Type\" to be 'Desktop' (was '" +
+        browser['Device_Type'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Pointing_Method'],
+      'mouse',
+      "Expected actual \"Device_Pointing_Method\" to be 'mouse' (was '" +
+        browser['Device_Pointing_Method'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Code_Name'],
+      'Macintosh',
+      "Expected actual \"Device_Code_Name\" to be 'Macintosh' (was '" +
+        browser['Device_Code_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['Device_Brand_Name'],
+      'Apple',
+      "Expected actual \"Device_Brand_Name\" to be 'Apple' (was '" +
+        browser['Device_Brand_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Name'],
+      'Blink',
+      "Expected actual \"RenderingEngine_Name\" to be 'Blink' (was '" +
+        browser['RenderingEngine_Name'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Version'],
+      'unknown',
+      "Expected actual \"RenderingEngine_Version\" to be 'unknown' (was '" +
+        browser['RenderingEngine_Version'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+    assert.strictEqual(
+      browser['RenderingEngine_Maker'],
+      'Google Inc',
+      "Expected actual \"RenderingEngine_Maker\" to be 'Google Inc' (was '" +
+        browser['RenderingEngine_Maker'] +
+        "'; used pattern: " +
+        browser['browser_name_regex'] +
+        ')'
+    );
+  });
+});

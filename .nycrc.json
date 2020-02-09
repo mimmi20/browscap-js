@@ -1,0 +1,35 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "check-coverage": true,
+  "per-file": true,
+  "lines": 0,
+  "statements": 0,
+  "functions": 0,
+  "branches": 0,
+  "cache": false,
+  "all": true,
+  "extension": [
+    ".ts"
+  ],
+  "require": [
+    "ts-node/register"
+  ],
+  "includes": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "**/*.interface.ts",
+    "rollup.config.ts",
+    "coverage",
+    "docs/",
+    "dist/",
+    "demo/",
+    "examples/"
+  ],
+  "reporter": [
+    "lcov",
+    "json"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "strict": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+  ],
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs",
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "name": "browscap-js"
+  }
+}

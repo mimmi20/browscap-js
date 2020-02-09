@@ -1,0 +1,55 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "node": true,
+    "es2017": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "array-callback-return": "error",
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-lonely-if": "error",
+    "no-var": "error",
+    "prefer-const": 0,
+    "prefer-destructuring": [
+      "error",
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "prefer-spread": "error",
+    "radix": "error",
+    "strict": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "@typescript-eslint/no-var-requires": 0
+  }
+}

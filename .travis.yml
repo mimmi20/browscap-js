@@ -25,33 +25,33 @@ node_js:
   - "12.2"
   - "12.1"
   - "12.0"
-  - 11
-  - 10
-  - 9
-  - 8
-  - 7
-  - 6
 
 os: linux
 
 stages:
-#  - check coding style
+  - check coding style
   - test
 #  - test with coverage
 
 before_install:
   - stty cols 130
 
+install:
+  - travis_retry npm install
+
 script: npm test
 
-#jobs:
-#  include:
+jobs:
+  include:
 #    - stage: test with coverage
-#      node_js: "12.0"
+#      node_js: "13.0"
 #      script: npm run test-and-coverage
 #      after_success:
 #        - bash <(curl -s https://codecov.io/bash) -f coverage/clover.xml
 
-#    - stage: check coding style
-#      node_js: "12.0"
-#      script: npm run prettier-check
+    - stage: check coding style
+      node_js: "13.0"
+      script: npm run prettier-check
+
+notifications:
+  email: false
